@@ -24,6 +24,7 @@
 		472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74B1D4C39A80081DDC5 /* RadioController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2BFF1D4C4850007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
+		47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
 		47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
 		47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuandraticModel.h; sourceTree = "<group>"; };
+		47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuandraticModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,9 +237,9 @@
 		472EC7381D4C39290081DDC5 /* CartoonQuadratic */ = {
 			isa = PBXGroup;
 			children = (
+				47EA2C031D4C4FF3007EC6E7 /* Model */,
+				47EA2C041D4C4FF3007EC6E7 /* View */,
 				472EC7391D4C39290081DDC5 /* Controller */,
-				472EC73A1D4C39290081DDC5 /* Model */,
-				472EC73B1D4C39290081DDC5 /* View */,
 			);
 			path = CartoonQuadratic;
 			sourceTree = "<group>";
@@ -250,26 +253,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		472EC73A1D4C39290081DDC5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		472EC73B1D4C39290081DDC5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		472EC73C1D4C39290081DDC5 /* CartoonRadio */ = {
 			isa = PBXGroup;
 			children = (
+				3F5069A61D4C513E00F9ABDE /* Model */,
+				47EA2C061D4C4FFA007EC6E7 /* View */,
 				472EC73D1D4C39290081DDC5 /* Controller */,
-				472EC73E1D4C39290081DDC5 /* Model */,
-				472EC73F1D4C39290081DDC5 /* View */,
 			);
 			path = CartoonRadio;
 			sourceTree = "<group>";
@@ -283,26 +272,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		472EC73E1D4C39290081DDC5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		472EC73F1D4C39290081DDC5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		472EC7401D4C39290081DDC5 /* CartoonTerrofying */ = {
 			isa = PBXGroup;
 			children = (
+				47EA2C071D4C5003007EC6E7 /* Model */,
+				47EA2C081D4C5003007EC6E7 /* View */,
 				472EC7411D4C39290081DDC5 /* Controller */,
-				472EC7421D4C39290081DDC5 /* Model */,
-				472EC7431D4C39290081DDC5 /* View */,
 			);
 			path = CartoonTerrofying;
 			sourceTree = "<group>";
@@ -316,21 +291,61 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		472EC7421D4C39290081DDC5 /* Model */ = {
+		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */,
+				47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */,
+				47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		47EA2C011D4C4FEA007EC6E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		472EC7431D4C39290081DDC5 /* View */ = {
+		47EA2C021D4C4FEA007EC6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
+		47EA2C031D4C4FF3007EC6E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */,
+				47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47EA2C041D4C4FF3007EC6E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47EA2C061D4C4FFA007EC6E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47EA2C071D4C5003007EC6E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47EA2C081D4C5003007EC6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3FC531B51D4C54E6000EB7E5 /* Global.h */,
@@ -338,7 +353,7 @@
 				47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */,
 				47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */,
 			);
-			path = Tools;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
+				47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
@@ -486,6 +502,7 @@
 				47EA2BFF1D4C4850007EC6E7 /* DownLoad.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */,
+				3F5069A91D4C515B00F9ABDE /* RadioModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
