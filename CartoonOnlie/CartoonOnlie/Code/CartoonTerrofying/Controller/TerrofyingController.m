@@ -27,8 +27,9 @@
 
 - (void)createHeaderView {
     
-//    self.imageViewH = [[UIImageView alloc] initWithImage:self.imgH];
-//    self.imageViewH.frame = CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
+    self.imageViewH = [[UIImageView alloc] initWithImage:self.imgH];
+    self.imageViewH.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
+    [self.view addSubview:self.imageViewH];
     
 }
 
@@ -49,14 +50,18 @@
             NSString *string = dict1[@"jumpdetail"];
             NSLog(@"%@", string);
             NSLog(@"%@", dict1[@"img"]);
+           
             
         }else {
             
-//            NSLog(@"数据为空");
+            NSLog(@"数据为空");
         }
-        
-      
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+           
+            
+            
+        });
         
     }];
     
