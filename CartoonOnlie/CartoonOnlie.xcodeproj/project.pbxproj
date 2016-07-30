@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC531A61D4C4EC2000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531A41D4C4EC2000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
+		3FC531A71D4C4EC2000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531A51D4C4EC2000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3FC531AA1D4C4ED3000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531A81D4C4ED3000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		472EC6D21D4C33890081DDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D11D4C33890081DDC5 /* main.m */; };
 		472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; };
 		472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472EC6DC1D4C33890081DDC5 /* Assets.xcassets */; };
@@ -41,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FC531A31D4C4EC2000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FunListCell.h; path = ../../../../../../../Desktop/FunListCell.h; sourceTree = "<group>"; };
+		3FC531A41D4C4EC2000EB7E5 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunListCell.m; path = ../../../../../../../Desktop/FunListCell.m; sourceTree = "<group>"; };
+		3FC531A51D4C4EC2000EB7E5 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FunListCell.xib; path = ../../../../../../../Desktop/FunListCell.xib; sourceTree = "<group>"; };
+		3FC531A81D4C4ED3000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunListModel.m; path = ../../../../../../../Desktop/FunListModel.m; sourceTree = "<group>"; };
+		3FC531A91D4C4ED3000EB7E5 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FunListModel.h; path = ../../../../../../../Desktop/FunListModel.h; sourceTree = "<group>"; };
 		472EC6CD1D4C33890081DDC5 /* CartoonOnlie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonOnlie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		472EC6D11D4C33890081DDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		472EC6D31D4C33890081DDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,6 +214,8 @@
 		472EC7361D4C39290081DDC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3FC531A81D4C4ED3000EB7E5 /* FunListModel.m */,
+				3FC531A91D4C4ED3000EB7E5 /* FunListModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +223,9 @@
 		472EC7371D4C39290081DDC5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3FC531A31D4C4EC2000EB7E5 /* FunListCell.h */,
+				3FC531A41D4C4EC2000EB7E5 /* FunListCell.m */,
+				3FC531A51D4C4EC2000EB7E5 /* FunListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 			files = (
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
+				3FC531A71D4C4EC2000EB7E5 /* FunListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +475,9 @@
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */,
+				3FC531AA1D4C4ED3000EB7E5 /* FunListModel.m in Sources */,
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
+				3FC531A61D4C4EC2000EB7E5 /* FunListCell.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
