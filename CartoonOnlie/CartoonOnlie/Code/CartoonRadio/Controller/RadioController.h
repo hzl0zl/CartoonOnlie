@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RadioController.h
 //  CartoonOnlie
 //
 //  Created by zhiling on 16/7/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RadioController : UIViewController
 
 @end
-
