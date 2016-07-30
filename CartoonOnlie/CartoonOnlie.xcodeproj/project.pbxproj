@@ -21,6 +21,7 @@
 		472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74B1D4C39A80081DDC5 /* RadioController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2BFF1D4C4850007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
+		47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
 		47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
 		47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuandraticModel.h; sourceTree = "<group>"; };
+		47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuandraticModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +290,8 @@
 		47EA2C031D4C4FF3007EC6E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */,
+				47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
+				47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */,
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
