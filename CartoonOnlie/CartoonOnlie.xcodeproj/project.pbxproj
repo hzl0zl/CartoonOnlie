@@ -20,6 +20,7 @@
 		472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7481D4C39980081DDC5 /* QuadraticController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74B1D4C39A80081DDC5 /* RadioController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
+		47EA2BFF1D4C4850007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
 		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
 		472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingController.m; sourceTree = "<group>"; };
+		47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
+		47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,7 @@
 		472EC7031D4C34D40081DDC5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				47EA2BFC1D4C480B007EC6E7 /* Tools */,
 				472EC7341D4C39290081DDC5 /* CartoonFunny */,
 				472EC7381D4C39290081DDC5 /* CartoonQuadratic */,
 				472EC73C1D4C39290081DDC5 /* CartoonRadio */,
@@ -311,6 +315,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */,
+				47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -450,6 +463,7 @@
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
+				47EA2BFF1D4C4850007EC6E7 /* DownLoad.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */,
 			);
