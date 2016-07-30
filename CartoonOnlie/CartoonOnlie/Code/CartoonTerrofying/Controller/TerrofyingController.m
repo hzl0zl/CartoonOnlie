@@ -10,6 +10,8 @@
 
 @interface TerrofyingController ()
 
+@property (nonatomic, strong) UIImageView *imageViewH;
+@property (nonatomic, strong) UIImage *imgH;
 @end
 
 @implementation TerrofyingController
@@ -22,6 +24,14 @@
     
     
 }
+
+- (void)createHeaderView {
+    
+//    self.imageViewH = [[UIImageView alloc] initWithImage:self.imgH];
+//    self.imageViewH.frame = CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
+    
+}
+
 - (void)getData {
     
     NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getBranchFoucs"];
@@ -32,11 +42,12 @@
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             NSLog(@"%@", dictData);
             
-            NSDictionary *str = dictData[@"result"];
-            NSLog(@"%@", str[@"jumpdetail"]);
-            NSArray *arr = str[@"result"];
-            NSString *string = arr[7][@"jumpdetail"];
+            NSArray *arr1 = dictData[@"result"];
+            
+            NSDictionary *dict1 = arr1[0];
+            NSString *string = dict1[@"jumpdetail"];
             NSLog(@"%@", string);
+            NSLog(@"%@", dict1[@"img"]);
             
         }else {
             
