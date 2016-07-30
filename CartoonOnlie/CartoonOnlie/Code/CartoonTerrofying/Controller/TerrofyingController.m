@@ -16,7 +16,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getData];
     
+    
+    
+    
+}
+- (void)getData {
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getBranchFoucs"];
+    NSString *body = @"deviceToken=nil&hash=90ec7e923f63d421d6e7781df9b0de63&appc=as_kbmh&appv=1.0.3.100&resolution=375%2C667&dateline=1469845784206";
+    [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
+       
+        if (data != nil) {
+            NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            
+            NSLog(@"%@", dictData);
+            
+        }else {
+            
+            NSLog(@"数据为空");
+        }
+        
+      
+        
+        
+    }];
     
     
     
