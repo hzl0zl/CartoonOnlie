@@ -31,11 +31,11 @@
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             
-            NSLog(@"%@", dictData);
+//            NSLog(@"%@", dictData);
             
         }else {
             
-            NSLog(@"数据为空");
+//            NSLog(@"数据为空");
         }
         
       
@@ -64,3 +64,4 @@
 */
 
 @end
+

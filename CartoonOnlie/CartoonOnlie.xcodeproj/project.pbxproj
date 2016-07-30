@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FC531A61D4C4EC2000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531A41D4C4EC2000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
-		3FC531A71D4C4EC2000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531A51D4C4EC2000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3FC531AA1D4C4ED3000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531A81D4C4ED3000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
+		3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531AD1D4C5320000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
+		3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		472EC6D21D4C33890081DDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D11D4C33890081DDC5 /* main.m */; };
 		472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; };
 		472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472EC6DC1D4C33890081DDC5 /* Assets.xcassets */; };
@@ -44,11 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3FC531A31D4C4EC2000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FunListCell.h; path = ../../../../../../../Desktop/FunListCell.h; sourceTree = "<group>"; };
-		3FC531A41D4C4EC2000EB7E5 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunListCell.m; path = ../../../../../../../Desktop/FunListCell.m; sourceTree = "<group>"; };
-		3FC531A51D4C4EC2000EB7E5 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FunListCell.xib; path = ../../../../../../../Desktop/FunListCell.xib; sourceTree = "<group>"; };
-		3FC531A81D4C4ED3000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunListModel.m; path = ../../../../../../../Desktop/FunListModel.m; sourceTree = "<group>"; };
-		3FC531A91D4C4ED3000EB7E5 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FunListModel.h; path = ../../../../../../../Desktop/FunListModel.h; sourceTree = "<group>"; };
+		3FC531AD1D4C5320000EB7E5 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
+		3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
+		3FC531AF1D4C5320000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
+		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
+		3FC531B31D4C5328000EB7E5 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
+		3FC531B51D4C54E6000EB7E5 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		472EC6CD1D4C33890081DDC5 /* CartoonOnlie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonOnlie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		472EC6D11D4C33890081DDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		472EC6D31D4C33890081DDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +107,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FC531AB1D4C5313000EB7E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
+				3FC531B31D4C5328000EB7E5 /* FunListModel.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3FC531AC1D4C5313000EB7E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FC531AD1D4C5320000EB7E5 /* FunListCell.m */,
+				3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */,
+				3FC531AF1D4C5320000EB7E5 /* FunListCell.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		472EC6C41D4C33890081DDC5 = {
 			isa = PBXGroup;
 			children = (
@@ -195,9 +215,9 @@
 		472EC7341D4C39290081DDC5 /* CartoonFunny */ = {
 			isa = PBXGroup;
 			children = (
+				3FC531AB1D4C5313000EB7E5 /* Models */,
 				472EC7351D4C39290081DDC5 /* Controller */,
-				472EC7361D4C39290081DDC5 /* Model */,
-				472EC7371D4C39290081DDC5 /* View */,
+				3FC531AC1D4C5313000EB7E5 /* Views */,
 			);
 			path = CartoonFunny;
 			sourceTree = "<group>";
@@ -209,25 +229,6 @@
 				472EC7451D4C39870081DDC5 /* FunnyController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		472EC7361D4C39290081DDC5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3FC531A81D4C4ED3000EB7E5 /* FunListModel.m */,
-				3FC531A91D4C4ED3000EB7E5 /* FunListModel.h */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		472EC7371D4C39290081DDC5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3FC531A31D4C4EC2000EB7E5 /* FunListCell.h */,
-				3FC531A41D4C4EC2000EB7E5 /* FunListCell.m */,
-				3FC531A51D4C4EC2000EB7E5 /* FunListCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		472EC7381D4C39290081DDC5 /* CartoonQuadratic */ = {
@@ -332,6 +333,7 @@
 		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3FC531B51D4C54E6000EB7E5 /* Global.h */,
 				47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */,
 				47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */,
 				47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */,
@@ -447,7 +449,7 @@
 			files = (
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
-				3FC531A71D4C4EC2000EB7E5 /* FunListCell.xib in Resources */,
+				3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,9 +477,9 @@
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */,
-				3FC531AA1D4C4ED3000EB7E5 /* FunListModel.m in Sources */,
+				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
-				3FC531A61D4C4EC2000EB7E5 /* FunListCell.m in Sources */,
+				3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
@@ -616,7 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Documents/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.CartoonOnlie;
@@ -628,7 +630,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Documents/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.CartoonOnlie;

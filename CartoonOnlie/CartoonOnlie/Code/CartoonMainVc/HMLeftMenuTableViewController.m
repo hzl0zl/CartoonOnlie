@@ -40,7 +40,7 @@
 }
 
 - (void)btnClick{
-    NSLog(@"点击了");
+//    NSLog(@"点击了");
     FunnyController *vc = [[FunnyController alloc] init];
     vc.view.backgroundColor = [UIColor magentaColor];
     

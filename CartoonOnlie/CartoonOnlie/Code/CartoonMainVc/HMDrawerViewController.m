@@ -72,7 +72,7 @@
     
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
        
-        NSLog(@"%f", self.leftWidth);
+//        NSLog(@"%f", self.leftWidth);
         //设置偏移量
         self.mainVc.view.transform = CGAffineTransformMakeTranslation(self.leftWidth, 0);
         self.leftMenuVc.view.transform = CGAffineTransformIdentity;
@@ -154,7 +154,7 @@
     
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         
-        NSLog(@"%f", self.leftWidth);
+//        NSLog(@"%f", self.leftWidth);
         //CGAffineTransformIdentity:还原view的tramsform
         self.mainVc.view.transform = CGAffineTransformIdentity;
           self.leftMenuVc.view.transform = CGAffineTransformMakeTranslation(-self.leftWidth, 0);
@@ -209,7 +209,7 @@
 
 - (void)edgePanGestureRecognizer:(UIScreenEdgePanGestureRecognizer *)pan {
 
-    NSLog(@"%s", __FUNCTION__);
+//    NSLog(@"%s", __FUNCTION__);
     
     //获取屏幕宽度
     CGFloat screen = [UIScreen mainScreen].bounds.size.width;

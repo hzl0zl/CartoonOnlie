@@ -7,19 +7,15 @@
 //
 
 #import "FunnyController.h"
-
+#import "FunListCell.h"
+#import "FunListModel.h"
 
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
 
-
-
 @property (nonatomic, strong) UITableView *tableView;
 
-
-
 @property (nonatomic, strong) NSMutableArray *funList;
-
 
 
 @end
@@ -69,7 +65,18 @@
 }
 
 
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
+}
 
+- (void)getData
+{
+    
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -86,7 +93,7 @@
 
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"funListCell"];
+    FunListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"funlistcell"];
     
     
     
@@ -102,26 +109,9 @@
 
 {
     
-    return 80.f;
+    return 100.f;
     
 }
-
-
-
-
-
-
-
-
-
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor redColor];
-    
-}
-
 
 
 - (void)didReceiveMemoryWarning {
