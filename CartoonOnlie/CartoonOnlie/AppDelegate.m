@@ -51,7 +51,7 @@
     
     TerrofyingController *thirdVC = (TerrofyingController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"remind.png" selectedImage:@"remind_fill.png" class:[TerrofyingController class]];
     
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"four" normalImage:@"lbs.png" selectedImage:@"lbs_fill.png" class:[RadioController class]];
+    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"lbs.png" selectedImage:@"lbs_fill.png" class:[RadioController class]];
     
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];

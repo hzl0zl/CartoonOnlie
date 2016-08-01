@@ -11,6 +11,7 @@
 		3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531AD1D4C5320000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
+		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		472EC6D21D4C33890081DDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D11D4C33890081DDC5 /* main.m */; };
 		472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; };
 		472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472EC6DC1D4C33890081DDC5 /* Assets.xcassets */; };
@@ -24,6 +25,9 @@
 		472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7481D4C39980081DDC5 /* QuadraticController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74B1D4C39A80081DDC5 /* RadioController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
+		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
+		479AED711D4CA8EE008CA4F0 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED701D4CA8EE008CA4F0 /* DetailController.m */; settings = {ASSET_TAGS = (); }; };
+		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -51,7 +55,8 @@
 		3FC531AF1D4C5320000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		3FC531B31D4C5328000EB7E5 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
-		3FC531B51D4C54E6000EB7E5 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
+		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
 		472EC6CD1D4C33890081DDC5 /* CartoonOnlie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonOnlie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		472EC6D11D4C33890081DDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		472EC6D31D4C33890081DDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,9 +84,11 @@
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
 		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
 		472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingController.m; sourceTree = "<group>"; };
-		47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
-		47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
-		47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
+		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
+		479AED6F1D4CA8EE008CA4F0 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
+		479AED701D4CA8EE008CA4F0 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
+		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
 		47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuandraticModel.h; sourceTree = "<group>"; };
 		47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuandraticModel.m; sourceTree = "<group>"; };
 		47EA2C0C1D4C589C007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
@@ -305,6 +312,8 @@
 			children = (
 				472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */,
 				472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */,
+				479AED6F1D4CA8EE008CA4F0 /* DetailController.h */,
+				479AED701D4CA8EE008CA4F0 /* DetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +355,8 @@
 		47EA2C071D4C5003007EC6E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */,
+				479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,10 +364,9 @@
 		47EA2C081D4C5003007EC6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3FC531B51D4C54E6000EB7E5 /* Global.h */,
-				47EA2BFD1D4C4850007EC6E7 /* DownLoad.h */,
-				47EA2BFE1D4C4850007EC6E7 /* DownLoad.m */,
-				47EA2C001D4C48FB007EC6E7 /* PrefixHeader.pch */,
+				479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */,
+				4706ED301D4C824600098239 /* TerrofyingCell.h */,
+				4706ED311D4C824600098239 /* TerrofyingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */,
@@ -558,12 +569,15 @@
 				47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472EC7491D4C39980081DDC5 /* QuadraticController.m in Sources */,
+				479AED711D4CA8EE008CA4F0 /* DetailController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
+				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
 				3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
+				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472EC74C1D4C39A80081DDC5 /* RadioController.m in Sources */,
