@@ -9,6 +9,7 @@
 #import "FunnyController.h"
 #import "FunListCell.h"
 #import "FunListModel.h"
+#import "SDCycleScrollView.h"
 
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
@@ -56,7 +57,9 @@
         
         _tableView.dataSource = self;
         
-        [self.view addSubview:_tableView];
+        UINib *nib = [UINib nibWithNibName:@"FunListCell" bundle:nil];
+        
+        [_tableView registerNib:nib forCellReuseIdentifier:@"funlistcell"];
         
     }
     
@@ -71,11 +74,52 @@
     
     self.view.backgroundColor = [UIColor redColor];
     
+    self.tableView.backgroundColor = [UIColor grayColor];
+    
+    [self.view addSubview:self.tableView];
+    
+    [self getData];
+    
 }
 
 - (void)getData
 {
-    
+    [DownLoad dowmLoadWithUrl:FUNNYLIST postBody:nil resultBlock:^(NSData *data) {
+        if (data == nil) {
+            return;
+        }else
+        {
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            
+            NSArray *array = dict[@"work"];
+            
+            NSMutableArray *scrollArray = [NSMutableArray array];
+            
+            for (NSDictionary *dic in array) {
+                
+                [scrollArray addObject:dic[@"cover"][@"url"]];
+                
+                FunListModel *model = [[FunListModel alloc] init];
+                model.url = dic[@"cover"][@"url"];
+                
+                [model setValuesForKeysWithDictionary:dic];
+                
+                [self.funList addObject:model];
+            }
+            NSLog(@"%@", self.funList);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150) delegate:nil placeholderImage:nil];
+                
+                cycleScrollView.imageURLStringsGroup = scrollArray;
+                
+                self.tableView.tableHeaderView = cycleScrollView;
+                
+                [self.tableView reloadData];
+            });
+        }
+        
+    }];
 }
 
 
@@ -95,9 +139,9 @@
     
     FunListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"funlistcell"];
     
+    FunListModel *model = self.funList[indexPath.row];
     
-    
-    
+    cell.listModel = model;
     
     return cell;
     
@@ -109,7 +153,7 @@
 
 {
     
-    return 100.f;
+    return 120.f;
     
 }
 

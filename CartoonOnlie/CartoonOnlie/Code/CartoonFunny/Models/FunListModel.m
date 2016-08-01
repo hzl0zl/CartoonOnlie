@@ -10,4 +10,9 @@
 
 @implementation FunListModel
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
+
 @end
