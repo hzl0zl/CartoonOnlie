@@ -12,8 +12,7 @@
 #import "FunnyController.h"
 #import "QuadraticController.h"
 #import "RadioController.h"
-#import "TerrofyingController.h"
-
+#import "DetailController.h"
 @interface AppDelegate ()
 
 @end
@@ -49,7 +48,7 @@
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"two" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
     
     
-    TerrofyingController *thirdVC = (TerrofyingController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"remind.png" selectedImage:@"remind_fill.png" class:[TerrofyingController class]];
+    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"remind.png" selectedImage:@"remind_fill.png" class:[DetailController class]];
     
     RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"lbs.png" selectedImage:@"lbs_fill.png" class:[RadioController class]];
     

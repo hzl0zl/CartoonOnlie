@@ -10,4 +10,10 @@
 
 @interface RadioModel : NSObject
 
+@property (nonatomic, strong) NSString *wiki_title;
+
+@property (nonatomic, strong) NSString *small;
+
+@property (nonatomic, strong) NSString *wiki_id;
+
 @end

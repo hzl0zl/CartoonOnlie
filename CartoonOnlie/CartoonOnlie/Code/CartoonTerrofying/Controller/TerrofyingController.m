@@ -54,19 +54,21 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
     //每一个item大小
-    flowLayout.itemSize = CGSizeMake(110, 140);
+    flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH / 7 * 2, SCREEN_HEIGHT / 10 * 2);
     
     //列数, 根据Item的大小和最小间距来
-    flowLayout.minimumInteritemSpacing = 10;
+//    flowLayout.minimumInteritemSpacing = 10;
+//    
+//    //最小行间距 --- 默认值为10
+//    flowLayout.minimumLineSpacing = 10;
     
-    //最小行间距 --- 默认值为10
-    flowLayout.minimumLineSpacing = 10;
+
     
     //距离分区边距
-    flowLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    flowLayout.sectionInset = UIEdgeInsetsMake(0, SCREEN_WIDTH / 32, SCREEN_WIDTH / 32, SCREEN_WIDTH / 32);
     
     //创建 CollectionView
-   self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) collectionViewLayout:flowLayout];
+   self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 113) collectionViewLayout:flowLayout];
     
     self.collectionView.backgroundColor = [UIColor blackColor];
     
@@ -89,8 +91,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    DetailController *detailVC = [[DetailController alloc] init];
-    [self.navigationController pushViewController:detailVC animated:YES];
+//    DetailController *detailVC = [[DetailController alloc] init];
+//    [self.navigationController pushViewController:detailVC animated:YES];
     
     
 }
@@ -111,7 +113,7 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         view.backgroundColor = [UIColor yellowColor];
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 40)];
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT / 10 * 3, SCREEN_WIDTH, SCREEN_HEIGHT / 12 )];
         lable.backgroundColor = [UIColor magentaColor];
         view.backgroundColor = [UIColor blackColor];
         lable.text = @"恐怖漫画";
@@ -131,13 +133,14 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     
     
-    return CGSizeMake(0, 250);
+    return CGSizeMake(0, SCREEN_HEIGHT / 10 * 4);
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     TerrofyingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"terrofyingCell" forIndexPath:indexPath];
     TerrofyingModel *model = [[TerrofyingModel alloc] init];
     model = self.dataCollectionArray[indexPath.item];
+    cell.backgroundColor = [UIColor whiteColor];
     cell.terrModel = model;
     cell.layer.cornerRadius = 3;
     cell.layer.masksToBounds = YES;
@@ -148,7 +151,7 @@
     self.imageViewH = [[UIImageView alloc] init];
     self.imageViewH.backgroundColor = [UIColor lightGrayColor];
 
-    self.imageViewH.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
+    self.imageViewH.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT / 10 * 3);
     [self.view addSubview:self.imageViewH];
     
 }
