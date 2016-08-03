@@ -235,7 +235,8 @@ return self; \
 //---------------搞笑网址URL类--------------------------
 
 // 搞笑列表
-#define FUNNYLIST @""
+#define FUNNYLIST @"http://182.254.180.202/gw/v100/get_works_genre.html?genreid=1023&page=1&rows_per_limit=15&dtype=a"
+//#define FUNNYLISTPOST @"genreid=1023&page=1&rows_per_limit=15&dtype=a"
 
 
 
