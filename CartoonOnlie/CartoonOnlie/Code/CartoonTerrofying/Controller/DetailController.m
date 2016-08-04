@@ -11,7 +11,7 @@
 #import "TerrofyingModel.h"
 #import "DetailCell.h"
 #import "TerrofyingController.h"
-
+#import "HMDrawerViewController.h"
 
 @interface DetailController ()
 
@@ -37,12 +37,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(TerroleftAction)];
     
     UINib *nib = [UINib nibWithNibName:@"DetailCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"detaiCell"];
     [self createHeaderView];
     [self getCollectionData];
     [self getHeaderViewData];
+}
+- (void)TerroleftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

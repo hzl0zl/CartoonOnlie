@@ -11,7 +11,7 @@
 #import "FunListModel.h"
 #import "SDCycleScrollView.h"
 #import "FunnyDetailViewController.h"
-
+#import "HMDrawerViewController.h"
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -73,7 +73,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
     self.navigationController.navigationBar.translucent = NO;
     self.tableView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:self.tableView];
@@ -175,7 +175,12 @@
     
     [self.navigationController pushViewController:funDetailVc animated:YES];
 }
-
+- (void)FunnyleftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
+}
 /*
  
  #pragma mark - Navigation

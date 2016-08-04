@@ -33,7 +33,6 @@
     return (HMDrawerViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
     
 }
-
 /**
  *  快速创建抽屉控制器
  *
@@ -110,17 +109,8 @@
         self.mainVc.view.transform = CGAffineTransformMakeTranslation(MAX(0, distance), 0);
         self.leftMenuVc.view.transform = CGAffineTransformMakeTranslation(-self.leftWidth + distance, 0);
     }
-
-    
-    
-    
-    
-    
     
 }
-
-
-
 
 #pragma mark ===懒加载遮盖按钮
 - (UIButton *)coverBtn {
@@ -274,8 +264,7 @@
         [self.showingVc.view removeFromSuperview];
         self.showingVc = nil;
     } ];
-
-    
+ 
     
 }
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,8 @@
 #import "TerrListModel.h"
 #import "ShowController.h"
 
+
+
 @interface TerrofyingController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) UIImageView *imageViewH;
@@ -219,7 +221,6 @@
         
     }];
 }
-
 
 
 

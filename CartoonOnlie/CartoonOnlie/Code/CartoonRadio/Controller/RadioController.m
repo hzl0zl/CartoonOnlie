@@ -1,7 +1,7 @@
 //
 //  RadioController.m
 //  CartoonOnlie
-//
+//  电台主界面
 //  Created by zhiling on 16/7/30.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
@@ -10,7 +10,7 @@
 #import "RadioModel.h"
 #import "RadioCell.h"
 #import "RadioDetailController.h"
-
+#import "HMDrawerViewController.h"
 @interface RadioController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray  *hot_musicsArr;
@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(RadioleftAction)];
     self.navigationController.navigationBar.translucent = NO;
     [self getData];
     [self createTableView];
@@ -277,7 +277,12 @@
 }
 
 
-
+- (void)RadioleftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
+}
 
 
 
