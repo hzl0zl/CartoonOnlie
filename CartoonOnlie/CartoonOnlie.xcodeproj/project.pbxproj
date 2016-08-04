@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		018A2CBFA6D186DFFC4FC7BA /* Pods_CartoonOnlie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610BD9FA5D9AC272DF6C0C1A /* Pods_CartoonOnlie.framework */; };
+		3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97CF1D52EE4300235153 /* QuadraticModel.m */; settings = {ASSET_TAGS = (); }; };
+		3F1A97D31D52EE7000235153 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; settings = {ASSET_TAGS = (); }; };
+		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531AD1D4C5320000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -42,7 +46,6 @@
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
-		47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1A97CE1D52EE4300235153 /* QuadraticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticModel.h; sourceTree = "<group>"; };
+		3F1A97CF1D52EE4300235153 /* QuadraticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticModel.m; sourceTree = "<group>"; };
+		3F1A97D11D52EE7000235153 /* QuadraticController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticController.h; sourceTree = "<group>"; };
+		3F1A97D21D52EE7000235153 /* QuadraticController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticController.m; sourceTree = "<group>"; };
+		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
+		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
+		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
 		3FC531AD1D4C5320000EB7E5 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
 		3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
 		3FC531AF1D4C5320000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
@@ -116,8 +126,6 @@
 		472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLeftMenuTableViewController.m; sourceTree = "<group>"; };
 		472EC7441D4C39870081DDC5 /* FunnyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyController.h; sourceTree = "<group>"; };
 		472EC7451D4C39870081DDC5 /* FunnyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyController.m; sourceTree = "<group>"; };
-		472EC7471D4C39980081DDC5 /* QuadraticController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticController.h; sourceTree = "<group>"; };
-		472EC7481D4C39980081DDC5 /* QuadraticController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticController.m; sourceTree = "<group>"; };
 		472EC74A1D4C39A80081DDC5 /* RadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioController.h; sourceTree = "<group>"; };
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
 		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
@@ -125,8 +133,6 @@
 		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
 		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
 		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
-		47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuandraticModel.h; sourceTree = "<group>"; };
-		47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuandraticModel.m; sourceTree = "<group>"; };
 		47EA2C0C1D4C589C007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
 		47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
 		47EA2C0E1D4C589C007EC6E7 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
@@ -320,8 +326,8 @@
 		472EC7391D4C39290081DDC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				472EC7471D4C39980081DDC5 /* QuadraticController.h */,
-				472EC7481D4C39980081DDC5 /* QuadraticController.m */,
+				3F1A97D11D52EE7000235153 /* QuadraticController.h */,
+				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -389,8 +395,8 @@
 		47EA2C031D4C4FF3007EC6E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				47EA2C091D4C509D007EC6E7 /* QuandraticModel.h */,
-				47EA2C0A1D4C509D007EC6E7 /* QuandraticModel.m */,
+				3F1A97CE1D52EE4300235153 /* QuadraticModel.h */,
+				3F1A97CF1D52EE4300235153 /* QuadraticModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,6 +404,9 @@
 		47EA2C041D4C4FF3007EC6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */,
+				3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */,
+				3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +573,7 @@
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
+				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,7 +649,6 @@
 			files = (
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
-				47EA2C0B1D4C509D007EC6E7 /* QuandraticModel.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
@@ -647,12 +656,14 @@
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
+				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
 				3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				472298F51D51BA8E0085BC66 /* RadioDetailCell.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
+				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,

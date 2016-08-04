@@ -43,7 +43,7 @@
     
     //创建多个视图控制器
     
-    QuadraticController *firstVC =  (QuadraticController *)[self viewControllerWithTitle:@"one" normalImage:@"home.png" selectedImage:@"home_fill.png" class:[QuadraticController class]];
+    QuadraticController *firstVC =  (QuadraticController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"home.png" selectedImage:@"home_fill.png" class:[QuadraticController class]];
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"two" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
     
