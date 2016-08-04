@@ -38,7 +38,6 @@
     
     UINib *nib = [UINib nibWithNibName:@"DetailCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"detaiCell"];
-    
     [self createHeaderView];
     [self getCollectionData];
     [self getHeaderViewData];
@@ -46,7 +45,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
+    
     
     
     
@@ -81,11 +80,16 @@
     
     NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getListCollect"];
     NSString *body = @"msgNum=83-1469842200%7C80-1469499300%7C79-1469257200%7C78-1469328300%7C76-1469773800%7C73-1469351400%7C71-1469684100%7C70-1469769900%7C65-1469242800%7C63-1468313640%7C62-1469589600%7C61-1457430340%7C60-1453365183%7C59-1453279023%7C58-1469775060%7C57-1469515440%7C55-1451204335%7C54-1466066100%7C53-1469514900%7C49-1469436300%7C48-1469322000%7C43-1466318700%7C42-1469589300%7C41-1463814000%7C38-1469431800%7C19-1441681200%7C14-1469785500%7C&hash=ab0e02ddedd32337d38313632ee65d6a&appc=as_kbmh&deviceToken=nil&dateline=1469861501537&page=1&resolution=375%2C667&appv=1.0.3.100";
+    
+    
+//    NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getView"];
+//    NSString *body = @"appc=as_kbmh&hash=563a8b7f97c87d11d4ab6badd51a3940&resolution=375%2C667&id=3871&cid=83&dateline=1470235389847&deviceToken=nil&appv=1.0.3.100";
+    
     [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            //            NSLog(@"%@", dictData);
+                        NSLog(@"%@", dictData);
             NSLog(@"%@", dictData[@"result"]);
             NSArray *arr = dictData[@"result"];
             
@@ -116,7 +120,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return self.dataTableViewArray.count;
 }
 - (void)createHeaderView {
@@ -124,7 +128,7 @@
     self.imageViewH.backgroundColor = [UIColor lightGrayColor];
     
     self.imageViewH.frame = CGRectMake(0, 0, SCREEN_WIDTH, 160);
-//    [self.view addSubview:self.imageViewH];
+    //    [self.view addSubview:self.imageViewH];
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -141,7 +145,7 @@
     
     TerrofyingModel *model = self.dataTableViewArray[indexPath.row];
     
-    cell.terrModel = model;  
+    cell.terrModel = model;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -152,8 +156,5 @@
     
     return 160;
 }
-
-
-
 
 @end
