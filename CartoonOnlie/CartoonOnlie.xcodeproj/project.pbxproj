@@ -46,6 +46,10 @@
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; };
+		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
+		47E1C5811D5358120037AFC5 /* ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57F1D5358120037AFC5 /* ShowController.m */; settings = {ASSET_TAGS = (); }; };
+		47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E1C5801D5358120037AFC5 /* ShowController.xib */; settings = {ASSET_TAGS = (); }; };
+		47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C5841D5368F20037AFC5 /* ShowModel.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -133,6 +137,13 @@
 		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
 		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
 		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
+		47E1C57B1D53352F0037AFC5 /* TerrListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrListModel.h; sourceTree = "<group>"; };
+		47E1C57C1D53352F0037AFC5 /* TerrListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrListModel.m; sourceTree = "<group>"; };
+		47E1C57E1D5358120037AFC5 /* ShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowController.h; sourceTree = "<group>"; };
+		47E1C57F1D5358120037AFC5 /* ShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowController.m; sourceTree = "<group>"; };
+		47E1C5801D5358120037AFC5 /* ShowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowController.xib; sourceTree = "<group>"; };
+		47E1C5831D5368F20037AFC5 /* ShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowModel.h; sourceTree = "<group>"; };
+		47E1C5841D5368F20037AFC5 /* ShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowModel.m; sourceTree = "<group>"; };
 		47EA2C0C1D4C589C007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
 		47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
 		47EA2C0E1D4C589C007EC6E7 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
@@ -375,6 +386,9 @@
 				472298F71D51DF610085BC66 /* DetailController.h */,
 				472298F81D51DF610085BC66 /* DetailController.m */,
 				472298F91D51DF610085BC66 /* DetailController.xib */,
+				47E1C57E1D5358120037AFC5 /* ShowController.h */,
+				47E1C57F1D5358120037AFC5 /* ShowController.m */,
+				47E1C5801D5358120037AFC5 /* ShowController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,6 +443,10 @@
 			children = (
 				479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */,
 				479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */,
+				47E1C57B1D53352F0037AFC5 /* TerrListModel.h */,
+				47E1C57C1D53352F0037AFC5 /* TerrListModel.m */,
+				47E1C5831D5368F20037AFC5 /* ShowModel.h */,
+				47E1C5841D5368F20037AFC5 /* ShowModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -568,6 +586,7 @@
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
+				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
@@ -657,7 +676,9 @@
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
+				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
+				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
 				3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */,
@@ -666,6 +687,7 @@
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
+				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,

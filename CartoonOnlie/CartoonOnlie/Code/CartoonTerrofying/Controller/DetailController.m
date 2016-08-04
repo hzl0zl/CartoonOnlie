@@ -90,7 +90,7 @@
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//                        NSLog(@"%@", dictData);
+                        NSLog(@"%@", dictData);
 //            NSLog(@"%@", dictData[@"result"]);
             NSArray *arr = dictData[@"result"];
             
@@ -162,6 +162,9 @@
     
     TerrofyingController *terrVc = [[TerrofyingController alloc] init];
     
+    TerrofyingModel *model = self.dataTableViewArray[indexPath.row];
+    
+    terrVc.ids = model.ids;
     [self.navigationController pushViewController:terrVc animated:YES];
     
     

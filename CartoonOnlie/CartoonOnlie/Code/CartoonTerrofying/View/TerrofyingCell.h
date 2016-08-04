@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TerrofyingModel.h"
+#import "TerrListModel.h"
 
 
 @interface TerrofyingCell : UICollectionViewCell
 
-@property (nonatomic, strong) TerrofyingModel *terrModel;
+@property (nonatomic, strong) TerrListModel *terrModel;
 
 @end
