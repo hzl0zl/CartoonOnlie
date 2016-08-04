@@ -10,18 +10,19 @@
 
 @interface FunListModel : NSObject
 
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString *coverPic;
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, assign) NSString *volumecount;
+@property (nonatomic, assign) NSString *updateSize;
 
-@property (nonatomic, assign) BOOL updateflag;
+@property (nonatomic, strong) NSString *authorName;
 
-@property (nonatomic, strong) NSString *painter;
+@property (nonatomic, strong) NSString *author;
 
-@property (nonatomic, strong) NSString *writer;
+@property (nonatomic, strong) NSString *label;
 
-@property (nonatomic, assign) NSString *score;
+@property (nonatomic, assign) NSNumber *collectNum;
+
 
 @end

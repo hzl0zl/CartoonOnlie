@@ -235,8 +235,8 @@ return self; \
 //---------------搞笑网址URL类--------------------------
 
 // 搞笑列表
-#define FUNNYLIST @"http://182.254.180.202/gw/v100/get_works_genre.html?genreid=1023&page=1&rows_per_limit=15&dtype=a"
-//#define FUNNYLISTPOST @"genreid=1023&page=1&rows_per_limit=15&dtype=a"
+#define FUNNYLIST @"http://api.youqudao.com/mhapi/api/list/search"
+#define FUNNYLISTPOST @"market=15&customerId=2208260&uuid=7c:1d:d9:9f:c7:2f&keyWord=%E6%90%9E%E7%AC%91&startIndex=0&size=20&categoryId=-1&appversion=21"
 
 
 

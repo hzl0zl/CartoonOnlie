@@ -17,27 +17,18 @@
     if (_listModel != listModel) {
         _listModel = listModel;
         
-        [self.titleImage sd_setImageWithURL:[NSURL URLWithString:listModel.url]];
+        NSURL *url = [NSURL URLWithString:listModel.coverPic];
         
-        self.titleL.text = listModel.title;
+    
+        [self.titleImage sd_setImageWithURL:url];
         
-        self.volemecountL.text = [NSString stringWithFormat:@"%@集", listModel.volumecount];
+        self.titleL.text = listModel.name;
         
+        self.authorL.text = [NSString stringWithFormat:@"作者: %@", listModel.author];
         
-        self.middleL.text = @"/";
+        self.typeL.text = [NSString stringWithFormat:@"类型: %@", listModel.label];
         
-        if (listModel.updateflag) {
-            self.updateflagL.text = @"连载中";
-        }else
-        {
-            self.updateflagL.text = @"完结";
-        }
-        
-        self.painterL.text = [NSString stringWithFormat:@"图: %@", listModel.painter];
-        
-        self.writerL.text = [NSString stringWithFormat:@"文: %@", listModel.writer];
-        
-        self.scoreL.text = [NSString stringWithFormat:@"评分: %@", listModel.score];
+        self.updateSizeL.text = [NSString stringWithFormat:@"更新至%@话", listModel.updateSize]; 
         
     }
 }

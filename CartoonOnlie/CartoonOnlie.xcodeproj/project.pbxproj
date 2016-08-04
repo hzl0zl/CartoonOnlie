@@ -11,8 +11,13 @@
 		3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97CF1D52EE4300235153 /* QuadraticModel.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531AD1D4C5320000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
-		3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F2130841D53254C00C88288 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2130821D53254C00C88288 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F2130851D53254C00C88288 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2130831D53254C00C88288 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F2130881D5325BC00C88288 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2130871D5325BC00C88288 /* FunnyController.m */; settings = {ASSET_TAGS = (); }; };
+		3F21308D1D53261900C88288 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F2130931D53269B00C88288 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2130911D53269B00C88288 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F2130961D5326AF00C88288 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2130951D5326AF00C88288 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -40,7 +45,6 @@
 		472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7061D4C35560081DDC5 /* HMMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7451D4C39870081DDC5 /* FunnyController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC7491D4C39980081DDC5 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -78,11 +82,18 @@
 		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
 		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
 		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
-		3FC531AD1D4C5320000EB7E5 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
-		3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
-		3FC531AF1D4C5320000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
+		3F2130811D53254C00C88288 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
+		3F2130821D53254C00C88288 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
+		3F2130831D53254C00C88288 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
+		3F2130861D53257000C88288 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
+		3F2130871D5325BC00C88288 /* FunnyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyController.m; sourceTree = "<group>"; };
+		3F2130891D53261900C88288 /* FunnyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailViewController.h; sourceTree = "<group>"; };
+		3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyDetailViewController.xib; sourceTree = "<group>"; };
+		3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailViewController.m; sourceTree = "<group>"; };
+		3F2130901D53269B00C88288 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
+		3F2130911D53269B00C88288 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
+		3F2130951D5326AF00C88288 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
-		3FC531B31D4C5328000EB7E5 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
 		471A1F9B1D4EE40900F3C9C6 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
@@ -129,7 +140,6 @@
 		472EC7091D4C35560081DDC5 /* HMLeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLeftMenuTableViewController.h; sourceTree = "<group>"; };
 		472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLeftMenuTableViewController.m; sourceTree = "<group>"; };
 		472EC7441D4C39870081DDC5 /* FunnyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyController.h; sourceTree = "<group>"; };
-		472EC7451D4C39870081DDC5 /* FunnyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyController.m; sourceTree = "<group>"; };
 		472EC74A1D4C39A80081DDC5 /* RadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioController.h; sourceTree = "<group>"; };
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
 		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
@@ -191,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
-				3FC531B31D4C5328000EB7E5 /* FunListModel.h */,
+				3F2130861D53257000C88288 /* FunListModel.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,9 +209,12 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3FC531AD1D4C5320000EB7E5 /* FunListCell.m */,
-				3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */,
-				3FC531AF1D4C5320000EB7E5 /* FunListCell.h */,
+				3F2130811D53254C00C88288 /* FunListCell.h */,
+				3F2130821D53254C00C88288 /* FunListCell.xib */,
+				3F2130831D53254C00C88288 /* FunListCell.m */,
+				3F2130901D53269B00C88288 /* VolumecountCell.h */,
+				3F2130911D53269B00C88288 /* VolumecountCell.m */,
+				3F2130951D5326AF00C88288 /* VolumecountCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,7 +332,10 @@
 			isa = PBXGroup;
 			children = (
 				472EC7441D4C39870081DDC5 /* FunnyController.h */,
-				472EC7451D4C39870081DDC5 /* FunnyController.m */,
+				3F2130871D5325BC00C88288 /* FunnyController.m */,
+				3F2130891D53261900C88288 /* FunnyDetailViewController.h */,
+				3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */,
+				3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -583,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
+				3F2130961D5326AF00C88288 /* VolumecountCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
@@ -590,8 +607,9 @@
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
-				3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
+				3F21308D1D53261900C88288 /* FunnyDetailViewController.xib in Resources */,
+				3F2130841D53254C00C88288 /* FunListCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
 			);
@@ -669,7 +687,9 @@
 				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
+				3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
+				3F2130881D5325BC00C88288 /* FunnyController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472EC7491D4C39980081DDC5 /* (null) in Sources */,
@@ -680,10 +700,10 @@
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
 				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
-				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
-				3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				472298F51D51BA8E0085BC66 /* RadioDetailCell.m in Sources */,
+				3F2130851D53254C00C88288 /* FunListCell.m in Sources */,
+				3F2130931D53269B00C88288 /* VolumecountCell.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
@@ -828,7 +848,7 @@
 			baseConfigurationReference = E8450B81A0D8416EC6F59D2F /* Pods-CartoonOnlie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.CartoonOnlie;
@@ -841,7 +861,7 @@
 			baseConfigurationReference = AA82DCF6822C97A619D057A9 /* Pods-CartoonOnlie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.CartoonOnlie;

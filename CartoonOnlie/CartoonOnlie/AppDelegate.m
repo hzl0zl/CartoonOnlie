@@ -45,7 +45,7 @@
     
     QuadraticController *firstVC =  (QuadraticController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"home.png" selectedImage:@"home_fill.png" class:[QuadraticController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"two" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
     
     
     DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"remind.png" selectedImage:@"remind_fill.png" class:[DetailController class]];
