@@ -4,4 +4,6 @@ use_frameworks!
 target 'CartoonOnlie' do
   pod ‘SDWebImage’, '~> 3.8.1’
   pod 'SDCycleScrollView', '~> 1.65'
+  pod 'SDWebImage/WebP'
+
 end
