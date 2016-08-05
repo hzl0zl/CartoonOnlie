@@ -98,7 +98,7 @@
         
         UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake( 0, i * SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
         
-        NSString *imageStr = [self.imageArray[i] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *imageStr = self.imageArray[i];
         
         [imageV sd_setImageWithURL:[NSURL URLWithString:imageStr]];
         
