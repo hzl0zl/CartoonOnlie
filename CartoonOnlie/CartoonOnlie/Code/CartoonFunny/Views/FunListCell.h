@@ -19,6 +19,9 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *authorL;
 
+@property (strong, nonatomic) IBOutlet UILabel *popularL;
+
+
 
 @property (nonatomic, strong) FunListModel *listModel;
 

@@ -9,9 +9,11 @@
 #import "FunnyDetailViewController.h"
 #import "UIImageView+WebCache.h"
 #import "VolumecountCell.h"
+#import <CoreImage/CoreImage.h>
+#import "ReadViewController.h"
 
 
-@interface FunnyDetailViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FunnyDetailViewController ()<UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout>
 
 
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -20,9 +22,20 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (strong, nonatomic) IBOutlet UIView *topView;
+
+
 @property (strong, nonatomic) IBOutlet UIView *bottomView;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (strong, nonatomic) IBOutlet UILabel *authorL;
+
+@property (strong, nonatomic) IBOutlet UILabel *circulateL;
+
+@property (strong, nonatomic) IBOutlet UILabel *statusL;
+@property (strong, nonatomic) IBOutlet UILabel *popularL;
+@property (strong, nonatomic) IBOutlet UILabel *descL;
 
 @end
 
@@ -31,14 +44,82 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSLog(@"%@", self.model);
-    
     [self setTopView];
     
-    [self createDataArray];
+    [self setTopViewBackground];
+    
+    [self setMiddleView];
+    
+//    [self createDataArray];
     
     [self.view addSubview:self.collectionView];
     
+    [self getData];
+    
+}
+
+- (void)getData
+{
+    NSString *str = [NSString stringWithFormat:@"albumId=%@&customerId=2208260", self.albumId];
+//    NSURL *url = [NSURL URLWithString:str];
+    
+    [DownLoad dowmLoadWithUrl:FUNNY postBody:str resultBlock:^(NSData *data) {
+        
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSArray *array = dic[@"data"][@"list"];
+        
+        for (NSDictionary *dict in array) {
+            
+            FunnyDetailModel *model = [[FunnyDetailModel alloc] init];
+            
+            [model setValuesForKeysWithDictionary:dict];
+            
+            [self.dataArray addObject:model];
+        }
+        
+        NSLog(@"%@", self.dataArray);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+        
+    }];
+}
+#pragma mark -- 顶部视图背景
+- (void)setTopViewBackground
+{
+    UIImageView *topImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+ 
+    topImageView.alpha = 0.5;
+
+//    CIContext *context = [CIContext contextWithOptions:nil];
+//    CIImage *image = [CIImage imageWithContentsOfURL:[NSURL URLWithString:self.model.coverPic]];;
+//    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+//    [filter setValue:image forKey:kCIInputImageKey];
+//    [filter setValue:@2.0f forKey: @"inputRadius"];
+//    CIImage *result = [filter valueForKey:kCIOutputImageKey];
+//    CGImageRef outImage = [context createCGImage: result fromRect:[result extent]];
+//    topImageView.image = [UIImage imageWithCGImage:outImage];
+
+    
+    [self.topView addSubview:topImageView];
+}
+
+#pragma mark -- 中间视图
+- (void)setMiddleView
+{
+    self.authorL.text = [NSString stringWithFormat:@"作者: %@", self.model.author];
+    
+    self.circulateL.text = [NSString stringWithFormat:@"发行商: %@", self.model.authorName];
+    if (self.model.status) {
+         self.statusL.text = @"状态: 连载中";
+    }else
+    {
+        self.statusL.text = @"状态: 已完结";
+    }
+    self.popularL.text = [NSString stringWithFormat:@"人气: %@", self.model.popular];
+    
+    self.descL.text = [NSString stringWithFormat:@"简介: %@", self.model.descriptions];
+   
 }
 
 - (UICollectionView *)collectionView
@@ -61,20 +142,21 @@
         // 设置距离分区的边距
         flowLayout.sectionInset = UIEdgeInsetsMake(8, 2, 0, 2);
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 300, SCREEN_WIDTH, SCREEN_HEIGHT - 349) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 320, SCREEN_WIDTH, SCREEN_HEIGHT - 369) collectionViewLayout:flowLayout];
         
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         
-        _collectionView.backgroundColor = [UIColor whiteColor];
-        
+        _collectionView.backgroundColor = [UIColor colorWithRed:239.0/255 green:239.0/255 blue:244.0/255 alpha:1.0];
+
         UINib *nib = [UINib nibWithNibName:@"VolumecountCell" bundle:nil];
         
         [_collectionView registerNib:nib forCellWithReuseIdentifier:@"volumecountcell"];
-        
+    
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
         
         [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView"];
+        
     }
     return _collectionView;
 }
@@ -88,18 +170,18 @@
     return _dataArray;
 }
 
-- (void)createDataArray
-{
-     int count = [self.model.updateSize intValue];
-    
-    for (int i = 0; i < count; i++) {
-        NSString *nameStr = [NSString stringWithFormat:@"第 %d 话", i];
-        [self.dataArray addObject:nameStr];
-    }
-    NSLog(@"%ld", self.dataArray.count);
-}
+//- (void)createDataArray
+//{
+//     int count = [self.model.updateSize intValue];
+//    
+//    for (int i = 0; i < count; i++) {
+//        NSString *nameStr = [NSString stringWithFormat:@"第 %d 话", i];
+//        [self.dataArray addObject:nameStr];
+//    }
+//    NSLog(@"%ld", self.dataArray.count);
+//}
 
-// 设置头部视图
+#pragma mark -- 设置顶部视图
 - (void)setTopView
 {
     [self.titleImage sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
@@ -111,12 +193,17 @@
 }
 
 #pragma mark -- 设置头部视图大小
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     CGSize size= CGSizeMake(0, 40);
     return size;
 }
 
-
+#pragma mark -- 尾部视图大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    CGSize size= CGSizeMake(0, 50);
+    return size;
+}
 
 #pragma mark -- 头部视图注册
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -125,12 +212,22 @@
     // 判断是否是分区头
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        reusableView.backgroundColor = [UIColor greenColor];
+        
+        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 120, 20)];
+        
+        headerL.text = @"目录";
+        
+        [reusableView addSubview:headerL];
+        reusableView.backgroundColor = [UIColor colorWithRed:226.0/255 green:226.0/255 blue:237.0/255 alpha:1.0];
         return reusableView;
     }else
     {
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
         reusableView.backgroundColor = [UIColor redColor];
+        UIView *bottomV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        bottomV.backgroundColor = [UIColor cyanColor];
+        
+        [reusableView addSubview:bottomV];
         
         return reusableView;
     }
@@ -144,19 +241,22 @@
     return self.dataArray.count;
 }
 
+#pragma mark -- 显示cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     VolumecountCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"volumecountcell" forIndexPath:indexPath];
     
-    [cell.volumecountBtn setTitle:self.dataArray[indexPath.item] forState:UIControlStateNormal];
+    FunnyDetailModel *model = self.dataArray[indexPath.item];
     
-    cell.volumecountBtn.layer.cornerRadius = 18;
-    cell.volumecountBtn.layer.borderWidth = 0.1;
+    cell.model = model;
+    
+    cell.volumecountL.layer.cornerRadius = 18;
+    cell.volumecountL.layer.borderWidth = 0.1;
     
     return cell;
 }
 
-// 视图即将出现
+#pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden = YES;
@@ -185,7 +285,7 @@
 - (IBAction)shareAction:(id)sender {
 }
 
-
+#pragma mark -- 视图即将消失
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self.bottomView removeFromSuperview];
@@ -196,6 +296,20 @@
     
     self.tabBarController.tabBar.translucent = NO;
 }
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ReadViewController *readVc = [[ReadViewController alloc] initWithNibName:@"ReadViewController" bundle:nil];
+    
+    readVc.model = self.dataArray[indexPath.item];
+    
+    [self.navigationController pushViewController:readVc animated:YES];
+    
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

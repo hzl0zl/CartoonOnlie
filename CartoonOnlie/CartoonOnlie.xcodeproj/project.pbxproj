@@ -18,6 +18,9 @@
 		3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F2130931D53269B00C88288 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2130911D53269B00C88288 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F2130961D5326AF00C88288 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2130951D5326AF00C88288 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3125E1D5445AB002C4FFD /* ReadViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA312631D54469A002C4FFD /* FunnyDetailModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -89,6 +92,11 @@
 		3F2130901D53269B00C88288 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
 		3F2130911D53269B00C88288 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
 		3F2130951D5326AF00C88288 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
+		3FA3125D1D5445AB002C4FFD /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		3FA3125E1D5445AB002C4FFD /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
+		3FA312621D54469A002C4FFD /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
+		3FA312631D54469A002C4FFD /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 			children = (
 				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
 				3F2130861D53257000C88288 /* FunListModel.h */,
+				3FA312621D54469A002C4FFD /* FunnyDetailModel.h */,
+				3FA312631D54469A002C4FFD /* FunnyDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +335,9 @@
 				3F2130891D53261900C88288 /* FunnyDetailViewController.h */,
 				3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */,
 				3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */,
+				3FA3125D1D5445AB002C4FFD /* ReadViewController.h */,
+				3FA3125E1D5445AB002C4FFD /* ReadViewController.m */,
+				3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -586,6 +599,7 @@
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
+				3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
@@ -668,10 +682,12 @@
 				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
+				3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */,
 				3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				3F2130881D5325BC00C88288 /* FunnyController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
+				3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472EC7491D4C39980081DDC5 /* (null) in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
