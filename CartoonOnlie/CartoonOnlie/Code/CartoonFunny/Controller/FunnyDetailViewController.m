@@ -7,7 +7,6 @@
 //
 
 #import "FunnyDetailViewController.h"
-#import "UIImageView+WebCache.h"
 #import "VolumecountCell.h"
 #import <CoreImage/CoreImage.h>
 #import "ReadViewController.h"
@@ -46,7 +45,7 @@
     
     [self setTopView];
     
-    [self setTopViewBackground];
+//    [self setTopViewBackground];
     
     [self setMiddleView];
     
@@ -61,27 +60,27 @@
 - (void)getData
 {
     NSString *str = [NSString stringWithFormat:@"albumId=%@&customerId=2208260", self.albumId];
-//    NSURL *url = [NSURL URLWithString:str];
     
     [DownLoad dowmLoadWithUrl:FUNNY postBody:str resultBlock:^(NSData *data) {
         
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSArray *array = dic[@"data"][@"list"];
-        
-        for (NSDictionary *dict in array) {
+        if (data != nil) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSArray *array = dic[@"data"][@"list"];
             
-            FunnyDetailModel *model = [[FunnyDetailModel alloc] init];
+            for (NSDictionary *dict in array) {
+                
+                FunnyDetailModel *model = [[FunnyDetailModel alloc] init];
+                
+                [model setValuesForKeysWithDictionary:dict];
+                
+                [self.dataArray addObject:model];
+            }
             
-            [model setValuesForKeysWithDictionary:dict];
-            
-            [self.dataArray addObject:model];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
         }
-        
-        NSLog(@"%@", self.dataArray);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
-        });
-        
+  
     }];
 }
 #pragma mark -- 顶部视图背景
@@ -170,16 +169,6 @@
     return _dataArray;
 }
 
-//- (void)createDataArray
-//{
-//     int count = [self.model.updateSize intValue];
-//    
-//    for (int i = 0; i < count; i++) {
-//        NSString *nameStr = [NSString stringWithFormat:@"第 %d 话", i];
-//        [self.dataArray addObject:nameStr];
-//    }
-//    NSLog(@"%ld", self.dataArray.count);
-//}
 
 #pragma mark -- 设置顶部视图
 - (void)setTopView
@@ -259,6 +248,8 @@
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    
     self.navigationController.navigationBar.hidden = YES;
     
     self.tabBarController.tabBar.hidden= YES;

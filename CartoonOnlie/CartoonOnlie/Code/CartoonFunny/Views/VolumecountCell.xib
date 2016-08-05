@@ -30,6 +30,7 @@
             <connections>
                 <outlet property="volumecountL" destination="fs0-7x-54d" id="b0m-PO-8xo"/>
             </connections>
+            <point key="canvasLocation" x="15" y="283"/>
         </collectionViewCell>
     </objects>
 </document>

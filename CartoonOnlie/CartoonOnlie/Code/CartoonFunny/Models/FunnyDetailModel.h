@@ -10,12 +10,13 @@
 
 @interface FunnyDetailModel : NSObject
 
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString *onlineUrl;
 
 @property (nonatomic, assign) NSNumber *orderNumber;
 
 @property (nonatomic, assign) NSNumber *albumId;
 
 @property (nonatomic, assign) NSNumber *workId;
+
 
 @end

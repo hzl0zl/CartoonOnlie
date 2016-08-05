@@ -7,7 +7,6 @@
 //
 
 #import "FunListCell.h"
-#import "UIImageView+WebCache.h"
 
 @implementation FunListCell
 
