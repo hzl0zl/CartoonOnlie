@@ -17,7 +17,6 @@
 		3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498771D546EEA0056F329 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F24987C1D546EEA0056F329 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2498781D546EEA0056F329 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F24987D1D546F600056F329 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2130871D5325BC00C88288 /* FunnyController.m */; };
-		3F24987E1D546F880056F329 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
 		3F2498821D5470630056F329 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498811D5470630056F329 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
 		3F2498831D5472DD0056F329 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */; };
@@ -57,6 +56,7 @@
 		476753671D546F29000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
+		47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; settings = {ASSET_TAGS = (); }; };
 		47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; };
 		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
 		47E1C5811D5358120037AFC5 /* ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57F1D5358120037AFC5 /* ShowController.m */; settings = {ASSET_TAGS = (); }; };
@@ -168,6 +168,8 @@
 		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
 		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
 		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
+		47A2571D1D54AD3B0016115F /* NSString+Md5String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Md5String.h"; sourceTree = "<group>"; };
+		47A2571E1D54AD3B0016115F /* NSString+Md5String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Md5String.m"; sourceTree = "<group>"; };
 		47E1C57B1D53352F0037AFC5 /* TerrListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrListModel.h; sourceTree = "<group>"; };
 		47E1C57C1D53352F0037AFC5 /* TerrListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrListModel.m; sourceTree = "<group>"; };
 		47E1C57E1D5358120037AFC5 /* ShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowController.h; sourceTree = "<group>"; };
@@ -460,6 +462,8 @@
 				47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */,
 				47EA2C0E1D4C589C007EC6E7 /* Global.h */,
 				47EA2C0F1D4C589C007EC6E7 /* PrefixHeader.pch */,
+				47A2571D1D54AD3B0016115F /* NSString+Md5String.h */,
+				47A2571E1D54AD3B0016115F /* NSString+Md5String.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -730,8 +734,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				476753671D546F29000A30DA /* LoginController.m in Sources */,
-				3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */,
-				3F22A06B1D546D0F005AF6E6 /* FunListCell.m in Sources */,
+				3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */,
+				3F24987D1D546F600056F329 /* FunnyController.m in Sources */,
 				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
 				3F2498791D546EEA0056F329 /* FunListCell.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
@@ -752,6 +756,7 @@
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
 				3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */,
+				47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,

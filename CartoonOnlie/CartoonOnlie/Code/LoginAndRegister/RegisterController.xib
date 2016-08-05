@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterController">
             <connections>
+                <outlet property="again" destination="Z9d-Bp-1fb" id="CiF-Rb-f3y"/>
+                <outlet property="passText" destination="8hb-zy-aei" id="RB7-BR-yQY"/>
+                <outlet property="phoneText" destination="6lW-dM-E9T" id="2Gx-wr-KZL"/>
+                <outlet property="usernameText" destination="h4v-l2-E3w" id="vUX-L3-Qkx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +23,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入您的邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lW-dM-E9T">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="请输入您的手机号吗" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lW-dM-E9T">
                     <rect key="frame" x="72" y="121" width="170" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>

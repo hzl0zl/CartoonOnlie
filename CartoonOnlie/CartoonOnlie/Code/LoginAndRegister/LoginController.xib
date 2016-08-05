@@ -6,8 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController">
             <connections>
+                <outlet property="emailText" destination="Uz1-eo-bzx" id="tT5-1O-6aH"/>
                 <outlet property="loginBtn" destination="kLz-r2-wnK" id="UId-nn-w2s"/>
+                <outlet property="passwordText" destination="pY8-vw-QSk" id="bvG-Ah-bC4"/>
                 <outlet property="qqLogin" destination="QBH-HJ-4Wn" id="jgo-s7-WE3"/>
+                <outlet property="registerBtn" destination="ow0-mC-LUi" id="SZy-hO-6EX"/>
                 <outlet property="sinaLogin" destination="oWk-s3-ANO" id="u4i-gG-Fn2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,26 +24,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="邮箱 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="RPP-GQ-boy">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="手机" translatesAutoresizingMaskIntoConstraints="NO" id="RPP-GQ-boy">
                     <rect key="frame" x="40" y="200" width="22" height="25"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="锁" translatesAutoresizingMaskIntoConstraints="NO" id="GJo-sn-6xT">
                     <rect key="frame" x="40" y="260" width="22" height="20"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="邮箱" placeholder="邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-eo-bzx">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-eo-bzx">
                     <rect key="frame" x="70" y="195" width="200" height="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="密码" placeholder="密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-vw-QSk">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-vw-QSk">
                     <rect key="frame" x="70" y="250" width="200" height="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLz-r2-wnK">
-                    <rect key="frame" x="45" y="302" width="230" height="47"/>
+                    <rect key="frame" x="40" y="309" width="110" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" title="登陆">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,7 +80,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWk-s3-ANO">
-                    <rect key="frame" x="180" y="450" width="110" height="40"/>
+                    <rect key="frame" x="175" y="450" width="110" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="  新浪登陆" image="新浪 (1)"/>
                 </button>
@@ -89,24 +92,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="二次元 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-TW-42m">
                     <rect key="frame" x="132" y="93" width="70" height="62"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ow0-mC-LUi">
-                    <rect key="frame" x="30" y="349" width="60" height="30"/>
-                    <state key="normal" title="注册">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="RFh-Y1-ZHc"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zA-Vy-A3o">
-                    <rect key="frame" x="210" y="349" width="80" height="30"/>
-                    <state key="normal" title="忘记密码 ?">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="forgetAction:" destination="-1" eventType="touchUpInside" id="VQr-Cb-5yT"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jw-5b-46L">
                     <rect key="frame" x="125" y="515" width="60" height="30"/>
                     <state key="normal" title="随便看看">
@@ -114,6 +99,16 @@
                     </state>
                     <connections>
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="VNb-cs-ltW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ow0-mC-LUi">
+                    <rect key="frame" x="170" y="309" width="110" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="RFh-Y1-ZHc"/>
                     </connections>
                 </button>
             </subviews>
@@ -133,8 +128,8 @@
         <image name="bai" width="219" height="190"/>
         <image name="login_bg6" width="405" height="667"/>
         <image name="二次元 (1)" width="128" height="128"/>
+        <image name="手机" width="32" height="32"/>
         <image name="新浪 (1)" width="40" height="32"/>
-        <image name="邮箱 (1)" width="32" height="32"/>
         <image name="锁" width="32" height="32"/>
     </resources>
 </document>

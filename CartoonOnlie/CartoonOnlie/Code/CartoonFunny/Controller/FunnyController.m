@@ -217,6 +217,12 @@
     [self.navigationController pushViewController:funDetailVc animated:YES];
 }
 
+- (void)FunnyleftAction {
+    
+    
+     [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     

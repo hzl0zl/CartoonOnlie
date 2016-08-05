@@ -12,6 +12,8 @@
 
 @interface HMLeftMenuTableViewController ()
 
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation HMLeftMenuTableViewController
@@ -21,6 +23,20 @@
     [self addLeftBtn];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 
+    
+    
+    
+    
+    
+    
+}
+
+- (void)getData {
+    
+    
+    
+    
+    
     
     
 }
@@ -63,20 +79,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 7;
+    return self.dataArray.count;
     
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    cell.textLabel.text = @"当前版本";
+    cell.textLabel.text = self.dataArray[indexPath.row];
     
     return cell;
 }
 
 
 
+- (NSMutableArray *)dataArray {
+    
+    if (_dataArray == nil) {
+        _dataArray = [[NSMutableArray alloc] initWithObjects:@"当前版本",@"清除缓存", @"分享给朋友", @"浏览记录", nil];
+    }
+    return _dataArray;
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
