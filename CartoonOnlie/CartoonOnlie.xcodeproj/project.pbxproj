@@ -12,6 +12,7 @@
 		3F1A97D31D52EE7000235153 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0581D544034005AF6E6 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531AD1D4C5320000EB7E5 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B11D4C5320000EB7E5 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -64,6 +65,8 @@
 		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
 		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
 		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
+		3F22A0571D544034005AF6E6 /* QuadraticWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticWebController.h; sourceTree = "<group>"; };
+		3F22A0581D544034005AF6E6 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
 		3FC531AD1D4C5320000EB7E5 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
 		3FC531AE1D4C5320000EB7E5 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
 		3FC531AF1D4C5320000EB7E5 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 			children = (
 				3F1A97D11D52EE7000235153 /* QuadraticController.h */,
 				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
+				3F22A0571D544034005AF6E6 /* QuadraticWebController.h */,
+				3F22A0581D544034005AF6E6 /* QuadraticWebController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				472EC7461D4C39870081DDC5 /* FunnyController.m in Sources */,
 				3FC531B01D4C5320000EB7E5 /* FunListCell.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
+				3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,

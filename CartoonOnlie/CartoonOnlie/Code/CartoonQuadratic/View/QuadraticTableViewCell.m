@@ -13,7 +13,7 @@
 @interface QuadraticTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *url;
-@property (weak, nonatomic) IBOutlet UILabel *title;
+
 
 @end
 
@@ -26,10 +26,7 @@
     NSURL *urls = [NSURL URLWithString:model.cover_image_url];
     
     [self.url sd_setImageWithURL:urls];
-    
- 
-    
-    self.title.text = model.title;
+
     
 }
 
