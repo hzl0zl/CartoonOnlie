@@ -20,6 +20,7 @@
 		3F24987E1D546F880056F329 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
 		3F2498821D5470630056F329 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498811D5470630056F329 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
+		3F2498831D5472DD0056F329 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */; };
 		3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3125E1D5445AB002C4FFD /* ReadViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA312631D54469A002C4FFD /* FunnyDetailModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -638,6 +639,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2498831D5472DD0056F329 /* FunnyDetailViewController.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
