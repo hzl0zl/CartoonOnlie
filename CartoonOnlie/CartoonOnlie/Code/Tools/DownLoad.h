@@ -14,4 +14,5 @@ typedef void (^Block) (NSData *data);
 
 + (void)dowmLoadWithUrl:(NSString *)urls postBody:(NSString *)postBody resultBlock:(Block)resultBlock;
 
+
 @end

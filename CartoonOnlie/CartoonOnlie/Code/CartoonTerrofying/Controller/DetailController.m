@@ -11,7 +11,7 @@
 #import "TerrofyingModel.h"
 #import "DetailCell.h"
 #import "TerrofyingController.h"
-
+#import "HMDrawerViewController.h"
 
 @interface DetailController ()
 
@@ -37,12 +37,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(TerroleftAction)];
     
     UINib *nib = [UINib nibWithNibName:@"DetailCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"detaiCell"];
     [self createHeaderView];
     [self getCollectionData];
     [self getHeaderViewData];
+}
+- (void)TerroleftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,7 +97,7 @@
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//                        NSLog(@"%@", dictData);
+                        NSLog(@"%@", dictData);
 //            NSLog(@"%@", dictData[@"result"]);
             NSArray *arr = dictData[@"result"];
             
@@ -162,6 +169,9 @@
     
     TerrofyingController *terrVc = [[TerrofyingController alloc] init];
     
+    TerrofyingModel *model = self.dataTableViewArray[indexPath.row];
+    
+    terrVc.ids = model.ids;
     [self.navigationController pushViewController:terrVc animated:YES];
     
     

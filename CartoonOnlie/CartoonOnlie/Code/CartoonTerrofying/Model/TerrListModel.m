@@ -1,17 +1,16 @@
 //
-//  TerrofyingModel.m
+//  TerrListModel.m
 //  CartoonOnlie
 //
-//  Created by zhiling on 16/7/30.
+//  Created by zhiling on 16/8/4.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
 
-#import "TerrofyingModel.h"
+#import "TerrListModel.h"
 
-@implementation TerrofyingModel
+@implementation TerrListModel
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    
     
 }
 
@@ -20,12 +19,11 @@
     [super setValue:value forKey:key];
     if ([key isEqualToString:@"id"]) {
         
-        self.ids = [NSString stringWithFormat:@"%@", value];
+        self.showID = [NSString stringWithFormat:@"%@", value];
         
     }
     
     
 }
-
 
 @end

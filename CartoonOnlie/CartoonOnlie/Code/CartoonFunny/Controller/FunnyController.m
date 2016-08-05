@@ -10,7 +10,7 @@
 #import "FunListCell.h"
 #import "FunListModel.h"
 #import "FunnyDetailViewController.h"
-
+#import "HMDrawerViewController.h"
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -98,7 +98,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
     self.navigationController.navigationBar.translucent = NO;
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];

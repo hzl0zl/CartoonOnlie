@@ -11,6 +11,10 @@
 #import "TerrofyingModel.h"
 #import "TerrofyingCell.h"
 #import "DetailController.h"
+#import "TerrListModel.h"
+#import "ShowController.h"
+
+
 
 @interface TerrofyingController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -30,10 +34,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
-//    [self getHeaderViewData];
     [self getCollectionData];
-//    [self createCollectionView];
-//     [self createHeaderView];
+    [self createCollectionView];
+     [self createHeaderView];
     
     
 }
@@ -54,7 +57,7 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
     //每一个item大小
-    flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH / 7 * 2, SCREEN_HEIGHT / 10 * 2);
+    flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH / 7 * 2, 135);
     
     //列数, 根据Item的大小和最小间距来
 //    flowLayout.minimumInteritemSpacing = 10;
@@ -91,8 +94,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-//    DetailController *detailVC = [[DetailController alloc] init];
-//    [self.navigationController pushViewController:detailVC animated:YES];
+    ShowController *showVC = [[ShowController alloc] initWithNibName:@"ShowController" bundle:nil];
+    showVC.ids = self.ids;
+    
+    TerrListModel *listModel = self.dataCollectionArray[indexPath.row];
+    showVC.showID = listModel.showID;
+    [self.navigationController pushViewController:showVC animated:YES];
+    
     
     
 }
@@ -114,9 +122,9 @@
         UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         view.backgroundColor = [UIColor yellowColor];
         UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT / 10 * 3, SCREEN_WIDTH, SCREEN_HEIGHT / 12 )];
-        lable.backgroundColor = [UIColor magentaColor];
+//        lable.backgroundColor = [UIColor magentaColor];
         view.backgroundColor = [UIColor blackColor];
-        lable.text = @"恐怖漫画";
+        lable.text = @"漫画列表";
         [view addSubview:self.imageViewH];
         [view addSubview:lable];
         
@@ -138,7 +146,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     TerrofyingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"terrofyingCell" forIndexPath:indexPath];
-    TerrofyingModel *model = [[TerrofyingModel alloc] init];
+    TerrListModel *model = [[TerrListModel alloc] init];
     model = self.dataCollectionArray[indexPath.item];
     cell.backgroundColor = [UIColor whiteColor];
     cell.terrModel = model;
@@ -146,6 +154,8 @@
     cell.layer.masksToBounds = YES;
     return cell;
 }
+
+
 
 - (void)createHeaderView {
     self.imageViewH = [[UIImageView alloc] init];
@@ -155,71 +165,64 @@
     [self.view addSubview:self.imageViewH];
     
 }
-#pragma mark ===请求数据
-- (void)getHeaderViewData {
-    
-    
-    
-    NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getBranchFoucs"];
-    NSString *body = @"deviceToken=nil&hash=3142f5bba043af28dfc75f3f3ccc2065&appc=as_kbmh&appv=1.0.3.100&resolution=375%2C667&dateline=1469846871821";
-    [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
-       
-        if (data != nil) {
-            NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            NSArray *arr1 = dictData[@"result"];
-            
-            NSDictionary *dict1 = [arr1 firstObject];
-            self.headerStr = dict1[@"img"];
-            
-        }else {
-            
-            NSLog(@"数据为空");
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [ self.imageViewH sd_setImageWithURL:[NSURL URLWithString:self.headerStr]];
-           
-        });
-
-    }];
-}
 #pragma mark ===collection请求数据
 - (void)getCollectionData {
     
         NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getList"];
-        NSString *body = @"appc=as_kbmh&hash=729ccececbd686663dc46a985534874e&sort=0&cid=83&resolution=375%2C667&dateline=1470291415022&page=1&deviceToken=nil&appv=1.0.3.100";
+//        NSString *body = @"appc=as_kbmh&hash=729ccececbd686663dc46a985534874e&sort=0&cid=83&resolution=375%2C667&dateline=1470291415022&page=1&deviceToken=nil&appv=1.0.3.100";
     
-    [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
+    NSString *body1 = @"&resolution=375%2C667&dateline=1470291415022&page=1&deviceToken=nil&appv=1.0.3.100";
+    
+    NSString *body = [NSString stringWithFormat:@"appc=as_kbmh&hash=729ccececbd686663dc46a985534874e&sort=0&cid=%@", self.ids];
+    
+    NSString *bodyStr = [body stringByAppendingString:body1];
+ 
+    [DownLoad dowmLoadWithUrl:urlStr postBody:bodyStr resultBlock:^(NSData *data) {
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             NSLog(@"%@", dictData);
             
             NSLog(@"%@", dictData[@"result"]);
-            NSArray *arr = dictData[@"result"];
+            NSArray *arr = dictData[@"result"][@"list"];
+            NSMutableArray *listArr = [NSMutableArray array];
+            NSLog(@"%lu", (unsigned long)arr.count);
             
-            NSLog(@"%@", arr);
+            [self.imageViewH sd_setImageWithURL:[NSURL URLWithString:dictData[@"result"][@"photo"]]];
+            
             for (NSDictionary *dict1 in arr) {
                 
-                TerrofyingModel *model = [[TerrofyingModel alloc] init];
+                TerrListModel *model = [[TerrListModel alloc] init];
                 
                 [model setValuesForKeysWithDictionary:dict1];
                 
-                [self.dataCollectionArray addObject:model];
+                [listArr addObject:model];
              
                 }
+           
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+               NSArray *alist = [ listArr sortedArrayUsingComparator:^NSComparisonResult(TerrListModel *p2, TerrListModel *p1) {
+                    
+                    return [p2.updatetime compare:p1.updatetime];
+                }];
+                
+                self.dataCollectionArray = (NSMutableArray *)alist;
+                [self.collectionView reloadData];
+            });
+
         
         }else {
             
             NSLog(@"数据为空");
         }
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog( @"%@",   self.dataCollectionArray);
-            [self.collectionView reloadData];
-        });
         
     }];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
