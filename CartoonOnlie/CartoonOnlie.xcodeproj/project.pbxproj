@@ -47,6 +47,10 @@
 		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC7491D4C39980081DDC5 /* (null) in Sources */ = {isa = PBXBuildFile; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
+		476753601D5428E2000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; settings = {ASSET_TAGS = (); }; };
+		476753611D5428E2000A30DA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4767535F1D5428E2000A30DA /* LoginController.xib */; settings = {ASSET_TAGS = (); }; };
+		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
+		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; };
@@ -144,6 +148,12 @@
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
 		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
 		472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingController.m; sourceTree = "<group>"; };
+		4767535D1D5428E2000A30DA /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		4767535E1D5428E2000A30DA /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		4767535F1D5428E2000A30DA /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		476753621D5458B5000A30DA /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
+		476753631D5458B5000A30DA /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
+		476753641D5458B5000A30DA /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
 		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
 		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
@@ -295,6 +305,7 @@
 		472EC7031D4C34D40081DDC5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				4767535C1D5428B5000A30DA /* LoginAndRegister */,
 				47EA2BFC1D4C480B007EC6E7 /* Tools */,
 				472EC7341D4C39290081DDC5 /* CartoonFunny */,
 				472EC7381D4C39290081DDC5 /* CartoonQuadratic */,
@@ -407,6 +418,19 @@
 				47E1C5801D5358120037AFC5 /* ShowController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4767535C1D5428B5000A30DA /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				4767535D1D5428E2000A30DA /* LoginController.h */,
+				4767535E1D5428E2000A30DA /* LoginController.m */,
+				4767535F1D5428E2000A30DA /* LoginController.xib */,
+				476753621D5458B5000A30DA /* RegisterController.h */,
+				476753631D5458B5000A30DA /* RegisterController.m */,
+				476753641D5458B5000A30DA /* RegisterController.xib */,
+			);
+			path = LoginAndRegister;
 			sourceTree = "<group>";
 		};
 		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
@@ -598,6 +622,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				3F2130961D5326AF00C88288 /* VolumecountCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
@@ -611,6 +636,7 @@
 				3F21308D1D53261900C88288 /* FunnyDetailViewController.xib in Resources */,
 				3F2130841D53254C00C88288 /* FunListCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
+				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +719,7 @@
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472EC7491D4C39980081DDC5 /* (null) in Sources */,
+				476753601D5428E2000A30DA /* LoginController.m in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
@@ -715,6 +742,7 @@
 				472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
+				476753651D5458B5000A30DA /* RegisterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
