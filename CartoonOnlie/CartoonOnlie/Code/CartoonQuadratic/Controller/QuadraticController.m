@@ -98,10 +98,8 @@
             model.title = dic1[@"title"];
             //分区头标题
             self.titleArry =  dic1[@"topic"][@"title"];
-             NSLog(@"$$%@",self.titleArry);
             //分区头作者
             NSDictionary *dic2 = dic1[@"topic"][@"user"];
-            
             model.nickname = dic2[@"nickname"];
             
             //漫画内容
