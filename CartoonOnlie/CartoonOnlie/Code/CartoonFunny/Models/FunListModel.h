@@ -22,7 +22,6 @@
 
 @property (nonatomic, strong) NSString *label;
 
-@property (nonatomic, assign) NSNumber *collectNum;
 
 @property (nonatomic, assign) NSNumber *status;
 
