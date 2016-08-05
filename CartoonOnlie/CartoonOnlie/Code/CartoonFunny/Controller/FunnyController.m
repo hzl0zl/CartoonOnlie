@@ -10,12 +10,14 @@
 #import "FunListCell.h"
 #import "FunListModel.h"
 #import "SDCycleScrollView.h"
-
+#import "FunnyDetailViewController.h"
+#import "HMDrawerViewController.h"
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
+// 数据源
 @property (nonatomic, strong) NSMutableArray *funList;
 
 
@@ -51,7 +53,7 @@
     
     if (_tableView == nil) {
         
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:0];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 113) style:0];
         
         _tableView.delegate = self;
         
@@ -71,49 +73,47 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor redColor];
-    
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
+    self.navigationController.navigationBar.translucent = NO;
     self.tableView.backgroundColor = [UIColor grayColor];
-    
     [self.view addSubview:self.tableView];
     
     [self getData];
     
 }
 
+// 获取网络数据
 - (void)getData
 {
-    [DownLoad dowmLoadWithUrl:FUNNYLIST postBody:nil resultBlock:^(NSData *data) {
+    
+    [DownLoad dowmLoadWithUrl:FUNNYLIST postBody:FUNNYLISTPOST resultBlock:^(NSData *data) {
         if (data == nil) {
             return;
         }else
         {
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             
-            NSArray *array = dict[@"work"];
-            
-            NSMutableArray *scrollArray = [NSMutableArray array];
+            NSArray *array = dict[@"data"][@"list"];
+        
             
             for (NSDictionary *dic in array) {
                 
-                [scrollArray addObject:dic[@"cover"][@"url"]];
-                
                 FunListModel *model = [[FunListModel alloc] init];
-                model.url = dic[@"cover"][@"url"];
-                
                 [model setValuesForKeysWithDictionary:dic];
                 
-                [self.funList addObject:model];
+                NSURL *url = [NSURL URLWithString:model.coverPic];
+                if (url) {
+                    [self.funList addObject:model];
+                }
+        
             }
             NSLog(@"%@", self.funList);
+            
+            FunListModel *model = self.funList[2];
+            
+            NSLog(@"%@", model.updateSize);
+            
             dispatch_async(dispatch_get_main_queue(), ^{
-                
-                SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150) delegate:nil placeholderImage:nil];
-                
-                cycleScrollView.imageURLStringsGroup = scrollArray;
-                
-                self.tableView.tableHeaderView = cycleScrollView;
                 
                 [self.tableView reloadData];
             });
@@ -123,6 +123,7 @@
 }
 
 
+// 返回每个分区的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 
 {
@@ -131,8 +132,7 @@
     
 }
 
-
-
+// 显示cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
@@ -148,11 +148,11 @@
 }
 
 
-
+// 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-    
+//    return (SCREEN_HEIGHT - 113) / 600 * 150 ;
     return 120.f;
     
 }
@@ -166,8 +166,21 @@
     
 }
 
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
+    
+    
+    funDetailVc.model = self.funList[indexPath.row];
+    
+    [self.navigationController pushViewController:funDetailVc animated:YES];
+}
+- (void)FunnyleftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
+}
 /*
  
  #pragma mark - Navigation

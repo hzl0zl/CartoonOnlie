@@ -12,8 +12,10 @@
 
 @property (nonatomic, strong) NSString *wiki_title;
 
-@property (nonatomic, strong) NSString *small;
+@property (nonatomic, strong) NSDictionary *wiki_cover;
 
 @property (nonatomic, strong) NSString *wiki_id;
+
+//@property (nonatomic, strong) NSString *wiki_id;
 
 @end

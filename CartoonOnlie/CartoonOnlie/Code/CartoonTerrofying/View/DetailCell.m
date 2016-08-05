@@ -7,7 +7,7 @@
 //
 
 #import "DetailCell.h"
-#import "UIImageView+WebCache.h"
+
 
 @interface DetailCell ()
 

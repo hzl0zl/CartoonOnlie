@@ -10,6 +10,8 @@
 #import "UIImageView+WebCache.h"
 #import "TerrofyingModel.h"
 #import "DetailCell.h"
+#import "TerrofyingController.h"
+#import "HMDrawerViewController.h"
 
 @interface DetailController ()
 
@@ -35,18 +37,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(TerroleftAction)];
     
     UINib *nib = [UINib nibWithNibName:@"DetailCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"detaiCell"];
-    
     [self createHeaderView];
     [self getCollectionData];
     [self getHeaderViewData];
 }
+- (void)TerroleftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
+    
     
     
     
@@ -56,10 +64,14 @@
 - (void)getHeaderViewData {
     NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getBranchFoucs"];
     NSString *body = @"deviceToken=nil&hash=3142f5bba043af28dfc75f3f3ccc2065&appc=as_kbmh&appv=1.0.3.100&resolution=375%2C667&dateline=1469846871821";
+    
+   
     [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//            NSLog(@"%@", dictData);
+            
             NSArray *arr1 = dictData[@"result"];
             
             NSDictionary *dict1 = [arr1 firstObject];
@@ -85,8 +97,8 @@
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            //            NSLog(@"%@", dictData);
-            NSLog(@"%@", dictData[@"result"]);
+                        NSLog(@"%@", dictData);
+//            NSLog(@"%@", dictData[@"result"]);
             NSArray *arr = dictData[@"result"];
             
             NSLog(@"%@", arr);
@@ -106,7 +118,7 @@
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog( @"%@",   self.dataTableViewArray);
+//            NSLog( @"%@",   self.dataTableViewArray);
             [self.tableView reloadData];
         });
         
@@ -116,7 +128,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return self.dataTableViewArray.count;
 }
 - (void)createHeaderView {
@@ -124,7 +136,7 @@
     self.imageViewH.backgroundColor = [UIColor lightGrayColor];
     
     self.imageViewH.frame = CGRectMake(0, 0, SCREEN_WIDTH, 160);
-//    [self.view addSubview:self.imageViewH];
+    //    [self.view addSubview:self.imageViewH];
     
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -141,7 +153,7 @@
     
     TerrofyingModel *model = self.dataTableViewArray[indexPath.row];
     
-    cell.terrModel = model;  
+    cell.terrModel = model;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -153,6 +165,17 @@
     return 160;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TerrofyingController *terrVc = [[TerrofyingController alloc] init];
+    
+    TerrofyingModel *model = self.dataTableViewArray[indexPath.row];
+    
+    terrVc.ids = model.ids;
+    [self.navigationController pushViewController:terrVc animated:YES];
+    
+    
+}
 
 
 

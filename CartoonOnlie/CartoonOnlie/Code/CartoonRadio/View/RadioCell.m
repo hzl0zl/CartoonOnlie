@@ -7,7 +7,6 @@
 //
 
 #import "RadioCell.h"
-
 @interface RadioCell ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageH;
@@ -17,6 +16,29 @@
 @end
 
 @implementation RadioCell
+
+
+- (void)setRadioModel:(RadioModel *)radioModel {
+    
+    _radioModel = radioModel;
+    
+    self.titleL.text = radioModel.wiki_title;
+    
+    NSDictionary *dict = radioModel.wiki_cover;
+//    NSLog(@"%@", dict);
+    self.imageH.layer.cornerRadius = 20;
+    self.imageH.layer.masksToBounds = YES;
+ 
+    [self.imageH sd_setImageWithURL:[NSURL URLWithString:dict[@"small"]]];
+    if (self.imageH.image == nil) {
+           self.imageH.image = [UIImage imageNamed:@"bgm"];
+    }
+    
+
+    
+}
+
+
 
 - (void)awakeFromNib {
     // Initialization code

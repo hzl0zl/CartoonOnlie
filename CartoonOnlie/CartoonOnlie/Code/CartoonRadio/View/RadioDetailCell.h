@@ -1,0 +1,19 @@
+//
+//  RadioDetailCell.h
+//  CartoonOnlie
+//
+//  Created by zhiling on 16/8/3.
+//  Copyright © 2016年 huangzhiling. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "RadioDetaiModel.h"
+
+
+@interface RadioDetailCell : UITableViewCell
+
+@property (nonatomic, strong) RadioDetaiModel *radioDetailModel;
+
+@property (nonatomic, strong) NSString *imageStr;
+
+@end

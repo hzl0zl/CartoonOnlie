@@ -7,7 +7,7 @@
 //
 
 #import "TerrofyingCell.h"
-#import "UIImageView+WebCache.h"
+
 
 @interface TerrofyingCell ()
 
@@ -17,23 +17,24 @@
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *descLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleL;
 
 @end
 
 @implementation TerrofyingCell
 
-- (void)setTerrModel:(TerrofyingModel *)terrModel {
+- (void)setTerrModel:(TerrListModel *)terrModel {
+    
     
     _terrModel = terrModel;
     
-    [self.imageH sd_setImageWithURL:[NSURL URLWithString:terrModel.cover]];
-    self.titleLabel.text = terrModel.name;
-    self.descLabel.text = terrModel.shotdesc;
-    
-    
-    
+    [self.imageH sd_setImageWithURL:[NSURL URLWithString:terrModel.pcover]];
+    self.titleLabel.text = terrModel.title;
+    self.descLabel.text = [NSString stringWithFormat:@"%@", terrModel.dig];
+    self.titleL.text = [NSString stringWithFormat:@"%@", terrModel.updatetime];
     
 }
+
 - (void)awakeFromNib {
     // Initialization code
 }

@@ -18,17 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftAction)];
-    
-    
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftAction)];
+//    
+//    
     
     
 }
 
-- (void)leftAction {
-    
-    [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-    
-}
+//- (void)leftAction {
+//    
+//    [[HMDrawerViewController shareDrawer] openLeftMenu];
+//    
+//    
+//}
 @end
