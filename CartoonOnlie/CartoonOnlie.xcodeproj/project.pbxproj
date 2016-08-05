@@ -47,10 +47,10 @@
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
-		476753601D5428E2000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; settings = {ASSET_TAGS = (); }; };
 		476753611D5428E2000A30DA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4767535F1D5428E2000A30DA /* LoginController.xib */; settings = {ASSET_TAGS = (); }; };
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
+		476753671D546F29000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; };
@@ -714,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476753671D546F29000A30DA /* LoginController.m in Sources */,
 				3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */,
 				3F22A06B1D546D0F005AF6E6 /* FunListCell.m in Sources */,
 				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
@@ -879,7 +880,7 @@
 			baseConfigurationReference = E8450B81A0D8416EC6F59D2F /* Pods-CartoonOnlie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.CartoonOnlie;
@@ -892,7 +893,7 @@
 			baseConfigurationReference = AA82DCF6822C97A619D057A9 /* Pods-CartoonOnlie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.CartoonOnlie;
