@@ -11,15 +11,19 @@
 		3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97CF1D52EE4300235153 /* QuadraticModel.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0581D544034005AF6E6 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
-		3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
-		3F22A0621D546CF1005AF6E6 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A05E1D546CF1005AF6E6 /* FunnyController.m */; settings = {ASSET_TAGS = (); }; };
-		3F22A0631D546CF1005AF6E6 /* FunnyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0601D546CF1005AF6E6 /* FunnyDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3F22A0641D546CF1005AF6E6 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A0611D546CF1005AF6E6 /* FunnyDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		3F22A06B1D546D0F005AF6E6 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0661D546D0F005AF6E6 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
-		3F22A06C1D546D0F005AF6E6 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A0671D546D0F005AF6E6 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3F22A06D1D546D0F005AF6E6 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0691D546D0F005AF6E6 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
-		3F22A06E1D546D0F005AF6E6 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A06A1D546D0F005AF6E6 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F2498791D546EEA0056F329 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498741D546EEA0056F329 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F24987A1D546EEA0056F329 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2498751D546EEA0056F329 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498771D546EEA0056F329 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F24987C1D546EEA0056F329 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2498781D546EEA0056F329 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F24987D1D546F600056F329 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2130871D5325BC00C88288 /* FunnyController.m */; };
+		3F24987E1D546F880056F329 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
+		3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
+		3F2498821D5470630056F329 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498811D5470630056F329 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
+		3F2498831D5472DD0056F329 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */; };
+		3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3125E1D5445AB002C4FFD /* ReadViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA312631D54469A002C4FFD /* FunnyDetailModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -86,19 +90,24 @@
 		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
 		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
 		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
-		3F22A0571D544034005AF6E6 /* QuadraticWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticWebController.h; sourceTree = "<group>"; };
-		3F22A0581D544034005AF6E6 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
-		3F22A05D1D546CE1005AF6E6 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
-		3F22A05E1D546CF1005AF6E6 /* FunnyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyController.m; sourceTree = "<group>"; };
-		3F22A05F1D546CF1005AF6E6 /* FunnyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailViewController.h; sourceTree = "<group>"; };
-		3F22A0601D546CF1005AF6E6 /* FunnyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailViewController.m; sourceTree = "<group>"; };
-		3F22A0611D546CF1005AF6E6 /* FunnyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyDetailViewController.xib; sourceTree = "<group>"; };
-		3F22A0651D546D0F005AF6E6 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
-		3F22A0661D546D0F005AF6E6 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
-		3F22A0671D546D0F005AF6E6 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
-		3F22A0681D546D0F005AF6E6 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
-		3F22A0691D546D0F005AF6E6 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
-		3F22A06A1D546D0F005AF6E6 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
+		3F2130861D53257000C88288 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
+		3F2130871D5325BC00C88288 /* FunnyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyController.m; sourceTree = "<group>"; };
+		3F2130891D53261900C88288 /* FunnyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailViewController.h; sourceTree = "<group>"; };
+		3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyDetailViewController.xib; sourceTree = "<group>"; };
+		3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailViewController.m; sourceTree = "<group>"; };
+		3F2498731D546EEA0056F329 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
+		3F2498741D546EEA0056F329 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
+		3F2498751D546EEA0056F329 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
+		3F2498761D546EEA0056F329 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
+		3F2498771D546EEA0056F329 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
+		3F2498781D546EEA0056F329 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
+		3F2498801D5470630056F329 /* QuadraticWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticWebController.h; sourceTree = "<group>"; };
+		3F2498811D5470630056F329 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
+		3FA3125D1D5445AB002C4FFD /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		3FA3125E1D5445AB002C4FFD /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
+		3FA312621D54469A002C4FFD /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
+		3FA312631D54469A002C4FFD /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
@@ -212,8 +221,10 @@
 		3FC531AB1D4C5313000EB7E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3F22A05D1D546CE1005AF6E6 /* FunListModel.h */,
 				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
+				3F2130861D53257000C88288 /* FunListModel.h */,
+				3FA312621D54469A002C4FFD /* FunnyDetailModel.h */,
+				3FA312631D54469A002C4FFD /* FunnyDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,12 +232,12 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3F22A0651D546D0F005AF6E6 /* FunListCell.h */,
-				3F22A0661D546D0F005AF6E6 /* FunListCell.m */,
-				3F22A0671D546D0F005AF6E6 /* FunListCell.xib */,
-				3F22A0681D546D0F005AF6E6 /* VolumecountCell.h */,
-				3F22A0691D546D0F005AF6E6 /* VolumecountCell.m */,
-				3F22A06A1D546D0F005AF6E6 /* VolumecountCell.xib */,
+				3F2498731D546EEA0056F329 /* FunListCell.h */,
+				3F2498741D546EEA0056F329 /* FunListCell.m */,
+				3F2498751D546EEA0056F329 /* FunListCell.xib */,
+				3F2498761D546EEA0056F329 /* VolumecountCell.h */,
+				3F2498771D546EEA0056F329 /* VolumecountCell.m */,
+				3F2498781D546EEA0056F329 /* VolumecountCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,11 +355,14 @@
 		472EC7351D4C39290081DDC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F22A05E1D546CF1005AF6E6 /* FunnyController.m */,
-				3F22A05F1D546CF1005AF6E6 /* FunnyDetailViewController.h */,
-				3F22A0601D546CF1005AF6E6 /* FunnyDetailViewController.m */,
-				3F22A0611D546CF1005AF6E6 /* FunnyDetailViewController.xib */,
 				472EC7441D4C39870081DDC5 /* FunnyController.h */,
+				3F2130871D5325BC00C88288 /* FunnyController.m */,
+				3F2130891D53261900C88288 /* FunnyDetailViewController.h */,
+				3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */,
+				3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */,
+				3FA3125D1D5445AB002C4FFD /* ReadViewController.h */,
+				3FA3125E1D5445AB002C4FFD /* ReadViewController.m */,
+				3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,10 +380,10 @@
 		472EC7391D4C39290081DDC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F2498801D5470630056F329 /* QuadraticWebController.h */,
+				3F2498811D5470630056F329 /* QuadraticWebController.m */,
 				3F1A97D11D52EE7000235153 /* QuadraticController.h */,
 				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
-				3F22A0571D544034005AF6E6 /* QuadraticWebController.h */,
-				3F22A0581D544034005AF6E6 /* QuadraticWebController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -626,22 +640,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2498831D5472DD0056F329 /* FunnyDetailViewController.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
-				3F22A06C1D546D0F005AF6E6 /* FunListCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
+				3F24987C1D546EEA0056F329 /* VolumecountCell.xib in Resources */,
 				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
+				3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
-				3F22A0641D546CF1005AF6E6 /* FunnyDetailViewController.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
-				3F22A06E1D546D0F005AF6E6 /* VolumecountCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
+				3F24987A1D546EEA0056F329 /* FunListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,24 +733,26 @@
 				3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */,
 				3F22A06B1D546D0F005AF6E6 /* FunListCell.m in Sources */,
 				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
+				3F2498791D546EEA0056F329 /* FunListCell.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
+				3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */,
+				3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
+				3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
+				3F2498821D5470630056F329 /* QuadraticWebController.m in Sources */,
 				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				472EC70B1D4C35560081DDC5 /* HMMessageViewController.m in Sources */,
-				3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */,
-				3F22A0621D546CF1005AF6E6 /* FunnyController.m in Sources */,
-				3F22A06D1D546D0F005AF6E6 /* VolumecountCell.m in Sources */,
+				3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
-				3F22A0631D546CF1005AF6E6 /* FunnyDetailViewController.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,

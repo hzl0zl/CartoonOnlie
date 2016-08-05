@@ -14,4 +14,12 @@
     // Initialization code
 }
 
+- (void)setModel:(FunnyDetailModel *)model
+{
+    if (_model != model) {
+        _model = model;
+        self.volumecountL.text = [NSString stringWithFormat:@"第 %@ 话", model.orderNumber];
+    }
+}
+
 @end

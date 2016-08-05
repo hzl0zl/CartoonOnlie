@@ -238,7 +238,7 @@ return self; \
 #define FUNNYLIST @"http://api.youqudao.com/mhapi/api/list/search"
 #define FUNNYLISTPOST @"market=15&customerId=2208260&uuid=7c:1d:d9:9f:c7:2f&keyWord=%E6%90%9E%E7%AC%91&startIndex=0&size=20&categoryId=-1&appversion=21"
 
-
+#define FUNNY @"http://api.youqudao.com/mhapi/api/album/detail?"
 
 
 
