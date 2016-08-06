@@ -9,8 +9,9 @@
 #import "HMLeftMenuTableViewController.h"
 #import "HMDrawerViewController.h"
 #import "LoginController.h"
+#import "UMSocial.h"
 
-@interface HMLeftMenuTableViewController ()
+@interface HMLeftMenuTableViewController ()<UMSocialUIDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
@@ -102,6 +103,31 @@
     
 }
 
+
+#pragma mark -- 选中cell时触发的方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 2) {
+        [UMSocialData defaultData].extConfig.title = @"分享的title";
+        [UMSocialData defaultData].extConfig.qqData.url = @"http://baidu.com";
+        [UMSocialSnsService presentSnsIconSheetView:self
+                                             appKey:@"57a5423267e58ebd7000281e"
+                                          shareText:@"友盟社会化分享让您快速实现分享等社会化功能，http://umeng.com/social"
+                                         shareImage:[UIImage imageNamed:@"icon"]
+                                    shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                           delegate:self];
+    }
+}
+
+#pragma mark -- 协议代理方法
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        //得到分享到的平台名
+        NSLog(@"分享成功");
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
