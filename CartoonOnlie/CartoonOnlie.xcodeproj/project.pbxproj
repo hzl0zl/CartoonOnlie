@@ -41,7 +41,6 @@
 		472299581D5220190085BC66 /* RadioPlayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472299551D5220190085BC66 /* RadioPlayController.xib */; settings = {ASSET_TAGS = (); }; };
 		4722995B1D52204C0085BC66 /* AVManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 472299591D52204C0085BC66 /* AVManager.m */; settings = {ASSET_TAGS = (); }; };
 		472EC6D21D4C33890081DDC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D11D4C33890081DDC5 /* main.m */; };
-		472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; };
 		472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472EC6DC1D4C33890081DDC5 /* Assets.xcassets */; };
 		472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472EC6DE1D4C33890081DDC5 /* LaunchScreen.storyboard */; };
 		472EC6EB1D4C33890081DDC5 /* CartoonOnlieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6EA1D4C33890081DDC5 /* CartoonOnlieTests.m */; };
@@ -53,6 +52,7 @@
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
 		476753671D546F29000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
+		478922131D558E3C00CCD728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; settings = {ASSET_TAGS = (); }; };
@@ -751,7 +751,6 @@
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */,
 				47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */,
-				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
@@ -763,6 +762,7 @@
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
 				476753651D5458B5000A30DA /* RegisterController.m in Sources */,
+				478922131D558E3C00CCD728 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -83,6 +83,9 @@
                     <rect key="frame" x="175" y="450" width="110" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="  新浪登陆" image="新浪 (1)"/>
+                    <connections>
+                        <action selector="wbAction:" destination="-1" eventType="touchUpInside" id="0NB-Bk-LNi"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-HJ-4Wn">
                     <rect key="frame" x="40" y="450" width="110" height="40"/>
