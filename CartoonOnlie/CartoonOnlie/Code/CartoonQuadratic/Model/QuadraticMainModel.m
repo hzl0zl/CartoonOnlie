@@ -1,14 +1,14 @@
 //
-//  QuadraticModel.m
+//  QuadraticMainModel.m
 //  CartoonOnlie
 //
-//  Created by lanou on 16/8/4.
+//  Created by lanou on 16/8/5.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
 
-#import "QuadraticModel.h"
+#import "QuadraticMainModel.h"
 
-@implementation QuadraticModel
+@implementation QuadraticMainModel
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key
 {

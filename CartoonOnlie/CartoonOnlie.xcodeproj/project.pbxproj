@@ -11,6 +11,7 @@
 		3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97CF1D52EE4300235153 /* QuadraticModel.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F21BD351D55BAE400316880 /* SgementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21BD341D55BAE400316880 /* SgementController.m */; settings = {ASSET_TAGS = (); }; };
 		3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0581D544034005AF6E6 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
 		3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
 		3F22A0621D546CF1005AF6E6 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A05E1D546CF1005AF6E6 /* FunnyController.m */; settings = {ASSET_TAGS = (); }; };
@@ -20,6 +21,13 @@
 		3F22A06C1D546D0F005AF6E6 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A0671D546D0F005AF6E6 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F22A06D1D546D0F005AF6E6 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0691D546D0F005AF6E6 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F22A06E1D546D0F005AF6E6 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A06A1D546D0F005AF6E6 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F22A06F1D546F47005AF6E6 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
+		3F22A0721D54766F005AF6E6 /* MainQuadraticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3F22A0751D5476C0005AF6E6 /* QuadraticMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */; settings = {ASSET_TAGS = (); }; };
+		3F22A08A1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0881D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F22A08B1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A0891D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F22A08F1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A08D1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F22A0901D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F22A08E1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -47,13 +55,11 @@
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
-		476753601D5428E2000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; settings = {ASSET_TAGS = (); }; };
 		476753611D5428E2000A30DA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4767535F1D5428E2000A30DA /* LoginController.xib */; settings = {ASSET_TAGS = (); }; };
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
-		47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; };
 		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
 		47E1C5811D5358120037AFC5 /* ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57F1D5358120037AFC5 /* ShowController.m */; settings = {ASSET_TAGS = (); }; };
 		47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E1C5801D5358120037AFC5 /* ShowController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -86,6 +92,8 @@
 		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
 		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
 		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
+		3F21BD331D55BAE400316880 /* SgementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SgementController.h; sourceTree = "<group>"; };
+		3F21BD341D55BAE400316880 /* SgementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SgementController.m; sourceTree = "<group>"; };
 		3F22A0571D544034005AF6E6 /* QuadraticWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticWebController.h; sourceTree = "<group>"; };
 		3F22A0581D544034005AF6E6 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
 		3F22A05D1D546CE1005AF6E6 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
@@ -99,6 +107,16 @@
 		3F22A0681D546D0F005AF6E6 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
 		3F22A0691D546D0F005AF6E6 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
 		3F22A06A1D546D0F005AF6E6 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
+		3F22A0701D54766F005AF6E6 /* MainQuadraticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainQuadraticViewController.h; sourceTree = "<group>"; };
+		3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainQuadraticViewController.m; sourceTree = "<group>"; };
+		3F22A0731D5476C0005AF6E6 /* QuadraticMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticMainModel.h; sourceTree = "<group>"; };
+		3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticMainModel.m; sourceTree = "<group>"; };
+		3F22A0871D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticFirstCollectionViewCell.h; sourceTree = "<group>"; };
+		3F22A0881D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticFirstCollectionViewCell.m; sourceTree = "<group>"; };
+		3F22A0891D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadrticFirstCollectionViewCell.xib; sourceTree = "<group>"; };
+		3F22A08C1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTwoCollectionViewCell.h; sourceTree = "<group>"; };
+		3F22A08D1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTwoCollectionViewCell.m; sourceTree = "<group>"; };
+		3F22A08E1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTwoCollectionViewCell.xib; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
@@ -370,6 +388,10 @@
 				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
 				3F22A0571D544034005AF6E6 /* QuadraticWebController.h */,
 				3F22A0581D544034005AF6E6 /* QuadraticWebController.m */,
+				3F22A0701D54766F005AF6E6 /* MainQuadraticViewController.h */,
+				3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */,
+				3F21BD331D55BAE400316880 /* SgementController.h */,
+				3F21BD341D55BAE400316880 /* SgementController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,6 +477,8 @@
 			children = (
 				3F1A97CE1D52EE4300235153 /* QuadraticModel.h */,
 				3F1A97CF1D52EE4300235153 /* QuadraticModel.m */,
+				3F22A0731D5476C0005AF6E6 /* QuadraticMainModel.h */,
+				3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -465,6 +489,12 @@
 				3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */,
 				3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */,
 				3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */,
+				3F22A0871D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.h */,
+				3F22A0881D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m */,
+				3F22A0891D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib */,
+				3F22A08C1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.h */,
+				3F22A08D1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.m */,
+				3F22A08E1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -634,6 +664,7 @@
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
 				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
+				3F22A08B1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				3F22A0641D546CF1005AF6E6 /* FunnyDetailViewController.xib in Resources */,
@@ -641,6 +672,7 @@
 				3F22A06E1D546D0F005AF6E6 /* VolumecountCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
+				3F22A0901D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,9 +746,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F22A06F1D546F47005AF6E6 /* LoginController.m in Sources */,
+				3F21BD351D55BAE400316880 /* SgementController.m in Sources */,
 				3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */,
 				3F22A06B1D546D0F005AF6E6 /* FunListCell.m in Sources */,
-				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
@@ -735,11 +768,15 @@
 				3F22A06D1D546D0F005AF6E6 /* VolumecountCell.m in Sources */,
 				472EC6D51D4C33890081DDC5 /* AppDelegate.m in Sources */,
 				3F22A0631D546CF1005AF6E6 /* FunnyDetailViewController.m in Sources */,
+				3F22A0721D54766F005AF6E6 /* MainQuadraticViewController.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
+				3F22A08F1D54AEE8005AF6E6 /* QuadraticTwoCollectionViewCell.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
+				3F22A08A1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m in Sources */,
+				3F22A0751D5476C0005AF6E6 /* QuadraticMainModel.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */,

@@ -46,7 +46,7 @@
     
 }
 
-#pragma 初始化
+#pragma mark 初始化
 -(NSMutableArray *)quadraticArry
 {
     if (_quadraticArry == nil) {
@@ -63,10 +63,10 @@
     return _titleArry;
 }
 
-#pragma 视图及数据处理
+#pragma  mark 视图及数据处理
 -(void)creatTblewView
 {
-    self.tabelView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tabelView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
@@ -124,7 +124,7 @@
    
 }
 
-#pragma tableView 设置
+#pragma mark tableView 设置
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
@@ -150,11 +150,12 @@
 
 }
 
+#pragma mark 分区头部及尾部相关设置
 
 //头分区
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 25)];
+    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 25)];
     
     UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(15, 8, 45, 20)];
 
@@ -212,7 +213,7 @@
     
     return view;
 }
-#pragma 点击cell响应方法
+#pragma  mark 点击cell响应方法
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -227,7 +228,7 @@
 }
 
 
-#pragma tableView 返回高度
+#pragma mark tableView 返回高度
 //返回cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
