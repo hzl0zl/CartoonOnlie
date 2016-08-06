@@ -121,6 +121,10 @@
     
     self.segmentControl.selectedSegmentIndex = 0;
     
+    self.segmentControl.tintColor = [UIColor brownColor];
+    
+    self.segmentControl.backgroundColor = [UIColor whiteColor];
+    
     [self.segmentControl addTarget:self action:@selector(segmentControlAction:) forControlEvents:UIControlEventValueChanged];
     
     [self.view addSubview:self.segmentControl];
@@ -208,6 +212,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
+    
     FunListModel *model = self.funList3[indexPath.row];
     
     funDetailVc.model = model;

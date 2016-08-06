@@ -38,6 +38,8 @@
 
 @end
 
+
+int i = 0;
 @implementation FunnyDetailViewController
 
 - (void)viewDidLoad {
@@ -50,6 +52,10 @@
     [self setMiddleView];
     
 //    [self createDataArray];
+    
+    i++;
+    
+    NSLog(@"%d", i);
     
     [self.view addSubview:self.collectionView];
     
@@ -262,6 +268,8 @@
 - (IBAction)backAction:(id)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
+    
+
 }
 
 #pragma mark -- 收藏按钮点击方法
