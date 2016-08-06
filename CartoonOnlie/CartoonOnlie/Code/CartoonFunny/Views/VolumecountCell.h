@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FunnyDetailModel.h"
 
 @interface VolumecountCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UIButton *volumecountBtn;
+@property (strong, nonatomic) IBOutlet UILabel *volumecountL;
 
+//@property (nonatomic, strong) NSString *url;
+
+
+@property (nonatomic, strong) FunnyDetailModel *model;
 
 @end

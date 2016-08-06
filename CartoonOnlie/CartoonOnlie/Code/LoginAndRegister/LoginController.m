@@ -8,6 +8,10 @@
 
 #import "LoginController.h"
 #import "RegisterController.h"
+#import "NSString+Md5String.h"
+#import "UMSocial.h"
+#import "UMSocialSinaSSOHandler.h"
+
 @interface LoginController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *loginBtn;
@@ -15,6 +19,13 @@
 @property (strong, nonatomic) IBOutlet UIButton *qqLogin;
 
 @property (strong, nonatomic) IBOutlet UIButton *sinaLogin;
+
+@property (strong, nonatomic) IBOutlet UIButton *registerBtn;
+
+@property (strong, nonatomic) IBOutlet UITextField *emailText;
+
+@property (strong, nonatomic) IBOutlet UITextField *passwordText;
+
 @end
 
 
@@ -38,10 +49,78 @@
 }
 #pragma mark ==== 登陆
 - (IBAction)loginAction:(id)sender {
-}
 
-#pragma mark ==== 忘记密码
-- (IBAction)forgetAction:(id)sender {
+
+    NSString *Url = @"http://api.idothing.com/zhongzi/v2.php/User/login";
+    
+    NSString *body = [NSString stringWithFormat:@"account=%@&account_type=4&password=%@",self.emailText.text,[self.passwordText.text md532BitUpper]];
+    
+    [DownLoad dowmLoadWithUrl:Url postBody:body resultBlock:^(NSData *data) {
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@", dict);
+//        NSLog(@"%@", dict[@"results"][@"status"]);
+        NSLog(@"%@", dict[@"info"]);
+       dispatch_async(dispatch_get_main_queue(), ^{
+          
+           if ([dict[@"info"] isEqualToString:@"登陆成功"]) {
+               
+               
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"通知" message:@"恭喜您登陆成功!!!" preferredStyle:UIAlertControllerStyleAlert];
+               
+               [ alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   
+                   [self dismissViewControllerAnimated:YES completion:nil];
+                   
+                   
+               } ]];
+               
+               [self presentViewController:alert animated:true completion:nil];
+               
+           }else {
+               
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:dict[@"info"] preferredStyle:UIAlertControllerStyleAlert];
+               
+               [ alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   
+//                   [self dismissViewControllerAnimated:YES completion:nil];
+                   
+                   
+               } ]];
+               
+           }
+      
+           
+       });
+        
+        
+        
+        
+    }];
+    
+    
+    
+    
+}
+#pragma mark ==== 新浪登陆
+- (IBAction)wbAction:(id)sender {
+    
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            
+            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+            NSLog(@"%@", dict);
+            
+        }});
+  
+    
 }
 
 
@@ -72,6 +151,11 @@
     self.loginBtn.layer.masksToBounds = YES;
     self.loginBtn.layer.borderWidth = 1;
     self.loginBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    self.registerBtn.layer.cornerRadius = 5;
+    self.registerBtn.layer.masksToBounds = YES;
+    self.registerBtn.layer.borderWidth = 1;
+    self.registerBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     
     self.qqLogin.layer.cornerRadius = 5;
     self.qqLogin.layer.masksToBounds = YES;

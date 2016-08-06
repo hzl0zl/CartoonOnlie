@@ -7,7 +7,6 @@
 //
 
 #import "FunListCell.h"
-#import "UIImageView+WebCache.h"
 
 @implementation FunListCell
 
@@ -27,8 +26,14 @@
         self.authorL.text = [NSString stringWithFormat:@"作者: %@", listModel.author];
         
         self.typeL.text = [NSString stringWithFormat:@"类型: %@", listModel.label];
+        if ([listModel.status intValue]) {
+            self.updateSizeL.text = [NSString stringWithFormat:@"更新至%@话(已完结)", listModel.updateSize];
+        }else
+        {
+            self.updateSizeL.text = [NSString stringWithFormat:@"更新至%@话(连载中)", listModel.updateSize];
+        }
         
-        self.updateSizeL.text = [NSString stringWithFormat:@"更新至%@话", listModel.updateSize]; 
+        self.popularL.text = [NSString stringWithFormat:@"%@", listModel.popular];
         
     }
 }

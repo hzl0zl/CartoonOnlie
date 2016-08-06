@@ -94,7 +94,7 @@
 #pragma mark 同--UINavigationBara 和UITabbar的风格
     
     // 设置所有导航栏的背景颜色
-    //    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
     //
     //    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //
@@ -107,27 +107,56 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+#pragma mark === 
+    
+    //初始化友盟分享
+    [UMSocialData setAppKey:@"57a5423267e58ebd7000281e"];
+    
+    //添加新浪分享初始化
+    //1、新浪应用的APPkey
+    //2、新浪应用的APP secret
+    //2、回调地址
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"1902776577" secret:@"919c3c135dd20f98eb665158d31dbc26" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    
+    
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //    self.window.backgroundColor = [UIColor redColor];
     //创建左右菜单控制器
     HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-    
-    //加载storyboard
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    //创建箭头指向的控制器 -- UITabBarController
-//    UITabBarController *tabBarVc = sb.instantiateInitialViewController;
-    
+
     //设置窗口根控制器
-    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:260];
+    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:220];
     
     //显示窗口
     [self.window makeKeyAndVisible];
-
+    
+    
+    
     return YES;
 
 }
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -150,5 +179,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end
