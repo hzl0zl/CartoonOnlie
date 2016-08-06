@@ -7,11 +7,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>weibosdk2.5</string>
-				<string>weibosdk</string>
-				<string>sinaweibosso</string>
-				<string>sinaweibo</string>
-				<string>wb428304041</string>
+				<string>wb1902776577</string>
 			</array>
 			<key>CFBundleURLName</key>
 			<string></string>
@@ -19,6 +15,10 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>weibosdk2.5</string>
+		<string>weibosdk</string>
+		<string>sinaweibosso</string>
+		<string>sinaweibo</string>
 		<string>sinaweibohd</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
