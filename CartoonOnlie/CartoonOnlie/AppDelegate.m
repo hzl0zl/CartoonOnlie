@@ -91,7 +91,7 @@
 #pragma mark 同--UINavigationBara 和UITabbar的风格
     
     // 设置所有导航栏的背景颜色
-    //    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
     //
     //    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //
@@ -109,15 +109,9 @@
     //    self.window.backgroundColor = [UIColor redColor];
     //创建左右菜单控制器
     HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-    
-    //加载storyboard
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    //创建箭头指向的控制器 -- UITabBarController
-//    UITabBarController *tabBarVc = sb.instantiateInitialViewController;
-    
+
     //设置窗口根控制器
-    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:260];
+    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:220];
     
     //显示窗口
     [self.window makeKeyAndVisible];
