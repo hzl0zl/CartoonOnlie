@@ -13,6 +13,9 @@
 #import "QuadraticController.h"
 #import "RadioController.h"
 #import "DetailController.h"
+#import "UMSocial.h"
+#import "UMSocialSinaSSOHandler.h"
+
 @interface AppDelegate ()
 
 @end
@@ -104,6 +107,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+#pragma mark === 
+    
+    //初始化友盟分享
+    [UMSocialData setAppKey:@"57a5423267e58ebd7000281e"];
+    
+    //添加新浪分享初始化
+    //1、新浪应用的APPkey
+    //2、新浪应用的APP secret
+    //2、回调地址
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"1902776577" secret:@"919c3c135dd20f98eb665158d31dbc26" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    
+    
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //    self.window.backgroundColor = [UIColor redColor];
@@ -119,6 +134,27 @@
     return YES;
 
 }
+
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

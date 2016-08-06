@@ -9,7 +9,8 @@
 #import "LoginController.h"
 #import "RegisterController.h"
 #import "NSString+Md5String.h"
-
+#import "UMSocial.h"
+#import "UMSocialSinaSSOHandler.h"
 
 @interface LoginController ()
 
@@ -101,7 +102,26 @@
     
     
 }
-
+#pragma mark ==== 新浪登陆
+- (IBAction)wbAction:(id)sender {
+    
+    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
+    
+    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+        
+        //          获取微博用户名、uid、token等
+        
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            
+            NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+            UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+            NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+            NSLog(@"%@", dict);
+            
+        }});
+  
+    
+}
 
 
 #pragma mark === 返回
