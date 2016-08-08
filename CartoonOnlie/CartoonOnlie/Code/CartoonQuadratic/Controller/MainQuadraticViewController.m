@@ -311,7 +311,7 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     
     PicWebController *picVC = [[PicWebController alloc] init];
-    picVC.urlStr = [NSString stringWithFormat:@"http://www.kuaikanmanhua.com/web/comic/%@", self.quadraticArry3[index]];
+    picVC.urlStr = [NSString stringWithFormat:@"http://api.kuaikanmanhua.com/v1/comics/%@", self.quadraticArry3[index]];
     [self.navigationController pushViewController:picVC animated:YES];
     
     NSLog(@"%ld",index);

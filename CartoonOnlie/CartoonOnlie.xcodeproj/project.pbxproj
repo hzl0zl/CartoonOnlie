@@ -61,6 +61,8 @@
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
 		478922131D558E3C00CCD728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		479A30DE1D582AD30058CD05 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 479A30DC1D582AD30058CD05 /* Icon.png */; settings = {ASSET_TAGS = (); }; };
+		479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 479A30DD1D582AD30058CD05 /* Icon@2x.png */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -182,6 +184,8 @@
 		476753621D5458B5000A30DA /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
 		476753631D5458B5000A30DA /* RegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterController.m; sourceTree = "<group>"; };
 		476753641D5458B5000A30DA /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
+		479A30DC1D582AD30058CD05 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		479A30DD1D582AD30058CD05 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
 		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
 		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 		472EC7031D4C34D40081DDC5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				479A30DB1D582AD30058CD05 /* Icon */,
 				4767535C1D5428B5000A30DA /* LoginAndRegister */,
 				47EA2BFC1D4C480B007EC6E7 /* Tools */,
 				472EC7341D4C39290081DDC5 /* CartoonFunny */,
@@ -472,6 +477,15 @@
 				476753641D5458B5000A30DA /* RegisterController.xib */,
 			);
 			path = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		479A30DB1D582AD30058CD05 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				479A30DC1D582AD30058CD05 /* Icon.png */,
+				479A30DD1D582AD30058CD05 /* Icon@2x.png */,
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
@@ -685,9 +699,11 @@
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
 				47592D7B1D55CCCF000EFC4C /* VolumecountCell.xib in Resources */,
+				479A30DE1D582AD30058CD05 /* Icon.png in Resources */,
 				3F22A08B1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
+				479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
