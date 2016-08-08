@@ -26,8 +26,6 @@
 		3F7608A11D583D6D007E7A52 /* FunnyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */; };
 		3F7608A21D583D72007E7A52 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3125E1D5445AB002C4FFD /* ReadViewController.m */; };
 		3F7608A31D583D78007E7A52 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2498771D546EEA0056F329 /* VolumecountCell.m */; };
-		3F7608BF1D5849E3007E7A52 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7608BD1D5849E3007E7A52 /* CollectionCell.m */; settings = {ASSET_TAGS = (); }; };
-		3F7608C01D5849E3007E7A52 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7608BE1D5849E3007E7A52 /* CollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F7608C11D584B2B007E7A52 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2498781D546EEA0056F329 /* VolumecountCell.xib */; };
 		3F7608C21D584B34007E7A52 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */; };
 		3F7608C31D584B39007E7A52 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */; };
@@ -126,9 +124,6 @@
 		3F76088E1D583D04007E7A52 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
 		3F76088F1D583D04007E7A52 /* SgementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SgementController.h; sourceTree = "<group>"; };
 		3F7608901D583D04007E7A52 /* SgementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SgementController.m; sourceTree = "<group>"; };
-		3F7608BC1D5849E3007E7A52 /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
-		3F7608BD1D5849E3007E7A52 /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
-		3F7608BE1D5849E3007E7A52 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		3FA3125D1D5445AB002C4FFD /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
 		3FA3125E1D5445AB002C4FFD /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
 		3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
@@ -278,9 +273,6 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3F7608BC1D5849E3007E7A52 /* CollectionCell.h */,
-				3F7608BD1D5849E3007E7A52 /* CollectionCell.m */,
-				3F7608BE1D5849E3007E7A52 /* CollectionCell.xib */,
 				3F2498731D546EEA0056F329 /* FunListCell.h */,
 				3F2498741D546EEA0056F329 /* FunListCell.m */,
 				3F2498751D546EEA0056F329 /* FunListCell.xib */,
@@ -724,15 +716,12 @@
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
-				3F7608C01D5849E3007E7A52 /* CollectionCell.xib in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
 				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
-				47592D7B1D55CCCF000EFC4C /* VolumecountCell.xib in Resources */,
 				479A30DE1D582AD30058CD05 /* Icon.png in Resources */,
-				3F22A08B1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */,
@@ -835,7 +824,6 @@
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
-				3F7608BF1D5849E3007E7A52 /* CollectionCell.m in Sources */,
 				3F7608921D583D04007E7A52 /* QuadraticWebController.m in Sources */,
 				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
@@ -992,7 +980,7 @@
 			baseConfigurationReference = E8450B81A0D8416EC6F59D2F /* Pods-CartoonOnlie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1069,7 +1057,7 @@
 			baseConfigurationReference = AA82DCF6822C97A619D057A9 /* Pods-CartoonOnlie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
