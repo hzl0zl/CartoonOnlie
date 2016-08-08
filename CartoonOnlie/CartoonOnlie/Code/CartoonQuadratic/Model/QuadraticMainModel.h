@@ -16,4 +16,6 @@
 //标题
 @property (nonatomic,strong) NSString *title;
 
+@property (nonatomic, strong) NSString *ids;
+
 @end

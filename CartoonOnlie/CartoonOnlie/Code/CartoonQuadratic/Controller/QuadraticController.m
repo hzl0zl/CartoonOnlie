@@ -7,7 +7,7 @@
 //
 
 #import "QuadraticController.h"
-#import "HMDrawerViewController.h"
+
 #import "QuadraticTableViewCell.h"
 #import "QuadraticModel.h"
 #import "QuadraticWebController.h"
@@ -31,7 +31,7 @@
     
     self.view.backgroundColor = [UIColor magentaColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftAction)];
+   
     
     [self creatTblewView];
     
@@ -39,12 +39,6 @@
 }
 
 
-- (void)leftAction {
-    
-    [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-    
-}
 
 #pragma mark 初始化
 -(NSMutableArray *)quadraticArry
@@ -217,12 +211,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    NSLog(@"点击");
     QuadraticWebController *webVC = [[QuadraticWebController alloc]init];
+    //传值
+    webVC.model = self.quadraticArry[indexPath.section];
     [self.navigationController pushViewController:webVC animated:YES];
     
-    //传值
-     webVC.model = self.quadraticArry[indexPath.section];
+  
     
     
 }

@@ -11,6 +11,6 @@
 @interface QuadrticFirstCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic,strong) QuadraticMainModel *model;
-
+@property (strong, nonatomic) IBOutlet UILabel *numberL;
 
 @end

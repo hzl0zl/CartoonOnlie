@@ -1,22 +1,25 @@
 //
-//  QuadrticFirstCollectionViewCell.m
+//  SectionOneCell.m
 //  CartoonOnlie
 //
-//  Created by lanou on 16/8/5.
+//  Created by zhiling on 16/8/8.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
 
-#import "QuadrticFirstCollectionViewCell.h"
-@interface QuadrticFirstCollectionViewCell()
+#import "SectionOneCell.h"
 
-@property (weak, nonatomic) IBOutlet UIImageView *url;
+@interface SectionOneCell ()
 
-@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (strong, nonatomic) IBOutlet UIImageView *url;
+
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTitle;
 
 
 @end
 
-@implementation QuadrticFirstCollectionViewCell
+@implementation SectionOneCell
+
 
 
 -(void)setModel:(QuadraticMainModel *)model
@@ -30,5 +33,8 @@
 }
 
 
+- (void)awakeFromNib {
+    // Initialization code
+}
 
 @end

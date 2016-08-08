@@ -14,5 +14,16 @@
 {
     
 }
+- (void)setValue:(id)value forKey:(NSString *)key {
+    
+    [super setValue:value forKey:key];
+    if ([key isEqualToString:@"id"]) {
+        
+        self.ids = [NSString stringWithFormat:@"%@", value];
+        
+    }
+    
+    
+}
 
 @end

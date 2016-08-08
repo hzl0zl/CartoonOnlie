@@ -10,7 +10,8 @@
 #import "HMDrawerViewController.h"
 #import "HMLeftMenuTableViewController.h"
 #import "FunnyController.h"
-
+#import "UMSocial.h"
+#import "UMSocialSinaSSOHandler.h"
 #import "RadioController.h"
 #import "DetailController.h"
 #import "SgementController.h"

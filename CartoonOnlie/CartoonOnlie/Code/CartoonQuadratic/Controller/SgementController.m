@@ -9,7 +9,7 @@
 #import "SgementController.h"
 #import "QuadraticController.m"
 #import "MainQuadraticViewController.h"
-
+#import "HMDrawerViewController.h"
 @interface SgementController ()
 
 @property (nonatomic, strong)QuadraticController *quaVC;
@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftAction)];
     [self createView];
     
     [self creatUIsegmented];
@@ -32,15 +32,21 @@
     
 }
 - (void)createView {
+   
     
     self.quaVC = [[QuadraticController alloc] init];
+    
+    
     self.quaVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     [self.view addSubview:self.quaVC.view];
+    
+    [self addChildViewController:self.quaVC];
+    
     self.mainQuaVC = [[MainQuadraticViewController alloc] init];
        self.mainQuaVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     [self.view addSubview:self.mainQuaVC.view];
-    
+    [self addChildViewController:self.mainQuaVC];
     
 }
 
@@ -89,6 +95,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)leftAction {
+    
+    [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+    
 }
 
 /*

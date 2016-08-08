@@ -1,16 +1,13 @@
 //
-//  QuadraticTwoCollectionViewCell.h
+//  SectionOneCell.h
 //  CartoonOnlie
 //
-//  Created by lanou on 16/8/5.
+//  Created by zhiling on 16/8/8.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
-
+#import "QuadrticFirstCollectionViewCell.h"
 #import <UIKit/UIKit.h>
-#import "QuadraticMainModel.h"
-@interface QuadraticTwoCollectionViewCell : UICollectionViewCell
 
+@interface SectionOneCell : UICollectionViewCell
 @property (nonatomic,strong) QuadraticMainModel *model;
-
-
 @end
