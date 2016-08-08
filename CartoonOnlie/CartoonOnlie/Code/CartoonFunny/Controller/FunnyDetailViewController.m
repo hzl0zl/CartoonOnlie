@@ -10,6 +10,8 @@
 #import "VolumecountCell.h"
 #import <CoreImage/CoreImage.h>
 #import "ReadViewController.h"
+#import "DataHandler.h"
+#import "CollectionController.h"
 
 
 @interface FunnyDetailViewController ()<UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout>
@@ -36,30 +38,39 @@
 @property (strong, nonatomic) IBOutlet UILabel *popularL;
 @property (strong, nonatomic) IBOutlet UILabel *descL;
 
+@property (strong, nonatomic) IBOutlet UIButton *showDescBtn;
+
+@property (strong, nonatomic) IBOutlet UIButton *collectionBtn;
+
 @end
 
 
-int i = 0;
 @implementation FunnyDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.hidden = YES;
+    
+    self.tabBarController.tabBar.hidden= YES;
+    
+    self.tabBarController.tabBar.translucent = YES;
+    
+    [self.view addSubview:self.bottomView];
+    
     [self setTopView];
     
-//    [self setTopViewBackground];
+    [self setTopViewBackground];
     
     [self setMiddleView];
     
 //    [self createDataArray];
     
-    i++;
-    
-    NSLog(@"%d", i);
-    
     [self.view addSubview:self.collectionView];
     
     [self getData];
+    
+    NSLog(@"----------%@", self.albumId);
     
 }
 
@@ -83,28 +94,25 @@ int i = 0;
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
+                
                 [self.collectionView reloadData];
             });
         }
   
     }];
 }
+
+
 #pragma mark -- 顶部视图背景
 - (void)setTopViewBackground
 {
     UIImageView *topImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
  
-    topImageView.alpha = 0.5;
-
-//    CIContext *context = [CIContext contextWithOptions:nil];
-//    CIImage *image = [CIImage imageWithContentsOfURL:[NSURL URLWithString:self.model.coverPic]];;
-//    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
-//    [filter setValue:image forKey:kCIInputImageKey];
-//    [filter setValue:@2.0f forKey: @"inputRadius"];
-//    CIImage *result = [filter valueForKey:kCIOutputImageKey];
-//    CGImageRef outImage = [context createCGImage: result fromRect:[result extent]];
-//    topImageView.image = [UIImage imageWithCGImage:outImage];
-
+    topImageView.alpha = 1;
+    
+//    [topImageView sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
+    
+    topImageView.image = [UIImage imageNamed:@"background"];
     
     [self.topView addSubview:topImageView];
 }
@@ -112,6 +120,9 @@ int i = 0;
 #pragma mark -- 中间视图
 - (void)setMiddleView
 {
+    
+//    FunnyDetailModel *model = self.dataArray;
+    
     self.authorL.text = [NSString stringWithFormat:@"作者: %@", self.model.author];
     
     self.circulateL.text = [NSString stringWithFormat:@"发行商: %@", self.model.authorName];
@@ -124,6 +135,9 @@ int i = 0;
     self.popularL.text = [NSString stringWithFormat:@"人气: %@", self.model.popular];
     
     self.descL.text = [NSString stringWithFormat:@"简介: %@", self.model.descriptions];
+    
+    self.showDescBtn.layer.cornerRadius = 10.0;
+    self.showDescBtn.layer.masksToBounds = YES;
    
 }
 
@@ -255,12 +269,25 @@ int i = 0;
 - (void)viewWillAppear:(BOOL)animated
 {
     
+//    self.btn = [[UIBarButtonItem alloc] initWithTitle:@"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(collectionAction:)];
+//    self.navigationItem.rightBarButtonItem = self.btn;
     
-    self.navigationController.navigationBar.hidden = YES;
+    self.collectionBtn.hidden = NO;
     
-    self.tabBarController.tabBar.hidden= YES;
+    NSArray *array = [[DataHandler shareDataHandler] allCartoon];
+    if(array == nil)
+    {
+        [self.collectionBtn setTitle:@"收藏" forState:UIControlStateNormal];
+    }
+    else
+    {
+        for (FunListModel *model in array) {
+            if ([self.model.name isEqualToString:model.name]) {
+                [self.collectionBtn setTitle:@"已收藏" forState:UIControlStateNormal];
+            }
+        }
+    }
     
-    self.tabBarController.tabBar.translucent = YES;
 }
 
 
@@ -269,11 +296,60 @@ int i = 0;
     
     [self.navigationController popViewControllerAnimated:YES];
     
-
 }
+
+
+#pragma mark -- 显示简介详情
+- (IBAction)showDescAction:(id)sender {
+    
+    
+    
+}
+
+
+#pragma mark -- 推出收藏页面
+- (IBAction)showCollectionView:(id)sender {
+    
+    CollectionController *collectionVc = [[CollectionController alloc] initWithNibName:@"CollectionController" bundle:nil];
+    
+    collectionVc.model = self.model;
+    
+    [self.navigationController pushViewController:collectionVc animated:YES];
+    
+}
+
+
 
 #pragma mark -- 收藏按钮点击方法
 - (IBAction)collectionAction:(id)sender {
+    
+    // 查询数据库
+    NSArray *array = [[DataHandler shareDataHandler] allCartoon];
+    
+    // 遍历数组
+    for (FunListModel *model in array) {
+        if ([self.model.name isEqualToString:model.name]) {
+            
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"收藏已存在" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:nil]];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            // 跳出整个方法
+            return;
+            
+        }
+    }
+    
+    
+    [[DataHandler shareDataHandler] collectionCartoon:self.model];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"收藏成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:nil]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark -- 下载按钮点击方法

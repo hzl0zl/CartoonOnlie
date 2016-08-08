@@ -18,6 +18,17 @@
 {
     if (_model != model) {
         _model = model;
+        
+        self.author = model.author;
+        
+        self.authorName = model.authorName;
+        
+        self.status = model.status;
+        
+        self.popular = model.popular;
+        
+        
+        
         self.volumecountL.text = [NSString stringWithFormat:@"第 %@ 话", model.orderNumber];
     }
 }
