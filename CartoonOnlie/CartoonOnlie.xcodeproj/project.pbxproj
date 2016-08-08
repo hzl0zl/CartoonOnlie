@@ -23,6 +23,12 @@
 		3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3125E1D5445AB002C4FFD /* ReadViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA312631D54469A002C4FFD /* FunnyDetailModel.m */; settings = {ASSET_TAGS = (); }; };
+		3FAB46FF1D55E9D1006DEE47 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
+		3FAB47031D56079D006DEE47 /* CollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB47011D56079D006DEE47 /* CollectionController.m */; settings = {ASSET_TAGS = (); }; };
+		3FAB47041D56079D006DEE47 /* CollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB47021D56079D006DEE47 /* CollectionController.xib */; settings = {ASSET_TAGS = (); }; };
+		3FAB47081D5612C9006DEE47 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB47061D5612C9006DEE47 /* CollectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		3FAB47091D5612C9006DEE47 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB47071D5612C9006DEE47 /* CollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3FAB470C1D56173D006DEE47 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB470B1D56173D006DEE47 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -107,6 +113,16 @@
 		3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
 		3FA312621D54469A002C4FFD /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
 		3FA312631D54469A002C4FFD /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
+		3FAB46FD1D55E9D1006DEE47 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		3FAB47001D56079D006DEE47 /* CollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionController.h; sourceTree = "<group>"; };
+		3FAB47011D56079D006DEE47 /* CollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionController.m; sourceTree = "<group>"; };
+		3FAB47021D56079D006DEE47 /* CollectionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionController.xib; sourceTree = "<group>"; };
+		3FAB47051D5612C9006DEE47 /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionCell.h; path = ../Models/CollectionCell.h; sourceTree = "<group>"; };
+		3FAB47061D5612C9006DEE47 /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionCell.m; path = ../Models/CollectionCell.m; sourceTree = "<group>"; };
+		3FAB47071D5612C9006DEE47 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionCell.xib; path = ../Models/CollectionCell.xib; sourceTree = "<group>"; };
+		3FAB470A1D56173D006DEE47 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
+		3FAB470B1D56173D006DEE47 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
@@ -224,6 +240,8 @@
 				3F2130861D53257000C88288 /* FunListModel.h */,
 				3FA312621D54469A002C4FFD /* FunnyDetailModel.h */,
 				3FA312631D54469A002C4FFD /* FunnyDetailModel.m */,
+				3FAB470A1D56173D006DEE47 /* CollectionModel.h */,
+				3FAB470B1D56173D006DEE47 /* CollectionModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +249,9 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FAB47051D5612C9006DEE47 /* CollectionCell.h */,
+				3FAB47061D5612C9006DEE47 /* CollectionCell.m */,
+				3FAB47071D5612C9006DEE47 /* CollectionCell.xib */,
 				3F2498731D546EEA0056F329 /* FunListCell.h */,
 				3F2498741D546EEA0056F329 /* FunListCell.m */,
 				3F2498751D546EEA0056F329 /* FunListCell.xib */,
@@ -360,6 +381,9 @@
 				3FA3125D1D5445AB002C4FFD /* ReadViewController.h */,
 				3FA3125E1D5445AB002C4FFD /* ReadViewController.m */,
 				3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */,
+				3FAB47001D56079D006DEE47 /* CollectionController.h */,
+				3FAB47011D56079D006DEE47 /* CollectionController.m */,
+				3FAB47021D56079D006DEE47 /* CollectionController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -459,6 +483,8 @@
 				47EA2C0F1D4C589C007EC6E7 /* PrefixHeader.pch */,
 				47A2571D1D54AD3B0016115F /* NSString+Md5String.h */,
 				47A2571E1D54AD3B0016115F /* NSString+Md5String.m */,
+				3FAB46FD1D55E9D1006DEE47 /* DataHandler.h */,
+				3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -652,9 +678,11 @@
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
+				3FAB47041D56079D006DEE47 /* CollectionController.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
+				3FAB47091D5612C9006DEE47 /* CollectionCell.xib in Resources */,
 				3F24987A1D546EEA0056F329 /* FunListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,12 +756,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAB47031D56079D006DEE47 /* CollectionController.m in Sources */,
 				476753671D546F29000A30DA /* LoginController.m in Sources */,
 				3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */,
 				3F24987D1D546F600056F329 /* FunnyController.m in Sources */,
 				47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */,
 				3F2498791D546EEA0056F329 /* FunListCell.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
+				3FAB47081D5612C9006DEE47 /* CollectionCell.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */,
 				3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */,
@@ -752,7 +782,9 @@
 				3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */,
 				47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
+				3FAB46FF1D55E9D1006DEE47 /* DataHandler.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
+				3FAB470C1D56173D006DEE47 /* CollectionModel.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,

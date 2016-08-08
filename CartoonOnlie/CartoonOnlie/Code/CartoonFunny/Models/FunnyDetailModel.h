@@ -18,5 +18,16 @@
 
 @property (nonatomic, assign) NSNumber *workId;
 
+@property (nonatomic, strong) NSString *author;
+
+@property (nonatomic, assign) NSNumber *status;
+
+@property (nonatomic, strong) NSString *authorName;
+
+@property (nonatomic, strong) NSNumber *popular;
+
+@property (nonatomic, strong) NSString *descriptions;
+
+
 
 @end
