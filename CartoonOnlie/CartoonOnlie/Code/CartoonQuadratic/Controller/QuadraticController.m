@@ -7,7 +7,7 @@
 //
 
 #import "QuadraticController.h"
-#import "HMDrawerViewController.h"
+
 #import "QuadraticTableViewCell.h"
 #import "QuadraticModel.h"
 #import "QuadraticWebController.h"
@@ -31,7 +31,7 @@
     
     self.view.backgroundColor = [UIColor magentaColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftAction)];
+   
     
     [self creatTblewView];
     
@@ -39,14 +39,8 @@
 }
 
 
-- (void)leftAction {
-    
-    [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-    
-}
 
-#pragma 初始化
+#pragma mark 初始化
 -(NSMutableArray *)quadraticArry
 {
     if (_quadraticArry == nil) {
@@ -63,10 +57,10 @@
     return _titleArry;
 }
 
-#pragma 视图及数据处理
+#pragma  mark 视图及数据处理
 -(void)creatTblewView
 {
-    self.tabelView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.tabelView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
@@ -124,7 +118,7 @@
    
 }
 
-#pragma tableView 设置
+#pragma mark tableView 设置
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
@@ -150,11 +144,12 @@
 
 }
 
+#pragma mark 分区头部及尾部相关设置
 
 //头分区
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 25)];
+    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 25)];
     
     UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(15, 8, 45, 20)];
 
@@ -212,22 +207,23 @@
     
     return view;
 }
-#pragma 点击cell响应方法
+#pragma  mark 点击cell响应方法
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    NSLog(@"点击");
     QuadraticWebController *webVC = [[QuadraticWebController alloc]init];
+    //传值
+    webVC.model = self.quadraticArry[indexPath.section];
     [self.navigationController pushViewController:webVC animated:YES];
     
-    //传值
-     webVC.model = self.quadraticArry[indexPath.section];
+  
     
     
 }
 
 
-#pragma tableView 返回高度
+#pragma mark tableView 返回高度
 //返回cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

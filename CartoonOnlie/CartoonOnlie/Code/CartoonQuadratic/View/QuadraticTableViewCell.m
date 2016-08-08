@@ -7,8 +7,6 @@
 //
 
 #import "QuadraticTableViewCell.h"
-#import "UIImageView+WebCache.h"
-
 
 @interface QuadraticTableViewCell ()
 

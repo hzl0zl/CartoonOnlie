@@ -54,15 +54,25 @@
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
+		47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */; settings = {ASSET_TAGS = (); }; };
+		47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */; settings = {ASSET_TAGS = (); }; };
+		47312C821D581BFB00B3B7B8 /* PicWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C811D581BFB00B3B7B8 /* PicWebController.m */; settings = {ASSET_TAGS = (); }; };
+		47592D781D55CCCF000EFC4C /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D731D55CCCF000EFC4C /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
+		47592D791D55CCCF000EFC4C /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47592D741D55CCCF000EFC4C /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		47592D7A1D55CCCF000EFC4C /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D761D55CCCF000EFC4C /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
+		47592D7B1D55CCCF000EFC4C /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47592D771D55CCCF000EFC4C /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
+		47592D871D55CCFC000EFC4C /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D801D55CCFC000EFC4C /* FunnyController.m */; settings = {ASSET_TAGS = (); }; };
+		47592D881D55CCFC000EFC4C /* FunnyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D821D55CCFC000EFC4C /* FunnyDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		47592D891D55CCFC000EFC4C /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47592D831D55CCFC000EFC4C /* FunnyDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		47592D8A1D55CCFC000EFC4C /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D851D55CCFC000EFC4C /* ReadViewController.m */; settings = {ASSET_TAGS = (); }; };
+		47592D8B1D55CCFC000EFC4C /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47592D861D55CCFC000EFC4C /* ReadViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		47592D8F1D55CD3F000EFC4C /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */; settings = {ASSET_TAGS = (); }; };
 		476753611D5428E2000A30DA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4767535F1D5428E2000A30DA /* LoginController.xib */; settings = {ASSET_TAGS = (); }; };
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
-		476753671D546F29000A30DA /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		478922131D558E3C00CCD728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
-		47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; settings = {ASSET_TAGS = (); }; };
-		47E1C57A1D530B570037AFC5 /* QuadraticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D21D52EE7000235153 /* QuadraticController.m */; };
 		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
 		47E1C5811D5358120037AFC5 /* ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57F1D5358120037AFC5 /* ShowController.m */; settings = {ASSET_TAGS = (); }; };
 		47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E1C5801D5358120037AFC5 /* ShowController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -172,6 +182,27 @@
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
 		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
 		472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingController.m; sourceTree = "<group>"; };
+		47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionOneCell.h; sourceTree = "<group>"; };
+		47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionOneCell.m; sourceTree = "<group>"; };
+		47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionOneCell.xib; sourceTree = "<group>"; };
+		47312C801D581BFB00B3B7B8 /* PicWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicWebController.h; sourceTree = "<group>"; };
+		47312C811D581BFB00B3B7B8 /* PicWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicWebController.m; sourceTree = "<group>"; };
+		47592D721D55CCCF000EFC4C /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
+		47592D731D55CCCF000EFC4C /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
+		47592D741D55CCCF000EFC4C /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
+		47592D751D55CCCF000EFC4C /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
+		47592D761D55CCCF000EFC4C /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
+		47592D771D55CCCF000EFC4C /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
+		47592D801D55CCFC000EFC4C /* FunnyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyController.m; sourceTree = "<group>"; };
+		47592D811D55CCFC000EFC4C /* FunnyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailViewController.h; sourceTree = "<group>"; };
+		47592D821D55CCFC000EFC4C /* FunnyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailViewController.m; sourceTree = "<group>"; };
+		47592D831D55CCFC000EFC4C /* FunnyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyDetailViewController.xib; sourceTree = "<group>"; };
+		47592D841D55CCFC000EFC4C /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		47592D851D55CCFC000EFC4C /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		47592D861D55CCFC000EFC4C /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
+		47592D8C1D55CD3F000EFC4C /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
+		47592D8D1D55CD3F000EFC4C /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
+		47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
 		4767535D1D5428E2000A30DA /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		4767535E1D5428E2000A30DA /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		4767535F1D5428E2000A30DA /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
@@ -236,6 +267,9 @@
 		3FC531AB1D4C5313000EB7E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47592D8C1D55CD3F000EFC4C /* FunListModel.h */,
+				47592D8D1D55CD3F000EFC4C /* FunnyDetailModel.h */,
+				47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */,
 				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
 				3F2130861D53257000C88288 /* FunListModel.h */,
 				3FA312621D54469A002C4FFD /* FunnyDetailModel.h */,
@@ -401,10 +435,16 @@
 		472EC7391D4C39290081DDC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F2498801D5470630056F329 /* QuadraticWebController.h */,
-				3F2498811D5470630056F329 /* QuadraticWebController.m */,
 				3F1A97D11D52EE7000235153 /* QuadraticController.h */,
 				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
+				3F22A0571D544034005AF6E6 /* QuadraticWebController.h */,
+				3F22A0581D544034005AF6E6 /* QuadraticWebController.m */,
+				3F22A0701D54766F005AF6E6 /* MainQuadraticViewController.h */,
+				3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */,
+				3F21BD331D55BAE400316880 /* SgementController.h */,
+				3F21BD341D55BAE400316880 /* SgementController.m */,
+				47312C801D581BFB00B3B7B8 /* PicWebController.h */,
+				47312C811D581BFB00B3B7B8 /* PicWebController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -494,6 +534,8 @@
 			children = (
 				3F1A97CE1D52EE4300235153 /* QuadraticModel.h */,
 				3F1A97CF1D52EE4300235153 /* QuadraticModel.m */,
+				3F22A0731D5476C0005AF6E6 /* QuadraticMainModel.h */,
+				3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -504,6 +546,12 @@
 				3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */,
 				3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */,
 				3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */,
+				3F22A0871D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.h */,
+				3F22A0881D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m */,
+				3F22A0891D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib */,
+				47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */,
+				47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */,
+				47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -665,16 +713,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F2498831D5472DD0056F329 /* FunnyDetailViewController.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
+				47592D891D55CCFC000EFC4C /* FunnyDetailViewController.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
+				47592D8B1D55CCFC000EFC4C /* ReadViewController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
-				3F24987C1D546EEA0056F329 /* VolumecountCell.xib in Resources */,
+				47592D791D55CCCF000EFC4C /* FunListCell.xib in Resources */,
 				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
-				3FA312611D5445AB002C4FFD /* ReadViewController.xib in Resources */,
+				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
+				47592D7B1D55CCCF000EFC4C /* VolumecountCell.xib in Resources */,
+				3F22A08B1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
@@ -765,30 +816,34 @@
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				3FAB47081D5612C9006DEE47 /* CollectionCell.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
-				3FA312641D54469A002C4FFD /* FunnyDetailModel.m in Sources */,
-				3F21308F1D53265D00C88288 /* FunnyDetailViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
-				3FA312601D5445AB002C4FFD /* ReadViewController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
-				3F2498821D5470630056F329 /* QuadraticWebController.m in Sources */,
 				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
-				3F24987B1D546EEA0056F329 /* VolumecountCell.m in Sources */,
-				47A2571F1D54AD3B0016115F /* NSString+Md5String.m in Sources */,
+				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
+				3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */,
+				47592D8A1D55CCFC000EFC4C /* ReadViewController.m in Sources */,
+				3F22A0721D54766F005AF6E6 /* MainQuadraticViewController.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				3FAB46FF1D55E9D1006DEE47 /* DataHandler.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				3FAB470C1D56173D006DEE47 /* CollectionModel.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
+				47592D781D55CCCF000EFC4C /* FunListCell.m in Sources */,
+				47592D8F1D55CD3F000EFC4C /* FunnyDetailModel.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
+				47312C821D581BFB00B3B7B8 /* PicWebController.m in Sources */,
+				3F22A08A1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m in Sources */,
+				3F22A0751D5476C0005AF6E6 /* QuadraticMainModel.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
+				47592D881D55CCFC000EFC4C /* FunnyDetailViewController.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
@@ -928,7 +983,7 @@
 			baseConfigurationReference = E8450B81A0D8416EC6F59D2F /* Pods-CartoonOnlie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1005,7 +1060,7 @@
 			baseConfigurationReference = AA82DCF6822C97A619D057A9 /* Pods-CartoonOnlie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

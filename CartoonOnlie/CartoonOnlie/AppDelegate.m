@@ -10,11 +10,11 @@
 #import "HMDrawerViewController.h"
 #import "HMLeftMenuTableViewController.h"
 #import "FunnyController.h"
-#import "QuadraticController.h"
-#import "RadioController.h"
-#import "DetailController.h"
 #import "UMSocial.h"
 #import "UMSocialSinaSSOHandler.h"
+#import "RadioController.h"
+#import "DetailController.h"
+#import "SgementController.h"
 @interface AppDelegate ()
 
 @end
@@ -45,7 +45,9 @@
     
     //创建多个视图控制器
     
-    QuadraticController *firstVC =  (QuadraticController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"home.png" selectedImage:@"home_fill.png" class:[QuadraticController class]];
+
+    
+    SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次u" normalImage:nil selectedImage:nil class:[SgementController class]];
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
     

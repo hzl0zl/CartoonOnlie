@@ -8,6 +8,7 @@
 
 #import "QuadraticWebController.h"
 
+
 @interface QuadraticWebController ()
 
 
@@ -41,11 +42,7 @@
      NSLog(@"$%@",request);
    web.backgroundColor = [UIColor redColor];
 }
--(void)loadData
-{
-    
-  
-}
+
 
 
 @end

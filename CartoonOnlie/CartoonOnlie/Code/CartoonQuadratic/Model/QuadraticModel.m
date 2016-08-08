@@ -9,6 +9,7 @@
 #import "QuadraticModel.h"
 
 @implementation QuadraticModel
+
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
     
