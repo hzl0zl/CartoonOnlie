@@ -122,7 +122,6 @@
         }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                //            [self creatSDCycleScrollView];
 
                 [self.collectionView reloadData];
             });
@@ -162,8 +161,7 @@
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    
+    self.collectionView.backgroundColor = [UIColor grayColor];
     //注册 cell1
     [self.collectionView registerNib:[UINib nibWithNibName:@"QuadrticFirstCollectionViewCell" bundle:nil]forCellWithReuseIdentifier:@"firstCell"];
     //注册 cell2
@@ -222,7 +220,6 @@
         cell.model = self.quadraticArry2[indexPath.row];
         cell.numberL.text = [NSString stringWithFormat:@"NO.%ld", indexPath.row + 1];
         return cell;
-        //        sectionCell
     }
         
     
@@ -256,7 +253,8 @@
 
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, SCREEN_WIDTH, 30)];
         label.text = @"人气飙升";
-        label.backgroundColor  = [UIColor redColor];
+        label.backgroundColor  = [UIColor whiteColor];
+        label.font = [UIFont systemFontOfSize:13];
         [sdcyc addSubview:label];
         [sdcyc addSubview:[self creatSDCycleScrollView]];
         
@@ -269,7 +267,8 @@
 
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
         label.text = @"每周排行榜";
-        label.backgroundColor  = [UIColor redColor];
+        label.backgroundColor  = [UIColor whiteColor];
+        label.font = [UIFont systemFontOfSize:13];
         [view addSubview:label];
         return view;
     }
