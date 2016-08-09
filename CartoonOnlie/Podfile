@@ -8,4 +8,5 @@ target 'CartoonOnlie' do
   pod 'UMengSocialCOM', '~> 5.2.1'
   pod 'MJRefresh', '~> 3.1.10'
   pod ‘FMDB’, '~> 2.6.2’
+  pod 'SDAutoLayout', '~> 2.1.3'
 end

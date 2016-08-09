@@ -10,6 +10,8 @@
 #import "QuadraticController.m"
 #import "MainQuadraticViewController.h"
 #import "HMDrawerViewController.h"
+#import "MYHint.h"
+#import "AppDelegate.h"
 @interface SgementController ()
 
 @property (nonatomic, strong)QuadraticController *quaVC;
@@ -23,6 +25,27 @@
 @implementation SgementController
 
 - (void)viewDidLoad {
+    
+    BOOL net = [((AppDelegate *)[[UIApplication sharedApplication] delegate]) networkreachability];
+    
+//    AppDelegate *appdelegate = [UIApplication sharedApplication].delegate;
+    
+    
+    
+    if (net)
+    {
+//        [self showIndicatorWithTime:0.3];
+        NSLog(@"有网络");
+    }
+    else
+    {
+        MYHint *hint = [[MYHint alloc] init];
+        hint.text = @"网络不可用";
+        NSLog(@"无网络");
+        [hint showInView:self.view];
+    }
+
+    
     [super viewDidLoad];
      self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftAction)];
     [self createView];

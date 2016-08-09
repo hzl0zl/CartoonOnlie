@@ -65,7 +65,11 @@
           
            if ([dict[@"info"] isEqualToString:@"登陆成功"]) {
                
+               NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
                
+               [user setValue:self.emailText.text forKey:@"userName"];
+               [user setValue:self.passwordText.text forKey:@"passWork"];
+
                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"通知" message:@"恭喜您登陆成功!!!" preferredStyle:UIAlertControllerStyleAlert];
                
                [ alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -131,17 +135,6 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

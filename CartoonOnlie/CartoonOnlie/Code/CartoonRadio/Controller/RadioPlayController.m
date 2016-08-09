@@ -9,10 +9,11 @@
 #import "RadioPlayController.h"
 #import "RadioDetaiModel.h"
 #import "AVManager.h"
-
+#import "SDAutoLayout.h"
 @interface RadioPlayController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageV;
+@property (strong, nonatomic) IBOutlet UIImageView *cdView;
 
 @property (strong, nonatomic) IBOutlet UILabel *timeL;
 @property (strong, nonatomic) IBOutlet UISlider *slider;
@@ -97,6 +98,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+//    self.cdView.sd_layout.leftSpaceToView(self.view, 60).topSpaceToView(self.view,80).heightIs(200).widthRatioToView(self.view, 0.4);
+//    
     self.revolveView.layer.cornerRadius = self.revolveView.frame.size.width / 2;
     self.revolveView.layer.masksToBounds = YES;
     self.slider.value = 0;

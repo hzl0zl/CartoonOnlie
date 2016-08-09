@@ -12,6 +12,7 @@
 #import "DetailCell.h"
 #import "TerrofyingController.h"
 #import "HMDrawerViewController.h"
+#import "TerrofyingDB.h"
 
 @interface DetailController ()
 
@@ -37,12 +38,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(TerroleftAction)];
     
+//    TerrofyingDB *db = [[TerrofyingDB alloc] init];
+//    [db createtable:nil];
+//    NSMutableArray *arr = [db selectFormTable];
+//    
+//    if (arr.count ==  0) {
+       [self getCollectionData];
+//    }else {
+//        
+//        [self.dataTableViewArray removeAllObjects];
+//        
+//        for (int i = 0; arr.count; i++) {
+//            
+//            TerrofyingModel *model = [[TerrofyingModel alloc] init];
+//            model.name = arr[i];
+//            
+//            [self.dataTableViewArray addObject:model];
+//        }
+//        
+//       
+//    }
+
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(TerroleftAction)];
     UINib *nib = [UINib nibWithNibName:@"DetailCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"detaiCell"];
     [self createHeaderView];
-    [self getCollectionData];
+    
     [self getHeaderViewData];
 }
 - (void)TerroleftAction {
@@ -102,12 +125,19 @@
             NSArray *arr = dictData[@"result"];
             
             NSLog(@"%@", arr);
+             TerrofyingDB *db  = [[TerrofyingDB alloc] init];
+            [db createtable:nil];
+            //清空表中数据
+            [db deleteData];
+            
             for (NSDictionary *dict1 in arr) {
                 
                 TerrofyingModel *model = [[TerrofyingModel alloc] init];
                 
                 [model setValuesForKeysWithDictionary:dict1];
-                
+               
+//                [db insertIntoTable:(NSString *) :(NSString *)];
+            
                 [self.dataTableViewArray addObject:model];
                 
             }

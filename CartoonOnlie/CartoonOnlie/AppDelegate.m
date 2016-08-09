@@ -5,7 +5,7 @@
 //  Created by zhiling on 16/7/30.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
-
+#import "Reachability.h"
 #import "AppDelegate.h"
 #import "HMDrawerViewController.h"
 #import "HMLeftMenuTableViewController.h"
@@ -15,7 +15,9 @@
 #import "RadioController.h"
 #import "DetailController.h"
 #import "SgementController.h"
-@interface AppDelegate ()
+@interface AppDelegate () {
+      Reachability *reachability;
+}
 
 @end
 
@@ -125,9 +127,9 @@
     //    self.window.backgroundColor = [UIColor redColor];
     //创建左右菜单控制器
     HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-
+    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
     //设置窗口根控制器
-    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:220];
+    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:SCREEN_WIDTH / 3 * 2];
     
     //显示窗口
     [self.window makeKeyAndVisible];
@@ -149,7 +151,29 @@
 }
 
 
-
+- (BOOL)networkreachability
+{
+    if (reachability)
+    {
+        switch (reachability.currentReachabilityStatus) {
+            case NotReachable:
+                return NO;
+                break;
+            case ReachableViaWiFi:
+                return YES;
+                break;
+            case ReachableViaWWAN:
+                return YES;
+            default:
+                return NO;
+                break;
+        }
+    }
+    else
+    {
+        return NO;
+    }
+}
 
 
 

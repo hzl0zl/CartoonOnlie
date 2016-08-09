@@ -68,6 +68,12 @@
 		478922131D558E3C00CCD728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6D41D4C33890081DDC5 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		479A30DE1D582AD30058CD05 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 479A30DC1D582AD30058CD05 /* Icon.png */; settings = {ASSET_TAGS = (); }; };
 		479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 479A30DD1D582AD30058CD05 /* Icon@2x.png */; settings = {ASSET_TAGS = (); }; };
+		479A30E31D584F5C0058CD05 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30E11D584F5C0058CD05 /* CollectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		479A30E41D584F5C0058CD05 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479A30E21D584F5C0058CD05 /* CollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
+		479A30E71D587D2D0058CD05 /* TerrofyingDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30E61D587D2D0058CD05 /* TerrofyingDB.m */; settings = {ASSET_TAGS = (); }; };
+		479A30ED1D5882060058CD05 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30EC1D5882060058CD05 /* DBManager.m */; settings = {ASSET_TAGS = (); }; };
+		479A30F01D59690F0058CD05 /* MYHint.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30EF1D59690F0058CD05 /* MYHint.m */; settings = {ASSET_TAGS = (); }; };
+		479A30F31D596A0E0058CD05 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30F21D596A0E0058CD05 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
 		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -200,6 +206,17 @@
 		476753641D5458B5000A30DA /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		479A30DC1D582AD30058CD05 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		479A30DD1D582AD30058CD05 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		479A30E01D584F5C0058CD05 /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		479A30E11D584F5C0058CD05 /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
+		479A30E21D584F5C0058CD05 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		479A30E51D587D2D0058CD05 /* TerrofyingDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingDB.h; sourceTree = "<group>"; };
+		479A30E61D587D2D0058CD05 /* TerrofyingDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingDB.m; sourceTree = "<group>"; };
+		479A30EB1D5882060058CD05 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		479A30EC1D5882060058CD05 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		479A30EE1D59690F0058CD05 /* MYHint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHint.h; sourceTree = "<group>"; };
+		479A30EF1D59690F0058CD05 /* MYHint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHint.m; sourceTree = "<group>"; };
+		479A30F11D596A0E0058CD05 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		479A30F21D596A0E0058CD05 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
 		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
 		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
@@ -273,6 +290,9 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				479A30E01D584F5C0058CD05 /* CollectionCell.h */,
+				479A30E11D584F5C0058CD05 /* CollectionCell.m */,
+				479A30E21D584F5C0058CD05 /* CollectionCell.xib */,
 				3F2498731D546EEA0056F329 /* FunListCell.h */,
 				3F2498741D546EEA0056F329 /* FunListCell.m */,
 				3F2498751D546EEA0056F329 /* FunListCell.xib */,
@@ -512,6 +532,10 @@
 		47EA2BFC1D4C480B007EC6E7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				479A30EE1D59690F0058CD05 /* MYHint.h */,
+				479A30EF1D59690F0058CD05 /* MYHint.m */,
+				479A30EB1D5882060058CD05 /* DBManager.h */,
+				479A30EC1D5882060058CD05 /* DBManager.m */,
 				472299591D52204C0085BC66 /* AVManager.m */,
 				4722995A1D52204C0085BC66 /* AVManager.h */,
 				47EA2C0C1D4C589C007EC6E7 /* DownLoad.h */,
@@ -522,6 +546,10 @@
 				47A2571E1D54AD3B0016115F /* NSString+Md5String.m */,
 				3FAB46FD1D55E9D1006DEE47 /* DataHandler.h */,
 				3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */,
+				479A30E51D587D2D0058CD05 /* TerrofyingDB.h */,
+				479A30E61D587D2D0058CD05 /* TerrofyingDB.m */,
+				479A30F11D596A0E0058CD05 /* Reachability.h */,
+				479A30F21D596A0E0058CD05 /* Reachability.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -714,6 +742,7 @@
 				3F7608C21D584B34007E7A52 /* ReadViewController.xib in Resources */,
 				3F7608C11D584B2B007E7A52 /* VolumecountCell.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
+				479A30E41D584F5C0058CD05 /* CollectionCell.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
@@ -809,9 +838,12 @@
 				3F7608A11D583D6D007E7A52 /* FunnyDetailViewController.m in Sources */,
 				47592D8F1D55CD3F000EFC4C /* FunnyDetailModel.m in Sources */,
 				3F7608A01D583D5A007E7A52 /* NSString+Md5String.m in Sources */,
+				479A30F01D59690F0058CD05 /* MYHint.m in Sources */,
 				3F76089F1D583D54007E7A52 /* LoginController.m in Sources */,
 				3FAB47031D56079D006DEE47 /* CollectionController.m in Sources */,
+				479A30E31D584F5C0058CD05 /* CollectionCell.m in Sources */,
 				3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */,
+				479A30F31D596A0E0058CD05 /* Reachability.m in Sources */,
 				3F24987D1D546F600056F329 /* FunnyController.m in Sources */,
 				3F2498791D546EEA0056F329 /* FunListCell.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
@@ -820,6 +852,7 @@
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
+				479A30ED1D5882060058CD05 /* DBManager.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
@@ -843,6 +876,7 @@
 				3F7608851D583CEC007E7A52 /* QuadraticMainModel.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */,
+				479A30E71D587D2D0058CD05 /* TerrofyingDB.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
 				476753651D5458B5000A30DA /* RegisterController.m in Sources */,

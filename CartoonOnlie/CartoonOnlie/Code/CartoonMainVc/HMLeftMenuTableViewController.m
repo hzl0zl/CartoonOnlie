@@ -21,17 +21,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addLeftBtn];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    NSLog(@"22");
+
+    
+//    [user setValue:self.usernameT.text forKey:@"userName"];
+//    [user setValue:self.passwordT.text forKey:@"passWork"];
 
     
     
-    
-    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     
 }
-
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *s = [user valueForKey:@"passWork"];
+    if (s) {
+        
+        [self addCancelBtn];
+    }else {
+        
+        [self addLoginBtn];
+    }
+    
+    
+}
 - (void)getData {
     
     
@@ -42,7 +58,7 @@
     
 }
 
-- (void)addLeftBtn {
+- (void)addCancelBtn {
     
     self.tableView.separatorStyle = UITableViewCellAccessoryNone;
     //    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ll1.jpg"]];
@@ -51,11 +67,11 @@
     headerView.backgroundColor = [UIColor magentaColor];
     //    headerView.userInteractionEnabled = YES;
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(30, 30, 120, 30)];
-    [addBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(30, 30, 80, 30)];
+    [addBtn setTitle:@"注销" forState:UIControlStateNormal];
     addBtn.backgroundColor = [UIColor lightGrayColor];
     //    addBtn.frame = CGRectMake(30, 30, 60, 30);
-    [addBtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [addBtn addTarget:self action:@selector(btnCancelClick) forControlEvents:UIControlEventTouchUpInside];
     [headerView addSubview:addBtn];
     
     
@@ -63,7 +79,28 @@
     
 }
 
-- (void)btnClick{
+- (void)addLoginBtn {
+    
+    self.tableView.separatorStyle = UITableViewCellAccessoryNone;
+    //    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ll1.jpg"]];
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
+    headerView.backgroundColor = [UIColor magentaColor];
+    //    headerView.userInteractionEnabled = YES;
+    
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(30, 30, 80, 30)];
+    [addBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    addBtn.backgroundColor = [UIColor lightGrayColor];
+    //    addBtn.frame = CGRectMake(30, 30, 60, 30);
+    [addBtn addTarget:self action:@selector(btnLoginClick) forControlEvents:UIControlEventTouchUpInside];
+    [headerView addSubview:addBtn];
+    
+    
+    self.tableView.tableHeaderView = headerView;
+    
+}
+
+- (void)btnLoginClick{
     
     
     
@@ -72,6 +109,18 @@
     [self presentViewController:loginVC animated:YES completion:nil];
     
 //    [[HMDrawerViewController shareDrawer] switchController:nav];
+    
+    
+}
+- (void)btnCancelClick{
+    
+    NSString*appDomain = [[NSBundle mainBundle]bundleIdentifier];
+
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    
+
+
+    [self addLoginBtn];
     
     
 }
