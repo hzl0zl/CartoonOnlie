@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectionModel.h"
+
 
 @interface FunnyController : UIViewController
+
+@property (nonatomic, strong) CollectionModel *model;
 
 @end

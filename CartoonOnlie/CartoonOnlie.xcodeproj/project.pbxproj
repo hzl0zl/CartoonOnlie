@@ -251,10 +251,14 @@
 		3FC531AB1D4C5313000EB7E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				47592D8C1D55CD3F000EFC4C /* FunListModel.h */,
 				47592D8D1D55CD3F000EFC4C /* FunnyDetailModel.h */,
 				47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */,
 				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
+				3F2130861D53257000C88288 /* FunListModel.h */,
+				3FA312621D54469A002C4FFD /* FunnyDetailModel.h */,
+				3FA312631D54469A002C4FFD /* FunnyDetailModel.m */,
+				3FAB470A1D56173D006DEE47 /* CollectionModel.h */,
+				3FAB470B1D56173D006DEE47 /* CollectionModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,12 +266,15 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				47592D721D55CCCF000EFC4C /* FunListCell.h */,
-				47592D731D55CCCF000EFC4C /* FunListCell.m */,
-				47592D741D55CCCF000EFC4C /* FunListCell.xib */,
-				47592D751D55CCCF000EFC4C /* VolumecountCell.h */,
-				47592D761D55CCCF000EFC4C /* VolumecountCell.m */,
-				47592D771D55CCCF000EFC4C /* VolumecountCell.xib */,
+				3F7608BC1D5849E3007E7A52 /* CollectionCell.h */,
+				3F7608BD1D5849E3007E7A52 /* CollectionCell.m */,
+				3F7608BE1D5849E3007E7A52 /* CollectionCell.xib */,
+				3F2498731D546EEA0056F329 /* FunListCell.h */,
+				3F2498741D546EEA0056F329 /* FunListCell.m */,
+				3F2498751D546EEA0056F329 /* FunListCell.xib */,
+				3F2498761D546EEA0056F329 /* VolumecountCell.h */,
+				3F2498771D546EEA0056F329 /* VolumecountCell.m */,
+				3F2498781D546EEA0056F329 /* VolumecountCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,13 +391,16 @@
 			isa = PBXGroup;
 			children = (
 				472EC7441D4C39870081DDC5 /* FunnyController.h */,
-				47592D801D55CCFC000EFC4C /* FunnyController.m */,
-				47592D811D55CCFC000EFC4C /* FunnyDetailViewController.h */,
-				47592D821D55CCFC000EFC4C /* FunnyDetailViewController.m */,
-				47592D831D55CCFC000EFC4C /* FunnyDetailViewController.xib */,
-				47592D841D55CCFC000EFC4C /* ReadViewController.h */,
-				47592D851D55CCFC000EFC4C /* ReadViewController.m */,
-				47592D861D55CCFC000EFC4C /* ReadViewController.xib */,
+				3F2130871D5325BC00C88288 /* FunnyController.m */,
+				3F2130891D53261900C88288 /* FunnyDetailViewController.h */,
+				3F21308E1D53265D00C88288 /* FunnyDetailViewController.m */,
+				3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */,
+				3FA3125D1D5445AB002C4FFD /* ReadViewController.h */,
+				3FA3125E1D5445AB002C4FFD /* ReadViewController.m */,
+				3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */,
+				3FAB47001D56079D006DEE47 /* CollectionController.h */,
+				3FAB47011D56079D006DEE47 /* CollectionController.m */,
+				3FAB47021D56079D006DEE47 /* CollectionController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -408,6 +418,12 @@
 		472EC7391D4C39290081DDC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F76088B1D583D04007E7A52 /* MainQuadraticViewController.h */,
+				3F76088C1D583D04007E7A52 /* MainQuadraticViewController.m */,
+				3F76088D1D583D04007E7A52 /* QuadraticWebController.h */,
+				3F76088E1D583D04007E7A52 /* QuadraticWebController.m */,
+				3F76088F1D583D04007E7A52 /* SgementController.h */,
+				3F7608901D583D04007E7A52 /* SgementController.m */,
 				3F1A97D11D52EE7000235153 /* QuadraticController.h */,
 				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
 				3F22A0571D544034005AF6E6 /* QuadraticWebController.h */,
@@ -505,6 +521,8 @@
 		47EA2C031D4C4FF3007EC6E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F7608831D583CEC007E7A52 /* QuadraticMainModel.h */,
+				3F7608841D583CEC007E7A52 /* QuadraticMainModel.m */,
 				3F1A97CE1D52EE4300235153 /* QuadraticModel.h */,
 				3F1A97CF1D52EE4300235153 /* QuadraticModel.m */,
 				3F22A0731D5476C0005AF6E6 /* QuadraticMainModel.h */,
@@ -518,12 +536,12 @@
 		47EA2C041D4C4FF3007EC6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F7608861D583CF8007E7A52 /* QuadrticFirstCollectionViewCell.h */,
+				3F7608871D583CF8007E7A52 /* QuadrticFirstCollectionViewCell.m */,
+				3F7608881D583CF8007E7A52 /* QuadrticFirstCollectionViewCell.xib */,
 				3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */,
 				3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */,
 				3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */,
-				3F22A0871D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.h */,
-				3F22A0881D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m */,
-				3F22A0891D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib */,
 				47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */,
 				47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */,
 				47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */,
@@ -694,23 +712,22 @@
 				3F21BD7A1D58362800316880 /* QuadraticCellTableViewCell.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
-				47592D891D55CCFC000EFC4C /* FunnyDetailViewController.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
+				3F7608C01D5849E3007E7A52 /* CollectionCell.xib in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
-				47592D8B1D55CCFC000EFC4C /* ReadViewController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
-				47592D791D55CCCF000EFC4C /* FunListCell.xib in Resources */,
 				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
-				47592D7B1D55CCCF000EFC4C /* VolumecountCell.xib in Resources */,
-				3F22A08B1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
+				3FAB47041D56079D006DEE47 /* CollectionController.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
+				3F76088A1D583CF8007E7A52 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
+				3F24987A1D546EEA0056F329 /* FunListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +817,8 @@
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
+				3F7608BF1D5849E3007E7A52 /* CollectionCell.m in Sources */,
+				3F7608921D583D04007E7A52 /* QuadraticWebController.m in Sources */,
 				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
@@ -808,17 +827,19 @@
 				47592D8A1D55CCFC000EFC4C /* ReadViewController.m in Sources */,
 				3F22A0721D54766F005AF6E6 /* MainQuadraticViewController.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
-				47592D871D55CCFC000EFC4C /* FunnyController.m in Sources */,
+				3FAB46FF1D55E9D1006DEE47 /* DataHandler.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
+				3F7608931D583D04007E7A52 /* SgementController.m in Sources */,
+				3FAB470C1D56173D006DEE47 /* CollectionModel.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
-				47592D781D55CCCF000EFC4C /* FunListCell.m in Sources */,
-				47592D8F1D55CD3F000EFC4C /* FunnyDetailModel.m in Sources */,
+				3F7608911D583D04007E7A52 /* MainQuadraticViewController.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
 				3F22A08A1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m in Sources */,
 				3F22A0751D5476C0005AF6E6 /* QuadraticMainModel.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
-				47592D881D55CCFC000EFC4C /* FunnyDetailViewController.m in Sources */,
+				3F7608891D583CF8007E7A52 /* QuadrticFirstCollectionViewCell.m in Sources */,
+				3F7608851D583CEC007E7A52 /* QuadraticMainModel.m in Sources */,
 				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,

@@ -15,6 +15,14 @@
 
 //@property (nonatomic, strong) NSString *url;
 
+@property (nonatomic, strong) NSString *author;
+
+@property (nonatomic, assign) NSNumber *status;
+
+@property (nonatomic, strong) NSString *authorName;
+
+@property (nonatomic, strong) NSNumber *popular;
+
 
 @property (nonatomic, strong) FunnyDetailModel *model;
 
