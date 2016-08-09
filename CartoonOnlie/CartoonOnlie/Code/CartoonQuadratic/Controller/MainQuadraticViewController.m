@@ -11,7 +11,7 @@
 #import "QuadrticFirstCollectionViewCell.h"
 #import "SDCycleScrollView.h"
 #import "SectionOneCell.h"
-#import "PicWebController.h"
+#import "QuadrticCellController.h"
 
 @interface MainQuadraticViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,SDCycleScrollViewDelegate>
 
@@ -24,11 +24,11 @@
 //轮播图数据
 @property (nonatomic,strong) NSMutableArray *SDCyclesArry;
 
-//@property (nonatomic, strong) NSMutableDictionary *dictData;
-
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
+
+
 
 
 @end
@@ -40,6 +40,7 @@
      [self loadData];
     [self SDCycleloadData];
     [self creatCollectionView];
+   
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSLog(@"%@", path);
   
@@ -122,8 +123,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 //            [self creatSDCycleScrollView];
-                
-                
+
                 [self.collectionView reloadData];
             });
             
@@ -175,11 +175,6 @@
     
     
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header1"];
-    
-    
-//    //注册分区尾
-//    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
-    
     
 }
 
@@ -283,41 +278,28 @@
 
    
 }
+
+//点击方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"11");
-    PicWebController *picVC = [[PicWebController alloc] init];
+    QuadrticCellController *cellVC = [[QuadrticCellController alloc]init];
+    
     QuadraticMainModel *model;
+   
     if (indexPath.section == 0) {
         
         model = self.quadraticArry[indexPath.row];
-        picVC.urlStr = [NSString stringWithFormat:@"http://api.kuaikanmanhua.com/v1/topics/%@?sort=0",model.ids];
+        cellVC.urlID =model.ids;
     }else {
-        
+
         model = self.quadraticArry2[indexPath.row];
-        picVC.urlStr = [NSString stringWithFormat:@"http://api.kuaikanmanhua.com/v1/topics/%@?sort=0",model.ids];
+        cellVC.urlID =model.ids;
+
     }
-    [self.navigationController pushViewController:picVC animated:YES];
     
-    
-    
-    
-    
-    
+    [self.navigationController pushViewController:cellVC animated:YES];
     
     
 }
-
-/** 点击图片回调 */
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    
-    PicWebController *picVC = [[PicWebController alloc] init];
-    picVC.urlStr = [NSString stringWithFormat:@"http://www.kuaikanmanhua.com/web/comic/%@", self.quadraticArry3[index]];
-    [self.navigationController pushViewController:picVC animated:YES];
-    
-    NSLog(@"%ld",index);
-}
-
-
 
 #pragma mark 初始化设置
 -(NSMutableArray *)quadraticArry

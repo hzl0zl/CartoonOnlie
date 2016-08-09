@@ -12,6 +12,11 @@
 		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F21BD351D55BAE400316880 /* SgementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21BD341D55BAE400316880 /* SgementController.m */; settings = {ASSET_TAGS = (); }; };
+		3F21BD721D58271300316880 /* QuadrticCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21BD711D58271300316880 /* QuadrticCellController.m */; settings = {ASSET_TAGS = (); }; };
+		3F21BD751D58338D00316880 /* QuadriticCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21BD741D58338D00316880 /* QuadriticCellModel.m */; settings = {ASSET_TAGS = (); }; };
+		3F21BD791D58362800316880 /* QuadraticCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21BD771D58362800316880 /* QuadraticCellTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F21BD7A1D58362800316880 /* QuadraticCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21BD781D58362800316880 /* QuadraticCellTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F21BD7D1D58A0B500316880 /* QuadrticLTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F21BD7C1D58A0B500316880 /* QuadrticLTView.m */; settings = {ASSET_TAGS = (); }; };
 		3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0581D544034005AF6E6 /* QuadraticWebController.m */; settings = {ASSET_TAGS = (); }; };
 		3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
 		3F22A06F1D546F47005AF6E6 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
@@ -46,7 +51,6 @@
 		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
 		47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */; settings = {ASSET_TAGS = (); }; };
 		47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */; settings = {ASSET_TAGS = (); }; };
-		47312C821D581BFB00B3B7B8 /* PicWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C811D581BFB00B3B7B8 /* PicWebController.m */; settings = {ASSET_TAGS = (); }; };
 		47592D781D55CCCF000EFC4C /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D731D55CCCF000EFC4C /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
 		47592D791D55CCCF000EFC4C /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47592D741D55CCCF000EFC4C /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
 		47592D7A1D55CCCF000EFC4C /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D761D55CCCF000EFC4C /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -97,6 +101,15 @@
 		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
 		3F21BD331D55BAE400316880 /* SgementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SgementController.h; sourceTree = "<group>"; };
 		3F21BD341D55BAE400316880 /* SgementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SgementController.m; sourceTree = "<group>"; };
+		3F21BD701D58271300316880 /* QuadrticCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticCellController.h; sourceTree = "<group>"; };
+		3F21BD711D58271300316880 /* QuadrticCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticCellController.m; sourceTree = "<group>"; };
+		3F21BD731D58338D00316880 /* QuadriticCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadriticCellModel.h; sourceTree = "<group>"; };
+		3F21BD741D58338D00316880 /* QuadriticCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadriticCellModel.m; sourceTree = "<group>"; };
+		3F21BD761D58362800316880 /* QuadraticCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticCellTableViewCell.h; sourceTree = "<group>"; };
+		3F21BD771D58362800316880 /* QuadraticCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticCellTableViewCell.m; sourceTree = "<group>"; };
+		3F21BD781D58362800316880 /* QuadraticCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticCellTableViewCell.xib; sourceTree = "<group>"; };
+		3F21BD7B1D58A0B500316880 /* QuadrticLTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticLTView.h; sourceTree = "<group>"; };
+		3F21BD7C1D58A0B500316880 /* QuadrticLTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticLTView.m; sourceTree = "<group>"; };
 		3F22A0571D544034005AF6E6 /* QuadraticWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticWebController.h; sourceTree = "<group>"; };
 		3F22A0581D544034005AF6E6 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
 		3F22A0701D54766F005AF6E6 /* MainQuadraticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainQuadraticViewController.h; sourceTree = "<group>"; };
@@ -158,8 +171,6 @@
 		47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionOneCell.h; sourceTree = "<group>"; };
 		47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionOneCell.m; sourceTree = "<group>"; };
 		47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionOneCell.xib; sourceTree = "<group>"; };
-		47312C801D581BFB00B3B7B8 /* PicWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicWebController.h; sourceTree = "<group>"; };
-		47312C811D581BFB00B3B7B8 /* PicWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicWebController.m; sourceTree = "<group>"; };
 		47592D721D55CCCF000EFC4C /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
 		47592D731D55CCCF000EFC4C /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
 		47592D741D55CCCF000EFC4C /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
@@ -405,8 +416,8 @@
 				3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */,
 				3F21BD331D55BAE400316880 /* SgementController.h */,
 				3F21BD341D55BAE400316880 /* SgementController.m */,
-				47312C801D581BFB00B3B7B8 /* PicWebController.h */,
-				47312C811D581BFB00B3B7B8 /* PicWebController.m */,
+				3F21BD701D58271300316880 /* QuadrticCellController.h */,
+				3F21BD711D58271300316880 /* QuadrticCellController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,6 +496,8 @@
 				47EA2C0F1D4C589C007EC6E7 /* PrefixHeader.pch */,
 				47A2571D1D54AD3B0016115F /* NSString+Md5String.h */,
 				47A2571E1D54AD3B0016115F /* NSString+Md5String.m */,
+				3F21BD7B1D58A0B500316880 /* QuadrticLTView.h */,
+				3F21BD7C1D58A0B500316880 /* QuadrticLTView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -496,6 +509,8 @@
 				3F1A97CF1D52EE4300235153 /* QuadraticModel.m */,
 				3F22A0731D5476C0005AF6E6 /* QuadraticMainModel.h */,
 				3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */,
+				3F21BD731D58338D00316880 /* QuadriticCellModel.h */,
+				3F21BD741D58338D00316880 /* QuadriticCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -512,6 +527,9 @@
 				47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */,
 				47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */,
 				47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */,
+				3F21BD761D58362800316880 /* QuadraticCellTableViewCell.h */,
+				3F21BD771D58362800316880 /* QuadraticCellTableViewCell.m */,
+				3F21BD781D58362800316880 /* QuadraticCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +691,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F21BD7A1D58362800316880 /* QuadraticCellTableViewCell.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				47592D891D55CCFC000EFC4C /* FunnyDetailViewController.xib in Resources */,
@@ -768,7 +787,10 @@
 				3F21BD351D55BAE400316880 /* SgementController.m in Sources */,
 				3F22A05C1D546CA2005AF6E6 /* RadioDetailCell.m in Sources */,
 				47592D7A1D55CCCF000EFC4C /* VolumecountCell.m in Sources */,
+				3F21BD721D58271300316880 /* QuadrticCellController.m in Sources */,
+				3F21BD751D58338D00316880 /* QuadriticCellModel.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
+				3F21BD7D1D58A0B500316880 /* QuadrticLTView.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
@@ -782,6 +804,7 @@
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
 				3F22A05A1D544034005AF6E6 /* QuadraticWebController.m in Sources */,
+				3F21BD791D58362800316880 /* QuadraticCellTableViewCell.m in Sources */,
 				47592D8A1D55CCFC000EFC4C /* ReadViewController.m in Sources */,
 				3F22A0721D54766F005AF6E6 /* MainQuadraticViewController.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
@@ -792,7 +815,6 @@
 				47592D781D55CCCF000EFC4C /* FunListCell.m in Sources */,
 				47592D8F1D55CD3F000EFC4C /* FunnyDetailModel.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
-				47312C821D581BFB00B3B7B8 /* PicWebController.m in Sources */,
 				3F22A08A1D54AEB8005AF6E6 /* QuadrticFirstCollectionViewCell.m in Sources */,
 				3F22A0751D5476C0005AF6E6 /* QuadraticMainModel.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
@@ -936,7 +958,7 @@
 			baseConfigurationReference = E8450B81A0D8416EC6F59D2F /* Pods-CartoonOnlie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1013,7 +1035,7 @@
 			baseConfigurationReference = AA82DCF6822C97A619D057A9 /* Pods-CartoonOnlie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

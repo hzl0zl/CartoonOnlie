@@ -7,10 +7,11 @@
 //
 
 #import "QuadraticController.h"
-
+#import "QuadrticLTView.h"
 #import "QuadraticTableViewCell.h"
 #import "QuadraticModel.h"
 #import "QuadraticWebController.h"
+
 
 @interface QuadraticController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -28,10 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor magentaColor];
-    
-   
     
     [self creatTblewView];
     
@@ -60,7 +57,7 @@
 #pragma  mark 视图及数据处理
 -(void)creatTblewView
 {
-    self.tabelView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    self.tabelView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
@@ -146,79 +143,45 @@
 
 #pragma mark 分区头部及尾部相关设置
 
-//头分区
+////头分区
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 25)];
     
-    UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(15, 8, 45, 20)];
-
-    UILabel *laber1 = [[UILabel alloc]initWithFrame:CGRectMake(75, 8, 130, 20)];
-   
-    UILabel *laber2 = [[UILabel alloc]initWithFrame:CGRectMake(240, 8, 70, 20)];
-    
-    laber2.backgroundColor = [UIColor orangeColor];
-    
-    view.backgroundColor = [UIColor redColor];
-    
-    laber.font = [UIFont systemFontOfSize:13];
-    
-    laber1.font = [UIFont systemFontOfSize:13];
-    
-    laber1.backgroundColor = [UIColor grayColor];
+    QuadrticLTView *view = [[QuadrticLTView alloc]initQuadrticLTViewWith:CGRectMake(0, 0, SCREEN_WIDTH, 20)headerAndFoote:@"header"];
     
     QuadraticModel *model = self.quadraticArry[section];
    
-    laber.text = model.label_text;
+    view.type.text = model.label_text;
     
+//    view.title.text = self.titleArry[section];
     
-   
-//    laber1.text = self.titleArry[section];
-    
-    laber2.text = model.nickname;
-    
- 
-    [view addSubview:laber2];
-    
-    [view addSubview:laber1];
-    
-    [view addSubview:laber];
-    
+    view.author.text = model.nickname;
+
     return view;
 }
 
 //尾分区
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView *view =[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 25)];
-    
-    UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, 150, 20)];
-    
-    view.backgroundColor = [UIColor whiteColor];
-    
-    laber.font = [UIFont systemFontOfSize:10];
-    laber.backgroundColor = [UIColor brownColor];
+    QuadrticLTView *view = [[QuadrticLTView alloc]initQuadrticLTViewWith:CGRectMake(0, 0, SCREEN_WIDTH, 20) headerAndFoote:@"footer"];
     
     QuadraticModel *model = self.quadraticArry[section];
     
-    laber.text = model.title;
-    
-    [view addSubview:laber];
-    
+    view.title.text = model.title;
+
     return view;
 }
 #pragma  mark 点击cell响应方法
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSLog(@"点击");
+
     QuadraticWebController *webVC = [[QuadraticWebController alloc]init];
+    
+    QuadraticModel *model = self.quadraticArry[indexPath.section];
+    
     //传值
-    webVC.model = self.quadraticArry[indexPath.section];
+    webVC.model_url = model.url;
     [self.navigationController pushViewController:webVC animated:YES];
-    
-  
-    
     
 }
 
@@ -235,13 +198,13 @@
 {
     
    
-    return 30;
+    return 25;
 }
 
 //返回尾
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 30;
+    return 20;
 }
 
 
