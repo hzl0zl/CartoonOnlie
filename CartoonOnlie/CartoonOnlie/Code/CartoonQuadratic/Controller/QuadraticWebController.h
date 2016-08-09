@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QuadraticModel.h"
+#import "QuadriticCellModel.h"
 
 @interface QuadraticWebController : UIViewController
 
+
+
 //外部传值属性
-@property (nonatomic,strong) id model;
+@property (nonatomic,strong) NSString *model_url;
 
 
 @end

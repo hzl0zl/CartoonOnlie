@@ -11,7 +11,7 @@
 #import "QuadrticFirstCollectionViewCell.h"
 #import "SDCycleScrollView.h"
 #import "SectionOneCell.h"
-#import "PicWebController.h"
+#import "QuadrticCellController.h"
 
 @interface MainQuadraticViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,SDCycleScrollViewDelegate>
 
@@ -24,11 +24,11 @@
 //轮播图数据
 @property (nonatomic,strong) NSMutableArray *SDCyclesArry;
 
-//@property (nonatomic, strong) NSMutableDictionary *dictData;
-
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
+
+
 
 
 @end
@@ -40,6 +40,7 @@
      [self loadData];
     [self SDCycleloadData];
     [self creatCollectionView];
+   
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSLog(@"%@", path);
   
@@ -121,9 +122,7 @@
         }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                //            [self creatSDCycleScrollView];
-                
-                
+
                 [self.collectionView reloadData];
             });
             
@@ -162,8 +161,7 @@
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    
+    self.collectionView.backgroundColor = [UIColor grayColor];
     //注册 cell1
     [self.collectionView registerNib:[UINib nibWithNibName:@"QuadrticFirstCollectionViewCell" bundle:nil]forCellWithReuseIdentifier:@"firstCell"];
     //注册 cell2
@@ -175,11 +173,6 @@
     
     
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header1"];
-    
-    
-//    //注册分区尾
-//    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
-    
     
 }
 
@@ -227,7 +220,6 @@
         cell.model = self.quadraticArry2[indexPath.row];
         cell.numberL.text = [NSString stringWithFormat:@"NO.%ld", indexPath.row + 1];
         return cell;
-        //        sectionCell
     }
         
     
@@ -261,7 +253,8 @@
 
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 180, SCREEN_WIDTH, 30)];
         label.text = @"人气飙升";
-        label.backgroundColor  = [UIColor redColor];
+        label.backgroundColor  = [UIColor whiteColor];
+        label.font = [UIFont systemFontOfSize:13];
         [sdcyc addSubview:label];
         [sdcyc addSubview:[self creatSDCycleScrollView]];
         
@@ -274,7 +267,8 @@
 
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
         label.text = @"每周排行榜";
-        label.backgroundColor  = [UIColor redColor];
+        label.backgroundColor  = [UIColor whiteColor];
+        label.font = [UIFont systemFontOfSize:13];
         [view addSubview:label];
         return view;
     }
@@ -283,26 +277,25 @@
 
    
 }
+
+//点击方法
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"11");
-    PicWebController *picVC = [[PicWebController alloc] init];
+    QuadrticCellController *cellVC = [[QuadrticCellController alloc]init];
+    
     QuadraticMainModel *model;
+   
     if (indexPath.section == 0) {
         
         model = self.quadraticArry[indexPath.row];
-        picVC.urlStr = [NSString stringWithFormat:@"http://api.kuaikanmanhua.com/v1/topics/%@?sort=0",model.ids];
+        cellVC.urlID =model.ids;
     }else {
-        
+
         model = self.quadraticArry2[indexPath.row];
-        picVC.urlStr = [NSString stringWithFormat:@"http://api.kuaikanmanhua.com/v1/topics/%@?sort=0",model.ids];
+        cellVC.urlID =model.ids;
+
     }
-    [self.navigationController pushViewController:picVC animated:YES];
     
-    
-    
-    
-    
-    
+    [self.navigationController pushViewController:cellVC animated:YES];
     
     
 }

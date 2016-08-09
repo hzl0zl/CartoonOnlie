@@ -49,14 +49,14 @@
     
 
     
-    SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次u" normalImage:nil selectedImage:nil class:[SgementController class]];
+    SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[SgementController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"06" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
     
     
-    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"remind.png" selectedImage:@"remind_fill.png" class:[DetailController class]];
+    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:@"remind_fill.png" class:[DetailController class]];
     
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"lbs.png" selectedImage:@"lbs_fill.png" class:[RadioController class]];
+    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"05" selectedImage:@"lbs_fill.png" class:[RadioController class]];
     
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
@@ -89,7 +89,7 @@
     tabbarController.tabBar.hidden = NO;
     
     //角标
-    firstVC.tabBarItem.badgeValue = @"100";
+//    firstVC.tabBarItem.badgeValue = @"100";
     
     //设置tabbarController
 //    tabbarController.delegate = self;
