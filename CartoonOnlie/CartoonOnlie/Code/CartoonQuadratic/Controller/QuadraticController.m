@@ -151,7 +151,7 @@
     QuadraticModel *model = self.quadraticArry[section];
    
     view.type.text = model.label_text;
-    
+             
 //    view.title.text = self.titleArry[section];
     
     view.author.text = model.nickname;

@@ -39,7 +39,7 @@
     NSString *time  = [dateFormatter stringFromDate:date];
 
     self.time.text = time;
-    
+
     
     
 }
