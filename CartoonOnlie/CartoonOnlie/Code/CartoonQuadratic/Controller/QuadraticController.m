@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.translucent = NO;
     [self creatTblewView];
     
     [self loadData];
@@ -57,7 +57,7 @@
 #pragma  mark 视图及数据处理
 -(void)creatTblewView
 {
-    self.tabelView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+    self.tabelView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
@@ -184,7 +184,13 @@
     
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.tabelView.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT);
+    
+}
 #pragma mark tableView 返回高度
 //返回cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -51,12 +51,12 @@
     
     SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[SgementController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"06" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
+//    
+//    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
     
-    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:@"remind_fill.png" class:[DetailController class]];
-    
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"05" selectedImage:@"lbs_fill.png" class:[RadioController class]];
+    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
@@ -64,12 +64,12 @@
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
     
     
-     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
+//     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
     
      UINavigationController *fourNav = [[UINavigationController alloc] initWithRootViewController:fourVC];
     
     
-    tabbarController.viewControllers = @[firstNav, secondNav, thridNav, fourNav];
+    tabbarController.viewControllers = @[firstNav, secondNav,  fourNav];
     
     
     //设置Item的选中颜色

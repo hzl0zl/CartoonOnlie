@@ -147,13 +147,13 @@
     self.layout = [[UICollectionViewFlowLayout alloc]init];
     
     //设置item
-    self.layout.itemSize = CGSizeMake(100, 130);
+    self.layout.itemSize = CGSizeMake(115, 150);
     
-    self.layout.minimumInteritemSpacing = 5;
-    self.layout.minimumLineSpacing = 5;
+//    self.layout.minimumInteritemSpacing = 2;
+//    self.layout.minimumLineSpacing = 2;
 
     //设置分区边距
-    self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 2, 2);
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 113) collectionViewLayout:self.layout];
     
@@ -300,16 +300,12 @@
     
 }
 
-/** 点击图片回调 */
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+- (void)viewWillAppear:(BOOL)animated {
     
-    PicWebController *picVC = [[PicWebController alloc] init];
-    picVC.urlStr = [NSString stringWithFormat:@"http://api.kuaikanmanhua.com/v1/comics/%@", self.quadraticArry3[index]];
-    [self.navigationController pushViewController:picVC animated:YES];
+    [super viewWillAppear:animated];
     
-    NSLog(@"%ld",index);
+    self.collectionView.frame =CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 113);
 }
-
 
 
 #pragma mark 初始化设置

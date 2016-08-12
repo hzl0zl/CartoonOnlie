@@ -31,7 +31,18 @@
     [self.imageH sd_setImageWithURL:[NSURL URLWithString:terrModel.pcover]];
     self.titleLabel.text = terrModel.title;
     self.descLabel.text = [NSString stringWithFormat:@"%@", terrModel.dig];
-    self.titleL.text = [NSString stringWithFormat:@"%@", terrModel.updatetime];
+    
+    //NSnumber转 NSdate
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:[terrModel.updatetime doubleValue]];
+    //创建格式
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"MM月dd日 HH:mm"];
+    //转字符串
+    NSString *time  = [dateFormatter stringFromDate:date];
+    
+//    self.time.text = time;
+    
+    self.titleL.text = time;
     
 }
 

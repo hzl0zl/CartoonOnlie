@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
+@property (strong, nonatomic) IBOutlet UIButton *playBtn;
 @property (nonatomic, strong)CADisplayLink *singerTimer;
 
 @property (strong, nonatomic) IBOutlet UIImageView *revolveView;
@@ -85,13 +86,14 @@
 
     if ([self.av play]) {
         
+   
           self.singerTimer.paused = NO;
         
     } else {
         
           self.singerTimer.paused = YES;
     }
-
+     self.playBtn.selected = !self.playBtn.selected;
     
 //   
 }
@@ -126,7 +128,7 @@
 #pragma mark ===定时器中执行方法
 - (void)updateTime {
     
-
+    
     float sec = [self.av playDuration];
     NSInteger a = sec / 60;
     NSInteger b = (int)sec % 60;

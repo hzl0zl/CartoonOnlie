@@ -12,7 +12,7 @@
 #import "DetailCell.h"
 #import "TerrofyingController.h"
 #import "HMDrawerViewController.h"
-#import "TerrofyingDB.h"
+#import "CartoonTerrofyingDB.h"
 
 @interface DetailController ()
 
@@ -39,34 +39,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    TerrofyingDB *db = [[TerrofyingDB alloc] init];
-//    [db createtable:nil];
-//    NSMutableArray *arr = [db selectFormTable];
-//    
-//    if (arr.count ==  0) {
-       [self getCollectionData];
-//    }else {
-//        
-//        [self.dataTableViewArray removeAllObjects];
-//        
-//        for (int i = 0; arr.count; i++) {
-//            
-//            TerrofyingModel *model = [[TerrofyingModel alloc] init];
-//            model.name = arr[i];
-//            
-//            [self.dataTableViewArray addObject:model];
-//        }
-//        
-//       
-//    }
+//    NSArray *arr = [[CartoonTerrofyingDB shareDataHandler] allModel];
+    
+ 
+        [self getCollectionData];
+
+
 
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(TerroleftAction)];
     UINib *nib = [UINib nibWithNibName:@"DetailCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"detaiCell"];
-    [self createHeaderView];
-    
-    [self getHeaderViewData];
+
+
 }
 - (void)TerroleftAction {
     
@@ -83,64 +68,20 @@
     
     
 }
-#pragma mark ===请求数据
-- (void)getHeaderViewData {
-    NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getBranchFoucs"];
-    NSString *body = @"deviceToken=nil&hash=3142f5bba043af28dfc75f3f3ccc2065&appc=as_kbmh&appv=1.0.3.100&resolution=375%2C667&dateline=1469846871821";
-    
-   
-    [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
-        
-        if (data != nil) {
-            NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//            NSLog(@"%@", dictData);
-            
-            NSArray *arr1 = dictData[@"result"];
-            
-            NSDictionary *dict1 = [arr1 firstObject];
-            self.headerStr = dict1[@"img"];
-            
-        }else {
-            
-            NSLog(@"数据为空");
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [ self.imageViewH sd_setImageWithURL:[NSURL URLWithString:self.headerStr]];
-            
-        });
-        
-    }];
-}
+
 #pragma mark ===collection请求数据
 - (void)getCollectionData {
     
-    NSString *urlStr = [NSString stringWithFormat:@"http://apikb.xiaomianguan.org/getListCollect"];
-    NSString *body = @"msgNum=83-1469842200%7C80-1469499300%7C79-1469257200%7C78-1469328300%7C76-1469773800%7C73-1469351400%7C71-1469684100%7C70-1469769900%7C65-1469242800%7C63-1468313640%7C62-1469589600%7C61-1457430340%7C60-1453365183%7C59-1453279023%7C58-1469775060%7C57-1469515440%7C55-1451204335%7C54-1466066100%7C53-1469514900%7C49-1469436300%7C48-1469322000%7C43-1466318700%7C42-1469589300%7C41-1463814000%7C38-1469431800%7C19-1441681200%7C14-1469785500%7C&hash=ab0e02ddedd32337d38313632ee65d6a&appc=as_kbmh&deviceToken=nil&dateline=1469861501537&page=1&resolution=375%2C667&appv=1.0.3.100";
+    NSString *urlStr = @"http://baobab.wandoujia.com/api/v1/ranklist.bak?";
+    NSString *body = @"strategy=date&categoryName=创意&num=10";
     [DownLoad dowmLoadWithUrl:urlStr postBody:body resultBlock:^(NSData *data) {
         
         if (data != nil) {
             NSDictionary *dictData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                        NSLog(@"%@", dictData);
-//            NSLog(@"%@", dictData[@"result"]);
-            NSArray *arr = dictData[@"result"];
             
-            NSLog(@"%@", arr);
-             TerrofyingDB *db  = [[TerrofyingDB alloc] init];
-            [db createtable:nil];
-            //清空表中数据
-            [db deleteData];
+            NSLog(@"%@",dictData);
             
-            for (NSDictionary *dict1 in arr) {
-                
-                TerrofyingModel *model = [[TerrofyingModel alloc] init];
-                
-                [model setValuesForKeysWithDictionary:dict1];
-               
-//                [db insertIntoTable:(NSString *) :(NSString *)];
-            
-                [self.dataTableViewArray addObject:model];
-                
-            }
+        
             
         }else {
             
@@ -161,14 +102,7 @@
     
     return self.dataTableViewArray.count;
 }
-- (void)createHeaderView {
-    self.imageViewH = [[UIImageView alloc] init];
-    self.imageViewH.backgroundColor = [UIColor lightGrayColor];
-    
-    self.imageViewH.frame = CGRectMake(0, 0, SCREEN_WIDTH, 160);
-    //    [self.view addSubview:self.imageViewH];
-    
-}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     
@@ -192,7 +126,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 160;
+    return 0.1;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
