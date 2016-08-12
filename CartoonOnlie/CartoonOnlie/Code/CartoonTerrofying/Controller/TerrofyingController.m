@@ -125,6 +125,7 @@
 //        lable.backgroundColor = [UIColor magentaColor];
         view.backgroundColor = [UIColor blackColor];
         lable.text = @"漫画列表";
+        lable.textColor = [UIColor whiteColor];
         [view addSubview:self.imageViewH];
         [view addSubview:lable];
         

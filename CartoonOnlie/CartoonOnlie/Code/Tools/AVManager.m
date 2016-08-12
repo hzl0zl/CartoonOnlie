@@ -54,7 +54,7 @@
     self.playIndex = number;
     
     NSString *urls = playList[number];
-    NSLog(@"%@", urls);
+    
     NSURL *url = [NSURL URLWithString:urls];
     
     self.item = [[AVPlayerItem alloc] initWithURL:url];
@@ -150,7 +150,7 @@
     //获取当前总时间
     //判断当前播放状态
     NSInteger totaSec = 0;
-    //    NSLog(@"%d", self.playerItem.status == AVPlayerItemStatusReadyToPlay);
+
     if (self.item.status == AVPlayerItemStatusReadyToPlay) {
         
         CMTime totalTime = self.item.duration;

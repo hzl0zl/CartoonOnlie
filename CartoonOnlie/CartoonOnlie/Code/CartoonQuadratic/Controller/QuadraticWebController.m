@@ -7,8 +7,6 @@
 //
 
 #import "QuadraticWebController.h"
-
-
 @interface QuadraticWebController ()
 
 
@@ -25,22 +23,16 @@
 
 -(void)creatWebView
 {
-    UIWebView *web = [[UIWebView alloc]initWithFrame:self.view.bounds];
+    UIWebView *web = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-60)];
     
     [self.view addSubview:web];
     
-   
-    //属性传值
-    QuadraticModel *model1 = self.model;
+    NSURL * url1 = [NSURL URLWithString:self.model_url];
     
-    NSURL * url = [NSURL URLWithString:model1.url];
+    NSURLRequest * request1 = [NSURLRequest requestWithURL:url1];
     
-    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-    
-    [web loadRequest:request];
-    
-     NSLog(@"$%@",request);
-   web.backgroundColor = [UIColor redColor];
+    [web loadRequest:request1];
+ 
 }
 
 

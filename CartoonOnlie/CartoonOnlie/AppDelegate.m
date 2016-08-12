@@ -5,7 +5,7 @@
 //  Created by zhiling on 16/7/30.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
-
+#import "Reachability.h"
 #import "AppDelegate.h"
 #import "HMDrawerViewController.h"
 #import "HMLeftMenuTableViewController.h"
@@ -51,14 +51,14 @@
     
 
     
-    SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次u" normalImage:nil selectedImage:nil class:[SgementController class]];
+    SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[SgementController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"fanli.png" selectedImage:@"fanli_fill.png" class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
+//    
+//    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
     
-    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"remind.png" selectedImage:@"remind_fill.png" class:[DetailController class]];
-    
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"lbs.png" selectedImage:@"lbs_fill.png" class:[RadioController class]];
+    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
@@ -66,12 +66,12 @@
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
     
     
-     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
+//     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
     
      UINavigationController *fourNav = [[UINavigationController alloc] initWithRootViewController:fourVC];
     
     
-    tabbarController.viewControllers = @[firstNav, secondNav, thridNav, fourNav];
+    tabbarController.viewControllers = @[firstNav, secondNav,  fourNav];
     
     
     //设置Item的选中颜色
@@ -91,7 +91,7 @@
     tabbarController.tabBar.hidden = NO;
     
     //角标
-    firstVC.tabBarItem.badgeValue = @"100";
+//    firstVC.tabBarItem.badgeValue = @"100";
     
     //设置tabbarController
 //    tabbarController.delegate = self;
@@ -132,9 +132,9 @@
     //    self.window.backgroundColor = [UIColor redColor];
     //创建左右菜单控制器
     HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-
+    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
     //设置窗口根控制器
-    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:220];
+    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:SCREEN_WIDTH / 3 * 2];
     
     //显示窗口
     [self.window makeKeyAndVisible];
@@ -158,7 +158,29 @@
 }
 
 
-
+- (BOOL)networkreachability
+{
+    if (reachability)
+    {
+        switch (reachability.currentReachabilityStatus) {
+            case NotReachable:
+                return NO;
+                break;
+            case ReachableViaWiFi:
+                return YES;
+                break;
+            case ReachableViaWWAN:
+                return YES;
+            default:
+                return NO;
+                break;
+        }
+    }
+    else
+    {
+        return NO;
+    }
+}
 
 
 

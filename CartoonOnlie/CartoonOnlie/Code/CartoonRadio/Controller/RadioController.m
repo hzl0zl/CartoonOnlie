@@ -10,6 +10,7 @@
 #import "RadioModel.h"
 #import "RadioCell.h"
 #import "RadioDetailController.h"
+#import "CartoonRadioDB.h"
 #import "HMDrawerViewController.h"
 @interface RadioController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -73,6 +74,9 @@
                 RadioModel *model = [[RadioModel alloc] init];
                 
                 [model setValuesForKeysWithDictionary:hot_musicsDict];
+                
+                [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_musics"];
+                
                 
                 [self.hot_musicsArr addObject:model];
             }
