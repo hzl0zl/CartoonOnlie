@@ -29,21 +29,15 @@
 		3FB67B521D5DBA9C001404BA /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; };
 		3FB67B531D5DBA9C001404BA /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
 		3FB67B5D1D5DBAD6001404BA /* CartoonRadioDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB67B561D5DBAD6001404BA /* CartoonRadioDB.m */; settings = {ASSET_TAGS = (); }; };
-		3FB67B5E1D5DBAD6001404BA /* CartoonTerrofyingDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB67B581D5DBAD6001404BA /* CartoonTerrofyingDB.m */; settings = {ASSET_TAGS = (); }; };
 		3FB67B5F1D5DBAD6001404BA /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB67B5A1D5DBAD6001404BA /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
 		3FB67B601D5DBAD6001404BA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB67B5C1D5DBAD6001404BA /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
-		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
-		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
-		471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471A1F9D1D4EE40900F3C9C6 /* DetailCell.xib */; settings = {ASSET_TAGS = (); }; };
 		471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FA81D4F4C3E00F3C9C6 /* RadioModel.m */; settings = {ASSET_TAGS = (); }; };
 		471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FAB1D4F54BC00F3C9C6 /* RadioCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471A1FAC1D4F54BC00F3C9C6 /* RadioCell.xib */; settings = {ASSET_TAGS = (); }; };
 		472298E81D51B1B60085BC66 /* RadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74B1D4C39A80081DDC5 /* RadioController.m */; };
 		472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F01D51B7830085BC66 /* RadioDetaiModel.m */; settings = {ASSET_TAGS = (); }; };
 		472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472298F41D51BA8E0085BC66 /* RadioDetailCell.xib */; settings = {ASSET_TAGS = (); }; };
-		472298FA1D51DF610085BC66 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F81D51DF610085BC66 /* DetailController.m */; settings = {ASSET_TAGS = (); }; };
-		472298FB1D51DF610085BC66 /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472298F91D51DF610085BC66 /* DetailController.xib */; settings = {ASSET_TAGS = (); }; };
 		472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472299461D51F4E70085BC66 /* RadioDetailController.m */; settings = {ASSET_TAGS = (); }; };
 		472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472299471D51F4E70085BC66 /* RadioDetailController.xib */; settings = {ASSET_TAGS = (); }; };
 		472299571D5220190085BC66 /* RadioPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472299541D5220190085BC66 /* RadioPlayController.m */; settings = {ASSET_TAGS = (); }; };
@@ -56,9 +50,10 @@
 		472EC6F61D4C33890081DDC5 /* CartoonOnlieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6F51D4C33890081DDC5 /* CartoonOnlieUITests.m */; };
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */; settings = {ASSET_TAGS = (); }; };
 		47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */; settings = {ASSET_TAGS = (); }; };
 		47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */; settings = {ASSET_TAGS = (); }; };
+		474117801D5DD48900336860 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4741177F1D5DD48900336860 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		474117831D5DD4B400336860 /* CleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117821D5DD4B400336860 /* CleanCaches.m */; settings = {ASSET_TAGS = (); }; };
 		476753611D5428E2000A30DA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4767535F1D5428E2000A30DA /* LoginController.xib */; settings = {ASSET_TAGS = (); }; };
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -79,12 +74,6 @@
 		479A314C1D59B7340058CD05 /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */; };
 		479A314D1D59B7340058CD05 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00944A1D59B3CB0087BA89 /* FunnyController.m */; };
 		479A31511D59B7660058CD05 /* QuadrticLTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31501D59B7660058CD05 /* QuadrticLTView.m */; settings = {ASSET_TAGS = (); }; };
-		479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */; settings = {ASSET_TAGS = (); }; };
-		479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */; settings = {ASSET_TAGS = (); }; };
-		47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57C1D53352F0037AFC5 /* TerrListModel.m */; settings = {ASSET_TAGS = (); }; };
-		47E1C5811D5358120037AFC5 /* ShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C57F1D5358120037AFC5 /* ShowController.m */; settings = {ASSET_TAGS = (); }; };
-		47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E1C5801D5358120037AFC5 /* ShowController.xib */; settings = {ASSET_TAGS = (); }; };
-		47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1C5841D5368F20037AFC5 /* ShowModel.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -139,18 +128,11 @@
 		3FB67B4C1D5DBA5A001404BA /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
 		3FB67B551D5DBAD6001404BA /* CartoonRadioDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoonRadioDB.h; sourceTree = "<group>"; };
 		3FB67B561D5DBAD6001404BA /* CartoonRadioDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoonRadioDB.m; sourceTree = "<group>"; };
-		3FB67B571D5DBAD6001404BA /* CartoonTerrofyingDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoonTerrofyingDB.h; sourceTree = "<group>"; };
-		3FB67B581D5DBAD6001404BA /* CartoonTerrofyingDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoonTerrofyingDB.m; sourceTree = "<group>"; };
 		3FB67B591D5DBAD6001404BA /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		3FB67B5A1D5DBAD6001404BA /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		3FB67B5B1D5DBAD6001404BA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		3FB67B5C1D5DBAD6001404BA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
-		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
-		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
-		471A1F9B1D4EE40900F3C9C6 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
-		471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
-		471A1F9D1D4EE40900F3C9C6 /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		471A1FA71D4F4C3E00F3C9C6 /* RadioModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioModel.h; sourceTree = "<group>"; };
 		471A1FA81D4F4C3E00F3C9C6 /* RadioModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioModel.m; sourceTree = "<group>"; };
 		471A1FAA1D4F54BC00F3C9C6 /* RadioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCell.h; sourceTree = "<group>"; };
@@ -161,9 +143,6 @@
 		472298F21D51BA8E0085BC66 /* RadioDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioDetailCell.h; sourceTree = "<group>"; };
 		472298F31D51BA8E0085BC66 /* RadioDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioDetailCell.m; sourceTree = "<group>"; };
 		472298F41D51BA8E0085BC66 /* RadioDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioDetailCell.xib; sourceTree = "<group>"; };
-		472298F71D51DF610085BC66 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
-		472298F81D51DF610085BC66 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
-		472298F91D51DF610085BC66 /* DetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailController.xib; sourceTree = "<group>"; };
 		472299451D51F4E70085BC66 /* RadioDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioDetailController.h; sourceTree = "<group>"; };
 		472299461D51F4E70085BC66 /* RadioDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioDetailController.m; sourceTree = "<group>"; };
 		472299471D51F4E70085BC66 /* RadioDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioDetailController.xib; sourceTree = "<group>"; };
@@ -192,11 +171,13 @@
 		472EC7441D4C39870081DDC5 /* FunnyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyController.h; sourceTree = "<group>"; };
 		472EC74A1D4C39A80081DDC5 /* RadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioController.h; sourceTree = "<group>"; };
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
-		472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingController.h; sourceTree = "<group>"; };
-		472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingController.m; sourceTree = "<group>"; };
 		47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionOneCell.h; sourceTree = "<group>"; };
 		47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionOneCell.m; sourceTree = "<group>"; };
 		47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionOneCell.xib; sourceTree = "<group>"; };
+		4741177E1D5DD48900336860 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4741177F1D5DD48900336860 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		474117811D5DD4B400336860 /* CleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanCaches.h; sourceTree = "<group>"; };
+		474117821D5DD4B400336860 /* CleanCaches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanCaches.m; sourceTree = "<group>"; };
 		47592D8D1D55CD3F000EFC4C /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
 		47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
 		4767535D1D5428E2000A30DA /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -229,18 +210,8 @@
 		479A31471D59B6ED0058CD05 /* SgementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SgementController.m; sourceTree = "<group>"; };
 		479A314F1D59B7660058CD05 /* QuadrticLTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticLTView.h; sourceTree = "<group>"; };
 		479A31501D59B7660058CD05 /* QuadrticLTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticLTView.m; sourceTree = "<group>"; };
-		479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingModel.h; sourceTree = "<group>"; };
-		479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingModel.m; sourceTree = "<group>"; };
-		479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TerrofyingCell.xib; sourceTree = "<group>"; };
 		47A2571D1D54AD3B0016115F /* NSString+Md5String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Md5String.h"; sourceTree = "<group>"; };
 		47A2571E1D54AD3B0016115F /* NSString+Md5String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Md5String.m"; sourceTree = "<group>"; };
-		47E1C57B1D53352F0037AFC5 /* TerrListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrListModel.h; sourceTree = "<group>"; };
-		47E1C57C1D53352F0037AFC5 /* TerrListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrListModel.m; sourceTree = "<group>"; };
-		47E1C57E1D5358120037AFC5 /* ShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowController.h; sourceTree = "<group>"; };
-		47E1C57F1D5358120037AFC5 /* ShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowController.m; sourceTree = "<group>"; };
-		47E1C5801D5358120037AFC5 /* ShowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowController.xib; sourceTree = "<group>"; };
-		47E1C5831D5368F20037AFC5 /* ShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowModel.h; sourceTree = "<group>"; };
-		47E1C5841D5368F20037AFC5 /* ShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowModel.m; sourceTree = "<group>"; };
 		47EA2C0C1D4C589C007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
 		47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoad.m; sourceTree = "<group>"; };
 		47EA2C0E1D4C589C007EC6E7 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
@@ -395,7 +366,6 @@
 				472EC7341D4C39290081DDC5 /* CartoonFunny */,
 				472EC7381D4C39290081DDC5 /* CartoonQuadratic */,
 				472EC73C1D4C39290081DDC5 /* CartoonRadio */,
-				472EC7401D4C39290081DDC5 /* CartoonTerrofying */,
 				472EC7041D4C35310081DDC5 /* CartoonMainVc */,
 			);
 			path = Code;
@@ -404,6 +374,10 @@
 		472EC7041D4C35310081DDC5 /* CartoonMainVc */ = {
 			isa = PBXGroup;
 			children = (
+				474117811D5DD4B400336860 /* CleanCaches.h */,
+				474117821D5DD4B400336860 /* CleanCaches.m */,
+				4741177E1D5DD48900336860 /* MBProgressHUD.h */,
+				4741177F1D5DD48900336860 /* MBProgressHUD.m */,
 				472EC7071D4C35560081DDC5 /* HMDrawerViewController.h */,
 				472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */,
 				472EC7091D4C35560081DDC5 /* HMLeftMenuTableViewController.h */,
@@ -492,31 +466,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		472EC7401D4C39290081DDC5 /* CartoonTerrofying */ = {
-			isa = PBXGroup;
-			children = (
-				47EA2C071D4C5003007EC6E7 /* Model */,
-				47EA2C081D4C5003007EC6E7 /* View */,
-				472EC7411D4C39290081DDC5 /* Controller */,
-			);
-			path = CartoonTerrofying;
-			sourceTree = "<group>";
-		};
-		472EC7411D4C39290081DDC5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				472EC74D1D4C39BD0081DDC5 /* TerrofyingController.h */,
-				472EC74E1D4C39BD0081DDC5 /* TerrofyingController.m */,
-				472298F71D51DF610085BC66 /* DetailController.h */,
-				472298F81D51DF610085BC66 /* DetailController.m */,
-				472298F91D51DF610085BC66 /* DetailController.xib */,
-				47E1C57E1D5358120037AFC5 /* ShowController.h */,
-				47E1C57F1D5358120037AFC5 /* ShowController.m */,
-				47E1C5801D5358120037AFC5 /* ShowController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		4767535C1D5428B5000A30DA /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,8 +493,6 @@
 			children = (
 				3FB67B551D5DBAD6001404BA /* CartoonRadioDB.h */,
 				3FB67B561D5DBAD6001404BA /* CartoonRadioDB.m */,
-				3FB67B571D5DBAD6001404BA /* CartoonTerrofyingDB.h */,
-				3FB67B581D5DBAD6001404BA /* CartoonTerrofyingDB.m */,
 				3FB67B591D5DBAD6001404BA /* DataHandler.h */,
 				3FB67B5A1D5DBAD6001404BA /* DataHandler.m */,
 				3FB67B5B1D5DBAD6001404BA /* Reachability.h */,
@@ -609,32 +556,6 @@
 				472298F21D51BA8E0085BC66 /* RadioDetailCell.h */,
 				472298F31D51BA8E0085BC66 /* RadioDetailCell.m */,
 				472298F41D51BA8E0085BC66 /* RadioDetailCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		47EA2C071D4C5003007EC6E7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				479AED6C1D4CA807008CA4F0 /* TerrofyingModel.h */,
-				479AED6D1D4CA807008CA4F0 /* TerrofyingModel.m */,
-				47E1C57B1D53352F0037AFC5 /* TerrListModel.h */,
-				47E1C57C1D53352F0037AFC5 /* TerrListModel.m */,
-				47E1C5831D5368F20037AFC5 /* ShowModel.h */,
-				47E1C5841D5368F20037AFC5 /* ShowModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		47EA2C081D4C5003007EC6E7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				479AED741D4CCC59008CA4F0 /* TerrofyingCell.xib */,
-				4706ED301D4C824600098239 /* TerrofyingCell.h */,
-				4706ED311D4C824600098239 /* TerrofyingCell.m */,
-				471A1F9B1D4EE40900F3C9C6 /* DetailCell.h */,
-				471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */,
-				471A1F9D1D4EE40900F3C9C6 /* DetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,23 +682,19 @@
 				3F00946B1D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				479A30E41D584F5C0058CD05 /* CollectionCell.xib in Resources */,
-				479AED751D4CCC59008CA4F0 /* TerrofyingCell.xib in Resources */,
 				472EC6E01D4C33890081DDC5 /* LaunchScreen.storyboard in Resources */,
 				472299491D51F4E70085BC66 /* RadioDetailController.xib in Resources */,
 				472298F61D51BA8E0085BC66 /* RadioDetailCell.xib in Resources */,
-				47E1C5821D5358120037AFC5 /* ShowController.xib in Resources */,
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				3F0094571D59B3CB0087BA89 /* ReadViewController.xib in Resources */,
 				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
 				479A30DE1D582AD30058CD05 /* Icon.png in Resources */,
 				3FB67B501D5DBA5A001404BA /* VolumecountCell.xib in Resources */,
-				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				3F0094551D59B3CB0087BA89 /* FunnyDetailViewController.xib in Resources */,
 				479A313F1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				3FB67B4E1D5DBA5A001404BA /* FunListCell.xib in Resources */,
 				479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */,
-				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
@@ -868,40 +785,33 @@
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				479A31391D59B6DA0058CD05 /* QuadraticMainModel.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
-				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
+				474117801D5DD48900336860 /* MBProgressHUD.m in Sources */,
+				474117831D5DD4B400336860 /* CleanCaches.m in Sources */,
 				3FB67B5F1D5DBAD6001404BA /* DataHandler.m in Sources */,
-				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				479A31481D59B6ED0058CD05 /* MainQuadraticViewController.m in Sources */,
 				3FB67B5D1D5DBAD6001404BA /* CartoonRadioDB.m in Sources */,
-				47E1C5851D5368F20037AFC5 /* ShowModel.m in Sources */,
 				3FB67B4F1D5DBA5A001404BA /* VolumecountCell.m in Sources */,
 				3F0094461D59B3BC0087BA89 /* CollectionModel.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
 				479A313E1D59B6E50058CD05 /* QuadraticCellTableViewCell.m in Sources */,
-				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
-				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
-				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				3F0094541D59B3CB0087BA89 /* FunnyDetailViewController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
 				3F0094511D59B3CB0087BA89 /* CollectionController.m in Sources */,
 				479A314B1D59B6ED0058CD05 /* SgementController.m in Sources */,
 				479A313A1D59B6DA0058CD05 /* QuadriticCellModel.m in Sources */,
-				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
 				3F00946A1D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.m in Sources */,
-				472EC74F1D4C39BD0081DDC5 /* TerrofyingController.m in Sources */,
 				3F0094561D59B3CB0087BA89 /* ReadViewController.m in Sources */,
 				472298F11D51B7830085BC66 /* RadioDetaiModel.m in Sources */,
 				479A31511D59B7660058CD05 /* QuadrticLTView.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
-				3FB67B5E1D5DBAD6001404BA /* CartoonTerrofyingDB.m in Sources */,
 				476753651D5458B5000A30DA /* RegisterController.m in Sources */,
 				3FB67B601D5DBAD6001404BA /* Reachability.m in Sources */,
 				478922131D558E3C00CCD728 /* AppDelegate.m in Sources */,
@@ -1039,7 +949,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1117,7 +1027,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
