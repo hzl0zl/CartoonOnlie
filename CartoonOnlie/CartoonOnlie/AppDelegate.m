@@ -53,11 +53,12 @@
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"06" selectedImage:nil class:[FunnyController class]];
     
+//    
+//    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
     
     DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:nil class:[DetailController class]];
     
     RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"05" selectedImage:nil class:[RadioController class]];
-    
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     
@@ -147,6 +148,37 @@
     }
     return result;
 }
+
+
+- (BOOL)networkreachability
+{
+    if (reachability)
+    {
+        switch (reachability.currentReachabilityStatus) {
+            case NotReachable:
+                return NO;
+                break;
+            case ReachableViaWiFi:
+                return YES;
+                break;
+            case ReachableViaWWAN:
+                return YES;
+            default:
+                return NO;
+                break;
+        }
+    }
+    else
+    {
+        return NO;
+    }
+}
+
+
+
+
+
+
 
 
 
