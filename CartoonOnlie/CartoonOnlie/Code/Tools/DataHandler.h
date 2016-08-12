@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMDB.h"
+
+
 @class CollectionModel;
+@class FunListModel;
 
 @interface DataHandler : NSObject
+
+@property (nonatomic, strong) FMDatabase *db;
 
 + (DataHandler *)shareDataHandler;
 
@@ -21,7 +27,7 @@
  *
  *  @return 收藏结果
  */
-- (BOOL)collectionCartoon:(CollectionModel *)cartoon;
+- (BOOL)collectionCartoon:(FunListModel *)cartoon;
 
 /**
  *  获取所有的收藏漫画
@@ -35,5 +41,17 @@
 - (BOOL)deleteCartoon:(CollectionModel *)cartoon;
 
 
+// 创建表格
+- (void)createTable:(NSString *)funlist;
+
+// 添加数据
+- (void)insertIntoTable:(FunListModel *)model;
+
+// 查找数据
+- (NSMutableArray *)selectFromTable;
+
+
+// 更新数据
+- (void)updateTable:(FunListModel *)model;
 
 @end

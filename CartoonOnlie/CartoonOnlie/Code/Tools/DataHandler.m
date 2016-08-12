@@ -8,14 +8,8 @@
 
 #import "DataHandler.h"
 #import "CollectionModel.h"
-#import "CollectionModel.h"
-#import "FMDB.h"
+#import "FunListModel.h"
 
-@interface DataHandler ()
-
-@property (nonatomic, strong) FMDatabase *db;
-
-@end
 @implementation DataHandler
 
 // 获取数据库路径
@@ -24,7 +18,9 @@
     NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     
     NSString *path = [doc stringByAppendingPathComponent:@"collection.sqlite"];
- 
+    
+    
+    NSLog(@"%@", path);
     
     return path;
 }
@@ -37,7 +33,7 @@
     if (self) {
         self.db = [FMDatabase databaseWithPath:[self dataBasePath]];
         if ([self.db open]) {
-            [self.db executeUpdate:@"create table if not exists cartoon(c_id integer primary key, c_albumId text, c_name text, c_coverPic text, c_descriptions text)"];
+            [self.db executeUpdate:@"create table if not exists cartoon(c_id integer primary key, c_albumId text, c_name text, c_coverPic text, c_descriptions text, c_author text, c_updateTime text, c_status text, c_popular text)"];
         }
         [self.db close];
     }
@@ -58,10 +54,10 @@
 
 
 // 往数据库添加数据
-- (BOOL)collectionCartoon:(CollectionModel *)cartoon
+- (BOOL)collectionCartoon:(FunListModel *)cartoon
 {
     if ([self.db open]) {
-        BOOL result = [self.db executeUpdate:@"insert into cartoon(c_albumId, c_name, c_coverPic, c_descriptions) values(?, ?, ?, ?)", cartoon.albumId, cartoon.name, cartoon.coverPic, cartoon.descriptions];
+        BOOL result = [self.db executeUpdate:@"insert into cartoon(c_albumId, c_name, c_coverPic, c_descriptions, c_author, c_updateTime, c_status, c_popular) values(?, ?, ?, ?, ?, ?, ?, ?)", cartoon.albumId, cartoon.name, cartoon.coverPic, cartoon.descriptions, cartoon.author, cartoon.updateTime, cartoon.status, cartoon.popular];
         [self.db close];
         return result;
     }
@@ -94,7 +90,14 @@
             model.coverPic = [resultSet stringForColumn:@"c_coverPic"];
             model.descriptions = [resultSet stringForColumn:@"c_descriptions"];
             
-            model.albumId = [resultSet stringForColumn:@"c_albumId"];
+            model.albumId = @([[resultSet stringForColumn:@"c_albumId"] integerValue]);
+            
+            model.author = [resultSet stringForColumn:@"c_author"];
+            model.updateTime = @([[resultSet stringForColumn:@"c_updateTime"] integerValue]);
+            
+            model.status = @([[resultSet stringForColumn:@"c_status"] integerValue]);
+            
+            model.popular = @([[resultSet stringForColumn:@"c_popular"] integerValue]);
             
             [mArray addObject:model];
         }
@@ -103,6 +106,67 @@
     }
     [self.db close];
     return nil;
+}
+
+
+// 创建表格
+- (void)createTable:(NSString *)funlist
+{
+    
+    if ([self.db open]) {
+        [self.db executeUpdate:@"create table if not exists funlist (f_name text not null, f_coverPic text, f_author text, f_label text, f_status text, f_updateSize text, f_popular text)"];
+        
+    }
+    [self.db close];
+}
+
+// 添加数据
+- (void)insertIntoTable:(FunListModel *)model
+{
+    [self.db open];
+    
+    [self.db executeUpdate:@"insert into funlist(f_name, f_coverPic, f_author, f_label, f_status, f_updateSize, f_popular) values(?, ?, ?, ?, ?, ?, ?)", model.name, model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular];
+    
+    [self.db close];
+}
+
+// 查找数据
+- (NSMutableArray *)selectFromTable
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    [self.db open];
+    FMResultSet *set = [self.db executeQuery:@"select * from funlist"];
+    while ([set next]) {
+        
+        FunListModel *model = [[FunListModel alloc] init];
+        model.name = [set stringForColumn:@"f_name"];
+        
+        model.coverPic = [set stringForColumn:@"f_coverPic"];
+        
+        model.author = [set stringForColumn:@"f_author"];
+        
+        model.label = [set stringForColumn:@"f_label"];
+        
+        model.status = @([[set stringForColumn:@"f_status"] integerValue]);
+        
+        model.updateSize = @([[set stringForColumn:@"f_updateSize"] integerValue]);
+        
+        model.popular = @([[set stringForColumn:@"f_popular"] integerValue]);
+        
+        [array addObject:model];
+        
+    }
+    
+    [self.db close];
+    return array;
+}
+
+- (void)updateTable:(FunListModel *)model
+{
+    [self.db open];
+    [self.db executeUpdate:[NSString stringWithFormat:@"update funlist set f_coverPic = \'%@\', f_author = \'%@\', f_label = \'%@\', f_status = \'%@\', f_updateSize = \'%@\', f_popular = \'%@\' WHERE f_name = \'%@\'", model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular, model.name]];
+    [self.db close];
 }
 
 @end

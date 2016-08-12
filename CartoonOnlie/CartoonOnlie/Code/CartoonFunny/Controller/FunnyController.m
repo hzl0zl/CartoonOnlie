@@ -11,6 +11,16 @@
 #import "FunListModel.h"
 #import "FunnyDetailViewController.h"
 #import "HMDrawerViewController.h"
+#import "DataHandler.h"
+#import "Reachability.h"
+
+@interface FunnyController ()
+
+{
+    Reachability *reachability;
+}
+
+@end
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -26,24 +36,14 @@
 
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
 
+@property (nonatomic, strong) UIButton *suspendBtn;
+
 
 @end
 
-
-
 @implementation FunnyController
 
-
-
 #pragma mark -- 懒加载
-
-//- (NSMutableArray *)funList
-//{
-//    if (_funList == nil) {
-//        _funList = [NSMutableArray array];
-//    }
-//    return _funList;
-//}
 
 - (NSMutableArray *)funList1
 {
@@ -94,28 +94,114 @@
     
 }
 
+- (BOOL)networkreachability
+{
+    if (reachability)
+    {
+        switch (reachability.currentReachabilityStatus) {
+            case NotReachable:
+                return NO;
+                break;
+            case ReachableViaWiFi:
+                return YES;
+                break;
+            case ReachableViaWWAN:
+                return YES;
+            default:
+                return NO;
+                break;
+        }
+    }
+    else
+    {
+        return NO;
+    }
+}
+
+
+#pragma mark -- 观察者执行的方法
+- (void)reachabilityChanged:(NSNotification* )notification
+{
+//    NSLog(@"netWork changed");
+    
+    Reachability *reach = [notification object];
+    
+    
+    if([reach isKindOfClass:[Reachability class]]){
+        
+        NetworkStatus status = [reach currentReachabilityStatus];
+        
+        NSLog(@"currentStatus:%@",@(status));
+        if (status) {
+            [self getData];
+            return;
+        }
+        
+    }
+}
+
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [reachability startNotifier];
+    
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
     self.navigationController.navigationBar.translucent = NO;
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
     [self createSegmentedControl];
+
     
-    [self getData];
     
+    [[DataHandler shareDataHandler] createTable:nil];
+    self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
+ 
+    NSLog(@"%@", self.funList3);
+
     
+    [self createSuspendBtn];
+    
+
 }
 
 
+//给cell添加动画
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //设置Cell的动画效果为3D效果
+    //设置x和y的初始值为0.1；
+    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+    //x和y的最终值为1
+    [UIView animateWithDuration:1 animations:^{
+        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+    }];
+}
 
-// 创建分段控件SegmentControl
+- (void)simulateRequest
+{
+    BOOL net = [self networkreachability];
+    
+    if (net)
+    {
+        NSLog(@"网络可用");
+    }
+    else
+    {
+        NSLog(@"网络不可用");
+    }
+}
+
+
+#pragma mark -- 创建分段控件SegmentControl
 - (void)createSegmentedControl
 {
-    self.segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"人气漫画", @"热门漫画"]];
+    self.segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"推荐漫画", @"热门漫画"]];
     
     self.segmentControl.frame = CGRectMake(0, 0, SCREEN_WIDTH, 30);
     
@@ -132,20 +218,77 @@
     [self segmentControlAction:self.segmentControl];
 }
 
+
+#pragma mark -- 分段控件点击方法
 - (void)segmentControlAction:(UISegmentedControl *)sg
 {
+    self.tableView.contentOffset = CGPointMake(0, 0);
+    
+    [self toTop];
     if (sg.selectedSegmentIndex == 0) {
-        self.funList3 = self.funList1;
-    }else if(sg.selectedSegmentIndex == 1)
-    {
+        if (self.funList3 != 0) {
+            self.funList3 = nil;
+            self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
+        }
+        else
+        {
+            self.funList3 = self.funList1;
+        }
+        
+    }
+    if (sg.selectedSegmentIndex == 1) {
         self.funList3 = self.funList2;
     }
     [self.tableView reloadData];
 }
 
 
+#pragma mark -- 创建悬浮按钮
+- (void)createSuspendBtn
+{
+    self.suspendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.suspendBtn.frame = CGRectMake(SCREEN_WIDTH - 40, SCREEN_HEIGHT - 160, 40, 40);
+    
+    self.suspendBtn.layer.cornerRadius = 20;
+    
+    self.suspendBtn.layer.borderWidth = 0.2;
+    
+    [self.suspendBtn setTitle:@"置顶" forState:UIControlStateNormal];
+    self.suspendBtn.layer.masksToBounds = YES;
+    
+    [self.suspendBtn addTarget:self action:@selector(toTop) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.suspendBtn];
+}
 
-// 获取网络数据
+
+#pragma mark -- 按钮置顶方法
+- (void)toTop
+{
+    // 快速停止正在滚动的视图
+    CGPoint offset = CGPointMake(0, 0);
+    (self.tableView.contentOffset.y > 0) ? offset.y-- : offset.y++;
+    [self.tableView setContentOffset:offset animated:NO];
+    
+}
+
+
+
+#pragma mark -- 滚动视图会调用的方法
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == self.tableView) {
+        if (self.tableView.contentOffset.y >= SCREEN_HEIGHT / 3) {
+            self.suspendBtn.hidden = NO;
+            
+            [self.view bringSubviewToFront:self.suspendBtn];
+        } else if (self.tableView.contentOffset.y < SCREEN_HEIGHT / 3) {
+            self.suspendBtn.hidden = YES;
+        }
+    }  
+}
+
+
+#pragma mark -- 获取网络数据
 - (void)getData
 {
     [DownLoad dowmLoadWithUrl:FUNNYLIST postBody:FUNNYLISTPOST resultBlock:^(NSData *data) {
@@ -153,6 +296,10 @@
             return;
         }else
         {
+            self.funList3 = nil;
+            self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
+            self.funList1 = nil;
+            self.funList2 = nil;
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             
             NSArray *array = dict[@"data"][@"list"];
@@ -165,31 +312,72 @@
                 NSURL *url = [NSURL URLWithString:model.coverPic];
                 if (url) {
                     if ([model.popular intValue] > 5000) {
-                        [self.funList1 addObject:model];
+                            [self.funList1 addObject:model];
+                            
+//                            [[DataHandler shareDataHandler] insertIntoTable:model];
+                        
+                        
                     }else
                     {
                         [self.funList2 addObject:model];
+
                     }
                 }
+                
             }
+            [self sortedWith:self.funList1];
+            [self sortedWith:self.funList2];
+            
+            
+            
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
+                for (int i = 0; i < self.funList1.count; i++) {
+                    
+                    FunListModel *model = self.funList1[i];
+                    [[DataHandler shareDataHandler] insertIntoTable:model];
+                }
+                
+                if (self.segmentControl.selectedSegmentIndex == 0) {
+                    self.funList3 = self.funList1;
+                }if (self.segmentControl.selectedSegmentIndex == 1) {
+                    self.funList3 = self.funList2;
+                }
+                
                 [self.tableView reloadData];
+
             });
         }
     }];
 }
 
 
-// 返回每个分区的行数
+#pragma mark -- 数组排序
+- (void)sortedWith:(NSMutableArray *)array
+{
+    for (int i = 0; i < array.count - 1; i++) {
+        for (int j = 0; j < array.count - 1 - i; j++) {
+            FunListModel *model1 = array[j];
+            FunListModel *model2 = array[j + 1];
+            if ([model1.popular intValue] < [model2.popular intValue]) {
+                FunListModel *tempModel = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = tempModel;
+            }
+        }
+    }
+    
+}
+
+#pragma mark -- 返回每个分区的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 
 {
-    return _funList3.count;
+    return self.funList3.count;
 }
 
-// 显示cell
+#pragma mark -- 显示cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -201,14 +389,14 @@
 }
 
 
-// 设置行高
+#pragma mark -- 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 120.f;
 }
 
 
-// 选中cell会调用
+#pragma mark -- 选中cell会调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
@@ -222,10 +410,22 @@
     [self.navigationController pushViewController:funDetailVc animated:YES];
 }
 
+#pragma mark -- 抽屉
 - (void)FunnyleftAction {
     
     
      [[HMDrawerViewController shareDrawer] openLeftMenu];
+    
+}
+
+#pragma mark -- 视图即将出现
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
+    
+    self.suspendBtn.hidden = YES;
+    
+    self.tableView.contentOffset = CGPointMake(0, 0);
     
 }
 

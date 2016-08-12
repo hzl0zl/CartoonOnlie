@@ -13,13 +13,13 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *volumecountL;
 
-//@property (nonatomic, strong) NSString *url;
-
 @property (nonatomic, strong) NSString *author;
 
 @property (nonatomic, assign) NSNumber *status;
 
 @property (nonatomic, strong) NSString *authorName;
+
+@property (nonatomic, assign) NSNumber *updateTime;
 
 @property (nonatomic, strong) NSNumber *popular;
 

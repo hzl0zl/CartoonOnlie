@@ -23,46 +23,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self getData];
-    
-    
-
+    self.navigationItem.title = @"收藏夹";
     
     UINib *nib = [UINib nibWithNibName:@"CollectionCell" bundle:nil];
     
     [self.tableView registerNib:nib forCellReuseIdentifier:@"collectioncell"];
+    
+    
+    [self createRightBtn];
 }
 
-// 获取网络数据
-- (void)getData
+- (void)createRightBtn
 {
-    [DownLoad dowmLoadWithUrl:FUNNYLIST postBody:FUNNYLISTPOST resultBlock:^(NSData *data) {
-        if (data == nil) {
-            return;
-        }else
-        {
-            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            
-            NSArray *array = dict[@"data"][@"list"];
-            
-            for (NSDictionary *dic in array) {
-                
-                CollectionModel *model = [[CollectionModel alloc] init];
-                
-                if ([self.dataArray containsObject:model.name]) {
-                    [model setValuesForKeysWithDictionary:dic];
-                    
-                    //                NSURL *url = [NSURL URLWithString:model.coverPic];
-                    [self.dataArray addObject:model];
-                }
-                
-            }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [self.tableView reloadData];
-            });
-        }
-    }];
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回首页" style:UIBarButtonItemStyleDone target:self action:@selector(backAction)];
+    
+    self.navigationItem.rightBarButtonItem = rightBtn;
+}
+
+
+- (void)backAction
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (NSMutableArray *)dataArray
@@ -95,7 +76,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     
-//    self.tableView.separatorStyle = NO;
+    self.tabBarController.tabBar.hidden = YES;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArray = [NSMutableArray arrayWithArray:[[DataHandler shareDataHandler] allCartoon]];
     
     [self.tableView reloadData];
@@ -128,22 +111,6 @@
 }
 
 
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -152,11 +119,7 @@
     
     funDetailVc.model = self.dataArray[indexPath.row];
     
-    
-    
     CollectionModel *model = self.dataArray[indexPath.row];
-    
-
     
     funDetailVc.albumId = @([model.albumId intValue]);
     [self.navigationController pushViewController:funDetailVc animated:YES];
@@ -164,14 +127,5 @@
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

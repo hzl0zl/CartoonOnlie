@@ -17,35 +17,26 @@
 - (void)setModel:(CollectionModel *)model
 {
     if (_model != model) {
-//        [self.titleImage sd_setImageWithURL:[NSURL URLWithString:model.coverPic]];
-//        
-//        self.titleL.text = model.name;
-//        
-//        self.albumId = model.albumId;
-//        
-//        self.descL.text = model.descriptions;
         
-            _model = model;
-            
-            NSURL *url = [NSURL URLWithString:model.coverPic];
-            
-            
-            [self.titleImage sd_setImageWithURL:url];
-            
-            self.titleL.text = model.name;
+        _model = model;
+        
+        NSURL *url = [NSURL URLWithString:model.coverPic];
+        
+        [self.titleImage sd_setImageWithURL:url];
+        
+        self.titleL.text = model.name;
         
         self.descL.text = model.descriptions;
             
-            self.author = model.author;
+        self.author = model.author;
+    
+        self.type = model.label;
         
-            self.type = model.label;
         self.updateSize = model.updateSize;
         
-        
-            self.popular = model.popular;
+        self.popular = model.popular;
         
         }
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

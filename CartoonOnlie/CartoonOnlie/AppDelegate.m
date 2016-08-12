@@ -15,8 +15,11 @@
 #import "RadioController.h"
 
 #import "SgementController.h"
-@interface AppDelegate () {
-      Reachability *reachability;
+
+
+@interface AppDelegate ()
+{
+    
 }
 
 @end
@@ -107,6 +110,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    
 #pragma mark === 
     
     //初始化友盟分享
@@ -138,6 +144,8 @@
 }
 
 
+
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     BOOL result = [UMSocialSnsService handleOpenURL:url];
@@ -147,30 +155,30 @@
     return result;
 }
 
-
-- (BOOL)networkreachability
-{
-    if (reachability)
-    {
-        switch (reachability.currentReachabilityStatus) {
-            case NotReachable:
-                return NO;
-                break;
-            case ReachableViaWiFi:
-                return YES;
-                break;
-            case ReachableViaWWAN:
-                return YES;
-            default:
-                return NO;
-                break;
-        }
-    }
-    else
-    {
-        return NO;
-    }
-}
+//
+//- (BOOL)networkreachability
+//{
+//    if (reachability)
+//    {
+//        switch (reachability.currentReachabilityStatus) {
+//            case NotReachable:
+//                return NO;
+//                break;
+//            case ReachableViaWiFi:
+//                return YES;
+//                break;
+//            case ReachableViaWWAN:
+//                return YES;
+//            default:
+//                return NO;
+//                break;
+//        }
+//    }
+//    else
+//    {
+//        return NO;
+//    }
+//}
 
 
 
