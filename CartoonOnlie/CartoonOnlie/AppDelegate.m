@@ -21,6 +21,7 @@
 {
     
 }
+
 @end
 
 @implementation AppDelegate
@@ -157,30 +158,33 @@
     return result;
 }
 
+//
+//- (BOOL)networkreachability
+//{
+//    if (reachability)
+//    {
+//        switch (reachability.currentReachabilityStatus) {
+//            case NotReachable:
+//                return NO;
+//                break;
+//            case ReachableViaWiFi:
+//                return YES;
+//                break;
+//            case ReachableViaWWAN:
+//                return YES;
+//            default:
+//                return NO;
+//                break;
+//        }
+//    }
+//    else
+//    {
+//        return NO;
+//    }
+//}
 
-- (BOOL)networkreachability
-{
-    if (reachability)
-    {
-        switch (reachability.currentReachabilityStatus) {
-            case NotReachable:
-                return NO;
-                break;
-            case ReachableViaWiFi:
-                return YES;
-                break;
-            case ReachableViaWWAN:
-                return YES;
-            default:
-                return NO;
-                break;
-        }
-    }
-    else
-    {
-        return NO;
-    }
-}
+
+
 
 
 
