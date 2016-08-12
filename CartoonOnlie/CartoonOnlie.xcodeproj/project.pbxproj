@@ -41,6 +41,7 @@
 		3F22A06F1D546F47005AF6E6 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		3F22A0721D54766F005AF6E6 /* MainQuadraticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F22A0751D5476C0005AF6E6 /* QuadraticMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */; settings = {ASSET_TAGS = (); }; };
+		3F97B11A1D5AFC1200988F11 /* QuadrticHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F97B1191D5AFC1200988F11 /* QuadrticHander.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -150,6 +151,8 @@
 		3F22A0711D54766F005AF6E6 /* MainQuadraticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainQuadraticViewController.m; sourceTree = "<group>"; };
 		3F22A0731D5476C0005AF6E6 /* QuadraticMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticMainModel.h; sourceTree = "<group>"; };
 		3F22A0741D5476C0005AF6E6 /* QuadraticMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticMainModel.m; sourceTree = "<group>"; };
+		3F97B1181D5AFC1200988F11 /* QuadrticHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticHander.h; sourceTree = "<group>"; };
+		3F97B1191D5AFC1200988F11 /* QuadrticHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticHander.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 				47A2571E1D54AD3B0016115F /* NSString+Md5String.m */,
 				3F21BD7B1D58A0B500316880 /* QuadrticLTView.h */,
 				3F21BD7C1D58A0B500316880 /* QuadrticLTView.m */,
+				3F97B1181D5AFC1200988F11 /* QuadrticHander.h */,
+				3F97B1191D5AFC1200988F11 /* QuadrticHander.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -822,6 +827,7 @@
 				3F21BD721D58271300316880 /* QuadrticCellController.m in Sources */,
 				3F21BD751D58338D00316880 /* QuadriticCellModel.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
+				3F97B11A1D5AFC1200988F11 /* QuadrticHander.m in Sources */,
 				3F21BD7D1D58A0B500316880 /* QuadrticLTView.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,

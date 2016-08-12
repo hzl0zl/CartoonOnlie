@@ -11,7 +11,7 @@
 #import "QuadraticTableViewCell.h"
 #import "QuadraticModel.h"
 #import "QuadraticWebController.h"
-
+#import "QuadrticHander.h"
 
 @interface QuadraticController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,7 +32,7 @@
     
     [self creatTblewView];
     
-    [self loadData];
+//    [self loadData];
 }
 
 
@@ -51,8 +51,22 @@
     if (_titleArry == nil) {
         _titleArry = [[NSMutableArray alloc]init];
     }
-    return _titleArry;
+    return _titleArry; 
 }
+
+
+#pragma mark 视图即将加载
+
+-(void)viewDidAppear:(BOOL)animated
+{
+
+    self.quadraticArry = [[QuadrticHander shareHandler]allData];
+    if (self.quadraticArry.count == 0) {
+        [self loadData];
+    }
+    [self.tabelView reloadData];
+}
+
 
 #pragma  mark 视图及数据处理
 -(void)creatTblewView
@@ -77,6 +91,8 @@
     [DownLoad dowmLoadWithUrl:url postBody:nil resultBlock:^(NSData *data) {
         
         if (data != nil) {
+            
+            self.quadraticArry = nil;
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
         NSMutableArray *arry = dic[@"data"][@"comics"];
@@ -99,10 +115,13 @@
             [model setValuesForKeysWithDictionary:dic1];
             
             [self.quadraticArry addObject:model];
+            
+            [[QuadrticHander shareHandler]saveData:model];
         }
             
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tabelView reloadData];
+            
         });
         }
         else

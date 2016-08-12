@@ -105,8 +105,6 @@
 }
 
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #pragma mark === 
     
@@ -147,15 +145,6 @@
     }
     return result;
 }
-
-
-
-
-
-
-
-
-
 
 
 

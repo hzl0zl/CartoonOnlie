@@ -129,7 +129,7 @@
         </view>
     </objects>
     <resources>
-        <image name="AvPlayBgm" width="700" height="1247"/>
+        <image name="AvPlayBgm" width="16" height="16"/>
         <image name="CD" width="532" height="528"/>
         <image name="aboveMusic" width="78" height="60"/>
         <image name="nextMusic" width="78" height="60"/>
