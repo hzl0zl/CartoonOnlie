@@ -54,13 +54,14 @@
     
     SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[SgementController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"06" selectedImage:nil class:[FunnyController class]];
     
 //    
 //    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
     
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"06" selectedImage:nil class:[RadioController class]];
+    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:nil class:[DetailController class]];
     
+    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"05" selectedImage:nil class:[RadioController class]];
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     
@@ -100,7 +101,7 @@
 #pragma mark 同--UINavigationBara 和UITabbar的风格
     
     // 设置所有导航栏的背景颜色
-        [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     //
     //    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //
@@ -108,8 +109,6 @@
     return tabbarController;
     
 }
-
-
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
