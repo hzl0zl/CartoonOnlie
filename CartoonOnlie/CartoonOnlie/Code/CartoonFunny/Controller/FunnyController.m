@@ -12,7 +12,6 @@
 #import "FunnyDetailViewController.h"
 #import "HMDrawerViewController.h"
 #import "DataHandler.h"
-#import "AppDelegate.h"
 #import "Reachability.h"
 
 @interface FunnyController ()
