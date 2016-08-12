@@ -5,7 +5,7 @@
 //  Created by zhiling on 16/7/30.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
-
+#import "Reachability.h"
 #import "AppDelegate.h"
 #import "HMDrawerViewController.h"
 #import "HMLeftMenuTableViewController.h"
@@ -15,7 +15,9 @@
 #import "RadioController.h"
 #import "DetailController.h"
 #import "SgementController.h"
-@interface AppDelegate ()
+@interface AppDelegate () {
+      Reachability *reachability;
+}
 
 @end
 
@@ -62,12 +64,12 @@
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
     
     
-     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
+//     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
     
      UINavigationController *fourNav = [[UINavigationController alloc] initWithRootViewController:fourVC];
     
     
-    tabbarController.viewControllers = @[firstNav, secondNav, thridNav, fourNav];
+    tabbarController.viewControllers = @[firstNav, secondNav,  fourNav];
     
     
     //设置Item的选中颜色
@@ -123,9 +125,9 @@
     //    self.window.backgroundColor = [UIColor redColor];
     //创建左右菜单控制器
     HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-
+    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
     //设置窗口根控制器
-    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:220];
+    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:SCREEN_WIDTH / 3 * 2];
     
     //显示窗口
     [self.window makeKeyAndVisible];

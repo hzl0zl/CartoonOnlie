@@ -70,7 +70,7 @@
     
     [self getData];
     
-    NSLog(@"----------%@", self.albumId);
+    
     
 }
 

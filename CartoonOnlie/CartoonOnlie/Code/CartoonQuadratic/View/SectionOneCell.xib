@@ -12,7 +12,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guX-ig-43h">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="guX-ig-43h">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kql-oH-aXo">
@@ -24,12 +24,21 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="guX-ig-43h" secondAttribute="trailing" id="135-gX-qYL"/>
+                <constraint firstAttribute="bottom" secondItem="kql-oH-aXo" secondAttribute="bottom" id="6Iq-k2-qIG"/>
+                <constraint firstItem="guX-ig-43h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KLx-kW-jTe"/>
+                <constraint firstAttribute="trailing" secondItem="kql-oH-aXo" secondAttribute="trailing" id="fve-VB-Dqj"/>
+                <constraint firstItem="guX-ig-43h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ioq-qO-wGG"/>
+                <constraint firstItem="kql-oH-aXo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mQ5-4k-M0W"/>
+                <constraint firstAttribute="bottom" secondItem="guX-ig-43h" secondAttribute="bottom" id="woG-Em-zry"/>
+            </constraints>
             <size key="customSize" width="138" height="170"/>
             <connections>
                 <outlet property="labelTitle" destination="kql-oH-aXo" id="nYC-hg-Fn8"/>
                 <outlet property="url" destination="guX-ig-43h" id="YOE-Za-60h"/>
             </connections>
-            <point key="canvasLocation" x="206" y="244"/>
+            <point key="canvasLocation" x="90" y="230"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -26,7 +26,7 @@
     [self getData];
     
     
-    NSLog(@"/////////////%@", self.model.name);
+
     
     UINib *nib = [UINib nibWithNibName:@"CollectionCell" bundle:nil];
     
@@ -156,7 +156,7 @@
     
     CollectionModel *model = self.dataArray[indexPath.row];
     
-    NSLog(@"******%@", model.author);
+
     
     funDetailVc.albumId = @([model.albumId intValue]);
     [self.navigationController pushViewController:funDetailVc animated:YES];

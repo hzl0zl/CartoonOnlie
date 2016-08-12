@@ -24,7 +24,7 @@
     NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     
     NSString *path = [doc stringByAppendingPathComponent:@"collection.sqlite"];
-    NSLog(@"%@", path);
+ 
     
     return path;
 }

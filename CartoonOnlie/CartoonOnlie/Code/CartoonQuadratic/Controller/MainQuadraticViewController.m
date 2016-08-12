@@ -147,13 +147,13 @@
     self.layout = [[UICollectionViewFlowLayout alloc]init];
     
     //设置item
-    self.layout.itemSize = CGSizeMake(100, 130);
+    self.layout.itemSize = CGSizeMake(115, 150);
     
-    self.layout.minimumInteritemSpacing = 5;
-    self.layout.minimumLineSpacing = 5;
+//    self.layout.minimumInteritemSpacing = 2;
+//    self.layout.minimumLineSpacing = 2;
 
     //设置分区边距
-    self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    self.layout.sectionInset = UIEdgeInsetsMake(5, 5, 2, 2);
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 113) collectionViewLayout:self.layout];
     
@@ -299,6 +299,14 @@
     
     
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.collectionView.frame =CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 113);
+}
+
 
 #pragma mark 初始化设置
 -(NSMutableArray *)quadraticArry
