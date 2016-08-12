@@ -23,6 +23,8 @@
         
         self.authorName = model.authorName;
         
+        self.updateTime = model.updateTime;
+        
         self.status = model.status;
         
         self.popular = model.popular;
@@ -32,5 +34,8 @@
         self.volumecountL.text = [NSString stringWithFormat:@"第 %@ 话", model.orderNumber];
     }
 }
+
+
+
 
 @end

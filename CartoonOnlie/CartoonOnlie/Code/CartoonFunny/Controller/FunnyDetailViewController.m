@@ -32,15 +32,17 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *authorL;
 
-@property (strong, nonatomic) IBOutlet UILabel *circulateL;
+@property (strong, nonatomic) IBOutlet UILabel *updateTimeL;
 
 @property (strong, nonatomic) IBOutlet UILabel *statusL;
 @property (strong, nonatomic) IBOutlet UILabel *popularL;
 @property (strong, nonatomic) IBOutlet UILabel *descL;
 
-@property (strong, nonatomic) IBOutlet UIButton *showDescBtn;
 
 @property (strong, nonatomic) IBOutlet UIButton *collectionBtn;
+
+- (IBAction)startReading:(id)sender;
+
 
 @end
 
@@ -50,27 +52,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.hidden = YES;
-    
-    self.tabBarController.tabBar.hidden= YES;
-    
-    self.tabBarController.tabBar.translucent = YES;
-    
-    [self.view addSubview:self.bottomView];
-    
     [self setTopView];
     
     [self setTopViewBackground];
     
     [self setMiddleView];
     
-//    [self createDataArray];
     
     [self.view addSubview:self.collectionView];
     
     [self getData];
     
-    NSLog(@"----------%@", self.albumId);
     
 }
 
@@ -110,8 +102,6 @@
  
     topImageView.alpha = 1;
     
-//    [topImageView sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
-    
     topImageView.image = [UIImage imageNamed:@"background"];
     
     [self.topView addSubview:topImageView];
@@ -121,11 +111,10 @@
 - (void)setMiddleView
 {
     
-//    FunnyDetailModel *model = self.dataArray;
-    
     self.authorL.text = [NSString stringWithFormat:@"作者: %@", self.model.author];
     
-    self.circulateL.text = [NSString stringWithFormat:@"发行商: %@", self.model.authorName];
+    self.updateTimeL.text = [NSString stringWithFormat:@"更新: %@", [self updateTime:self.model.updateTime]];
+    
     if (self.model.status) {
          self.statusL.text = @"状态: 连载中";
     }else
@@ -136,10 +125,27 @@
     
     self.descL.text = [NSString stringWithFormat:@"简介: %@", self.model.descriptions];
     
-    self.showDescBtn.layer.cornerRadius = 10.0;
-    self.showDescBtn.layer.masksToBounds = YES;
    
 }
+
+
+#pragma mark -- 将时间戳转换成标准时间
+- (NSString *)updateTime:(NSNumber *)state
+{
+    NSString *string = [NSString stringWithFormat:@"%@", state];
+    
+    NSTimeInterval time = [string doubleValue] / 1000.0;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSString *currentDateStr = [dateFormat stringFromDate:date];
+    
+    NSLog(@"%@", [dateFormat stringFromDate: date]);
+    
+    return currentDateStr;
+}
+
 
 - (UICollectionView *)collectionView
 {
@@ -155,9 +161,7 @@
         
         // 最小行间距--默认值为10
         flowLayout.minimumLineSpacing = 10;
-        
-        // 设置滚动方向
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+
         // 设置距离分区的边距
         flowLayout.sectionInset = UIEdgeInsetsMake(8, 2, 0, 2);
         
@@ -234,7 +238,11 @@
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
         reusableView.backgroundColor = [UIColor redColor];
         UIView *bottomV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-        bottomV.backgroundColor = [UIColor cyanColor];
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        
+        [bottomV addSubview:imageView];
+        imageView.image = [UIImage imageNamed:@"bottomView"];
         
         [reusableView addSubview:bottomV];
         
@@ -269,23 +277,32 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     
-//    self.btn = [[UIBarButtonItem alloc] initWithTitle:@"收藏" style:UIBarButtonItemStylePlain target:self action:@selector(collectionAction:)];
-//    self.navigationItem.rightBarButtonItem = self.btn;
+    
+    self.bottomView.hidden = NO;
+    
+    self.navigationController.navigationBar.hidden = YES;
+    
+    self.tabBarController.tabBar.hidden= YES;
+    
+    self.tabBarController.tabBar.translucent = YES;
     
     self.collectionBtn.hidden = NO;
     
     NSArray *array = [[DataHandler shareDataHandler] allCartoon];
-    if(array == nil)
-    {
-        [self.collectionBtn setTitle:@"收藏" forState:UIControlStateNormal];
-    }
-    else
+    if(array.count)
     {
         for (FunListModel *model in array) {
-            if ([self.model.name isEqualToString:model.name]) {
+            if (![self.model.name isEqualToString:model.name]) {
+                [self.collectionBtn setTitle:@"收藏" forState:UIControlStateNormal];
+            }else
+            {
                 [self.collectionBtn setTitle:@"已收藏" forState:UIControlStateNormal];
             }
         }
+    }
+    else
+    {
+        [self.collectionBtn setTitle:@"收藏" forState:UIControlStateNormal];
     }
     
 }
@@ -299,13 +316,6 @@
 }
 
 
-#pragma mark -- 显示简介详情
-- (IBAction)showDescAction:(id)sender {
-    
-    
-    
-}
-
 
 #pragma mark -- 推出收藏页面
 - (IBAction)showCollectionView:(id)sender {
@@ -314,10 +324,11 @@
     
     collectionVc.model = self.model;
     
-    [self.navigationController pushViewController:collectionVc animated:YES];
+    [self.navigationController pushViewController:collectionVc animated:NO];
+    
+    self.bottomView.hidden = YES;
     
 }
-
 
 
 #pragma mark -- 收藏按钮点击方法
@@ -346,25 +357,22 @@
     [[DataHandler shareDataHandler] collectionCartoon:self.model];
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"收藏成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:nil]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self.collectionBtn setTitle:@"已收藏" forState:UIControlStateNormal];
+        
+        
+    }]];
     
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-#pragma mark -- 下载按钮点击方法
-- (IBAction)downLoadAction:(id)sender {
-}
-
-#pragma mark -- 分享按钮点击方法
-- (IBAction)shareAction:(id)sender {
-}
 
 #pragma mark -- 视图即将消失
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self.bottomView removeFromSuperview];
-    
+    self.bottomView.hidden = YES;
     self.navigationController.navigationBar.hidden = NO;
     
     self.tabBarController.tabBar.hidden= NO;
@@ -391,4 +399,9 @@
 }
 
 
+- (IBAction)startReading:(id)sender {
+    
+    
+    
+}
 @end

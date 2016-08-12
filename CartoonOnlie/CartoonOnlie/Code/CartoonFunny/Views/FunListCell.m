@@ -35,8 +35,11 @@
         
         self.popularL.text = [NSString stringWithFormat:@"%@", listModel.popular];
         
+        
     }
 }
+
+
 
 - (void)awakeFromNib {
     // Initialization code

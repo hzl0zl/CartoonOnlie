@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) NSString *authorName;
 
+@property (nonatomic, assign) NSNumber *updateTime;
+
 @property (nonatomic, strong) NSNumber *popular;
 
 @property (nonatomic, strong) NSString *descriptions;

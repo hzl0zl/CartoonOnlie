@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *titleL;
 @property (strong, nonatomic) IBOutlet UILabel *descL;
-@property (nonatomic, strong) NSString *albumId;
+@property (nonatomic, assign) NSNumber *albumId;
 
 @property (nonatomic, strong) CollectionModel *model;
 
@@ -24,9 +24,9 @@
 
 @property (nonatomic, strong) NSString *type;
 
-@property (nonatomic, strong) NSNumber *updateSize;
+@property (nonatomic, assign) NSNumber *updateSize;
 
-@property (nonatomic, strong) NSNumber *popular;
+@property (nonatomic, assign) NSNumber *popular;
 
 
 @end

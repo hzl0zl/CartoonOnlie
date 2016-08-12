@@ -23,6 +23,7 @@
 
 
 
+
 @property (nonatomic, strong) FunListModel *listModel;
 
 @end

@@ -31,10 +31,11 @@
 		3F7608C11D584B2B007E7A52 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F2498781D546EEA0056F329 /* VolumecountCell.xib */; };
 		3F7608C21D584B34007E7A52 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */; };
 		3F7608C31D584B39007E7A52 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F21308B1D53261900C88288 /* FunnyDetailViewController.xib */; };
+		3FA5969C1D58529B00C71535 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5969B1D58529B00C71535 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
+		3FAA2E871D5B591E00F42CEF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA2E861D5B591E00F42CEF /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		3FAB46FF1D55E9D1006DEE47 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
 		3FAB47031D56079D006DEE47 /* CollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB47011D56079D006DEE47 /* CollectionController.m */; settings = {ASSET_TAGS = (); }; };
 		3FAB47041D56079D006DEE47 /* CollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB47021D56079D006DEE47 /* CollectionController.xib */; settings = {ASSET_TAGS = (); }; };
-		3FAB470C1D56173D006DEE47 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB470B1D56173D006DEE47 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1F9C1D4EE40900F3C9C6 /* DetailCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -132,13 +133,15 @@
 		3FA3125F1D5445AB002C4FFD /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
 		3FA312621D54469A002C4FFD /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
 		3FA312631D54469A002C4FFD /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
+		3FA5969A1D58529B00C71535 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
+		3FA5969B1D58529B00C71535 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
+		3FAA2E851D5B591E00F42CEF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3FAA2E861D5B591E00F42CEF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		3FAB46FD1D55E9D1006DEE47 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		3FAB47001D56079D006DEE47 /* CollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionController.h; sourceTree = "<group>"; };
 		3FAB47011D56079D006DEE47 /* CollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionController.m; sourceTree = "<group>"; };
 		3FAB47021D56079D006DEE47 /* CollectionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionController.xib; sourceTree = "<group>"; };
-		3FAB470A1D56173D006DEE47 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
-		3FAB470B1D56173D006DEE47 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		4706ED301D4C824600098239 /* TerrofyingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrofyingCell.h; sourceTree = "<group>"; };
 		4706ED311D4C824600098239 /* TerrofyingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TerrofyingCell.m; sourceTree = "<group>"; };
@@ -259,14 +262,14 @@
 		3FC531AB1D4C5313000EB7E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FA5969A1D58529B00C71535 /* CollectionModel.h */,
+				3FA5969B1D58529B00C71535 /* CollectionModel.m */,
 				47592D8D1D55CD3F000EFC4C /* FunnyDetailModel.h */,
 				47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */,
 				3FC531B21D4C5328000EB7E5 /* FunListModel.m */,
 				3F2130861D53257000C88288 /* FunListModel.h */,
 				3FA312621D54469A002C4FFD /* FunnyDetailModel.h */,
 				3FA312631D54469A002C4FFD /* FunnyDetailModel.m */,
-				3FAB470A1D56173D006DEE47 /* CollectionModel.h */,
-				3FAB470B1D56173D006DEE47 /* CollectionModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -516,6 +519,8 @@
 				47A2571E1D54AD3B0016115F /* NSString+Md5String.m */,
 				3FAB46FD1D55E9D1006DEE47 /* DataHandler.h */,
 				3FAB46FE1D55E9D1006DEE47 /* DataHandler.m */,
+				3FAA2E851D5B591E00F42CEF /* Reachability.h */,
+				3FAA2E861D5B591E00F42CEF /* Reachability.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -806,6 +811,7 @@
 				3FAB47031D56079D006DEE47 /* CollectionController.m in Sources */,
 				3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */,
 				3F24987D1D546F600056F329 /* FunnyController.m in Sources */,
+				3FA5969C1D58529B00C71535 /* CollectionModel.m in Sources */,
 				3F2498791D546EEA0056F329 /* FunListCell.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
@@ -826,11 +832,11 @@
 				3FAB46FF1D55E9D1006DEE47 /* DataHandler.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				3F7608931D583D04007E7A52 /* SgementController.m in Sources */,
-				3FAB470C1D56173D006DEE47 /* CollectionModel.m in Sources */,
 				47E1C5811D5358120037AFC5 /* ShowController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
 				3F7608911D583D04007E7A52 /* MainQuadraticViewController.m in Sources */,
 				4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */,
+				3FAA2E871D5B591E00F42CEF /* Reachability.m in Sources */,
 				47312C821D581BFB00B3B7B8 /* PicWebController.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
 				3F7608891D583CF8007E7A52 /* QuadrticFirstCollectionViewCell.m in Sources */,
@@ -974,7 +980,7 @@
 			baseConfigurationReference = E8450B81A0D8416EC6F59D2F /* Pods-CartoonOnlie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/lan/Desktop/未命名文件夹/项目版本4/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1051,7 +1057,7 @@
 			baseConfigurationReference = AA82DCF6822C97A619D057A9 /* Pods-CartoonOnlie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/lan/Desktop/未命名文件夹/项目版本4/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

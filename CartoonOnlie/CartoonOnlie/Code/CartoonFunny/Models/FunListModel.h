@@ -18,10 +18,11 @@
 
 @property (nonatomic, strong) NSString *authorName;
 
+@property (nonatomic, assign) NSNumber *updateTime;
+
 @property (nonatomic, strong) NSString *author;
 
 @property (nonatomic, strong) NSString *label;
-
 
 @property (nonatomic, assign) NSNumber *status;
 
@@ -30,6 +31,7 @@
 @property (nonatomic, strong) NSString *descriptions;
 
 @property (nonatomic, assign) NSNumber *albumId;
+
 
 
 @end

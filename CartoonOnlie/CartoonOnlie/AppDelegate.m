@@ -15,8 +15,12 @@
 #import "RadioController.h"
 #import "DetailController.h"
 #import "SgementController.h"
-@interface AppDelegate ()
 
+
+@interface AppDelegate ()
+{
+    
+}
 @end
 
 @implementation AppDelegate
@@ -108,6 +112,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    
 #pragma mark === 
     
     //初始化友盟分享
@@ -139,6 +146,8 @@
 }
 
 
+
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     BOOL result = [UMSocialSnsService handleOpenURL:url];
@@ -147,9 +156,6 @@
     }
     return result;
 }
-
-
-
 
 
 
