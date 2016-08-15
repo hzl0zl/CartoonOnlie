@@ -165,8 +165,10 @@
                                              appKey:@"57a5423267e58ebd7000281e"
                                           shareText:@"友盟社会化分享让您快速实现分享等社会化功能，http://umeng.com/social"
                                          shareImage:[UIImage imageNamed:@"icon"]
-                                    shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                    shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina]
                                            delegate:self];
+        
+        
     }
 }
 

@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) FunListModel *model;
 
-@property (nonatomic, assign) NSNumber *albumId;
+@property (nonatomic, strong) NSNumber *albumId;
 
 
 

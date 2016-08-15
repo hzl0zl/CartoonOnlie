@@ -34,6 +34,10 @@
         self.db = [FMDatabase databaseWithPath:[self dataBasePath]];
         if ([self.db open]) {
             [self.db executeUpdate:@"create table if not exists cartoon(c_id integer primary key, c_albumId text, c_name text, c_coverPic text, c_descriptions text, c_author text, c_updateTime text, c_status text, c_popular text)"];
+            
+            [self.db executeUpdate:@"create table if not exists funlist (f_name text not null, f_coverPic text, f_author text, f_label text, f_status text, f_updateSize text, f_popular text, f_albumId text, f_authorName text, f_updateTime text, f_descriptions text)"];
+            
+            [self.db executeUpdate:@"create table if not exists funlist1 (f_name text not null, f_coverPic text, f_author text, f_label text, f_status text, f_updateSize text, f_popular text, f_albumId text, f_authorName text, f_updateTime text, f_descriptions text)"];
         }
         [self.db close];
     }
@@ -109,24 +113,20 @@
 }
 
 
-// 创建表格
-- (void)createTable:(NSString *)funlist
-{
-    
-    if ([self.db open]) {
-        [self.db executeUpdate:@"create table if not exists funlist (f_name text not null, f_coverPic text, f_author text, f_label text, f_status text, f_updateSize text, f_popular text)"];
-        
-    }
-    [self.db close];
-}
-
 // 添加数据
 - (void)insertIntoTable:(FunListModel *)model
 {
     [self.db open];
     
-    [self.db executeUpdate:@"insert into funlist(f_name, f_coverPic, f_author, f_label, f_status, f_updateSize, f_popular) values(?, ?, ?, ?, ?, ?, ?)", model.name, model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular];
+    [self.db executeUpdate:@"insert into funlist(f_name, f_coverPic, f_author, f_label, f_status, f_updateSize, f_popular, f_albumId, f_authorName, f_updateTime, f_descriptions) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", model.name, model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular, model.albumId, model.authorName, model.updateTime, model.descriptions];
     
+    [self.db close];
+}
+
+- (void)createTable
+{
+    [self.db open];
+    [self.db executeUpdate:@"create table if not exists funlist (f_name text not null, f_coverPic text, f_author text, f_label text, f_status text, f_updateSize text, f_popular text, f_albumId text, f_authorName text, f_updateTime text, f_descriptions text)"];
     [self.db close];
 }
 
@@ -154,6 +154,72 @@
         
         model.popular = @([[set stringForColumn:@"f_popular"] integerValue]);
         
+        model.albumId = @([[set stringForColumn:@"f_albumId"] integerValue]);
+        
+        model.authorName = [set stringForColumn:@"f_authorName"];
+        
+        model.updateTime = @([[set stringForColumn:@"f_updateTime"] integerValue]);
+        
+        model.descriptions = [set stringForColumn:@"f_descriptions"];
+        
+        
+        [array addObject:model];
+        
+    }
+    
+    [self.db close];
+    return array;
+}
+// 添加数据
+- (void)insertIntoTable1:(FunListModel *)model
+{
+    [self.db open];
+    
+    [self.db executeUpdate:@"insert into funlist1(f_name, f_coverPic, f_author, f_label, f_status, f_updateSize, f_popular, f_albumId, f_authorName, f_updateTime, f_descriptions) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", model.name, model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular, model.albumId, model.authorName, model.updateTime, model.descriptions];
+    
+    [self.db close];
+}
+
+- (void)createTable1
+{
+    [self.db open];
+    [self.db executeUpdate:@"create table if not exists funlist1 (f_name text not null, f_coverPic text, f_author text, f_label text, f_status text, f_updateSize text, f_popular text, f_albumId text, f_authorName text, f_updateTime text, f_descriptions text)"];
+    [self.db close];
+}
+
+// 查找数据
+- (NSMutableArray *)selectFromTable1
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    [self.db open];
+    FMResultSet *set = [self.db executeQuery:@"select * from funlist1"];
+    while ([set next]) {
+        
+        FunListModel *model = [[FunListModel alloc] init];
+        model.name = [set stringForColumn:@"f_name"];
+        
+        model.coverPic = [set stringForColumn:@"f_coverPic"];
+        
+        model.author = [set stringForColumn:@"f_author"];
+        
+        model.label = [set stringForColumn:@"f_label"];
+        
+        model.status = @([[set stringForColumn:@"f_status"] integerValue]);
+        
+        model.updateSize = @([[set stringForColumn:@"f_updateSize"] integerValue]);
+        
+        model.popular = @([[set stringForColumn:@"f_popular"] integerValue]);
+        
+        model.albumId = @([[set stringForColumn:@"f_albumId"] integerValue]);
+        
+        model.authorName = [set stringForColumn:@"f_authorName"];
+        
+        model.updateTime = @([[set stringForColumn:@"f_updateTime"] integerValue]);
+        
+        model.descriptions = [set stringForColumn:@"f_descriptions"];
+        
+        
         [array addObject:model];
         
     }
@@ -165,7 +231,22 @@
 - (void)updateTable:(FunListModel *)model
 {
     [self.db open];
-    [self.db executeUpdate:[NSString stringWithFormat:@"update funlist set f_coverPic = \'%@\', f_author = \'%@\', f_label = \'%@\', f_status = \'%@\', f_updateSize = \'%@\', f_popular = \'%@\' WHERE f_name = \'%@\'", model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular, model.name]];
+    [self.db executeUpdate:[NSString stringWithFormat:@"update funlist set f_coverPic = \'%@\', f_author = \'%@\', f_label = \'%@\', f_status = \'%@\', f_updateSize = \'%@\', f_popular = \'%@\', f_albumId = \'%@\', f_authorName = \'%@\', f_updateTime = \'%@\', f_descriptions = \'%@\' WHERE f_name = \'%@\'", model.coverPic, model.author, model.label, model.status, model.updateSize, model.popular, model.albumId, model.authorName, model.updateTime, model.descriptions, model.name]];
+    [self.db close];
+}
+
+// 删除表
+- (void)dropTable
+{
+    [self.db open];
+    [self.db executeUpdate:@"drop table funlist"];
+    [self.db close];
+}
+
+- (void)dropTable1
+{
+    [self.db open];
+    [self.db executeUpdate:@"drop table funlist1"];
     [self.db close];
 }
 

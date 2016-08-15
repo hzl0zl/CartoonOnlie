@@ -7,6 +7,14 @@
 //
 
 #import "FunListCell.h"
+#import "Masonry.h"
+
+@interface FunListCell ()
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *labelWidth;
+
+
+@end
 
 @implementation FunListCell
 
@@ -35,9 +43,14 @@
         
         self.popularL.text = [NSString stringWithFormat:@"%@", listModel.popular];
         
+        NSString *popular = listModel.popular.stringValue;
         
+        
+        
+        self.labelWidth.constant = (float)popular.length * 9;
     }
 }
+
 
 
 

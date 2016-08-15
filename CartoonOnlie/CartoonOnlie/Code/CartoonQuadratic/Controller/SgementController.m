@@ -26,24 +26,11 @@
 
 - (void)viewDidLoad {
     
-    BOOL net = [((AppDelegate *)[[UIApplication sharedApplication] delegate]) networkreachability];
+    
     
 //    AppDelegate *appdelegate = [UIApplication sharedApplication].delegate;
     
-    
-    
-    if (net)
-    {
-//        [self showIndicatorWithTime:0.3];
-        NSLog(@"有网络");
-    }
-    else
-    {
-        MYHint *hint = [[MYHint alloc] init];
-        hint.text = @"网络不可用";
-        NSLog(@"无网络");
-        [hint showInView:self.view];
-    }
+ 
 
     
     [super viewDidLoad];

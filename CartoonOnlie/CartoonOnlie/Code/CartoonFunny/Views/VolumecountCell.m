@@ -32,6 +32,10 @@
         
         
         self.volumecountL.text = [NSString stringWithFormat:@"第 %@ 话", model.orderNumber];
+        self.volumecountL.layer.cornerRadius = 18;
+        self.volumecountL.layer.borderWidth = 0.1;
+        self.volumecountL.layer.masksToBounds = YES;
+        
     }
 }
 

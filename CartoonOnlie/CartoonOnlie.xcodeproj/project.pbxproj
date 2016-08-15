@@ -25,9 +25,12 @@
 		3F591A6E1D5DC10D0076F5B9 /* CartoonTerrofyingDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A661D5DC10D0076F5B9 /* CartoonTerrofyingDB.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A6F1D5DC10D0076F5B9 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A681D5DC10D0076F5B9 /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A701D5DC10D0076F5B9 /* QuadrticHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A6A1D5DC10D0076F5B9 /* QuadrticHander.m */; settings = {ASSET_TAGS = (); }; };
-		3F591A711D5DC10D0076F5B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A6C1D5DC10D0076F5B9 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A721D5DC1380076F5B9 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		3F591A731D5DC1A70076F5B9 /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; };
+		3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A751D5DC3C60076F5B9 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F591A7B1D5DC3C60076F5B9 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F591A761D5DC3C60076F5B9 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3F591A7C1D5DC3C60076F5B9 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A781D5DC3C60076F5B9 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
+		3F591A7D1D5DC3C60076F5B9 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F591A791D5DC3C60076F5B9 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3FA5969C1D58529B00C71535 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5969B1D58529B00C71535 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
 		4706ED331D4C824600098239 /* TerrofyingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706ED311D4C824600098239 /* TerrofyingCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -131,8 +134,12 @@
 		3F591A681D5DC10D0076F5B9 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		3F591A691D5DC10D0076F5B9 /* QuadrticHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticHander.h; sourceTree = "<group>"; };
 		3F591A6A1D5DC10D0076F5B9 /* QuadrticHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticHander.m; sourceTree = "<group>"; };
-		3F591A6B1D5DC10D0076F5B9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		3F591A6C1D5DC10D0076F5B9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3F591A741D5DC3C60076F5B9 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
+		3F591A751D5DC3C60076F5B9 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
+		3F591A761D5DC3C60076F5B9 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
+		3F591A771D5DC3C60076F5B9 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
+		3F591A781D5DC3C60076F5B9 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
+		3F591A791D5DC3C60076F5B9 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
 		3FA312621D54469A002C4FFD /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
 		3FA312631D54469A002C4FFD /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
 		3FA5969A1D58529B00C71535 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
@@ -294,6 +301,12 @@
 		3FC531AC1D4C5313000EB7E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3F591A741D5DC3C60076F5B9 /* FunListCell.h */,
+				3F591A751D5DC3C60076F5B9 /* FunListCell.m */,
+				3F591A761D5DC3C60076F5B9 /* FunListCell.xib */,
+				3F591A771D5DC3C60076F5B9 /* VolumecountCell.h */,
+				3F591A781D5DC3C60076F5B9 /* VolumecountCell.m */,
+				3F591A791D5DC3C60076F5B9 /* VolumecountCell.xib */,
 				479A30E01D584F5C0058CD05 /* CollectionCell.h */,
 				479A30E11D584F5C0058CD05 /* CollectionCell.m */,
 				479A30E21D584F5C0058CD05 /* CollectionCell.xib */,
@@ -538,8 +551,6 @@
 				3F591A681D5DC10D0076F5B9 /* DataHandler.m */,
 				3F591A691D5DC10D0076F5B9 /* QuadrticHander.h */,
 				3F591A6A1D5DC10D0076F5B9 /* QuadrticHander.m */,
-				3F591A6B1D5DC10D0076F5B9 /* Reachability.h */,
-				3F591A6C1D5DC10D0076F5B9 /* Reachability.m */,
 				479A30EE1D59690F0058CD05 /* MYHint.h */,
 				479A30EF1D59690F0058CD05 /* MYHint.m */,
 				472299591D52204C0085BC66 /* AVManager.m */,
@@ -758,10 +769,12 @@
 				3F0094571D59B3CB0087BA89 /* ReadViewController.xib in Resources */,
 				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
 				479A30DE1D582AD30058CD05 /* Icon.png in Resources */,
+				3F591A7D1D5DC3C60076F5B9 /* VolumecountCell.xib in Resources */,
 				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				3F0094551D59B3CB0087BA89 /* FunnyDetailViewController.xib in Resources */,
 				479A313F1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib in Resources */,
 				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
+				3F591A7B1D5DC3C60076F5B9 /* FunListCell.xib in Resources */,
 				479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */,
 				471A1F9F1D4EE40900F3C9C6 /* DetailCell.xib in Resources */,
 				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
@@ -856,6 +869,7 @@
 				479A31391D59B6DA0058CD05 /* QuadraticMainModel.m in Sources */,
 				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
 				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
+				3F591A7C1D5DC3C60076F5B9 /* VolumecountCell.m in Sources */,
 				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
 				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
 				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
@@ -867,6 +881,7 @@
 				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				3F591A6D1D5DC10D0076F5B9 /* CartoonRadioDB.m in Sources */,
 				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
+				3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */,
 				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
@@ -885,7 +900,6 @@
 				479A31511D59B7660058CD05 /* QuadrticLTView.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
-				3F591A711D5DC10D0076F5B9 /* Reachability.m in Sources */,
 				3F591A6E1D5DC10D0076F5B9 /* CartoonTerrofyingDB.m in Sources */,
 				476753651D5458B5000A30DA /* RegisterController.m in Sources */,
 				478922131D558E3C00CCD728 /* AppDelegate.m in Sources */,

@@ -12,7 +12,6 @@
 #import "FunnyDetailViewController.h"
 #import "HMDrawerViewController.h"
 #import "DataHandler.h"
-#import "Reachability.h"
 
 @interface FunnyController ()
 
@@ -122,32 +121,13 @@
 #pragma mark -- 观察者执行的方法
 - (void)reachabilityChanged:(NSNotification* )notification
 {
-//    NSLog(@"netWork changed");
-    
-    Reachability *reach = [notification object];
-    
-    
-    if([reach isKindOfClass:[Reachability class]]){
-        
-        NetworkStatus status = [reach currentReachabilityStatus];
-        
-        NSLog(@"currentStatus:%@",@(status));
-        if (status) {
-            [self getData];
-            return;
-        }
-        
-    }
+    NSLog(@"netWork changed");
 }
 
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-    [reachability startNotifier];
     
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
@@ -156,32 +136,32 @@
     [self.view addSubview:self.tableView];
     
     [self createSegmentedControl];
-
-    
-    
-    [[DataHandler shareDataHandler] createTable:nil];
-    self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
- 
-    NSLog(@"%@", self.funList3);
-
     
     [self createSuspendBtn];
     
-
+    [self simulateRequest];
+    
+    self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
+    
 }
 
+- (void)dealloc
+{
+    
+}
 
 //给cell添加动画
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //设置Cell的动画效果为3D效果
-    //设置x和y的初始值为0.1；
-    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
-    //x和y的最终值为1
-    [UIView animateWithDuration:1 animations:^{
-        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-    }];
-}
+//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    //设置Cell的动画效果为3D效果
+//    //设置x和y的初始值为0.1；
+//    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+//    //x和y的最终值为1
+//    [UIView animateWithDuration:1 animations:^{
+//        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+//    }];
+//}
+
 
 - (void)simulateRequest
 {
@@ -190,9 +170,14 @@
     if (net)
     {
         NSLog(@"网络可用");
+        [self getData];
     }
     else
     {
+        self.funList1 = [[DataHandler shareDataHandler] selectFromTable];
+        self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
+        self.funList3 = self.funList1;
+        self.funList3 = self.funList2;
         NSLog(@"网络不可用");
     }
 }
@@ -203,7 +188,7 @@
 {
     self.segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"推荐漫画", @"热门漫画"]];
     
-    self.segmentControl.frame = CGRectMake(0, 0, SCREEN_WIDTH, 30);
+    self.segmentControl.frame = CGRectMake(-5, 0, SCREEN_WIDTH + 10, 30);
     
     self.segmentControl.selectedSegmentIndex = 0;
     
@@ -222,28 +207,22 @@
 #pragma mark -- 分段控件点击方法
 - (void)segmentControlAction:(UISegmentedControl *)sg
 {
+    [self simulateRequest];
     self.tableView.contentOffset = CGPointMake(0, 0);
     
     [self toTop];
     if (sg.selectedSegmentIndex == 0) {
-        if (self.funList3 != 0) {
-            self.funList3 = nil;
-            self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
-        }
-        else
-        {
-            self.funList3 = self.funList1;
-        }
-        
+        self.funList3 = self.funList1;
     }
     if (sg.selectedSegmentIndex == 1) {
         self.funList3 = self.funList2;
     }
+    
     [self.tableView reloadData];
 }
 
 
-#pragma mark -- 创建悬浮按钮
+#pragma mark -- 创建置顶按钮
 - (void)createSuspendBtn
 {
     self.suspendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -296,10 +275,13 @@
             return;
         }else
         {
-            self.funList3 = nil;
-            self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
             self.funList1 = nil;
             self.funList2 = nil;
+            [[DataHandler shareDataHandler] dropTable];
+            [[DataHandler shareDataHandler] dropTable1];
+            
+            [[DataHandler shareDataHandler] createTable1];
+            [[DataHandler shareDataHandler] createTable];
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             
             NSArray *array = dict[@"data"][@"list"];
@@ -311,33 +293,27 @@
                 
                 NSURL *url = [NSURL URLWithString:model.coverPic];
                 if (url) {
-                    if ([model.popular intValue] > 5000) {
-                            [self.funList1 addObject:model];
-                            
-//                            [[DataHandler shareDataHandler] insertIntoTable:model];
+                    if ([model.popular intValue] > 5000 ) {
+                       
+                        [self.funList1 addObject:model];
                         
-                        
+                        [[DataHandler shareDataHandler] insertIntoTable:model];
                     }else
                     {
                         [self.funList2 addObject:model];
+                        
+                        [[DataHandler shareDataHandler] insertIntoTable1:model];
 
                     }
                 }
                 
             }
-            [self sortedWith:self.funList1];
-            [self sortedWith:self.funList2];
             
-            
-            
+           
+//            [self sortedWith:self.funList1];
+//            [self sortedWith:self.funList2];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
-                for (int i = 0; i < self.funList1.count; i++) {
-                    
-                    FunListModel *model = self.funList1[i];
-                    [[DataHandler shareDataHandler] insertIntoTable:model];
-                }
                 
                 if (self.segmentControl.selectedSegmentIndex == 0) {
                     self.funList3 = self.funList1;
@@ -372,7 +348,6 @@
 
 #pragma mark -- 返回每个分区的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-
 {
     return self.funList3.count;
 }
@@ -399,15 +374,22 @@
 #pragma mark -- 选中cell会调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
     
-    FunListModel *model = self.funList3[indexPath.row];
     
-    funDetailVc.model = model;
-    
-    funDetailVc.albumId = model.albumId;
-    
-    [self.navigationController pushViewController:funDetailVc animated:YES];
+    if ([self networkreachability]) {
+        FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
+        
+        FunListModel *model = self.funList3[indexPath.row];
+        
+        funDetailVc.model = model;
+        
+        funDetailVc.albumId = model.albumId;
+        [self.navigationController pushViewController:funDetailVc animated:YES];
+    }else
+    {
+        [MBProgressHUD showError:@"网络不可用" toView:nil];
+    }
+
 }
 
 #pragma mark -- 抽屉
@@ -426,7 +408,7 @@
     self.suspendBtn.hidden = YES;
     
     self.tableView.contentOffset = CGPointMake(0, 0);
-    
+  
 }
 
 - (void)didReceiveMemoryWarning {

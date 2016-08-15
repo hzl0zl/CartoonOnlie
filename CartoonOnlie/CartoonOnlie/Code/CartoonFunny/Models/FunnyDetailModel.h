@@ -12,19 +12,19 @@
 
 @property (nonatomic, strong) NSString *onlineUrl;
 
-@property (nonatomic, assign) NSNumber *orderNumber;
+@property (nonatomic, strong) NSNumber *orderNumber;
 
-@property (nonatomic, assign) NSNumber *albumId;
+@property (nonatomic, strong) NSNumber *albumId;
 
-@property (nonatomic, assign) NSNumber *workId;
+@property (nonatomic, strong) NSNumber *workId;
 
 @property (nonatomic, strong) NSString *author;
 
-@property (nonatomic, assign) NSNumber *status;
+@property (nonatomic, strong) NSNumber *status;
 
 @property (nonatomic, strong) NSString *authorName;
 
-@property (nonatomic, assign) NSNumber *updateTime;
+@property (nonatomic, strong) NSNumber *updateTime;
 
 @property (nonatomic, strong) NSNumber *popular;
 

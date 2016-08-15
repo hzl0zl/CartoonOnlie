@@ -59,7 +59,7 @@
 //    
 //    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
     
-    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:nil class:[DetailController class]];
+//    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:nil class:[DetailController class]];
     
     RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"05" selectedImage:nil class:[RadioController class]];
     

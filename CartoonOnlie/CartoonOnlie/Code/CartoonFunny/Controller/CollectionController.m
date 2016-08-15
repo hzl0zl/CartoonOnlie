@@ -81,7 +81,6 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArray = [NSMutableArray arrayWithArray:[[DataHandler shareDataHandler] allCartoon]];
     
-    [self.tableView reloadData];
     
 }
 
