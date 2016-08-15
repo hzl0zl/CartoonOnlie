@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RadioDetaiModel.h"
 
 
+@class MusicModel;
 @interface RadioDetailCell : UITableViewCell
 
-@property (nonatomic, strong) RadioDetaiModel *radioDetailModel;
+@property (nonatomic, strong) MusicModel *radioDetailModel;
 
 @property (nonatomic, strong) NSString *imageStr;
 

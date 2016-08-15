@@ -25,14 +25,23 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="正方形" translatesAutoresizingMaskIntoConstraints="NO" id="TCc-Nf-bRy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="ttJ-Mo-DUO"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="iT0-Vt-5Xg" secondAttribute="bottom" constant="14" id="0q5-IK-ks4"/>
                     <constraint firstAttribute="trailing" secondItem="iT0-Vt-5Xg" secondAttribute="trailing" constant="54" id="3yE-uV-OJf"/>
                     <constraint firstItem="u4g-yW-QNn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DLu-x1-ti5"/>
+                    <constraint firstAttribute="trailing" secondItem="TCc-Nf-bRy" secondAttribute="trailing" constant="4" id="Fqv-e0-ONX"/>
                     <constraint firstItem="iT0-Vt-5Xg" firstAttribute="leading" secondItem="u4g-yW-QNn" secondAttribute="trailing" constant="10" id="KPk-0g-loy"/>
                     <constraint firstItem="iT0-Vt-5Xg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="LSU-5S-flo"/>
+                    <constraint firstItem="TCc-Nf-bRy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Nro-ud-Uh5"/>
                     <constraint firstAttribute="bottom" secondItem="u4g-yW-QNn" secondAttribute="bottom" constant="10" id="Vdc-gf-Nyb"/>
+                    <constraint firstItem="TCc-Nf-bRy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eIO-AO-JOl"/>
                     <constraint firstItem="u4g-yW-QNn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qVn-YZ-OxA"/>
                     <constraint firstItem="u4g-yW-QNn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="sHK-6P-0Rg"/>
                     <constraint firstItem="u4g-yW-QNn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zo3-m0-vVK"/>
@@ -43,10 +52,11 @@
                 <outlet property="imageH" destination="u4g-yW-QNn" id="vT8-cU-NMN"/>
                 <outlet property="titleL" destination="iT0-Vt-5Xg" id="aFB-tf-TLf"/>
             </connections>
-            <point key="canvasLocation" x="577" y="325.5"/>
+            <point key="canvasLocation" x="443" y="223"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bgm" width="324" height="220"/>
+        <image name="正方形" width="128" height="128"/>
     </resources>
 </document>

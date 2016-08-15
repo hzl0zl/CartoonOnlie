@@ -8,7 +8,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-
+#import "MBProgressHUD.h"
 #import "DownLoad.h"
 #import "Global.h"
 #import "UIImageView+WebCache.h"

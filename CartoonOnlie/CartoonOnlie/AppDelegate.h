@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (BOOL)networkreachability;
+//- (BOOL)networkreachability;
 
 @end
 

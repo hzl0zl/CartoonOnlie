@@ -38,7 +38,25 @@
     
 }
 
-
+- (void)setFrame:(CGRect)frame {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width - 10;
+    frame.size.width = width;
+    
+//    CGFloat height = [UIScreen mainScreen].bounds.size.height - 10;
+//    frame.size.height = height;
+    
+    CGFloat x = 5;
+    frame.origin.x = x;
+    
+    
+    [super setFrame:frame];
+    
+//    CGFloat y = 90;
+//    frame.origin.y = y;
+    
+   
+}
 
 - (void)awakeFromNib {
     // Initialization code

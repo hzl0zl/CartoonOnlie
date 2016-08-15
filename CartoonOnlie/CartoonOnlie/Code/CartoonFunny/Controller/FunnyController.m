@@ -12,13 +12,13 @@
 #import "FunnyDetailViewController.h"
 #import "HMDrawerViewController.h"
 #import "DataHandler.h"
-#import "Reachability.h"
+
 
 @interface FunnyController ()
 
-{
-    Reachability *reachability;
-}
+//{
+//    Reachability *reachability;
+//}
 
 @end
 
@@ -94,60 +94,60 @@
     
 }
 
-- (BOOL)networkreachability
-{
-    if (reachability)
-    {
-        switch (reachability.currentReachabilityStatus) {
-            case NotReachable:
-                return NO;
-                break;
-            case ReachableViaWiFi:
-                return YES;
-                break;
-            case ReachableViaWWAN:
-                return YES;
-            default:
-                return NO;
-                break;
-        }
-    }
-    else
-    {
-        return NO;
-    }
-}
+//- (BOOL)networkreachability
+//{
+//    if (reachability)
+//    {
+//        switch (reachability.currentReachabilityStatus) {
+//            case NotReachable:
+//                return NO;
+//                break;
+//            case ReachableViaWiFi:
+//                return YES;
+//                break;
+//            case ReachableViaWWAN:
+//                return YES;
+//            default:
+//                return NO;
+//                break;
+//        }
+//    }
+//    else
+//    {
+//        return NO;
+//    }
+//}
 
 
-#pragma mark -- 观察者执行的方法
-- (void)reachabilityChanged:(NSNotification* )notification
-{
-//    NSLog(@"netWork changed");
-    
-    Reachability *reach = [notification object];
-    
-    
-    if([reach isKindOfClass:[Reachability class]]){
-        
-        NetworkStatus status = [reach currentReachabilityStatus];
-        
-        NSLog(@"currentStatus:%@",@(status));
-        if (status) {
-            [self getData];
-            return;
-        }
-        
-    }
-}
-
+//#pragma mark -- 观察者执行的方法
+//- (void)reachabilityChanged:(NSNotification* )notification
+//{
+////    NSLog(@"netWork changed");
+//    
+//    Reachability *reach = [notification object];
+//    
+//    
+//    if([reach isKindOfClass:[Reachability class]]){
+//        
+//        NetworkStatus status = [reach currentReachabilityStatus];
+//        
+//        NSLog(@"currentStatus:%@",@(status));
+//        if (status) {
+//            [self getData];
+//            return;
+//        }
+//        
+//    }
+//}
+//
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-    [reachability startNotifier];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+//    reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+//    [reachability startNotifier];
     
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
@@ -183,19 +183,6 @@
     }];
 }
 
-- (void)simulateRequest
-{
-    BOOL net = [self networkreachability];
-    
-    if (net)
-    {
-        NSLog(@"网络可用");
-    }
-    else
-    {
-        NSLog(@"网络不可用");
-    }
-}
 
 
 #pragma mark -- 创建分段控件SegmentControl

@@ -241,6 +241,18 @@ return self; \
 #define FUNNY @"http://api.youqudao.com/mhapi/api/album/detail?"
 
 
+//-----------------------------------
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
+//#define KTabBarHeight 49.0f // tabBar高度
+//#define KNavigatHeight  64.f // 导航栏高度
+//#define KStateHeight 20.0f // 状态栏
+//#define NavHeight KNavigatHeight - KStateHeight
 
+/* 数值变量 */
+#define TableViewRowHeight 60.0f // tableView RowHight
+
+/* 坐标变量 */
+#define Frame_x_0  0.0f // 坐标 -> x
+#define Frame_y_0  0.0f //
 #endif /* Global_h */
