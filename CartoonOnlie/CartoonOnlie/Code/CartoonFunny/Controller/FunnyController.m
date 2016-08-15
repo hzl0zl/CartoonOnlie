@@ -15,9 +15,9 @@
 
 @interface FunnyController ()
 
-{
-    Reachability *reachability;
-}
+//{
+//    Reachability *reachability;
+//}
 
 @end
 

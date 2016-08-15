@@ -11,7 +11,7 @@
 @interface QuadrticCellController : UIViewController
 
 //MainController -> QuadrticCellController 外部传值属性
-@property (nonatomic,strong) NSString *urlID;
+//@property (nonatomic,strong) NSString *urlID;
 
 
 

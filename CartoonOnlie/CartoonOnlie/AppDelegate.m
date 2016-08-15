@@ -5,7 +5,7 @@
 //  Created by zhiling on 16/7/30.
 //  Copyright © 2016年 huangzhiling. All rights reserved.
 //
-#import "Reachability.h"
+
 #import "AppDelegate.h"
 #import "HMDrawerViewController.h"
 #import "HMLeftMenuTableViewController.h"
@@ -13,18 +13,29 @@
 #import "UMSocial.h"
 #import "UMSocialSinaSSOHandler.h"
 #import "RadioController.h"
-#import "DetailController.h"
+#import "AudioPlayerController.h"
 #import "SgementController.h"
-
-
+#import "RealReachability.h"
 @interface AppDelegate ()
-{
-    
-}
+
+@property (nonatomic ,strong) AudioPlayerController *palyer;
 
 @end
 
 @implementation AppDelegate
+
+- (AudioPlayerController *)palyer {
+    
+    if (_palyer == nil) {
+        
+        _palyer = [AudioPlayerController audioPlayerController];
+        
+    }
+    
+    return  _palyer;
+}
+
+
 - (UIViewController *)viewControllerWithTitle:(NSString *)title normalImage:(NSString *)normalImage selectedImage:(NSString *)selectedImage class:(Class)class{
     
     UIViewController *vc  = [[class alloc] init];
@@ -54,7 +65,7 @@
     
     SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[SgementController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"06" selectedImage:nil class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
 //    
 //    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
@@ -101,7 +112,7 @@
 #pragma mark 同--UINavigationBara 和UITabbar的风格
     
     // 设置所有导航栏的背景颜色
-        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+//        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     //
     //    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //
@@ -110,10 +121,43 @@
     
 }
 
+- (BOOL) canBecomeFirstResponder {
+    return YES;
+}
+
+- (void) remoteControlReceivedWithEvent:(UIEvent *) receivedEvent{
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        switch (receivedEvent.subtype) {
+            case UIEventSubtypeRemoteControlPause:
+                //点击了暂停
+                [self.palyer playerStatus];
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                //点击了下一首
+                [self.palyer theNextSong];
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                //点击了上一首
+                [self.palyer inASong];
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                //点击了播放
+                [self.palyer playerStatus];
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
+     [GLobalRealReachability startNotifier];
+    //开启远程控制
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
     
 #pragma mark === 
     
@@ -156,34 +200,6 @@
     }
     return result;
 }
-
-//
-//- (BOOL)networkreachability
-//{
-//    if (reachability)
-//    {
-//        switch (reachability.currentReachabilityStatus) {
-//            case NotReachable:
-//                return NO;
-//                break;
-//            case ReachableViaWiFi:
-//                return YES;
-//                break;
-//            case ReachableViaWWAN:
-//                return YES;
-//            default:
-//                return NO;
-//                break;
-//        }
-//    }
-//    else
-//    {
-//        return NO;
-//    }
-//}
-
-
-
 
 
 

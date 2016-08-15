@@ -34,7 +34,7 @@
     // 判断文件夹是否存在，如果不存在，则创建
     if (![[NSFileManager defaultManager] fileExistsAtPath:createPath]) {
         [fileManager createDirectoryAtPath:createPath withIntermediateDirectories:YES attributes:nil error:nil];
-        //        [fileManager createDirectoryAtPath:createDir withIntermediateDirectories:YES attributes:nil error:nil];
+
     } else {
         NSLog(@"FileDir is exists.");
     }
@@ -48,20 +48,44 @@
 
 - (void)createTableWithName:(NSString *)name {
     self.tableName = name;
-    self.db = [FMDatabase databaseWithPath:[self dataBasePath]];
     
+    self.db = [FMDatabase databaseWithPath:[self dataBasePath]];
+ 
     if ([self.db open]) {
         
-        NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text);", name];
-        
-        NSLog(@"%@", sqlStr);
-        [self.db executeUpdate:sqlStr];
-    }
+        //hot_radios  musics wiki_id
+        if ([name isEqualToString:@"hot_musics"]) {
+            
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_ids text);", name];
+            
+            NSLog(@"%@", sqlStr);
+            [self.db executeUpdate:sqlStr];
+
+            
+        }else if ([name isEqualToString:@"hot_radios"]) {
+            
+            
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_ids text);", name];
+            
+            NSLog(@"%@", sqlStr);
+            [self.db executeUpdate:sqlStr];
+
+            
+        }else if ([name isEqualToString:@"musics"]) {
+            
+            
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_ids text);", name];
+            
+            NSLog(@"%@", sqlStr);
+            [self.db executeUpdate:sqlStr];
+
+            
+            }
+     
+        }
     
     [self.db close];
-    
-
-    
+ 
     
 }
 
@@ -86,12 +110,10 @@
     if ([self.db open]) {
         NSLog(@"打开数据库开始存储数据");
 //        NSString *sqlStr1 = [NSString stringWithFormat:@"insert into %@", self.tableName];
-        
-        NSString *sqlStr = [NSString stringWithFormat:@"insert into %@(n_title, n_picUrl) values (?, ?);%@, %@ ", tableName ,model.wiki_title, model.wiki_cover[@"small"]];
-        NSLog(@"%@", model.wiki_title);
-        NSLog(@"%@", sqlStr);
-        
-        [self.db executeUpdate:sqlStr];
+//        model.wiki_cover[@"small"];
+        NSString *sqlStr = [NSString stringWithFormat:@"insert into %@(n_title, n_picUrl,n_ids) values (?, ?, ?);", tableName];
+
+        [self.db executeUpdate:sqlStr, model.wiki_title, model.wiki_cover[@"small"], model.wiki_id];
         
         [self.db close];
         
@@ -107,6 +129,9 @@
         NSMutableArray *mArray = [[NSMutableArray alloc] init];
         
         NSString *sqlStr = [NSString stringWithFormat:@"select * from %@",tableName];
+        
+        
+        
         FMResultSet *resultSet = [self.db executeQuery:sqlStr];
         
         while ([resultSet next]) {
@@ -115,6 +140,8 @@
             model.wiki_title = [resultSet stringForColumn:@"n_title"];
             
             NSString *pic = [resultSet stringForColumn:@"n_picUrl"];
+            
+            model.wiki_id = [resultSet stringForColumn:@"n_ids"];
             
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             

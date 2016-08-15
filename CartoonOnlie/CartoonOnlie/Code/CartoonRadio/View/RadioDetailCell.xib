@@ -13,32 +13,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgm" translatesAutoresizingMaskIntoConstraints="NO" id="pMt-fk-fcA">
-                        <rect key="frame" x="10" y="10" width="40" height="40"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je7-hi-7hZ">
-                        <rect key="frame" x="60" y="15" width="182" height="30"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBA-SP-pOc">
+                        <rect key="frame" x="265" y="19" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4h6-HL-gtJ"/>
+                            <constraint firstAttribute="width" constant="50" id="Flh-BD-Pga"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBA-SP-pOc">
-                        <rect key="frame" x="265" y="19" width="47" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je7-hi-7hZ">
+                        <rect key="frame" x="16" y="14" width="231" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="iBA-SP-pOc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="Hnf-LD-Qbg"/>
+                    <constraint firstAttribute="trailing" secondItem="iBA-SP-pOc" secondAttribute="trailing" constant="5" id="pKd-l5-hIY"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageH" destination="pMt-fk-fcA" id="miU-Rg-bVh"/>
                 <outlet property="timeL" destination="iBA-SP-pOc" id="PLj-DU-Q4K"/>
                 <outlet property="titleL" destination="Je7-hi-7hZ" id="HEX-2N-lOl"/>
             </connections>
-            <point key="canvasLocation" x="408" y="323"/>
+            <point key="canvasLocation" x="207" y="296"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="bgm" width="324" height="220"/>
-    </resources>
 </document>

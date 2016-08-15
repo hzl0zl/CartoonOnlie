@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HMLeftMenuTableViewController : UITableViewController
-
+- (void)shareSina;
 @end

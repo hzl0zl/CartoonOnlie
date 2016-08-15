@@ -7,10 +7,10 @@
 //
 
 #import "RadioDetailCell.h"
-
+#import "MusicModel.h"
 @interface RadioDetailCell ()
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageH;
+//@property (strong, nonatomic) IBOutlet UIImageView *imageH;
 
 @property (strong, nonatomic) IBOutlet UILabel *titleL;
 
@@ -19,22 +19,21 @@
 
 @implementation RadioDetailCell
 
-
-- (void)setRadioDetailModel:(RadioDetaiModel *)radioDetailModel {
+- (void)setRadioDetailModel:(MusicModel *)radioDetailModel {
     
     _radioDetailModel = radioDetailModel;
     
     self.titleL.text = radioDetailModel.sub_title;
-    self.imageH.layer.cornerRadius = 20;
-    self.imageH.layer.masksToBounds = YES;
-    [self.imageH sd_setImageWithURL:[NSURL URLWithString:self.imageStr]];
+//    self.imageH.layer.cornerRadius = 20;
+//    self.imageH.layer.masksToBounds = YES;
+//    [self.imageH sd_setImageWithURL:[NSURL URLWithString:self.imageStr]];
     self.timeL.text = radioDetailModel.stream_time;
     
 //    [self.imageH sd_setImageWithURL:[NSURL URLWithString:dict[@"small"]]];
-    if (self.imageH.image == nil) {
-        self.imageH.image = [UIImage imageNamed:@"bgm"];
-    }
-    
+//    if (self.imageH.image == nil) {
+//        self.imageH.image = [UIImage imageNamed:@"bgm"];
+//    }
+//    
 
     
 }
