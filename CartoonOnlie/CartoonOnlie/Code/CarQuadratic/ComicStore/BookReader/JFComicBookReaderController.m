@@ -16,6 +16,9 @@
 
 @property (nonatomic, strong) JFComicReaderBookModel *contentModel;
 
+
+@property (strong, nonatomic) IBOutlet UIButton *backBtn;
+
 @end
 
 static NSString *cellIdentifier = @"JFComicShowImageContentCellIdentifier";
@@ -23,7 +26,7 @@ static NSString *cellIdentifier = @"JFComicShowImageContentCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+     self.backBtn.imageView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
     [self requestData];
     [self initSubViews];
 }
@@ -100,6 +103,10 @@ static NSString *cellIdentifier = @"JFComicShowImageContentCellIdentifier";
         height = model.contentHeight.floatValue;
     }
     return CGSizeMake(kScreenWidth - 10, floorf(height * kScreen375Scale));
+}
+#pragma mark - action
+- (IBAction)backButtonAction:(id)sender {
+    [[JFJumpToControllerManager shared].navigation popViewControllerAnimated:YES];
 }
 
 @end

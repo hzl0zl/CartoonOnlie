@@ -10,7 +10,7 @@
 #import "FunListCell.h"
 #import "FunListModel.h"
 #import "FunnyDetailViewController.h"
-
+#import "HMDrawerViewController.h"
 #import "DataHandler.h"
 #import "RealReachability.h"
 #import "AppDelegate.h"
@@ -109,8 +109,7 @@
     
     [self simulateRequest];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
-    self.navigationController.navigationBar.translucent = NO;
+       self.navigationController.navigationBar.translucent = NO;
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
@@ -423,7 +422,6 @@
     }
 
 }
-
 
 
 #pragma mark -- 视图即将出现

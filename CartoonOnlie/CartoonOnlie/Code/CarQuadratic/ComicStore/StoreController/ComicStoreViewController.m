@@ -53,8 +53,10 @@
     [super viewWillAppear:animated];
     
     self.tabBarController.tabBar.hidden = NO;
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    self.navigationController.navigationBar.hidden = YES;
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+     [[JFJumpToControllerManager shared].navigation setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES];
+    
 }
 
 - (void)loadModelData{

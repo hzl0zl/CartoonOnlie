@@ -83,7 +83,7 @@
                 <outlet property="titleContentView" destination="oMa-6C-fby" id="O7m-WS-lzc"/>
                 <outlet property="titleLabel" destination="EBr-kh-nbJ" id="fP1-xi-JXz"/>
             </connections>
-            <point key="canvasLocation" x="297.5" y="303.5"/>
+            <point key="canvasLocation" x="148.5" y="289.5"/>
         </collectionReusableView>
     </objects>
     <resources>

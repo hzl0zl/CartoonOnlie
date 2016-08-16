@@ -35,7 +35,7 @@ static NSString *const kCellID = @"radioDetailCell";
 
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"音乐"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(leftAction)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(leftAction)];
     
         self.tableView.frame = self.view.bounds;
 //
@@ -101,7 +101,7 @@ static NSString *const kCellID = @"radioDetailCell";
     MusicModel *model = self.dataArr[indexPath.row];
     
     cell.radioDetailModel = model;
-    cell.imageStr = self.radioModel.wiki_cover[@"small"];
+    cell.imageStr = self.radioModel.wiki_cover[@"large"];
     
     return cell;
 }
@@ -152,7 +152,32 @@ static NSString *const kCellID = @"radioDetailCell";
     }];
     
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 300;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 320)];
+    
+    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 270)];
+    [image sd_setImageWithURL:[NSURL URLWithString:self.radioModel.wiki_cover[@"large"]]];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 270, SCREEN_WIDTH, 30)];
+    title.text = self.radioModel.wiki_title;
+    
+    UILabel *title1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 300, SCREEN_WIDTH, 20)];
+    title1.text = @"  曲目";
+    [view addSubview:image];
+    [view addSubview:title];
+    [view addSubview:title1];
+    
+    return view;
+    
+    
+    
+    
+}
 
 - (UITableView *)tableView{
     
@@ -191,17 +216,7 @@ static NSString *const kCellID = @"radioDetailCell";
     
     
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-//    
-//    
-//    return 30;
-//}
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
-//    label.text = @"曲目";
-//    return label;
-//}
+
 
 //给cell添加动画
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

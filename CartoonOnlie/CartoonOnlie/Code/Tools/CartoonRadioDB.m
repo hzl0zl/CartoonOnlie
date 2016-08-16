@@ -56,7 +56,7 @@
         //hot_radios  musics wiki_id
         if ([name isEqualToString:@"hot_musics"]) {
             
-            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_ids text);", name];
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text,n_lagerUrl text, n_ids text);", name];
             
             NSLog(@"%@", sqlStr);
             [self.db executeUpdate:sqlStr];
@@ -65,7 +65,7 @@
         }else if ([name isEqualToString:@"hot_radios"]) {
             
             
-            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_ids text);", name];
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_lagerUrl text, n_ids text);", name];
             
             NSLog(@"%@", sqlStr);
             [self.db executeUpdate:sqlStr];
@@ -74,13 +74,21 @@
         }else if ([name isEqualToString:@"musics"]) {
             
             
-            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text, n_ids text);", name];
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text,n_lagerUrl text, n_ids text);", name];
             
             NSLog(@"%@", sqlStr);
             [self.db executeUpdate:sqlStr];
 
             
-            }
+        }else if ( [name isEqualToString:@"new_musics"]) {
+            
+            
+            NSString *sqlStr = [NSString stringWithFormat:@"create table if not exists %@(n_id integer primary key, n_title text, n_picUrl text,n_lagerUrl text, n_ids text);", name];
+            
+            NSLog(@"%@", sqlStr);
+            [self.db executeUpdate:sqlStr];
+            
+        }
      
         }
     
@@ -111,9 +119,9 @@
         NSLog(@"打开数据库开始存储数据");
 //        NSString *sqlStr1 = [NSString stringWithFormat:@"insert into %@", self.tableName];
 //        model.wiki_cover[@"small"];
-        NSString *sqlStr = [NSString stringWithFormat:@"insert into %@(n_title, n_picUrl,n_ids) values (?, ?, ?);", tableName];
+        NSString *sqlStr = [NSString stringWithFormat:@"insert into %@(n_title, n_picUrl, n_lagerUrl , n_ids) values (?, ?, ?, ?);", tableName];
 
-        [self.db executeUpdate:sqlStr, model.wiki_title, model.wiki_cover[@"small"], model.wiki_id];
+        [self.db executeUpdate:sqlStr, model.wiki_title, model.wiki_cover[@"small"],model.wiki_cover[@"large"], model.wiki_id];
         
         [self.db close];
         
@@ -141,11 +149,14 @@
             
             NSString *pic = [resultSet stringForColumn:@"n_picUrl"];
             
+            NSString *lagerPic = [resultSet stringForColumn:@"n_lagerUrl"];
+            
             model.wiki_id = [resultSet stringForColumn:@"n_ids"];
             
             NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
             
             [dict setObject:pic forKey:@"small"];
+            [dict setObject:lagerPic forKey:@"large"];
             model.wiki_cover = dict;
             [mArray addObject:model];
         
@@ -161,8 +172,8 @@
     
     
     if ([self.db open]) {
-        
-        BOOL result = [self.db executeUpdate:@"delete from terrofying"];
+         NSString *sqlStr = [NSString stringWithFormat:@"delete from %@",tableName];
+        BOOL result = [self.db executeUpdate:sqlStr];
         if (result) {
             
             NSLog(@"删除成功");
