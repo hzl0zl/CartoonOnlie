@@ -88,7 +88,12 @@
     [self createSuspendBtn];
     
     [self createTableView];
-     [self ScrollLocalImages];
+    if (self.scrollerArr.count != 0) {
+        
+             [self ScrollLocalImages];
+        
+    }
+
     
 }
 - (void)createTableView {
@@ -446,6 +451,7 @@
     CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 360);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
     NSMutableArray *urlStr = [[NSMutableArray alloc] init];
+    
     for (RadioModel *model in self.scrollerArr) {
         
        NSString *str = model.wiki_cover[@"large"];
