@@ -11,7 +11,7 @@
 @interface CleanCaches : NSObject
 
 /**
- *  返回path路径下文件的文件大小。
+ *  返回path路径下文件的文件大小。1
  */
 + (double)sizeWithFilePath:(NSString *)path;
 

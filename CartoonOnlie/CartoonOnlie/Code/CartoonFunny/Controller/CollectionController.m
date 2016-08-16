@@ -33,19 +33,7 @@
     [self createRightBtn];
 }
 
-- (void)createRightBtn
-{
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回首页" style:UIBarButtonItemStyleDone target:self action:@selector(backAction)];
-    
-    self.navigationItem.rightBarButtonItem = rightBtn;
-}
-
-
-- (void)backAction
-{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
+#pragma mark -- 懒加载
 - (NSMutableArray *)dataArray
 {
     if (_dataArray == nil) {
@@ -54,7 +42,22 @@
     return _dataArray;
 }
 
-#pragma mark - Table view data source
+
+#pragma mark -- 返回主页按钮方法
+- (void)createRightBtn
+{
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回首页" style:UIBarButtonItemStyleDone target:self action:@selector(backAction)];
+    
+    self.navigationItem.rightBarButtonItem = rightBtn;
+}
+
+#pragma makr -- 返回按钮方法
+- (void)backAction
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
@@ -67,12 +70,13 @@
 }
 
 
+#pragma mark -- 返回行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 120.f;
 }
 
-// 视图即将出现
+#pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {
     
@@ -81,10 +85,11 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArray = [NSMutableArray arrayWithArray:[[DataHandler shareDataHandler] allCartoon]];
     
-    [self.tableView reloadData];
     
 }
 
+
+#pragma mark -- 显示cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CollectionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"collectioncell" forIndexPath:indexPath];
     
@@ -95,6 +100,7 @@
 }
 
 
+#pragma mark -- 编辑cell
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -110,9 +116,7 @@
     }
 }
 
-
-#pragma mark - Table view delegate
-
+#pragma mark -- 选中cell时调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];

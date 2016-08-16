@@ -12,6 +12,7 @@
 #import "ReadViewController.h"
 #import "DataHandler.h"
 #import "CollectionController.h"
+#import "MBProgressHUD.h"
 
 
 @interface FunnyDetailViewController ()<UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout>
@@ -25,7 +26,6 @@
 
 @property (strong, nonatomic) IBOutlet UIView *topView;
 
-
 @property (strong, nonatomic) IBOutlet UIView *bottomView;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -38,23 +38,36 @@
 @property (strong, nonatomic) IBOutlet UILabel *popularL;
 @property (strong, nonatomic) IBOutlet UILabel *descL;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *descHeight;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *middleHeight;
 
 @property (strong, nonatomic) IBOutlet UIButton *collectionBtn;
 
-- (IBAction)startReading:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *middleView;
+
+@property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) UIButton *coverBtn;
+
+@property (nonatomic, assign) CGSize size;
+
+@property (strong, nonatomic) IBOutlet UIImageView *topImageView;
 
 
 @end
 
+BOOL isFavor;
 
 @implementation FunnyDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setTopViewBackground];
+    
     [self setTopView];
     
-    [self setTopViewBackground];
+    
     
     [self setMiddleView];
     
@@ -66,13 +79,19 @@
     
 }
 
+#pragma mark -- 获取网络数据
 - (void)getData
 {
-    NSString *str = [NSString stringWithFormat:@"albumId=%@&customerId=2208260", self.albumId];
+
+    MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+    [self.view addSubview:hud];
+    hud.labelText = @"努力加载中";
+    NSString *string = [NSString stringWithFormat:@"http://api.youqudao.com/mhapi/api/album/detail?albumId=%@&customerId=2208260", self.model.albumId];
     
-    [DownLoad dowmLoadWithUrl:FUNNY postBody:str resultBlock:^(NSData *data) {
+    [DownLoad dowmLoadWithUrl:string postBody:nil resultBlock:^(NSData *data) {
         
         if (data != nil) {
+            
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSArray *array = dic[@"data"][@"list"];
             
@@ -85,7 +104,12 @@
                 [self.dataArray addObject:model];
             }
             
+            
+            
             dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [hud removeFromSuperview];
+                self.imageView.image = [UIImage imageNamed:@"bottomView"];
                 
                 [self.collectionView reloadData];
             });
@@ -98,23 +122,27 @@
 #pragma mark -- 顶部视图背景
 - (void)setTopViewBackground
 {
-    UIImageView *topImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
- 
-    topImageView.alpha = 1;
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     
-    topImageView.image = [UIImage imageNamed:@"background"];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
     
-    [self.topView addSubview:topImageView];
+    effectView.alpha = 0.8;
+    
+    effectView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
+    
+    [self.topImageView addSubview:effectView];
+    
+    [self.topImageView sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
+
 }
 
 #pragma mark -- 中间视图
 - (void)setMiddleView
 {
-    
     self.authorL.text = [NSString stringWithFormat:@"作者: %@", self.model.author];
     
     self.updateTimeL.text = [NSString stringWithFormat:@"更新: %@", [self updateTime:self.model.updateTime]];
-    
+
     if (self.model.status) {
          self.statusL.text = @"状态: 连载中";
     }else
@@ -123,11 +151,37 @@
     }
     self.popularL.text = [NSString stringWithFormat:@"人气: %@", self.model.popular];
     
-    self.descL.text = [NSString stringWithFormat:@"简介: %@", self.model.descriptions];
+    NSString *descStr = [NSString stringWithFormat:@"简介: %@", self.model.descriptions];
+    self.descL.text = descStr;
+    
     
    
 }
 
+#pragma mark -- 显示详情按钮方法
+- (void)selectAction:(id)sender
+{
+    static BOOL isSelect = YES;
+    
+    if (isSelect) {
+        self.descHeight.constant = (int)(self.descL.text.length * 15.0/ (SCREEN_WIDTH - 20) + 1) * 15;
+        self.middleView.frame = CGRectMake(0, 160, SCREEN_WIDTH, 110 + self.descHeight.constant);
+        self.collectionView.frame = CGRectMake(0, 280 + self.descHeight.constant - 40, SCREEN_WIDTH, SCREEN_HEIGHT - 329 - (self.descHeight.constant - 40));
+        [self.coverBtn setBackgroundImage:[UIImage imageNamed:@"up"] forState:UIControlStateNormal];
+        
+    }else
+    {
+        self.descHeight.constant = 40;
+        self.middleView.frame = CGRectMake(0, 160, SCREEN_WIDTH, 150);
+        self.collectionView.frame = CGRectMake(0, 280, SCREEN_WIDTH, SCREEN_HEIGHT - 329);
+        [self.coverBtn setBackgroundImage:[UIImage imageNamed:@"down"] forState:UIControlStateNormal];
+    }
+    isSelect = !isSelect;
+    
+    
+    self.coverBtn.selected = !self.coverBtn.selected;
+}
+    
 
 #pragma mark -- 将时间戳转换成标准时间
 - (NSString *)updateTime:(NSNumber *)state
@@ -137,15 +191,13 @@
     NSTimeInterval time = [string doubleValue] / 1000.0;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
     
     NSString *currentDateStr = [dateFormat stringFromDate:date];
     
-    NSLog(@"%@", [dateFormat stringFromDate: date]);
     
     return currentDateStr;
 }
-
 
 - (UICollectionView *)collectionView
 {
@@ -155,17 +207,13 @@
         // 每一个item的大小
         flowLayout.itemSize = CGSizeMake(70, 40);
         
-        // 设置最小列间距-- 默认值为10
         // 列数是根据Item的大小和最小间距来自动调整
         flowLayout.minimumInteritemSpacing = 5;
         
-        // 最小行间距--默认值为10
-        flowLayout.minimumLineSpacing = 10;
-
         // 设置距离分区的边距
-        flowLayout.sectionInset = UIEdgeInsetsMake(8, 2, 0, 2);
+        flowLayout.sectionInset = UIEdgeInsetsMake(10, 2, 0, 2);
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 320, SCREEN_WIDTH, SCREEN_HEIGHT - 369) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 280, SCREEN_WIDTH, SCREEN_HEIGHT - 329) collectionViewLayout:flowLayout];
         
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -203,19 +251,26 @@
     self.titleImage.layer.masksToBounds = YES;
     
     self.titleLabel.text = self.model.name;
+    
+//    self.titleLabel.textColor = [UIColor brownColor];
+//    
+//    [self.collectionBtn setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
 }
 
 #pragma mark -- 设置头部视图大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    CGSize size= CGSizeMake(0, 40);
+    CGSize size= CGSizeMake(0, 60);
     return size;
 }
 
 #pragma mark -- 尾部视图大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
-    CGSize size= CGSizeMake(0, 50);
-    return size;
+    if (self.dataArray.count < 15) {
+        self.size = CGSizeMake(0, 80);
+    }
+    self.size= CGSizeMake(0, 50);
+    return self.size;
 }
 
 #pragma mark -- 头部视图注册
@@ -226,7 +281,14 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         
-        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 120, 20)];
+        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, 120, 20)];
+        self.coverBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.coverBtn.frame = CGRectMake(0, 0, SCREEN_WIDTH, 20);
+        
+        [self.coverBtn setBackgroundImage:[UIImage imageNamed:@"down"] forState:UIControlStateNormal];
+
+        [self.coverBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
+        [reusableView addSubview:self.coverBtn];
         
         headerL.text = @"目录";
         
@@ -236,13 +298,15 @@
     }else
     {
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"FooterView" forIndexPath:indexPath];
-        reusableView.backgroundColor = [UIColor redColor];
         UIView *bottomV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
         
-        [bottomV addSubview:imageView];
-        imageView.image = [UIImage imageNamed:@"bottomView"];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        if (self.dataArray.count < 15) {
+            self.imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
+        }
+        
+        [bottomV addSubview:self.imageView];
         
         [reusableView addSubview:bottomV];
         
@@ -266,18 +330,12 @@
     FunnyDetailModel *model = self.dataArray[indexPath.item];
     
     cell.model = model;
-    
-    cell.volumecountL.layer.cornerRadius = 18;
-    cell.volumecountL.layer.borderWidth = 0.1;
-    
     return cell;
 }
 
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {
-    
-    
     self.bottomView.hidden = NO;
     
     self.navigationController.navigationBar.hidden = YES;
@@ -381,6 +439,7 @@
 }
 
 
+#pragma mark -- 点击cell
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ReadViewController *readVc = [[ReadViewController alloc] initWithNibName:@"ReadViewController" bundle:nil];
@@ -399,9 +458,4 @@
 }
 
 
-- (IBAction)startReading:(id)sender {
-    
-    
-    
-}
 @end

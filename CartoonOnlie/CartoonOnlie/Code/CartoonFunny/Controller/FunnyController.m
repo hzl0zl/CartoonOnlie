@@ -12,13 +12,11 @@
 #import "FunnyDetailViewController.h"
 #import "HMDrawerViewController.h"
 #import "DataHandler.h"
+#import "RealReachability.h"
+#import "AppDelegate.h"
 
 
 @interface FunnyController ()
-
-//{
-//    Reachability *reachability;
-//}
 
 @end
 
@@ -37,6 +35,8 @@
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
 
 @property (nonatomic, strong) UIButton *suspendBtn;
+
+@property (nonatomic, strong) RealReachability *reachability;
 
 
 @end
@@ -94,61 +94,20 @@
     
 }
 
-//- (BOOL)networkreachability
-//{
-//    if (reachability)
-//    {
-//        switch (reachability.currentReachabilityStatus) {
-//            case NotReachable:
-//                return NO;
-//                break;
-//            case ReachableViaWiFi:
-//                return YES;
-//                break;
-//            case ReachableViaWWAN:
-//                return YES;
-//            default:
-//                return NO;
-//                break;
-//        }
-//    }
-//    else
-//    {
-//        return NO;
-//    }
-//}
-
-
-//#pragma mark -- 观察者执行的方法
-//- (void)reachabilityChanged:(NSNotification* )notification
-//{
-////    NSLog(@"netWork changed");
-//    
-//    Reachability *reach = [notification object];
-//    
-//    
-//    if([reach isKindOfClass:[Reachability class]]){
-//        
-//        NetworkStatus status = [reach currentReachabilityStatus];
-//        
-//        NSLog(@"currentStatus:%@",@(status));
-//        if (status) {
-//            [self getData];
-//            return;
-//        }
-//        
-//    }
-//}
-//
-
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-//    reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-//    [reachability startNotifier];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkChanged:)
+                                                 name:kRealReachabilityChangedNotification
+                                               object:nil];
     
+    [GLobalRealReachability startNotifier];
+    
+    self.reachability = [RealReachability sharedInstance];
+    
+    [self simulateRequest];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
     self.navigationController.navigationBar.translucent = NO;
@@ -156,20 +115,91 @@
     [self.view addSubview:self.tableView];
     
     [self createSegmentedControl];
-
-    
-    
-    [[DataHandler shareDataHandler] createTable:nil];
-    self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
- 
-    NSLog(@"%@", self.funList3);
-
     
     [self createSuspendBtn];
     
-
+    self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
+    
+    
 }
 
+#pragma mark -- 网络改变时会调用
+- (void)networkChanged:(NSNotification *)notification
+{
+    RealReachability *reachability = [RealReachability sharedInstance];
+    reachability = (RealReachability *)notification.object;
+    ReachabilityStatus status = [reachability currentReachabilityStatus];
+    if (status == RealStatusNotReachable)
+    {
+        return;
+    }
+    if (status == RealStatusViaWiFi)
+    {
+        [self showNotificationMessageWithStatus:@"已连接至WiFi"];
+        
+        [self getData];
+    }
+    WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
+    if (status == RealStatusViaWWAN)
+    {
+        if (accessType == WWANType2G)
+        {
+            [self showNotificationMessageWithStatus:@"已连接2G"];
+            [self getData];
+        }
+        else if (accessType == WWANType3G)
+        {
+            [self showNotificationMessageWithStatus:@"已连接3G"];
+            [self getData];
+        }
+        else if (accessType == WWANType4G)
+        {
+            [self showNotificationMessageWithStatus:@"已连接4G"];
+            [self getData];
+        }
+        else
+        {
+            [self showNotificationMessageWithStatus:@"未知网络"];
+        }
+    }
+}
+
+#pragma mark -- 状态切换后提示信息
+- (void)showNotificationMessageWithStatus: (NSString *)status{
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"当前网络状态" message:status preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2];
+}
+
+
+- (void)dismiss:(UIAlertController *)alert{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark -- 视图销毁的时候停止监听，移除通知
+- (void)dealloc{
+    [GLobalRealReachability stopNotifier];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark -- 判断当前网络状态
+- (void)simulateRequest
+{
+    if (self.reachability.currentReachabilityStatus == RealStatusViaWiFi || self.reachability.currentReachabilityStatus == RealStatusViaWWAN) {
+        [self getData];
+    }else
+    {
+        self.funList1 = [[DataHandler shareDataHandler] selectFromTable];
+        self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
+        MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+        hud.labelText = @"请检查网络状态";
+        [self.view addSubview:hud];
+        [hud hide:YES afterDelay:2];
+    }
+
+}
 
 //给cell添加动画
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -184,13 +214,12 @@
 }
 
 
-
 #pragma mark -- 创建分段控件SegmentControl
 - (void)createSegmentedControl
 {
     self.segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"推荐漫画", @"热门漫画"]];
     
-    self.segmentControl.frame = CGRectMake(0, 0, SCREEN_WIDTH, 30);
+    self.segmentControl.frame = CGRectMake(-5, 0, SCREEN_WIDTH + 10, 30);
     
     self.segmentControl.selectedSegmentIndex = 0;
     
@@ -213,24 +242,17 @@
     
     [self toTop];
     if (sg.selectedSegmentIndex == 0) {
-        if (self.funList3 != 0) {
-            self.funList3 = nil;
-            self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
-        }
-        else
-        {
-            self.funList3 = self.funList1;
-        }
-        
+        self.funList3 = self.funList1;
     }
     if (sg.selectedSegmentIndex == 1) {
         self.funList3 = self.funList2;
     }
+    
     [self.tableView reloadData];
 }
 
 
-#pragma mark -- 创建悬浮按钮
+#pragma mark -- 创建置顶按钮
 - (void)createSuspendBtn
 {
     self.suspendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -259,8 +281,6 @@
     
 }
 
-
-
 #pragma mark -- 滚动视图会调用的方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView == self.tableView) {
@@ -283,10 +303,13 @@
             return;
         }else
         {
-            self.funList3 = nil;
-            self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
             self.funList1 = nil;
             self.funList2 = nil;
+            [[DataHandler shareDataHandler] dropTable];
+            [[DataHandler shareDataHandler] dropTable1];
+            
+            [[DataHandler shareDataHandler] createTable1];
+            [[DataHandler shareDataHandler] createTable];
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             
             NSArray *array = dict[@"data"][@"list"];
@@ -298,15 +321,16 @@
                 
                 NSURL *url = [NSURL URLWithString:model.coverPic];
                 if (url) {
-                    if ([model.popular intValue] > 5000) {
-                            [self.funList1 addObject:model];
-                            
-//                            [[DataHandler shareDataHandler] insertIntoTable:model];
+                    if ([model.popular intValue] > 5000 ) {
+                       
+                        [self.funList1 addObject:model];
                         
-                        
+                        [[DataHandler shareDataHandler] insertIntoTable:model];
                     }else
                     {
                         [self.funList2 addObject:model];
+                        
+                        [[DataHandler shareDataHandler] insertIntoTable1:model];
 
                     }
                 }
@@ -315,16 +339,7 @@
             [self sortedWith:self.funList1];
             [self sortedWith:self.funList2];
             
-            
-            
-            
             dispatch_async(dispatch_get_main_queue(), ^{
-                
-                for (int i = 0; i < self.funList1.count; i++) {
-                    
-                    FunListModel *model = self.funList1[i];
-                    [[DataHandler shareDataHandler] insertIntoTable:model];
-                }
                 
                 if (self.segmentControl.selectedSegmentIndex == 0) {
                     self.funList3 = self.funList1;
@@ -359,7 +374,6 @@
 
 #pragma mark -- 返回每个分区的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-
 {
     return self.funList3.count;
 }
@@ -386,15 +400,28 @@
 #pragma mark -- 选中cell会调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
     
-    FunListModel *model = self.funList3[indexPath.row];
     
-    funDetailVc.model = model;
-    
-    funDetailVc.albumId = model.albumId;
-    
-    [self.navigationController pushViewController:funDetailVc animated:YES];
+    if (self.reachability.currentReachabilityStatus == RealStatusViaWWAN || self.reachability.currentReachabilityStatus == RealStatusViaWiFi) {
+        FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
+        
+        FunListModel *model = self.funList3[indexPath.row];
+        
+        funDetailVc.model = model;
+        
+        funDetailVc.albumId = model.albumId;
+        [self.navigationController pushViewController:funDetailVc animated:YES];
+    }
+    else
+    {
+        MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+        [self.view addSubview:hud];
+        hud.labelText = @"网络不可用";
+        [hud show:YES];
+        
+        [hud hide:YES afterDelay:2];
+    }
+
 }
 
 #pragma mark -- 抽屉
@@ -413,7 +440,7 @@
     self.suspendBtn.hidden = YES;
     
     self.tableView.contentOffset = CGPointMake(0, 0);
-    
+  
 }
 
 - (void)didReceiveMemoryWarning {

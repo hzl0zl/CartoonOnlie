@@ -14,23 +14,23 @@
 
 @property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, assign) NSNumber *updateSize;
+@property (nonatomic, strong) NSNumber *updateSize;
 
 @property (nonatomic, strong) NSString *authorName;
 
-@property (nonatomic, assign) NSNumber *updateTime;
+@property (nonatomic, strong) NSNumber *updateTime;
 
 @property (nonatomic, strong) NSString *author;
 
 @property (nonatomic, strong) NSString *label;
 
-@property (nonatomic, assign) NSNumber *status;
+@property (nonatomic, strong) NSNumber *status;
 
-@property (nonatomic, assign) NSNumber *popular;
+@property (nonatomic, strong) NSNumber *popular;
 
 @property (nonatomic, strong) NSString *descriptions;
 
-@property (nonatomic, assign) NSNumber *albumId;
+@property (nonatomic, strong) NSNumber *albumId;
 
 
 

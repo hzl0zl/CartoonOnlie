@@ -10,7 +10,7 @@
 
 @interface CollectionModel : NSObject
 
-@property (nonatomic, assign) NSNumber *albumId;
+@property (nonatomic, strong) NSNumber *albumId;
 
 @property (nonatomic, strong) NSString *descriptions;
 
@@ -21,15 +21,15 @@
 
 @property (nonatomic, assign) NSNumber *updateSize;
 
-@property (nonatomic, assign) NSNumber *updateTime;
+@property (nonatomic, strong) NSNumber *updateTime;
 
 @property (nonatomic, strong) NSString *author;
 
 @property (nonatomic, strong) NSString *label;
 
-@property (nonatomic, assign) NSNumber *status;
+@property (nonatomic, strong) NSNumber *status;
 
-@property (nonatomic, assign) NSNumber *popular;
+@property (nonatomic, strong) NSNumber *popular;
 
 
 

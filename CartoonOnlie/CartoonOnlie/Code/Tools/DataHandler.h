@@ -42,16 +42,28 @@
 
 
 // 创建表格
-- (void)createTable:(NSString *)funlist;
+//- (void)createTable:(NSString *)funlist;
 
 // 添加数据
 - (void)insertIntoTable:(FunListModel *)model;
+- (void)insertIntoTable1:(FunListModel *)model;
 
 // 查找数据
 - (NSMutableArray *)selectFromTable;
 
+- (NSMutableArray *)selectFromTable1;
+
 
 // 更新数据
 - (void)updateTable:(FunListModel *)model;
+
+// 删除表
+- (void)dropTable;
+
+- (void)createTable;
+
+- (void)dropTable1;
+
+- (void)createTable1;
 
 @end

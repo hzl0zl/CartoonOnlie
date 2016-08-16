@@ -70,7 +70,7 @@
 #define kDeviceInfo
 
 //http://112.124.96.190:9090/manhuakong4yuansen0520/ComicHandle.ashx?method=catalogs
-//new  URL
+//new  URL人
 #define kNewRequestURL @"http://112.124.96.190:9090/manhuakong4yuansen0520/ComicHandle.ashx"
 #define kNewTitleMethod @"catalogs"
 #define kNewListContentDayMethod @"dailyupdate"
