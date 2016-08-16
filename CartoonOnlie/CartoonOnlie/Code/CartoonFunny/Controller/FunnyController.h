@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) CollectionModel *model;
 
+- (BOOL)networkreachability;
+
 @end

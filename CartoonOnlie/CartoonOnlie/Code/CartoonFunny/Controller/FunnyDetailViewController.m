@@ -56,14 +56,13 @@
 
 @end
 
-BOOL isFavor;
 
 @implementation FunnyDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setTopViewBackground];
+//    [self setTopViewBackground];
     
     [self setTopView];
     
@@ -86,6 +85,7 @@ BOOL isFavor;
     MBProgressHUD *hud = [[MBProgressHUD alloc] init];
     [self.view addSubview:hud];
     hud.labelText = @"努力加载中";
+    [hud show:YES];
     NSString *string = [NSString stringWithFormat:@"http://api.youqudao.com/mhapi/api/album/detail?albumId=%@&customerId=2208260", self.model.albumId];
     
     [DownLoad dowmLoadWithUrl:string postBody:nil resultBlock:^(NSData *data) {
@@ -120,21 +120,21 @@ BOOL isFavor;
 
 
 #pragma mark -- 顶部视图背景
-- (void)setTopViewBackground
-{
-    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
-    
-    effectView.alpha = 0.8;
-    
-    effectView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
-    
-    [self.topImageView addSubview:effectView];
-    
-    [self.topImageView sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
-
-}
+//- (void)setTopViewBackground
+//{
+//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    
+//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
+//    
+//    effectView.alpha = 0.8;
+//    
+//    effectView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
+//    
+//    [self.topImageView addSubview:effectView];
+//    
+//    [self.topImageView sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
+//
+//}
 
 #pragma mark -- 中间视图
 - (void)setMiddleView
@@ -252,9 +252,8 @@ BOOL isFavor;
     
     self.titleLabel.text = self.model.name;
     
-//    self.titleLabel.textColor = [UIColor brownColor];
-//    
-//    [self.collectionBtn setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
+    self.topImageView.image = [UIImage imageNamed:@"background"];
+    
 }
 
 #pragma mark -- 设置头部视图大小
@@ -337,8 +336,8 @@ BOOL isFavor;
 - (void)viewWillAppear:(BOOL)animated
 {
     self.bottomView.hidden = NO;
-    
     self.navigationController.navigationBar.hidden = YES;
+    
     
     self.tabBarController.tabBar.hidden= YES;
     
@@ -433,9 +432,9 @@ BOOL isFavor;
     self.bottomView.hidden = YES;
     self.navigationController.navigationBar.hidden = NO;
     
-    self.tabBarController.tabBar.hidden= NO;
+    self.tabBarController.tabBar.hidden= YES;
     
-    self.tabBarController.tabBar.translucent = NO;
+    self.tabBarController.tabBar.translucent = YES;
 }
 
 
@@ -445,6 +444,8 @@ BOOL isFavor;
     ReadViewController *readVc = [[ReadViewController alloc] initWithNibName:@"ReadViewController" bundle:nil];
     
     readVc.model = self.dataArray[indexPath.item];
+    
+//    [[JFJumpToControllerManager shared].navigation pushViewController:readVc animated:YES];
     
     [self.navigationController pushViewController:readVc animated:YES];
     

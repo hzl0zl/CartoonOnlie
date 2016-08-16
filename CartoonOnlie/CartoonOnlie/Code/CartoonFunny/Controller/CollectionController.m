@@ -47,7 +47,6 @@
 - (void)createRightBtn
 {
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回首页" style:UIBarButtonItemStyleDone target:self action:@selector(backAction)];
-    
     self.navigationItem.rightBarButtonItem = rightBtn;
 }
 

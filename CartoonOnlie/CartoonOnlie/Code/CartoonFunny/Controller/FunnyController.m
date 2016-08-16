@@ -10,11 +10,12 @@
 #import "FunListCell.h"
 #import "FunListModel.h"
 #import "FunnyDetailViewController.h"
-
 #import "DataHandler.h"
 #import "RealReachability.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
 
+#define KbackgroundColer ([UIColor colorWithRed:255/255.0 green:221/255.0 blue:255/255.0 alpha:1])
 
 @interface FunnyController ()
 
@@ -36,7 +37,7 @@
 
 @property (nonatomic, strong) UIButton *suspendBtn;
 
-@property (nonatomic, strong) RealReachability *reachability;
+@property (nonatomic, strong) Reachability *reachability;
 
 
 @end
@@ -76,7 +77,7 @@
     
     if (_tableView == nil) {
         
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, SCREEN_WIDTH, SCREEN_HEIGHT - 143) style:0];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, SCREEN_WIDTH, SCREEN_HEIGHT - 133) style:0];
         
         _tableView.delegate = self;
         
@@ -98,20 +99,13 @@
     
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(networkChanged:)
-                                                 name:kRealReachabilityChangedNotification
-                                               object:nil];
-    
-    [GLobalRealReachability startNotifier];
-    
-    self.reachability = [RealReachability sharedInstance];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reachability startNotifier];
     [self simulateRequest];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
-    self.navigationController.navigationBar.translucent = NO;
-    self.tableView.backgroundColor = [UIColor whiteColor];
+    [self controllerSetting];
+    
     [self.view addSubview:self.tableView];
     
     [self createSegmentedControl];
@@ -123,46 +117,21 @@
     
 }
 
-#pragma mark -- 网络改变时会调用
-- (void)networkChanged:(NSNotification *)notification
+- (void)controllerSetting
 {
-    RealReachability *reachability = [RealReachability sharedInstance];
-    reachability = (RealReachability *)notification.object;
-    ReachabilityStatus status = [reachability currentReachabilityStatus];
-    if (status == RealStatusNotReachable)
-    {
-        return;
-    }
-    if (status == RealStatusViaWiFi)
-    {
-        [self showNotificationMessageWithStatus:@"已连接至WiFi"];
-        
-        [self getData];
-    }
-    WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
-    if (status == RealStatusViaWWAN)
-    {
-        if (accessType == WWANType2G)
-        {
-            [self showNotificationMessageWithStatus:@"已连接2G"];
-            [self getData];
-        }
-        else if (accessType == WWANType3G)
-        {
-            [self showNotificationMessageWithStatus:@"已连接3G"];
-            [self getData];
-        }
-        else if (accessType == WWANType4G)
-        {
-            [self showNotificationMessageWithStatus:@"已连接4G"];
-            [self getData];
-        }
-        else
-        {
-            [self showNotificationMessageWithStatus:@"未知网络"];
-        }
-    }
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = KbackgroundColer;
+    
+    self.tableView.backgroundColor = KbackgroundColer;
+    self.tabBarController.tabBar.barTintColor = KbackgroundColer;
 }
+
+#pragma mark -- 观察者执行的方法
+- (void)reachabilityChanged:(NSNotification* )notification
+{
+    NSLog(@"netWork changed");
+}
+
 
 #pragma mark -- 状态切换后提示信息
 - (void)showNotificationMessageWithStatus: (NSString *)status{
@@ -184,34 +153,64 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (BOOL)networkreachability
+{
+    if (self.reachability)
+    {
+        switch (self.reachability.currentReachabilityStatus) {
+            case NotReachable:
+                return NO;
+                break;
+            case ReachableViaWiFi:
+                return YES;
+                break;
+            case ReachableViaWWAN:
+                return YES;
+            default:
+                return NO;
+                break;
+        }
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 #pragma mark -- 判断当前网络状态
+
 - (void)simulateRequest
 {
-    if (self.reachability.currentReachabilityStatus == RealStatusViaWiFi || self.reachability.currentReachabilityStatus == RealStatusViaWWAN) {
+    BOOL net = [self networkreachability];
+    
+    if (net)
+    {
+        NSLog(@"网络可用");
         [self getData];
-    }else
+    }
+    else
     {
         self.funList1 = [[DataHandler shareDataHandler] selectFromTable];
         self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
-        MBProgressHUD *hud = [[MBProgressHUD alloc] init];
-        hud.labelText = @"请检查网络状态";
-        [self.view addSubview:hud];
-        [hud hide:YES afterDelay:2];
+        self.funList3 = self.funList1;
+        self.funList3 = self.funList2;
+        NSLog(@"网络不可用");
     }
-
 }
+
+
 
 //给cell添加动画
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //设置Cell的动画效果为3D效果
-    //设置x和y的初始值为0.1；
-    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
-    //x和y的最终值为1
-    [UIView animateWithDuration:1 animations:^{
-        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-    }];
-}
+//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    //设置Cell的动画效果为3D效果
+//    //设置x和y的初始值为0.1；
+//    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+//    //x和y的最终值为1
+//    [UIView animateWithDuration:1 animations:^{
+//        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+//    }];
+//}
 
 
 #pragma mark -- 创建分段控件SegmentControl
@@ -238,6 +237,8 @@
 #pragma mark -- 分段控件点击方法
 - (void)segmentControlAction:(UISegmentedControl *)sg
 {
+    
+    [self simulateRequest];
     self.tableView.contentOffset = CGPointMake(0, 0);
     
     [self toTop];
@@ -386,6 +387,7 @@
     
     FunListModel *model = self.funList3[indexPath.row];
     cell.listModel = model;
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 
@@ -429,6 +431,11 @@
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {
+    
+    self.navigationController.navigationBar.hidden = NO;
+    
+    [JFJumpToControllerManager shared].navigation.navigationBarHidden = YES;
+    
     self.tabBarController.tabBar.hidden = NO;
     
     self.suspendBtn.hidden = YES;
