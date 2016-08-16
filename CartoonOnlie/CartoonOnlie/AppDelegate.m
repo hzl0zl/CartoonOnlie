@@ -74,8 +74,7 @@
     
     RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
-//    BarViewController *fourVC = (BarViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"08" selectedImage:nil class:[BarViewController class]];
-    
+
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
@@ -179,7 +178,8 @@
 //    HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
 //    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[self createTabbarController]];
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[HMDrawerViewController drawerVcWithMainVc:[self createTabbarController]]];
     //设置窗口根控制器
     self.window.rootViewController = navVC;
     

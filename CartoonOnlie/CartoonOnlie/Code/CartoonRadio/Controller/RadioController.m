@@ -12,7 +12,7 @@
 #import "AudioPlayerController.h"
 #import "CartoonRadioDB.h"
 #import "RadioDetailVC.h"
-#import "HMDrawerViewController.h"
+
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
 
@@ -511,12 +511,7 @@
 }
 
 
-- (void)RadioleftAction {
-    
-    [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-    
-}
+
 //-(void)setNavbarBackgroundHidden:(BOOL)hidden
 //{
 //    QYNavigationBar *navBar =(QYNavigationBar*)self.navigationController.navigationBar;

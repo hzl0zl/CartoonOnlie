@@ -10,7 +10,7 @@
 #import "FunListCell.h"
 #import "FunListModel.h"
 #import "FunnyDetailViewController.h"
-#import "HMDrawerViewController.h"
+
 #import "DataHandler.h"
 #import "RealReachability.h"
 #import "AppDelegate.h"
@@ -424,13 +424,7 @@
 
 }
 
-#pragma mark -- 抽屉
-- (void)FunnyleftAction {
-    
-    
-     [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-}
+
 
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated

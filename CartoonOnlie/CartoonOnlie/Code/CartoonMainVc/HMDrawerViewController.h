@@ -24,24 +24,7 @@
  *  @param leftWidth  左边菜单控制器显示的最大范围
  *  @return 抽屉控制器
  */
-+ (instancetype)drawerVcWithMainVc:(UIViewController *)mainVc leftMenuVc:(UIViewController *)leftMenuVc leftWidth:(CGFloat)leftWidth;
-/**
- *  打开左边菜单控制器
- */
-- (void)openLeftMenu;
-
-/**
- *  切换控制器的方法
- *
- *  @param destVC <#destVC description#>
- */
-- (void)switchController:(UIViewController *)destVC;
-
-/**
- *  回到主界面
- */
-- (void)backHome;
-
++ (instancetype)drawerVcWithMainVc:(UIViewController *)mainVc;
 
 
 
