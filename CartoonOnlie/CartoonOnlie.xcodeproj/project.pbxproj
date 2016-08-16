@@ -13,11 +13,6 @@
 		3F0094551D59B3CB0087BA89 /* FunnyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F00944D1D59B3CB0087BA89 /* FunnyDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		3F0094561D59B3CB0087BA89 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00944F1D59B3CB0087BA89 /* ReadViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3F0094571D59B3CB0087BA89 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0094501D59B3CB0087BA89 /* ReadViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		3F00946A1D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0094681D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		3F00946B1D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0094691D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97CF1D52EE4300235153 /* QuadraticModel.m */; settings = {ASSET_TAGS = (); }; };
-		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F591A6D1D5DC10D0076F5B9 /* CartoonRadioDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A641D5DC10D0076F5B9 /* CartoonRadioDB.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A751D5DC3C60076F5B9 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A7B1D5DC3C60076F5B9 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F591A761D5DC3C60076F5B9 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -42,10 +37,7 @@
 		472EC6EB1D4C33890081DDC5 /* CartoonOnlieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6EA1D4C33890081DDC5 /* CartoonOnlieTests.m */; };
 		472EC6F61D4C33890081DDC5 /* CartoonOnlieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6F51D4C33890081DDC5 /* CartoonOnlieUITests.m */; };
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */; settings = {ASSET_TAGS = (); }; };
-		47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */; settings = {ASSET_TAGS = (); }; };
 		474117851D5DE57700336860 /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; };
-		474117861D5DE57700336860 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31431D59B6ED0058CD05 /* QuadraticWebController.m */; };
 		4741178E1D5DE5AB00336860 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4741178C1D5DE5AB00336860 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
 		474117991D5DE5E400336860 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		4741179A1D5DE61F00336860 /* CollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0094491D59B3CB0087BA89 /* CollectionController.xib */; };
@@ -80,16 +72,8 @@
 		479A30E31D584F5C0058CD05 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30E11D584F5C0058CD05 /* CollectionCell.m */; settings = {ASSET_TAGS = (); }; };
 		479A30E41D584F5C0058CD05 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479A30E21D584F5C0058CD05 /* CollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
 		479A30F01D59690F0058CD05 /* MYHint.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A30EF1D59690F0058CD05 /* MYHint.m */; settings = {ASSET_TAGS = (); }; };
-		479A31391D59B6DA0058CD05 /* QuadraticMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31361D59B6DA0058CD05 /* QuadraticMainModel.m */; settings = {ASSET_TAGS = (); }; };
-		479A313A1D59B6DA0058CD05 /* QuadriticCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31381D59B6DA0058CD05 /* QuadriticCellModel.m */; settings = {ASSET_TAGS = (); }; };
-		479A313E1D59B6E50058CD05 /* QuadraticCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A313C1D59B6E50058CD05 /* QuadraticCellTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		479A313F1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479A313D1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		479A31481D59B6ED0058CD05 /* MainQuadraticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31411D59B6ED0058CD05 /* MainQuadraticViewController.m */; settings = {ASSET_TAGS = (); }; };
-		479A314A1D59B6ED0058CD05 /* QuadrticCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31451D59B6ED0058CD05 /* QuadrticCellController.m */; settings = {ASSET_TAGS = (); }; };
-		479A314B1D59B6ED0058CD05 /* SgementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31471D59B6ED0058CD05 /* SgementController.m */; settings = {ASSET_TAGS = (); }; };
 		479A314C1D59B7340058CD05 /* FunnyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47592D8E1D55CD3F000EFC4C /* FunnyDetailModel.m */; };
 		479A314D1D59B7340058CD05 /* FunnyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F00944A1D59B3CB0087BA89 /* FunnyController.m */; };
-		479A31511D59B7660058CD05 /* QuadrticLTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31501D59B7660058CD05 /* QuadrticLTView.m */; settings = {ASSET_TAGS = (); }; };
 		47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2C0D1D4C589C007EC6E7 /* DownLoad.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -121,16 +105,6 @@
 		3F00944E1D59B3CB0087BA89 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
 		3F00944F1D59B3CB0087BA89 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
 		3F0094501D59B3CB0087BA89 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
-		3F0094671D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticFirstCollectionViewCell.h; sourceTree = "<group>"; };
-		3F0094681D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticFirstCollectionViewCell.m; sourceTree = "<group>"; };
-		3F0094691D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadrticFirstCollectionViewCell.xib; sourceTree = "<group>"; };
-		3F1A97CE1D52EE4300235153 /* QuadraticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticModel.h; sourceTree = "<group>"; };
-		3F1A97CF1D52EE4300235153 /* QuadraticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticModel.m; sourceTree = "<group>"; };
-		3F1A97D11D52EE7000235153 /* QuadraticController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticController.h; sourceTree = "<group>"; };
-		3F1A97D21D52EE7000235153 /* QuadraticController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticController.m; sourceTree = "<group>"; };
-		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
-		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
-		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
 		3F591A631D5DC10D0076F5B9 /* CartoonRadioDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoonRadioDB.h; sourceTree = "<group>"; };
 		3F591A641D5DC10D0076F5B9 /* CartoonRadioDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoonRadioDB.m; sourceTree = "<group>"; };
 		3F591A671D5DC10D0076F5B9 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
@@ -176,9 +150,6 @@
 		472EC7441D4C39870081DDC5 /* FunnyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyController.h; sourceTree = "<group>"; };
 		472EC74A1D4C39A80081DDC5 /* RadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioController.h; sourceTree = "<group>"; };
 		472EC74B1D4C39A80081DDC5 /* RadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioController.m; sourceTree = "<group>"; };
-		47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionOneCell.h; sourceTree = "<group>"; };
-		47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionOneCell.m; sourceTree = "<group>"; };
-		47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionOneCell.xib; sourceTree = "<group>"; };
 		4741177E1D5DD48900336860 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		4741177F1D5DD48900336860 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		474117811D5DD4B400336860 /* CleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanCaches.h; sourceTree = "<group>"; };
@@ -235,23 +206,6 @@
 		479A30E21D584F5C0058CD05 /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		479A30EE1D59690F0058CD05 /* MYHint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHint.h; sourceTree = "<group>"; };
 		479A30EF1D59690F0058CD05 /* MYHint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHint.m; sourceTree = "<group>"; };
-		479A31351D59B6DA0058CD05 /* QuadraticMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticMainModel.h; sourceTree = "<group>"; };
-		479A31361D59B6DA0058CD05 /* QuadraticMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticMainModel.m; sourceTree = "<group>"; };
-		479A31371D59B6DA0058CD05 /* QuadriticCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadriticCellModel.h; sourceTree = "<group>"; };
-		479A31381D59B6DA0058CD05 /* QuadriticCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadriticCellModel.m; sourceTree = "<group>"; };
-		479A313B1D59B6E50058CD05 /* QuadraticCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticCellTableViewCell.h; sourceTree = "<group>"; };
-		479A313C1D59B6E50058CD05 /* QuadraticCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticCellTableViewCell.m; sourceTree = "<group>"; };
-		479A313D1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticCellTableViewCell.xib; sourceTree = "<group>"; };
-		479A31401D59B6ED0058CD05 /* MainQuadraticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainQuadraticViewController.h; sourceTree = "<group>"; };
-		479A31411D59B6ED0058CD05 /* MainQuadraticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainQuadraticViewController.m; sourceTree = "<group>"; };
-		479A31421D59B6ED0058CD05 /* QuadraticWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticWebController.h; sourceTree = "<group>"; };
-		479A31431D59B6ED0058CD05 /* QuadraticWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticWebController.m; sourceTree = "<group>"; };
-		479A31441D59B6ED0058CD05 /* QuadrticCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticCellController.h; sourceTree = "<group>"; };
-		479A31451D59B6ED0058CD05 /* QuadrticCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticCellController.m; sourceTree = "<group>"; };
-		479A31461D59B6ED0058CD05 /* SgementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SgementController.h; sourceTree = "<group>"; };
-		479A31471D59B6ED0058CD05 /* SgementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SgementController.m; sourceTree = "<group>"; };
-		479A314F1D59B7660058CD05 /* QuadrticLTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticLTView.h; sourceTree = "<group>"; };
-		479A31501D59B7660058CD05 /* QuadrticLTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticLTView.m; sourceTree = "<group>"; };
 		47A2571D1D54AD3B0016115F /* NSString+Md5String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Md5String.h"; sourceTree = "<group>"; };
 		47A2571E1D54AD3B0016115F /* NSString+Md5String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Md5String.m"; sourceTree = "<group>"; };
 		47EA2C0C1D4C589C007EC6E7 /* DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoad.h; sourceTree = "<group>"; };
@@ -408,7 +362,6 @@
 				4767535C1D5428B5000A30DA /* LoginAndRegister */,
 				47EA2BFC1D4C480B007EC6E7 /* Tools */,
 				472EC7341D4C39290081DDC5 /* CartoonFunny */,
-				472EC7381D4C39290081DDC5 /* CartoonQuadratic */,
 				472EC73C1D4C39290081DDC5 /* CartoonRadio */,
 				472EC7041D4C35310081DDC5 /* CartoonMainVc */,
 			);
@@ -457,33 +410,6 @@
 				3F00944F1D59B3CB0087BA89 /* ReadViewController.m */,
 				3F0094501D59B3CB0087BA89 /* ReadViewController.xib */,
 				472EC7441D4C39870081DDC5 /* FunnyController.h */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		472EC7381D4C39290081DDC5 /* CartoonQuadratic */ = {
-			isa = PBXGroup;
-			children = (
-				47EA2C031D4C4FF3007EC6E7 /* Model */,
-				47EA2C041D4C4FF3007EC6E7 /* View */,
-				472EC7391D4C39290081DDC5 /* Controller */,
-			);
-			path = CartoonQuadratic;
-			sourceTree = "<group>";
-		};
-		472EC7391D4C39290081DDC5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				479A31401D59B6ED0058CD05 /* MainQuadraticViewController.h */,
-				479A31411D59B6ED0058CD05 /* MainQuadraticViewController.m */,
-				479A31421D59B6ED0058CD05 /* QuadraticWebController.h */,
-				479A31431D59B6ED0058CD05 /* QuadraticWebController.m */,
-				479A31441D59B6ED0058CD05 /* QuadrticCellController.h */,
-				479A31451D59B6ED0058CD05 /* QuadrticCellController.m */,
-				479A31461D59B6ED0058CD05 /* SgementController.h */,
-				479A31471D59B6ED0058CD05 /* SgementController.m */,
-				3F1A97D11D52EE7000235153 /* QuadraticController.h */,
-				3F1A97D21D52EE7000235153 /* QuadraticController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -629,40 +555,6 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		47EA2C031D4C4FF3007EC6E7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				479A31351D59B6DA0058CD05 /* QuadraticMainModel.h */,
-				479A31361D59B6DA0058CD05 /* QuadraticMainModel.m */,
-				479A31371D59B6DA0058CD05 /* QuadriticCellModel.h */,
-				479A31381D59B6DA0058CD05 /* QuadriticCellModel.m */,
-				3F1A97CE1D52EE4300235153 /* QuadraticModel.h */,
-				3F1A97CF1D52EE4300235153 /* QuadraticModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		47EA2C041D4C4FF3007EC6E7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				479A314F1D59B7660058CD05 /* QuadrticLTView.h */,
-				479A31501D59B7660058CD05 /* QuadrticLTView.m */,
-				479A313B1D59B6E50058CD05 /* QuadraticCellTableViewCell.h */,
-				479A313C1D59B6E50058CD05 /* QuadraticCellTableViewCell.m */,
-				479A313D1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib */,
-				3F0094671D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.h */,
-				3F0094681D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.m */,
-				3F0094691D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.xib */,
-				3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */,
-				3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */,
-				3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */,
-				47312C7B1D5815FD00B3B7B8 /* SectionOneCell.h */,
-				47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */,
-				47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		47EA2C061D4C4FFA007EC6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,7 +696,6 @@
 				474117C11D5DF53A00336860 /* MusicPlayer_后退@2x.png in Resources */,
 				474117BE1D5DF53A00336860 /* MusicPlayer_下一个@2x.png in Resources */,
 				474117C51D5DF53A00336860 /* MusicPlayer_顺序播放@2x.png in Resources */,
-				3F00946B1D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.xib in Resources */,
 				476753661D5458B5000A30DA /* RegisterController.xib in Resources */,
 				474117C81D5DF53A00336860 /* 音乐_播放器_默认模糊背景@2x.png in Resources */,
 				479A30E41D584F5C0058CD05 /* CollectionCell.xib in Resources */,
@@ -817,15 +708,12 @@
 				472EC6DD1D4C33890081DDC5 /* Assets.xcassets in Resources */,
 				3F0094571D59B3CB0087BA89 /* ReadViewController.xib in Resources */,
 				474117E31D61483C00336860 /* SwitchCell.xib in Resources */,
-				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
 				479A30DE1D582AD30058CD05 /* Icon.png in Resources */,
 				3F591A7D1D5DC3C60076F5B9 /* VolumecountCell.xib in Resources */,
 				3F0094551D59B3CB0087BA89 /* FunnyDetailViewController.xib in Resources */,
-				479A313F1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib in Resources */,
 				3F591A7B1D5DC3C60076F5B9 /* FunListCell.xib in Resources */,
 				479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */,
 				474117C71D5DF53A00336860 /* 音乐_播放器_默认唱片头像@2x.png in Resources */,
-				3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */,
 				476753611D5428E2000A30DA /* LoginController.xib in Resources */,
 				471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */,
 			);
@@ -911,11 +799,9 @@
 				474117D31D5EA90C00336860 /* RadioDetailCell.m in Sources */,
 				474117991D5DE5E400336860 /* LoginController.m in Sources */,
 				474117851D5DE57700336860 /* NSString+Md5String.m in Sources */,
-				474117861D5DE57700336860 /* QuadraticWebController.m in Sources */,
 				479A314C1D59B7340058CD05 /* FunnyDetailModel.m in Sources */,
 				474117E61D61521300336860 /* SingleDayAndNight.m in Sources */,
 				479A314D1D59B7340058CD05 /* FunnyController.m in Sources */,
-				479A314A1D59B6ED0058CD05 /* QuadrticCellController.m in Sources */,
 				474117CF1D5EA21900336860 /* MusicModel.m in Sources */,
 				479A30F01D59690F0058CD05 /* MYHint.m in Sources */,
 				479A30E31D584F5C0058CD05 /* CollectionCell.m in Sources */,
@@ -923,30 +809,20 @@
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
 				474117BB1D5DF53A00336860 /* AudioPlayerController.m in Sources */,
 				474117E21D61483C00336860 /* SwitchCell.m in Sources */,
-				479A31391D59B6DA0058CD05 /* QuadraticMainModel.m in Sources */,
 				4741178E1D5DE5AB00336860 /* CollectionModel.m in Sources */,
 				3F591A7C1D5DC3C60076F5B9 /* VolumecountCell.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
-				479A31481D59B6ED0058CD05 /* MainQuadraticViewController.m in Sources */,
 				474117BA1D5DF53A00336860 /* AudioPlayerController+methods.m in Sources */,
-				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
 				474117CA1D5DF53A00336860 /* NSString+time.m in Sources */,
-				479A313E1D59B6E50058CD05 /* QuadraticCellTableViewCell.m in Sources */,
 				3F591A6D1D5DC10D0076F5B9 /* CartoonRadioDB.m in Sources */,
 				3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */,
-				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
-				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				474117D91D5ECCC100336860 /* RadioDetailVC.m in Sources */,
 				3F0094541D59B3CB0087BA89 /* FunnyDetailViewController.m in Sources */,
 				4722995B1D52204C0085BC66 /* AVManager.m in Sources */,
 				3F0094511D59B3CB0087BA89 /* CollectionController.m in Sources */,
-				479A314B1D59B6ED0058CD05 /* SgementController.m in Sources */,
-				479A313A1D59B6DA0058CD05 /* QuadriticCellModel.m in Sources */,
 				47EA2C101D4C589C007EC6E7 /* DownLoad.m in Sources */,
-				3F00946A1D59B3EF0087BA89 /* QuadrticFirstCollectionViewCell.m in Sources */,
 				3F0094561D59B3CB0087BA89 /* ReadViewController.m in Sources */,
-				479A31511D59B7660058CD05 /* QuadrticLTView.m in Sources */,
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				474117CC1D5DF53A00336860 /* RotatingView.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
@@ -1086,7 +962,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "/Users/lan/Desktop/未命名文件夹/项目版本4/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1164,7 +1040,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "/Users/lan/Desktop/未命名文件夹/项目版本4/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
