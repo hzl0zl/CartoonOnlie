@@ -430,7 +430,7 @@
 #pragma mark 创建轮播图
 - (void)ScrollLocalImages
 {
-    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 200);
+    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 360);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
     // 网络图片数组
     self.cycleScrollView.imageURLStringsGroup = self.scrollerArr;

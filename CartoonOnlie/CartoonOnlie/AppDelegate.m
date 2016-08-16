@@ -14,7 +14,7 @@
 #import "UMSocialSinaSSOHandler.h"
 #import "RadioController.h"
 #import "AudioPlayerController.h"
-#import "SgementController.h"
+#import "ComicStoreViewController.h"
 #import "RealReachability.h"
 @interface AppDelegate ()
 
@@ -63,26 +63,26 @@
     
 
     
-    SgementController *firstVC=(SgementController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[SgementController class]];
+    ComicStoreViewController *firstVC=(ComicStoreViewController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[ComicStoreViewController class]];
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
 //    
-//    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
     
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
+    RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
+    UIViewController *fourVC = (UIViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"08" selectedImage:nil class:[UIViewController class]];
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
     
     
-//     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
     
-     UINavigationController *fourNav = [[UINavigationController alloc] initWithRootViewController:fourVC];
+     UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
     
+    UINavigationController *fourNav = [[UINavigationController alloc] initWithRootViewController:fourVC];
     
-    tabbarController.viewControllers = @[firstNav, secondNav,  fourNav];
+    tabbarController.viewControllers = @[firstNav, secondNav,  thridNav, fourNav];
     
     
     //设置Item的选中颜色
@@ -173,15 +173,25 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //    self.window.backgroundColor = [UIColor redColor];
     //创建左右菜单控制器
-    HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
+//    HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
+//    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[self createTabbarController]];
     //设置窗口根控制器
-    self.window.rootViewController = [HMDrawerViewController drawerVcWithMainVc:[self createTabbarController] leftMenuVc:leftMenuVc leftWidth:SCREEN_WIDTH / 3 * 2];
+    self.window.rootViewController = navVC;
     
     //显示窗口
     [self.window makeKeyAndVisible];
     
-    
+//    UINavigationBar *navigationBar = [UINavigationBar appearance];
+//    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
+//    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+//    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
+//    navigationBar.translucent = NO;
+//    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
+//                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
+//                                          };
+
     
     return YES;
 
