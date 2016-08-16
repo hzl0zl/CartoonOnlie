@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     
+//    BOOL net = [((AppDelegate *)[[UIApplication sharedApplication] delegate]) networkreachability];
     
     
 //    AppDelegate *appdelegate = [UIApplication sharedApplication].delegate;

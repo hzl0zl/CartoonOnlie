@@ -18,21 +18,19 @@
 		3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97CF1D52EE4300235153 /* QuadraticModel.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F1A97D81D52EE9100235153 /* QuadraticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3F24987F1D5470330056F329 /* RadioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472298F31D51BA8E0085BC66 /* RadioDetailCell.m */; };
-		3F591A601D5DBEE80076F5B9 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31431D59B6ED0058CD05 /* QuadraticWebController.m */; };
-		3F591A611D5DBEFC0076F5B9 /* CollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0094491D59B3CB0087BA89 /* CollectionController.xib */; };
 		3F591A6D1D5DC10D0076F5B9 /* CartoonRadioDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A641D5DC10D0076F5B9 /* CartoonRadioDB.m */; settings = {ASSET_TAGS = (); }; };
-		3F591A6E1D5DC10D0076F5B9 /* CartoonTerrofyingDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A661D5DC10D0076F5B9 /* CartoonTerrofyingDB.m */; settings = {ASSET_TAGS = (); }; };
-		3F591A6F1D5DC10D0076F5B9 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A681D5DC10D0076F5B9 /* DataHandler.m */; settings = {ASSET_TAGS = (); }; };
-		3F591A701D5DC10D0076F5B9 /* QuadrticHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A6A1D5DC10D0076F5B9 /* QuadrticHander.m */; settings = {ASSET_TAGS = (); }; };
-		3F591A721D5DC1380076F5B9 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
-		3F591A731D5DC1A70076F5B9 /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; };
 		3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A751D5DC3C60076F5B9 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A7B1D5DC3C60076F5B9 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F591A761D5DC3C60076F5B9 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3F591A7C1D5DC3C60076F5B9 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A781D5DC3C60076F5B9 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
 		3F591A7D1D5DC3C60076F5B9 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F591A791D5DC3C60076F5B9 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
-		3FA5969C1D58529B00C71535 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA5969B1D58529B00C71535 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
 		3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC531B21D4C5328000EB7E5 /* FunListModel.m */; settings = {ASSET_TAGS = (); }; };
+		3FC858A31D61D32700542FFA /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A681D5DC10D0076F5B9 /* DataHandler.m */; };
+		3FC858A41D61D32700542FFA /* QuadrticHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F591A6A1D5DC10D0076F5B9 /* QuadrticHander.m */; };
+		3FC858A51D61D3F200542FFA /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; };
+		3FC858D41D61D6C700542FFA /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117B61D5DF53A00336860 /* UIImage+ImageEffects.m */; };
+		3FC858D51D61D6C700542FFA /* UIViewController+NavBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117F11D61B27800336860 /* UIViewController+NavBarHidden.m */; };
+		3FC858D61D61D6C700542FFA /* CleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117821D5DD4B400336860 /* CleanCaches.m */; };
+		3FC858D71D61D6C700542FFA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4741177F1D5DD48900336860 /* MBProgressHUD.m */; };
 		471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FA81D4F4C3E00F3C9C6 /* RadioModel.m */; settings = {ASSET_TAGS = (); }; };
 		471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FAB1D4F54BC00F3C9C6 /* RadioCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471A1FAC1D4F54BC00F3C9C6 /* RadioCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -44,38 +42,26 @@
 		472EC6EB1D4C33890081DDC5 /* CartoonOnlieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6EA1D4C33890081DDC5 /* CartoonOnlieTests.m */; };
 		472EC6F61D4C33890081DDC5 /* CartoonOnlieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC6F51D4C33890081DDC5 /* CartoonOnlieUITests.m */; };
 		472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC7081D4C35560081DDC5 /* HMDrawerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472EC70A1D4C35560081DDC5 /* HMLeftMenuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47312C7C1D5815FD00B3B7B8 /* SectionOneCell.m */; settings = {ASSET_TAGS = (); }; };
 		47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47312C7D1D5815FD00B3B7B8 /* SectionOneCell.xib */; settings = {ASSET_TAGS = (); }; };
-		474117801D5DD48900336860 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4741177F1D5DD48900336860 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
-		474117831D5DD4B400336860 /* CleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117821D5DD4B400336860 /* CleanCaches.m */; settings = {ASSET_TAGS = (); }; };
 		474117851D5DE57700336860 /* NSString+Md5String.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A2571E1D54AD3B0016115F /* NSString+Md5String.m */; };
 		474117861D5DE57700336860 /* QuadraticWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 479A31431D59B6ED0058CD05 /* QuadraticWebController.m */; };
-		4741178A1D5DE59100336860 /* QuadrticHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117891D5DE59100336860 /* QuadrticHander.m */; settings = {ASSET_TAGS = (); }; };
 		4741178E1D5DE5AB00336860 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4741178C1D5DE5AB00336860 /* CollectionModel.m */; settings = {ASSET_TAGS = (); }; };
-		474117951D5DE5BC00336860 /* FunListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117901D5DE5BC00336860 /* FunListCell.m */; settings = {ASSET_TAGS = (); }; };
-		474117961D5DE5BC00336860 /* FunListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474117911D5DE5BC00336860 /* FunListCell.xib */; settings = {ASSET_TAGS = (); }; };
-		474117971D5DE5BC00336860 /* VolumecountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117931D5DE5BC00336860 /* VolumecountCell.m */; settings = {ASSET_TAGS = (); }; };
-		474117981D5DE5BC00336860 /* VolumecountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474117941D5DE5BC00336860 /* VolumecountCell.xib */; settings = {ASSET_TAGS = (); }; };
 		474117991D5DE5E400336860 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4767535E1D5428E2000A30DA /* LoginController.m */; };
 		4741179A1D5DE61F00336860 /* CollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0094491D59B3CB0087BA89 /* CollectionController.xib */; };
 		474117BA1D5DF53A00336860 /* AudioPlayerController+methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 4741179E1D5DF53A00336860 /* AudioPlayerController+methods.m */; settings = {ASSET_TAGS = (); }; };
 		474117BB1D5DF53A00336860 /* AudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117A01D5DF53A00336860 /* AudioPlayerController.m */; settings = {ASSET_TAGS = (); }; };
 		474117BC1D5DF53A00336860 /* AudioPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474117A11D5DF53A00336860 /* AudioPlayerController.xib */; settings = {ASSET_TAGS = (); }; };
-		474117BD1D5DF53A00336860 /* MusicPlayer_上一个@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A31D5DF53A00336860 /* MusicPlayer_上一个@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117BE1D5DF53A00336860 /* MusicPlayer_下一个@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A41D5DF53A00336860 /* MusicPlayer_下一个@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117BF1D5DF53A00336860 /* MusicPlayer_下载@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A51D5DF53A00336860 /* MusicPlayer_下载@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C01D5DF53A00336860 /* MusicPlayer_单曲循环@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A61D5DF53A00336860 /* MusicPlayer_单曲循环@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C11D5DF53A00336860 /* MusicPlayer_后退@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A71D5DF53A00336860 /* MusicPlayer_后退@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C21D5DF53A00336860 /* MusicPlayer_播放@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A81D5DF53A00336860 /* MusicPlayer_播放@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C31D5DF53A00336860 /* MusicPlayer_暂停@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117A91D5DF53A00336860 /* MusicPlayer_暂停@2x.png */; settings = {ASSET_TAGS = (); }; };
-		474117C41D5DF53A00336860 /* MusicPlayer_随机播放@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117AA1D5DF53A00336860 /* MusicPlayer_随机播放@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C51D5DF53A00336860 /* MusicPlayer_顺序播放@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117AB1D5DF53A00336860 /* MusicPlayer_顺序播放@2x.png */; settings = {ASSET_TAGS = (); }; };
-		474117C61D5DF53A00336860 /* Slider_控制点@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117AC1D5DF53A00336860 /* Slider_控制点@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C71D5DF53A00336860 /* 音乐_播放器_默认唱片头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117AD1D5DF53A00336860 /* 音乐_播放器_默认唱片头像@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117C81D5DF53A00336860 /* 音乐_播放器_默认模糊背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 474117AE1D5DF53A00336860 /* 音乐_播放器_默认模糊背景@2x.png */; settings = {ASSET_TAGS = (); }; };
 		474117CA1D5DF53A00336860 /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117B41D5DF53A00336860 /* NSString+time.m */; settings = {ASSET_TAGS = (); }; };
-		474117CB1D5DF53A00336860 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117B61D5DF53A00336860 /* UIImage+ImageEffects.m */; settings = {ASSET_TAGS = (); }; };
 		474117CC1D5DF53A00336860 /* RotatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117B91D5DF53A00336860 /* RotatingView.m */; settings = {ASSET_TAGS = (); }; };
 		474117CF1D5EA21900336860 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117CE1D5EA21900336860 /* MusicModel.m */; settings = {ASSET_TAGS = (); }; };
 		474117D01D5EA83B00336860 /* RadioDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472298F41D51BA8E0085BC66 /* RadioDetailCell.xib */; };
@@ -85,7 +71,6 @@
 		474117E21D61483C00336860 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117E01D61483C00336860 /* SwitchCell.m */; settings = {ASSET_TAGS = (); }; };
 		474117E31D61483C00336860 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474117E11D61483C00336860 /* SwitchCell.xib */; settings = {ASSET_TAGS = (); }; };
 		474117E61D61521300336860 /* SingleDayAndNight.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117E51D61521300336860 /* SingleDayAndNight.m */; settings = {ASSET_TAGS = (); }; };
-		474117F21D61B27800336860 /* UIViewController+NavBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 474117F11D61B27800336860 /* UIViewController+NavBarHidden.m */; settings = {ASSET_TAGS = (); }; };
 		476753611D5428E2000A30DA /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4767535F1D5428E2000A30DA /* LoginController.xib */; settings = {ASSET_TAGS = (); }; };
 		476753651D5458B5000A30DA /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476753631D5458B5000A30DA /* RegisterController.m */; settings = {ASSET_TAGS = (); }; };
 		476753661D5458B5000A30DA /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476753641D5458B5000A30DA /* RegisterController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -146,11 +131,8 @@
 		3F1A97D41D52EE9100235153 /* QuadraticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadraticTableViewCell.h; sourceTree = "<group>"; };
 		3F1A97D51D52EE9100235153 /* QuadraticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadraticTableViewCell.m; sourceTree = "<group>"; };
 		3F1A97D61D52EE9100235153 /* QuadraticTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuadraticTableViewCell.xib; sourceTree = "<group>"; };
-		3F591A5E1D5DBEA80076F5B9 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
 		3F591A631D5DC10D0076F5B9 /* CartoonRadioDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoonRadioDB.h; sourceTree = "<group>"; };
 		3F591A641D5DC10D0076F5B9 /* CartoonRadioDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoonRadioDB.m; sourceTree = "<group>"; };
-		3F591A651D5DC10D0076F5B9 /* CartoonTerrofyingDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartoonTerrofyingDB.h; sourceTree = "<group>"; };
-		3F591A661D5DC10D0076F5B9 /* CartoonTerrofyingDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoonTerrofyingDB.m; sourceTree = "<group>"; };
 		3F591A671D5DC10D0076F5B9 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 		3F591A681D5DC10D0076F5B9 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		3F591A691D5DC10D0076F5B9 /* QuadrticHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticHander.h; sourceTree = "<group>"; };
@@ -161,10 +143,6 @@
 		3F591A771D5DC3C60076F5B9 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
 		3F591A781D5DC3C60076F5B9 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
 		3F591A791D5DC3C60076F5B9 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
-		3FA312621D54469A002C4FFD /* FunnyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyDetailModel.h; sourceTree = "<group>"; };
-		3FA312631D54469A002C4FFD /* FunnyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyDetailModel.m; sourceTree = "<group>"; };
-		3FA5969A1D58529B00C71535 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
-		3FA5969B1D58529B00C71535 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
 		3FC531B21D4C5328000EB7E5 /* FunListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListModel.m; sourceTree = "<group>"; };
 		471A1FA71D4F4C3E00F3C9C6 /* RadioModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioModel.h; sourceTree = "<group>"; };
 		471A1FA81D4F4C3E00F3C9C6 /* RadioModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioModel.m; sourceTree = "<group>"; };
@@ -205,17 +183,9 @@
 		4741177F1D5DD48900336860 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		474117811D5DD4B400336860 /* CleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanCaches.h; sourceTree = "<group>"; };
 		474117821D5DD4B400336860 /* CleanCaches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanCaches.m; sourceTree = "<group>"; };
-		474117881D5DE59100336860 /* QuadrticHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadrticHander.h; sourceTree = "<group>"; };
-		474117891D5DE59100336860 /* QuadrticHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuadrticHander.m; sourceTree = "<group>"; };
 		4741178B1D5DE5AB00336860 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
 		4741178C1D5DE5AB00336860 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
 		4741178D1D5DE5AB00336860 /* FunListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListModel.h; sourceTree = "<group>"; };
-		4741178F1D5DE5BC00336860 /* FunListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunListCell.h; sourceTree = "<group>"; };
-		474117901D5DE5BC00336860 /* FunListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunListCell.m; sourceTree = "<group>"; };
-		474117911D5DE5BC00336860 /* FunListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunListCell.xib; sourceTree = "<group>"; };
-		474117921D5DE5BC00336860 /* VolumecountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumecountCell.h; sourceTree = "<group>"; };
-		474117931D5DE5BC00336860 /* VolumecountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumecountCell.m; sourceTree = "<group>"; };
-		474117941D5DE5BC00336860 /* VolumecountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VolumecountCell.xib; sourceTree = "<group>"; };
 		4741179D1D5DF53A00336860 /* AudioPlayerController+methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioPlayerController+methods.h"; sourceTree = "<group>"; };
 		4741179E1D5DF53A00336860 /* AudioPlayerController+methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AudioPlayerController+methods.m"; sourceTree = "<group>"; };
 		4741179F1D5DF53A00336860 /* AudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerController.h; sourceTree = "<group>"; };
@@ -639,8 +609,6 @@
 			children = (
 				3F591A631D5DC10D0076F5B9 /* CartoonRadioDB.h */,
 				3F591A641D5DC10D0076F5B9 /* CartoonRadioDB.m */,
-				3F591A651D5DC10D0076F5B9 /* CartoonTerrofyingDB.h */,
-				3F591A661D5DC10D0076F5B9 /* CartoonTerrofyingDB.m */,
 				3F591A671D5DC10D0076F5B9 /* DataHandler.h */,
 				3F591A681D5DC10D0076F5B9 /* DataHandler.m */,
 				3F591A691D5DC10D0076F5B9 /* QuadrticHander.h */,
@@ -852,10 +820,8 @@
 				47312C7F1D5815FD00B3B7B8 /* SectionOneCell.xib in Resources */,
 				479A30DE1D582AD30058CD05 /* Icon.png in Resources */,
 				3F591A7D1D5DC3C60076F5B9 /* VolumecountCell.xib in Resources */,
-				472298FB1D51DF610085BC66 /* DetailController.xib in Resources */,
 				3F0094551D59B3CB0087BA89 /* FunnyDetailViewController.xib in Resources */,
 				479A313F1D59B6E50058CD05 /* QuadraticCellTableViewCell.xib in Resources */,
-				472299581D5220190085BC66 /* RadioPlayController.xib in Resources */,
 				3F591A7B1D5DC3C60076F5B9 /* FunListCell.xib in Resources */,
 				479A30DF1D582AD30058CD05 /* Icon@2x.png in Resources */,
 				474117C71D5DF53A00336860 /* 音乐_播放器_默认唱片头像@2x.png in Resources */,
@@ -934,13 +900,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC858D41D61D6C700542FFA /* UIImage+ImageEffects.m in Sources */,
+				3FC858D51D61D6C700542FFA /* UIViewController+NavBarHidden.m in Sources */,
+				3FC858D61D61D6C700542FFA /* CleanCaches.m in Sources */,
+				3FC858D71D61D6C700542FFA /* MBProgressHUD.m in Sources */,
+				3FC858A51D61D3F200542FFA /* HMLeftMenuTableViewController.m in Sources */,
+				3FC858A31D61D32700542FFA /* DataHandler.m in Sources */,
+				3FC858A41D61D32700542FFA /* QuadrticHander.m in Sources */,
 				474117D21D5EA90C00336860 /* RadioDetaiModel.m in Sources */,
 				474117D31D5EA90C00336860 /* RadioDetailCell.m in Sources */,
 				474117991D5DE5E400336860 /* LoginController.m in Sources */,
 				474117851D5DE57700336860 /* NSString+Md5String.m in Sources */,
 				474117861D5DE57700336860 /* QuadraticWebController.m in Sources */,
-				474117951D5DE5BC00336860 /* FunListCell.m in Sources */,
-				4741178A1D5DE59100336860 /* QuadrticHander.m in Sources */,
 				479A314C1D59B7340058CD05 /* FunnyDetailModel.m in Sources */,
 				474117E61D61521300336860 /* SingleDayAndNight.m in Sources */,
 				479A314D1D59B7340058CD05 /* FunnyController.m in Sources */,
@@ -954,23 +925,14 @@
 				474117E21D61483C00336860 /* SwitchCell.m in Sources */,
 				479A31391D59B6DA0058CD05 /* QuadraticMainModel.m in Sources */,
 				4741178E1D5DE5AB00336860 /* CollectionModel.m in Sources */,
-				472EC70D1D4C35560081DDC5 /* HMLeftMenuTableViewController.m in Sources */,
-				472298FA1D51DF610085BC66 /* DetailController.m in Sources */,
 				3F591A7C1D5DC3C60076F5B9 /* VolumecountCell.m in Sources */,
-				471A1F9E1D4EE40900F3C9C6 /* DetailCell.m in Sources */,
-				472299481D51F4E70085BC66 /* RadioDetailController.m in Sources */,
-				472299571D5220190085BC66 /* RadioPlayController.m in Sources */,
 				3FC531B41D4C5328000EB7E5 /* FunListModel.m in Sources */,
 				479A31481D59B6ED0058CD05 /* MainQuadraticViewController.m in Sources */,
 				474117BA1D5DF53A00336860 /* AudioPlayerController+methods.m in Sources */,
-				3FB67B5D1D5DBAD6001404BA /* CartoonRadioDB.m in Sources */,
 				3F1A97D01D52EE4300235153 /* QuadraticModel.m in Sources */,
 				474117CA1D5DF53A00336860 /* NSString+time.m in Sources */,
-				474117971D5DE5BC00336860 /* VolumecountCell.m in Sources */,
 				479A313E1D59B6E50058CD05 /* QuadraticCellTableViewCell.m in Sources */,
-				47E1C57D1D53352F0037AFC5 /* TerrListModel.m in Sources */,
 				3F591A6D1D5DC10D0076F5B9 /* CartoonRadioDB.m in Sources */,
-				479AED6E1D4CA807008CA4F0 /* TerrofyingModel.m in Sources */,
 				3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */,
 				47312C7E1D5815FD00B3B7B8 /* SectionOneCell.m in Sources */,
 				3F1A97D71D52EE9100235153 /* QuadraticTableViewCell.m in Sources */,
@@ -988,7 +950,6 @@
 				471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */,
 				474117CC1D5DF53A00336860 /* RotatingView.m in Sources */,
 				471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */,
-				3F591A6E1D5DC10D0076F5B9 /* CartoonTerrofyingDB.m in Sources */,
 				476753651D5458B5000A30DA /* RegisterController.m in Sources */,
 				478922131D558E3C00CCD728 /* AppDelegate.m in Sources */,
 			);
@@ -1125,7 +1086,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/lan/Desktop/未命名文件夹/项目版本4/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1203,7 +1164,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/lan/Desktop/未命名文件夹/项目版本4/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

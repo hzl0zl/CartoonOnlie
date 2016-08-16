@@ -16,7 +16,9 @@
 #import "AudioPlayerController.h"
 #import "SgementController.h"
 #import "RealReachability.h"
+
 @interface AppDelegate ()
+
 
 @property (nonatomic ,strong) AudioPlayerController *palyer;
 
@@ -68,11 +70,9 @@
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
 //    
-//    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"08" selectedImage:nil class:[DetailController class]];
+    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
 //    DetailController *thirdVC = (DetailController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"07" selectedImage:nil class:[DetailController class]];
-    
-    RadioController *fourVC = (RadioController *)[self viewControllerWithTitle:@"动漫电台" normalImage:@"05" selectedImage:nil class:[RadioController class]];
     
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     
@@ -152,9 +152,8 @@
 
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-     [GLobalRealReachability startNotifier];
+//     [GLobalRealReachability startNotifier];
     //开启远程控制
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];

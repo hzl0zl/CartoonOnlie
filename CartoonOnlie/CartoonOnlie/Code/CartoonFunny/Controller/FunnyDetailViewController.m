@@ -12,7 +12,7 @@
 #import "ReadViewController.h"
 #import "DataHandler.h"
 #import "CollectionController.h"
-#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD.h"
 
 
 @interface FunnyDetailViewController ()<UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout>
@@ -83,7 +83,9 @@ BOOL isFavor;
 - (void)getData
 {
 
-    self.hud = [MBProgressHUD showMessage:@"努力加载中" toView:nil];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+    [self.view addSubview:hud];
+    hud.labelText = @"努力加载中";
     NSString *string = [NSString stringWithFormat:@"http://api.youqudao.com/mhapi/api/album/detail?albumId=%@&customerId=2208260", self.model.albumId];
     
     [DownLoad dowmLoadWithUrl:string postBody:nil resultBlock:^(NSData *data) {
@@ -106,7 +108,7 @@ BOOL isFavor;
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self.hud hide:YES];
+                [hud removeFromSuperview];
                 self.imageView.image = [UIImage imageNamed:@"bottomView"];
                 
                 [self.collectionView reloadData];

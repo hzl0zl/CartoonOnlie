@@ -12,12 +12,11 @@
 #import "FunnyDetailViewController.h"
 #import "HMDrawerViewController.h"
 #import "DataHandler.h"
+#import "RealReachability.h"
+#import "AppDelegate.h"
+
 
 @interface FunnyController ()
-
-//{
-//    Reachability *reachability;
-//}
 
 @end
 
@@ -36,6 +35,8 @@
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
 
 @property (nonatomic, strong) UIButton *suspendBtn;
+
+@property (nonatomic, strong) RealReachability *reachability;
 
 
 @end
@@ -93,42 +94,20 @@
     
 }
 
-- (BOOL)networkreachability
-{
-    if (reachability)
-    {
-        switch (reachability.currentReachabilityStatus) {
-            case NotReachable:
-                return NO;
-                break;
-            case ReachableViaWiFi:
-                return YES;
-                break;
-            case ReachableViaWWAN:
-                return YES;
-            default:
-                return NO;
-                break;
-        }
-    }
-    else
-    {
-        return NO;
-    }
-}
-
-
-#pragma mark -- 观察者执行的方法
-- (void)reachabilityChanged:(NSNotification* )notification
-{
-    NSLog(@"netWork changed");
-}
-
-
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(networkChanged:)
+                                                 name:kRealReachabilityChangedNotification
+                                               object:nil];
+    
+    [GLobalRealReachability startNotifier];
+    
+    self.reachability = [RealReachability sharedInstance];
+    
+    [self simulateRequest];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
     self.navigationController.navigationBar.translucent = NO;
@@ -139,47 +118,99 @@
     
     [self createSuspendBtn];
     
-    [self simulateRequest];
-    
     self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
     
-}
-
-- (void)dealloc
-{
     
 }
 
-//给cell添加动画
-//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    //设置Cell的动画效果为3D效果
-//    //设置x和y的初始值为0.1；
-//    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
-//    //x和y的最终值为1
-//    [UIView animateWithDuration:1 animations:^{
-//        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-//    }];
-//}
-
-
-- (void)simulateRequest
+#pragma mark -- 网络改变时会调用
+- (void)networkChanged:(NSNotification *)notification
 {
-    BOOL net = [self networkreachability];
-    
-    if (net)
+    RealReachability *reachability = [RealReachability sharedInstance];
+    reachability = (RealReachability *)notification.object;
+    ReachabilityStatus status = [reachability currentReachabilityStatus];
+    if (status == RealStatusNotReachable)
     {
-        NSLog(@"网络可用");
+        return;
+    }
+    if (status == RealStatusViaWiFi)
+    {
+        [self showNotificationMessageWithStatus:@"已连接至WiFi"];
+        
         [self getData];
     }
-    else
+    WWANAccessType accessType = [GLobalRealReachability currentWWANtype];
+    if (status == RealStatusViaWWAN)
+    {
+        if (accessType == WWANType2G)
+        {
+            [self showNotificationMessageWithStatus:@"已连接2G"];
+            [self getData];
+        }
+        else if (accessType == WWANType3G)
+        {
+            [self showNotificationMessageWithStatus:@"已连接3G"];
+            [self getData];
+        }
+        else if (accessType == WWANType4G)
+        {
+            [self showNotificationMessageWithStatus:@"已连接4G"];
+            [self getData];
+        }
+        else
+        {
+            [self showNotificationMessageWithStatus:@"未知网络"];
+        }
+    }
+}
+
+#pragma mark -- 状态切换后提示信息
+- (void)showNotificationMessageWithStatus: (NSString *)status{
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"当前网络状态" message:status preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2];
+}
+
+
+- (void)dismiss:(UIAlertController *)alert{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark -- 视图销毁的时候停止监听，移除通知
+- (void)dealloc{
+    [GLobalRealReachability stopNotifier];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark -- 判断当前网络状态
+- (void)simulateRequest
+{
+    if (self.reachability.currentReachabilityStatus == RealStatusViaWiFi || self.reachability.currentReachabilityStatus == RealStatusViaWWAN) {
+        [self getData];
+    }else
     {
         self.funList1 = [[DataHandler shareDataHandler] selectFromTable];
         self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
-        self.funList3 = self.funList1;
-        self.funList3 = self.funList2;
-        NSLog(@"网络不可用");
+        MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+        hud.labelText = @"请检查网络状态";
+        [self.view addSubview:hud];
+        [hud hide:YES afterDelay:2];
     }
+
+}
+
+//给cell添加动画
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //设置Cell的动画效果为3D效果
+    //设置x和y的初始值为0.1；
+    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+    //x和y的最终值为1
+    [UIView animateWithDuration:1 animations:^{
+        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+    }];
 }
 
 
@@ -207,7 +238,6 @@
 #pragma mark -- 分段控件点击方法
 - (void)segmentControlAction:(UISegmentedControl *)sg
 {
-    [self simulateRequest];
     self.tableView.contentOffset = CGPointMake(0, 0);
     
     [self toTop];
@@ -250,8 +280,6 @@
     [self.tableView setContentOffset:offset animated:NO];
     
 }
-
-
 
 #pragma mark -- 滚动视图会调用的方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -308,10 +336,8 @@
                 }
                 
             }
-            
-           
-//            [self sortedWith:self.funList1];
-//            [self sortedWith:self.funList2];
+            [self sortedWith:self.funList1];
+            [self sortedWith:self.funList2];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -376,7 +402,7 @@
 {
     
     
-    if ([self networkreachability]) {
+    if (self.reachability.currentReachabilityStatus == RealStatusViaWWAN || self.reachability.currentReachabilityStatus == RealStatusViaWiFi) {
         FunnyDetailViewController *funDetailVc = [[FunnyDetailViewController alloc] initWithNibName:@"FunnyDetailViewController" bundle:nil];
         
         FunListModel *model = self.funList3[indexPath.row];
@@ -385,9 +411,15 @@
         
         funDetailVc.albumId = model.albumId;
         [self.navigationController pushViewController:funDetailVc animated:YES];
-    }else
+    }
+    else
     {
-        [MBProgressHUD showError:@"网络不可用" toView:nil];
+        MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+        [self.view addSubview:hud];
+        hud.labelText = @"网络不可用";
+        [hud show:YES];
+        
+        [hud hide:YES afterDelay:2];
     }
 
 }
