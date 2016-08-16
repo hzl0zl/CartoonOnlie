@@ -186,14 +186,14 @@
     //显示窗口
     [self.window makeKeyAndVisible];
     
-//    UINavigationBar *navigationBar = [UINavigationBar appearance];
-//    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
-//    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
-//    navigationBar.translucent = NO;
-//    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
-//                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
-//                                          };
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
+    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
+    navigationBar.translucent = NO;
+    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
+                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
+                                          };
 
     
     return YES;
