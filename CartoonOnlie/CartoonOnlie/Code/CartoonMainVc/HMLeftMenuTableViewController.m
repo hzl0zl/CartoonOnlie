@@ -84,6 +84,8 @@
     
     UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 100, 30)];
     
+    [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
     [addBtn setTitle:@"注销" forState:UIControlStateNormal];
     
     [addBtn addTarget:self action:@selector(btnCancelClick) forControlEvents:UIControlEventTouchUpInside];
