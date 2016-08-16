@@ -1350,8 +1350,6 @@
 				4706434B1D62E4D100A67D1F /* RequestTool.m in Sources */,
 				3FB67B5D1D5DBAD6001404BA /* CartoonRadioDB.m in Sources */,
 				474117CA1D5DF53A00336860 /* NSString+time.m in Sources */,
-				3F591A6D1D5DC10D0076F5B9 /* CartoonRadioDB.m in Sources */,
-				3F591A7A1D5DC3C60076F5B9 /* FunListCell.m in Sources */,
 				472EC6D21D4C33890081DDC5 /* main.m in Sources */,
 				4706434D1D62E4D100A67D1F /* ComicStoreHeaderView.m in Sources */,
 				470643541D62E4D100A67D1F /* UIView+JFFrame.m in Sources */,
@@ -1512,7 +1510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/0/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1590,7 +1588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/0/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

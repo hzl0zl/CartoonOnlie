@@ -69,8 +69,8 @@
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
-//    
-    UIViewController *fourVC = (UIViewController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"06" selectedImage:nil class:[UIViewController class]];
+ 
+    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"06" selectedImage:nil class:[HMLeftMenuTableViewController class]];
     
     RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
