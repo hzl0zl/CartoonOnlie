@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor brownColor];
+//    self.view.backgroundColor = [UIColor brownColor];
     
     [self getData];
    
@@ -101,7 +101,8 @@
         
         NSString *imageStr = self.imageArray[i];
         
-        [imageV sd_setImageWithURL:[NSURL URLWithString:imageStr]];
+//        [imageV sd_setImageWithURL:[NSURL URLWithString:imageStr]];
+        [imageV sd_setImageWithPreviousCachedImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:[UIImage imageNamed:@"placeholder"] options:0 progress:nil completed:nil];
         
         [self.scrollView addSubview:imageV];
         

@@ -69,8 +69,8 @@
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
-//    
-    UIViewController *fourVC = (UIViewController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"06" selectedImage:nil class:[UIViewController class]];
+ 
+    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"06" selectedImage:nil class:[HMLeftMenuTableViewController class]];
     
     RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
@@ -192,8 +192,15 @@
 
     //显示窗口
     [self.window makeKeyAndVisible];
-//    
-  
+    
+//    UINavigationBar *navigationBar = [UINavigationBar appearance];
+//    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
+//    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+//    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
+//    navigationBar.translucent = NO;
+//    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
+//                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
+//                                          };
 
     
     return YES;
