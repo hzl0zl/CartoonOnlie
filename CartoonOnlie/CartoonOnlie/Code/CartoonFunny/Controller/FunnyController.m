@@ -109,8 +109,7 @@
     
     [self simulateRequest];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(FunnyleftAction)];
-    self.navigationController.navigationBar.translucent = NO;
+       self.navigationController.navigationBar.translucent = NO;
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     
@@ -424,13 +423,6 @@
 
 }
 
-#pragma mark -- 抽屉
-- (void)FunnyleftAction {
-    
-    
-     [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-}
 
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated

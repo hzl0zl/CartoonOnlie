@@ -16,9 +16,9 @@
 - (void)requestArrayByComicStoreListModelCompletion:(void (^)(NSMutableArray *blockListArray))success
                                             failure:(void (^)(NSError *error))failure;
 
-- (void)requestArrayByComicStoreRowListModel:(id)parameters
-                                  Completion:(void (^)(NSMutableArray *blockRowListArray))success
-                                     failure:(void (^)(NSError *error))failure;
+//- (void)requestArrayByComicStoreRowListModel:(id)parameters
+//                                  Completion:(void (^)(NSMutableArray *blockRowListArray))success
+//                                     failure:(void (^)(NSError *error))failure;
 
 - (void)requestArrayByComicStoreModelCompletion:(void (^)(NSMutableArray *blockHeaderArray,
                                                           NSMutableArray *blockListArray))success

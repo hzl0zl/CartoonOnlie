@@ -12,7 +12,7 @@
 #import "AudioPlayerController.h"
 #import "CartoonRadioDB.h"
 #import "RadioDetailVC.h"
-#import "HMDrawerViewController.h"
+
 
 #import <SDCycleScrollView/SDCycleScrollView.h>
 
@@ -29,7 +29,7 @@
 
 @property (nonatomic, strong) NSMutableArray *scrollerArr;
 
-@property (nonatomic, strong) NSMutableArray *scrollerTitleArr;
+//@property (nonatomic, strong) NSMutableArray *scrollerTitleArr;
 
 @property (nonatomic, strong) UIButton *suspendBtn;
 
@@ -47,8 +47,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self getScrollerViewData];
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(RadioleftAction)];
+    
+    
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"音乐"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
     
@@ -57,6 +57,7 @@
     [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_musics"];
     NSArray *arr = [[CartoonRadioDB shareDataHandler] allModelWithTableName:@"hot_musics"];
     if (arr.count == 0) {
+        [self getScrollerViewData];
         [self getData];
     
     }else {
@@ -73,6 +74,11 @@
         self.musicsArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"musics"];
         [self.dataDict setValue:self.musicsArr forKey:@"musics"];
         
+        [[CartoonRadioDB shareDataHandler] createTableWithName:@"new_musics"];
+        self.scrollerArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"new_musics"];
+//        [self.dataDict setValue:self.musicsArr forKey:@"new_musics"];
+      
+        
     }
     
     
@@ -82,7 +88,7 @@
     [self createSuspendBtn];
     
     [self createTableView];
-    
+     [self ScrollLocalImages];
     
 }
 - (void)createTableView {
@@ -188,12 +194,16 @@
             
             for (NSDictionary *dict in new_musics) {
                 
-                NSString *strUrl = dict[@"wiki_cover"][@"large"];
                 
-                [self.scrollerArr addObject:strUrl];
+                RadioModel *model = [RadioModel alloc];
+                                   
+                [model setValuesForKeysWithDictionary:dict];
                 
-                NSString *strTitle = dict[@"wiki_title"];
-                [self.scrollerTitleArr addObject:strTitle];
+                [[CartoonRadioDB shareDataHandler] createTableWithName:@"new_musics"];
+                [[CartoonRadioDB shareDataHandler] RadioModelModelWithTableName:@"new_musics" model:model];
+                
+                [self.scrollerArr addObject:model];
+                
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self ScrollLocalImages];
@@ -209,11 +219,14 @@
     }];
     
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
     return 60;
 }
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -432,15 +445,29 @@
 {
     CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 360);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
+    NSMutableArray *urlStr = [[NSMutableArray alloc] init];
+    for (RadioModel *model in self.scrollerArr) {
+        
+       NSString *str = model.wiki_cover[@"large"];
+        
+        [urlStr addObject:str];
+    }
+    NSMutableArray *titleStr = [[NSMutableArray alloc] init];
+    for (RadioModel *model in self.scrollerArr) {
+        
+        NSString *str = model.wiki_title;
+        
+        [titleStr addObject:str];
+    }
     // 网络图片数组
-    self.cycleScrollView.imageURLStringsGroup = self.scrollerArr;
+    self.cycleScrollView.imageURLStringsGroup = urlStr;
     // 设置图片显示类型
     self.cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
     self.cycleScrollView.showPageControl = YES;
     self.cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     self.cycleScrollView.pageDotImage = [UIImage imageNamed:@"pageCon.png"];
     self.cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"pageConSel.png"];
-    self.cycleScrollView.titlesGroup = self.scrollerTitleArr;
+    self.cycleScrollView.titlesGroup = titleStr;
     //    [self.view addSubview:self.cycleScrollView];
     self.tableView.tableHeaderView = self.cycleScrollView;
 }
@@ -501,45 +528,16 @@
     
     return _scrollerArr;
 }
-- (NSMutableArray *)scrollerTitleArr {
-    if (_scrollerTitleArr == nil) {
-        
-        _scrollerTitleArr = [NSMutableArray array];
-    }
-    
-    return _scrollerTitleArr;
-}
-
-
-- (void)RadioleftAction {
-    
-    [[HMDrawerViewController shareDrawer] openLeftMenu];
-    
-    
-}
-//-(void)setNavbarBackgroundHidden:(BOOL)hidden
-//{
-//    QYNavigationBar *navBar =(QYNavigationBar*)self.navigationController.navigationBar;
-//    if (!hidden) {
-//        [navBar show];
-//    }else{
-//        [navBar hidden];
+//- (NSMutableArray *)scrollerTitleArr {
+//    if (_scrollerTitleArr == nil) {
+//        
+//        _scrollerTitleArr = [NSMutableArray array];
 //    }
 //    
-//}
-
-//-(void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-////    [_headView scrollViewDidScroll:scrollView];
-//  
+//    return _scrollerTitleArr;
 //}
 
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//   
-//    
-//    
-//}
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
@@ -547,7 +545,7 @@
 //    [self.navigationController setNavigationBarHidden:YES];
      self.tabBarController.tabBar.hidden = NO;
     
-    
+         [[JFJumpToControllerManager shared].navigation setNavigationBarHidden:YES];
     
     
 }
