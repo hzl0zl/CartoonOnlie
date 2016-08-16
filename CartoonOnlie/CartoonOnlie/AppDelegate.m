@@ -69,8 +69,8 @@
     
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
-//    
-    UIViewController *fourVC = (UIViewController *)[self viewControllerWithTitle:@"恐怖漫画屋" normalImage:@"06" selectedImage:nil class:[UIViewController class]];
+ 
+    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"06" selectedImage:nil class:[HMLeftMenuTableViewController class]];
     
     RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
@@ -78,7 +78,7 @@
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
     
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
-    
+//    secondNav.navigationItem.title = @"搞笑";
     
     
      UINavigationController *thridNav = [[UINavigationController alloc] initWithRootViewController:thirdVC];
@@ -102,7 +102,7 @@
     //tabbar 高度 --49
     //当tabbar不是半透明时, 被管理的控制器根视图高度要-49;
     //隐藏
-    tabbarController.tabBar.hidden = NO;
+//    tabbarController.tabBar.hidden = NO;
     
     //角标
 //    firstVC.tabBarItem.badgeValue = @"100";
@@ -159,6 +159,17 @@
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
     
+    
+//    
+//    UINavigationBar *navigationBar = [UINavigationBar appearance];
+//    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
+//    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+//    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
+//    navigationBar.translucent = NO;
+//    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
+//                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
+//                                          };
+    
 #pragma mark === 
     
     //初始化友盟分享
@@ -173,16 +184,12 @@
     
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //    self.window.backgroundColor = [UIColor redColor];
-    //创建左右菜单控制器
-//    HMLeftMenuTableViewController *leftMenuVc = [[HMLeftMenuTableViewController alloc] init];
-//    leftMenuVc.view.frame = CGRectMake(0, 0, SCREEN_WIDTH / 3 * 2, SCREEN_HEIGHT);
-    
+
     
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[HMDrawerViewController drawerVcWithMainVc:[self createTabbarController]]];
     //设置窗口根控制器
     self.window.rootViewController = navVC;
-    
+
     //显示窗口
     [self.window makeKeyAndVisible];
     

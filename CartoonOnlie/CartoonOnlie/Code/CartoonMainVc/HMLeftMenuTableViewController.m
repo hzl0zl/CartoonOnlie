@@ -23,8 +23,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"22");
-    self.tableView.backgroundColor = [UIColor lightGrayColor];
+  
+    
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"背景"]];
+    
+    image.frame = self.view.bounds;
+    
+    self.tableView.backgroundView = image;
+
+    
     
 //    [user setValue:self.usernameT.text forKey:@"userName"];
 //    [user setValue:self.passwordT.text forKey:@"passWork"];
@@ -36,6 +45,10 @@
     
     
 }
+
+
+
+#pragma mark app即将出现
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
@@ -51,29 +64,28 @@
     
     
 }
-- (void)getData {
-    
-    
-    
-    
-    
-    
-    
-}
 
+#pragma mark 注销
 - (void)addCancelBtn {
     
     self.tableView.separatorStyle = UITableViewCellAccessoryNone;
-    //    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ll1.jpg"]];
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
-    headerView.backgroundColor = [UIColor magentaColor];
-    //    headerView.userInteractionEnabled = YES;
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 150)];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(30, 30, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"二次元 (1)"]];
+    
+    imageView.layer.masksToBounds  = YES;
+    
+    imageView.layer.cornerRadius = 40;
+    
+    imageView.frame = CGRectMake(160,25, 80, 80);
+    
+    [headerView addSubview:imageView];
+    
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 80, 30)];
+    
     [addBtn setTitle:@"注销" forState:UIControlStateNormal];
-    addBtn.backgroundColor = [UIColor lightGrayColor];
-    //    addBtn.frame = CGRectMake(30, 30, 60, 30);
+    
     [addBtn addTarget:self action:@selector(btnCancelClick) forControlEvents:UIControlEventTouchUpInside];
     [headerView addSubview:addBtn];
     
@@ -82,67 +94,80 @@
     
 }
 
+#pragma mark 登录
 - (void)addLoginBtn {
     
     self.tableView.separatorStyle = UITableViewCellAccessoryNone;
-    //    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ll1.jpg"]];
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
-    headerView.backgroundColor = [UIColor magentaColor];
-    //    headerView.userInteractionEnabled = YES;
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 150)];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(30, 30, 80, 30)];
-    [addBtn setTitle:@"登陆" forState:UIControlStateNormal];
-    addBtn.backgroundColor = [UIColor lightGrayColor];
-    //    addBtn.frame = CGRectMake(30, 30, 60, 30);
+    
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"二次元 (1)"]];
+    
+    imageView.layer.masksToBounds  = YES;
+    
+    imageView.layer.cornerRadius = 40;
+    
+    imageView.frame = CGRectMake(160,25, 80, 80);
+    
+    imageView.backgroundColor = [UIColor blueColor];
+    
+    [headerView addSubview:imageView];
+    
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 80, 30)];
+    
+    [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+  
+    [addBtn setTitle:@"登陆/注册" forState:  UIControlStateNormal];
+
     [addBtn addTarget:self action:@selector(btnLoginClick) forControlEvents:UIControlEventTouchUpInside];
     [headerView addSubview:addBtn];
-    
     
     self.tableView.tableHeaderView = headerView;
     
 }
 
+#pragma mark 登录方法
 - (void)btnLoginClick{
-    
-    
     
     LoginController *loginVC = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
     
     [self presentViewController:loginVC animated:YES completion:nil];
     
-//    [[HMDrawerViewController shareDrawer] switchController:nav];
+    //    [[HMDrawerViewController shareDrawer] switchController:nav];
     
     
 }
+
+#pragma mark 注销方法
 - (void)btnCancelClick{
     
     NSString*appDomain = [[NSBundle mainBundle]bundleIdentifier];
-
+    
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
     
-
-
     [self addLoginBtn];
     
+}
+
+
+#pragma mark 返回行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
     
 }
 
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.dataArray.count;
-    
-}
-
-
+#pragma mark 返回cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         
         SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"switchCell"];
         
+        cell.backgroundColor = [UIColor clearColor];
         
         return cell;
         
@@ -150,13 +175,31 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.text = self.dataArray[indexPath.section];
     
+    cell.backgroundColor = [UIColor clearColor];
+
     return cell;
 }
 
+#pragma mark 返回分区
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+ 
+    return 4;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+#pragma mark 初始化
 - (NSMutableArray *)dataArray {
     
     if (_dataArray == nil) {
@@ -165,6 +208,8 @@
     return _dataArray;
     
 }
+
+
 ////获取缓存文件路径
 //-(NSString *)getCachesPath{
 //    // 获取Caches目录路径
@@ -176,6 +221,8 @@
 //    return filePath;
 //}
 
+
+#pragma mark 新浪
 - (void)shareSina {
     [UMSocialData defaultData].extConfig.title = @"分享的title";
     [UMSocialData defaultData].extConfig.qqData.url = @"http://baidu.com";
@@ -183,18 +230,20 @@
                                          appKey:@"57a5423267e58ebd7000281e"
                                       shareText:@"友盟社会化分享让您快速实现分享等社会化功能，http://umeng.com/social"
                                      shareImage:[UIImage imageNamed:@"icon"]
-                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina]
                                        delegate:self];
     
     
 }
+
+
 #pragma mark -- 选中cell时触发的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 2) {
+    if (indexPath.section == 2) {
         [self shareSina];
     }
-    if (indexPath.row == 1) {
+    if (indexPath.section == 1) {
         
 //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"真的要清除吗" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
 //        [alert show];
@@ -242,14 +291,12 @@
         
         
     }
-    if (indexPath.row == 3) {
+    if (indexPath.section == 3) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前版本号: v0.1" preferredStyle:UIAlertControllerStyleAlert];
         
         [ alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-            
-            
+
         } ]];
         
         [ alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -257,14 +304,11 @@
         } ]];
         
         [self presentViewController:alert animated:true completion:nil];
-        
-        
-        
+ 
     }
     
     
 }
-
 
 
 #pragma mark -- 协议代理方法
@@ -277,10 +321,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
