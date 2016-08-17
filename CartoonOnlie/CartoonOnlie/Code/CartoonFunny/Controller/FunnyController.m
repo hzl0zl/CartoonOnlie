@@ -119,9 +119,11 @@
     
     self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
     
-    view = [((AppDelegate *)[[UIApplication sharedApplication] delegate]) notifaction];
-//    NSLog(@"%@", view);
-    [self.view addSubview:view];
+//    view = [((AppDelegate *)[[UIApplication sharedApplication] delegate]) notifaction];
+////    NSLog(@"%@", view);
+//    [[JFJumpToControllerManager shared].navigation.view addSubview:view];
+//    [self.navigationController.view addSubview:view];
+//    [self.view addSubview:view];
     
 }
 

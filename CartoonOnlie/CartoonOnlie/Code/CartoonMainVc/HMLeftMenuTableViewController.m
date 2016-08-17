@@ -57,8 +57,13 @@
     
     view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     view.backgroundColor = [UIColor clearColor];
+    
+//    view.userInteractionEnabled = NO;
+    view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    view.alpha = 0.5;
     view.userInteractionEnabled = NO;
-    [self.view addSubview:view];
+    [[JFJumpToControllerManager shared].navigation.view addSubview:view];
+//    [self.view addSubview:view];
     
     
 }
