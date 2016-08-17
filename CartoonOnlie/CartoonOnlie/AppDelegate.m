@@ -115,7 +115,6 @@
     // 设置所有导航栏的背景颜色
 //        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     //
-        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //UIColorFromRGB(0xFFBF00).CGColor
     [UITabBar appearance].backgroundColor = [UIColor orangeColor];
 

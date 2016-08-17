@@ -481,13 +481,13 @@
 #pragma mark 点击图片回调
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    NSLog(@"%ld",(long)index);
+//    NSLog(@"%ld",(long)index);
 }
 
 #pragma mark 滚动回调
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index
 {
-    NSLog(@"%ld",(long)index);
+//    NSLog(@"%ld",(long)index);
 }
 
 - (NSDictionary *)dataDict {

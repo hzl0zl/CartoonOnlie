@@ -70,7 +70,7 @@
     self.state = UZYSGIFLoadMoreStateNone;
     self.backgroundColor = [UIColor clearColor];
     
-    NSAssert([self._pImgArrProgress.lastObject isKindOfClass:[UIImage class]], @"pImgArrProgress Array has object that is not image");
+//    NSAssert([self._pImgArrProgress.lastObject isKindOfClass:[UIImage class]], @"pImgArrProgress Array has object that is not image");
     self._imageViewProgress = [[UIImageView alloc] initWithImage:[self._pImgArrProgress lastObject]];
     self._imageViewProgress.contentMode = UIViewContentModeScaleAspectFit;
     self._imageViewProgress.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
@@ -89,7 +89,7 @@
     }
     else
     {
-        NSAssert([self._pImgArrLoading.lastObject isKindOfClass:[UIImage class]], @"pImgArrLoading Array has object that is not image");
+//        NSAssert([self._pImgArrLoading.lastObject isKindOfClass:[UIImage class]], @"pImgArrLoading Array has object that is not image");
         self._imageViewLoading = [[UIImageView alloc] initWithImage:[self._pImgArrLoading firstObject]];
         self._imageViewLoading.contentMode = UIViewContentModeScaleAspectFit;
         self._imageViewLoading.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
@@ -448,7 +448,10 @@
         self._activityIndicatorView.frame = self.bounds;
     }
 }
+
+
+
+
+
+
 @end
-// 版权属于原作者
-// http://code4app.com (cn) http://code4app.net (en)
-// 发布代码于最专业的源码分享网站: Code4App.com

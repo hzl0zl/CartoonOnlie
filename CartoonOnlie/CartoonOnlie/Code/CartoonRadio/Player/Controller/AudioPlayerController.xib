@@ -61,25 +61,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7K-y7-xfe">
                     <rect key="frame" x="0.0" y="468" width="320" height="100"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za4-Z5-IzC">
-                            <rect key="frame" x="126" y="16" width="68" height="68"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="68" id="0QH-pW-BAM"/>
-                                <constraint firstAttribute="height" constant="68" id="KJd-EC-FWA"/>
-                            </constraints>
-                            <state key="normal" image="MusicPlayer_暂停.png"/>
-                            <connections>
-                                <action selector="playAndPauseClick:" destination="-1" eventType="touchUpInside" id="eec-hH-ml5"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOE-ei-cJP">
                             <rect key="frame" x="64" y="28" width="44" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="R68-EH-JVd"/>
                                 <constraint firstAttribute="width" constant="44" id="unP-pg-Vda"/>
                             </constraints>
-                            <state key="normal" image="MusicPlayer_上一个.png"/>
+                            <state key="normal" image="MusicPlayer_上一个"/>
                             <connections>
                                 <action selector="previousClick:" destination="-1" eventType="touchUpInside" id="dzA-Ed-8eA"/>
                             </connections>
@@ -115,6 +103,18 @@
                             <state key="normal" image="MusicPlayer_下载.png"/>
                             <connections>
                                 <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="3ey-mu-oL6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za4-Z5-IzC">
+                            <rect key="frame" x="126" y="16" width="68" height="68"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="0QH-pW-BAM"/>
+                                <constraint firstAttribute="height" constant="68" id="KJd-EC-FWA"/>
+                            </constraints>
+                            <state key="normal" image="MusicPlayer_暂停.png"/>
+                            <connections>
+                                <action selector="playAndPauseClick:" destination="-1" eventType="touchUpInside" id="eec-hH-ml5"/>
                             </connections>
                         </button>
                     </subviews>
@@ -236,7 +236,7 @@
         </view>
     </objects>
     <resources>
-        <image name="MusicPlayer_上一个.png" width="40" height="40"/>
+        <image name="MusicPlayer_上一个" width="40" height="40"/>
         <image name="MusicPlayer_下一个.png" width="40" height="40"/>
         <image name="MusicPlayer_下载.png" width="23" height="21"/>
         <image name="MusicPlayer_后退.png" width="27" height="27"/>

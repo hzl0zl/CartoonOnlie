@@ -31,36 +31,21 @@ static NSString *const kCellID = @"radioDetailCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self getData];
 
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"06"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
     
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(leftAction)];
-    
-        self.tableView.frame = self.view.bounds;
-//
-//      //设置当有导航栏自动添加64的高度的属性为NO
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-//    
-//    [self setKeyScrollView:self.tableView scrolOffsetY:600 options:HYHidenControlOptionLeft | HYHidenControlOptionTitle];
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"2.jpg"] forBarMetrics:UIBarMetricsDefault];
 
     
-//    [self setNavbarBackgroundHidden:YES];
+        self.tableView.frame = self.view.bounds;
+
+
+    
+    [self getData];
+
     
     
 }
 
-//-(void)setNavbarBackgroundHidden:(BOOL)hidden
-//{
-//    QYNavigationBar *navBar =(QYNavigationBar*)self.navigationController.navigationBar;
-//    if (!hidden) {
-//        [navBar show];
-//    }else{
-//        [navBar hidden];
-//    }
-//    
-//}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
@@ -117,7 +102,10 @@ static NSString *const kCellID = @"radioDetailCell";
 }
 - (void)getData {
     //    NSString *url = @"http://moe.fm/listen/playlist?api=json&api_key=74915edacd1a54b1157833bb952f64a5055b78cdc&page=1&perpage=30&radio=45835";
-    
+    MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+    [self.view addSubview:hud];
+    hud.labelText = @"努力加载中";
+    [hud show:YES];
     NSString *url = [NSString stringWithFormat:@"http://moe.fm/listen/playlist?api=json&api_key=74915edacd1a54b1157833bb952f64a5055b78cdc&page=1&perpage=30&radio=%@", self.radioModel.wiki_id];
     
     [DownLoad dowmLoadWithUrl:url postBody:nil resultBlock:^(NSData *data) {
@@ -139,13 +127,14 @@ static NSString *const kCellID = @"radioDetailCell";
             NSLog(@"%@", self.dataArr);
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
+                [hud removeFromSuperview];
                 [self.tableView reloadData];
                 
             });
             
         }else {
-            
+            hud.labelText = @"网络繁忙!!!";
+            [hud removeFromSuperview];
             NSLog(@"网络繁忙!!!");
         }
         
