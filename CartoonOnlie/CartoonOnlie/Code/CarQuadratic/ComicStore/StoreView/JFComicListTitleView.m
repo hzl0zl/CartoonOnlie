@@ -55,9 +55,11 @@
         [_moreButton setTitleColor:UIColorFromRGB(0xBBBBBB) forState:UIControlStateNormal];
         [_moreButton addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [_moreButton setTitle:@"更多" forState:UIControlStateNormal];
+        
     }
     return _moreButton;
 }
+
 
 - (void)setContentModel:(NewStoreTitleModel *)contentModel{
     _contentModel = contentModel;
