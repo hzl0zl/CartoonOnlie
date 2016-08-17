@@ -70,7 +70,7 @@
     FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
     
  
-    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"06" selectedImage:nil class:[HMLeftMenuTableViewController class]];
+    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"04" selectedImage:nil class:[HMLeftMenuTableViewController class]];
     
     RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
     
@@ -115,9 +115,10 @@
     // 设置所有导航栏的背景颜色
 //        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     //
-    //    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    //
-    //    [[UITabBar appearance] setTintColor:[UIColor magentaColor]];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //UIColorFromRGB(0xFFBF00).CGColor
+    [UITabBar appearance].backgroundColor = [UIColor orangeColor];
+
     return tabbarController;
     
 }

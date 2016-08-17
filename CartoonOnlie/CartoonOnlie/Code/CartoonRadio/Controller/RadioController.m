@@ -50,7 +50,7 @@
     
     
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"音乐"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"06"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
     
     self.navigationController.navigationBar.translucent = NO;
     
@@ -313,19 +313,19 @@
     if (section == 0) {
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
         label.backgroundColor  = [UIColor brownColor];
-        label.text = @"hot_musics";
+        label.text = @"  hot_musics";
         return label;
     }else if (section == 1) {
         
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        label.text = @"hot_radios";
+        label.text = @"  hot_radios";
         label.backgroundColor  = [UIColor brownColor];
         return label;
         
     }else {
         
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        label.text = @"musics";
+        label.text = @"  musics";
         label.backgroundColor  = [UIColor brownColor];
         return label;
         
@@ -400,7 +400,7 @@
     self.suspendBtn.layer.cornerRadius = 20;
     
     self.suspendBtn.layer.borderWidth = 0.2;
-    self.suspendBtn.backgroundColor = [UIColor redColor];
+    self.suspendBtn.backgroundColor = [UIColor orangeColor];
     [self.suspendBtn setTitle:@"置顶" forState:UIControlStateNormal];
     self.suspendBtn.layer.masksToBounds = YES;
     

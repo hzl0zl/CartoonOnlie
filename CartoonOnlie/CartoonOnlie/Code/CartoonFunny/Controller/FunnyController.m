@@ -123,7 +123,7 @@
     self.navigationController.navigationBar.barTintColor = KbackgroundColer;
     
     self.tableView.backgroundColor = KbackgroundColer;
-    self.tabBarController.tabBar.barTintColor = KbackgroundColer;
+    self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
 }
 
 #pragma mark -- 观察者执行的方法

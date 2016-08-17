@@ -65,7 +65,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor magentaColor];
-  
+//  self.tabBarController.tabBar.backgroundColor
 
    
 }
