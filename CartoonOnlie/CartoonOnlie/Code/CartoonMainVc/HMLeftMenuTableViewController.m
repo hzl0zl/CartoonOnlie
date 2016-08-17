@@ -94,7 +94,9 @@
     
     [headerView addSubview:imageView];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 80, 30)];
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 100, 30)];
+    
+    [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     [addBtn setTitle:@"注销" forState:UIControlStateNormal];
     
@@ -127,7 +129,7 @@
     
     [headerView addSubview:imageView];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 80, 30)];
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 100, 30)];
     
     [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
   

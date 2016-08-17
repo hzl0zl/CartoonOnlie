@@ -81,6 +81,8 @@
 		4706435A1D62E4D100A67D1F /* UIScrollView+UzysAnimatedGifLoadMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 470643161D62E4D100A67D1F /* UIScrollView+UzysAnimatedGifLoadMore.m */; settings = {ASSET_TAGS = (); }; };
 		4706435B1D62E4D100A67D1F /* UzysAnimtedGifLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 470643191D62E4D100A67D1F /* UzysAnimtedGifLoadMoreView.m */; settings = {ASSET_TAGS = (); }; };
 		4706435C1D62E4D100A67D1F /* ShowWaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4706431C1D62E4D100A67D1F /* ShowWaitView.m */; settings = {ASSET_TAGS = (); }; };
+		470643661D63F5D300A67D1F /* LaunchAnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 470643651D63F5D300A67D1F /* LaunchAnimationTool.m */; settings = {ASSET_TAGS = (); }; };
+		470643681D63F6B100A67D1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470643671D63F6B100A67D1F /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		471A1FA91D4F4C3E00F3C9C6 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FA81D4F4C3E00F3C9C6 /* RadioModel.m */; settings = {ASSET_TAGS = (); }; };
 		471A1FAD1D4F54BC00F3C9C6 /* RadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471A1FAB1D4F54BC00F3C9C6 /* RadioCell.m */; settings = {ASSET_TAGS = (); }; };
 		471A1FAE1D4F54BC00F3C9C6 /* RadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471A1FAC1D4F54BC00F3C9C6 /* RadioCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -293,6 +295,9 @@
 		470643191D62E4D100A67D1F /* UzysAnimtedGifLoadMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysAnimtedGifLoadMoreView.m; sourceTree = "<group>"; };
 		4706431B1D62E4D100A67D1F /* ShowWaitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowWaitView.h; sourceTree = "<group>"; };
 		4706431C1D62E4D100A67D1F /* ShowWaitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowWaitView.m; sourceTree = "<group>"; };
+		470643641D63F5D300A67D1F /* LaunchAnimationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAnimationTool.h; sourceTree = "<group>"; };
+		470643651D63F5D300A67D1F /* LaunchAnimationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAnimationTool.m; sourceTree = "<group>"; };
+		470643671D63F6B100A67D1F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		471A1FA71D4F4C3E00F3C9C6 /* RadioModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioModel.h; sourceTree = "<group>"; };
 		471A1FA81D4F4C3E00F3C9C6 /* RadioModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioModel.m; sourceTree = "<group>"; };
 		471A1FAA1D4F54BC00F3C9C6 /* RadioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCell.h; sourceTree = "<group>"; };
@@ -307,8 +312,8 @@
 		4722995A1D52204C0085BC66 /* AVManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVManager.h; sourceTree = "<group>"; };
 		472EC6CD1D4C33890081DDC5 /* CartoonOnlie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonOnlie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		472EC6D11D4C33890081DDC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		472EC6D31D4C33890081DDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		472EC6D41D4C33890081DDC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		472EC6D31D4C33890081DDC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		472EC6D41D4C33890081DDC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		472EC6DC1D4C33890081DDC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		472EC6DF1D4C33890081DDC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472EC6E11D4C33890081DDC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -770,6 +775,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4706435D1D63F22D00A67D1F /* sysClass */ = {
+			isa = PBXGroup;
+			children = (
+				470643641D63F5D300A67D1F /* LaunchAnimationTool.h */,
+				470643651D63F5D300A67D1F /* LaunchAnimationTool.m */,
+				470643671D63F6B100A67D1F /* LaunchScreen.xib */,
+				472EC6D31D4C33890081DDC5 /* AppDelegate.h */,
+				472EC6D41D4C33890081DDC5 /* AppDelegate.m */,
+			);
+			path = sysClass;
+			sourceTree = "<group>";
+		};
 		471A1FA61D4F4C3E00F3C9C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,8 +826,6 @@
 			isa = PBXGroup;
 			children = (
 				472EC7031D4C34D40081DDC5 /* Code */,
-				472EC6D31D4C33890081DDC5 /* AppDelegate.h */,
-				472EC6D41D4C33890081DDC5 /* AppDelegate.m */,
 				472EC6DC1D4C33890081DDC5 /* Assets.xcassets */,
 				472EC6DE1D4C33890081DDC5 /* LaunchScreen.storyboard */,
 				472EC6E11D4C33890081DDC5 /* Info.plist */,
@@ -848,6 +863,7 @@
 		472EC7031D4C34D40081DDC5 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				4706435D1D63F22D00A67D1F /* sysClass */,
 				4706428F1D62E4D100A67D1F /* CarQuadratic */,
 				479A30DB1D582AD30058CD05 /* Icon */,
 				4767535C1D5428B5000A30DA /* LoginAndRegister */,
@@ -1199,6 +1215,7 @@
 				474117C31D5DF53A00336860 /* MusicPlayer_暂停@2x.png in Resources */,
 				4706432C1D62E4D100A67D1F /* JFComicHeaderReusableView.xib in Resources */,
 				474117BF1D5DF53A00336860 /* MusicPlayer_下载@2x.png in Resources */,
+				470643681D63F6B100A67D1F /* LaunchScreen.xib in Resources */,
 				474118D21D62DA2D00336860 /* FunListCell.xib in Resources */,
 				470643301D62E4D100A67D1F /* JFComicSelectedReusableView.xib in Resources */,
 				474117BC1D5DF53A00336860 /* AudioPlayerController.xib in Resources */,
@@ -1324,6 +1341,7 @@
 				4706433B1D62E4D100A67D1F /* JFComicShowContentCollectionView.m in Sources */,
 				472298E81D51B1B60085BC66 /* RadioController.m in Sources */,
 				472EC70C1D4C35560081DDC5 /* HMDrawerViewController.m in Sources */,
+				470643661D63F5D300A67D1F /* LaunchAnimationTool.m in Sources */,
 				474117BB1D5DF53A00336860 /* AudioPlayerController.m in Sources */,
 				470643471D62E4D100A67D1F /* JFComicStoreModelTool.m in Sources */,
 				4706434E1D62E4D100A67D1F /* ContentListView.m in Sources */,
@@ -1516,7 +1534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "/Users/lan/Desktop/项目修改/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1594,7 +1612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "/Users/lan/Desktop/项目修改/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/lan/Desktop/CartoonOnlie/CartoonOnlie/CartoonOnlie/CartoonOnlie/Code/Tools/PrefixHeader.pch;
 				INFOPLIST_FILE = CartoonOnlie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

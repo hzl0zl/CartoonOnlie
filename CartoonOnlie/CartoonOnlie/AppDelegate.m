@@ -16,7 +16,7 @@
 #import "AudioPlayerController.h"
 #import "ComicStoreViewController.h"
 #import "RealReachability.h"
-
+#import "LaunchAnimationTool.h"
 @interface AppDelegate ()
 
 
@@ -159,16 +159,7 @@
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
     
-    
-//    
-//    UINavigationBar *navigationBar = [UINavigationBar appearance];
-//    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
-//    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
-//    navigationBar.translucent = NO;
-//    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
-//                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
-//                                          };
+
     
 #pragma mark === 
     
@@ -189,18 +180,11 @@
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[HMDrawerViewController drawerVcWithMainVc:[self createTabbarController]]];
     //设置窗口根控制器
     self.window.rootViewController = navVC;
-
+    self.window.backgroundColor = [UIColor whiteColor];
     //显示窗口
     [self.window makeKeyAndVisible];
-    
-//    UINavigationBar *navigationBar = [UINavigationBar appearance];
-//    UIImage *image = [UIImage imageNamed:@"menu_bk_partten"];
-//    [navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    [navigationBar setTintColor:[[UIColor whiteColor]colorWithAlphaComponent:0.8]];
-//    navigationBar.translucent = NO;
-//    navigationBar.titleTextAttributes = @{NSStrokeColorAttributeName: [[UIColor whiteColor]colorWithAlphaComponent:0.8],
-//                                          NSFontAttributeName: [UIFont boldSystemFontOfSize:15]
-//                                          };
+    [LaunchAnimationTool showLaunchAnimationViewToWindow];
+
 
     
     return YES;
