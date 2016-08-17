@@ -62,8 +62,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self setTopViewBackground];
-    
     [self setTopView];
     
     
@@ -118,23 +116,6 @@
     }];
 }
 
-
-#pragma mark -- 顶部视图背景
-//- (void)setTopViewBackground
-//{
-//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//    
-//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
-//    
-//    effectView.alpha = 0.8;
-//    
-//    effectView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
-//    
-//    [self.topImageView addSubview:effectView];
-//    
-//    [self.topImageView sd_setImageWithURL:[NSURL URLWithString:self.model.coverPic]];
-//
-//}
 
 #pragma mark -- 中间视图
 - (void)setMiddleView

@@ -14,11 +14,15 @@
 #import "RealReachability.h"
 #import "AppDelegate.h"
 #import "Reachability.h"
+#import "CoverView.h"
 
-#define KbackgroundColer ([UIColor colorWithRed:255/255.0 green:221/255.0 blue:255/255.0 alpha:1])
+#define KbackgroundColer ([UIColor colorWithRed:178/255.0 green:227/255.0 blue:233/255.0 alpha:1])
 
 @interface FunnyController ()
 
+{
+    UIView *view;
+}
 @end
 
 @interface FunnyController ()<UITableViewDataSource, UITableViewDelegate>
@@ -100,6 +104,9 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notifaction:) name:@"switchChange" object:nil];
+    
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [self.reachability startNotifier];
     [self simulateRequest];
@@ -117,10 +124,31 @@
     
 }
 
+- (void)notifaction:(NSNotification *)notification
+{
+    
+    NSLog(@"888888%@", notification.object);
+    if ([notification.object isEqualToString:@"day"]) {
+        
+        [view removeFromSuperview];
+        
+    }else if ([notification.object isEqualToString:@"night"])
+    {
+        view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        view.userInteractionEnabled = NO;
+        
+        view.backgroundColor = [UIColor lightGrayColor];
+        view.alpha = 0.3;
+        view.hidden = NO;
+        [self.view addSubview:view];
+        
+    }
+}
+
 - (void)controllerSetting
 {
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = KbackgroundColer;
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
     self.tableView.backgroundColor = KbackgroundColer;
     self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
@@ -223,6 +251,7 @@
     self.segmentControl.selectedSegmentIndex = 0;
     
     self.segmentControl.tintColor = [UIColor brownColor];
+    
     
     self.segmentControl.backgroundColor = [UIColor whiteColor];
     
