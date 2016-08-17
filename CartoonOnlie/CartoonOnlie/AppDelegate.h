@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (UIView *)notifaction;
+//- (UIView *)notifaction;
 
 
 @end

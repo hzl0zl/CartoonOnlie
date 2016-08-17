@@ -118,7 +118,6 @@
     // 设置所有导航栏的背景颜色
 //        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     //
-//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //UIColorFromRGB(0xFFBF00).CGColor
     [UITabBar appearance].backgroundColor = [UIColor orangeColor];
 
@@ -163,11 +162,9 @@
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notifaction) name:@"switchChange" object:nil];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notifaction) name:@"switchChange" object:nil];
     
-    view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    view.alpha = 0.5;
-    view.userInteractionEnabled = NO;
+    
     
 #pragma mark ===
     
@@ -200,19 +197,19 @@
 }
 
 
-- (UIView *)notifaction
-{
-    NSLog(@"12121");
-    if ([CoverView shareCoverView].isDarkTheme == YES) {
-        
-        view.backgroundColor = [UIColor clearColor];
-        
-        
-    }else{
-        view.backgroundColor = [UIColor grayColor];
-    }
-    return view;
-}
+//- (UIView *)notifaction
+//{
+//    NSLog(@"12121");
+//    if ([CoverView shareCoverView].isDarkTheme == YES) {
+//        
+//        view.backgroundColor = [UIColor clearColor];
+//        
+//        
+//    }else{
+//        view.backgroundColor = [UIColor grayColor];
+//    }
+//    return view;
+//}
 
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
