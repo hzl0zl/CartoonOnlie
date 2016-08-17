@@ -16,7 +16,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         coverView = [[CoverView alloc] init];
-        coverView.isDarkTheme = NO;
+        coverView.isDarkTheme = YES;
     });
     return coverView;
 }
