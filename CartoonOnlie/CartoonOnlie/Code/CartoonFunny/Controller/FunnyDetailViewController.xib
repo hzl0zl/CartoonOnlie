@@ -177,13 +177,15 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lt5-Cz-eHl">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                            <state key="normal" title="我的收藏"/>
+                            <state key="normal" title="我的收藏">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="showCollectionView:" destination="-1" eventType="touchUpInside" id="Rg5-rY-5Hj"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.33877345060000003" green="0.98567708330000003" blue="0.93810302359999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.69803921568627447" green="0.8901960784313725" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Lt5-Cz-eHl" secondAttribute="trailing" id="3Fk-H4-JLs"/>
                         <constraint firstAttribute="bottom" secondItem="Lt5-Cz-eHl" secondAttribute="bottom" id="Cj3-M9-X2j"/>

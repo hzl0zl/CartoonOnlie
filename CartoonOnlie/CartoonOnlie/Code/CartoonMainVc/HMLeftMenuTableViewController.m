@@ -13,9 +13,19 @@
 #import "MBProgressHUD.h"
 #import "CleanCaches.h"
 #import "SwitchCell.h"
+
+
 @interface HMLeftMenuTableViewController ()<UMSocialUIDelegate>
 
+
+{
+    UIView *view;
+}
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic, strong) UISwitch *mySwitch;
+
+@property (nonatomic, strong) NSString *status;
 
 @end
 
@@ -43,7 +53,9 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"switchCell"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
+    NSString *result = self.status;
     
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"switchChange" object:result userInfo:nil];
 }
 
 
@@ -169,6 +181,10 @@
         
         cell.backgroundColor = [UIColor clearColor];
         
+        [cell.dnSwitch addTarget:self action:@selector(switchAction) forControlEvents:UIControlEventValueChanged];
+        
+        self.mySwitch = cell.dnSwitch;
+        
         return cell;
         
     }
@@ -178,8 +194,29 @@
     cell.textLabel.text = self.dataArray[indexPath.section];
     
     cell.backgroundColor = [UIColor clearColor];
+    
+    
 
     return cell;
+}
+
+- (void)switchAction
+{
+    if (self.mySwitch.isOn) {
+        self.status = @"day";
+       [view removeFromSuperview];
+    }else
+    {
+        self.status = @"night";
+        view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        view.userInteractionEnabled = NO;
+        
+        view.backgroundColor = [UIColor lightGrayColor];
+        view.alpha = 0.3;
+        view.hidden = NO;
+        [self.view addSubview:view];
+       
+    }
 }
 
 #pragma mark 返回分区
