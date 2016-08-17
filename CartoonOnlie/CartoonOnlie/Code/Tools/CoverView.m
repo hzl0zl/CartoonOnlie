@@ -10,32 +10,16 @@
 
 @implementation CoverView
 
-{
-    UIView *view;
-}
-
 + (CoverView *)shareCoverView
 {
     static CoverView *coverView = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         coverView = [[CoverView alloc] init];
+        coverView.isDarkTheme = NO;
     });
     return coverView;
 }
 
-- (UIView *)createCoverView
-{
-    view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    view.backgroundColor = [UIColor lightGrayColor];
-    view.alpha = 0.3;
-    
-    return view;
-}
-
-- (void)removeView
-{
-    [view removeFromSuperview];
-}
 
 @end

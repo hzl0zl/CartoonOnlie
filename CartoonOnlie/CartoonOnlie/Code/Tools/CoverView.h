@@ -10,10 +10,10 @@
 
 @interface CoverView : NSObject
 
+@property (nonatomic,assign) BOOL isDarkTheme;
+
 + (CoverView *)shareCoverView;
 
-- (UIView *)createCoverView;
 
-- (void)removeView;
 
 @end

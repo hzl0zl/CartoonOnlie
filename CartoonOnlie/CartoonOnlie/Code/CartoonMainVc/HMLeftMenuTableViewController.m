@@ -13,6 +13,8 @@
 #import "MBProgressHUD.h"
 #import "CleanCaches.h"
 #import "SwitchCell.h"
+#import "CoverView.h"
+#import "AppDelegate.h"
 
 
 @interface HMLeftMenuTableViewController ()<UMSocialUIDelegate>
@@ -53,11 +55,13 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"switchCell"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    NSString *result = self.status;
+    view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    view.backgroundColor = [UIColor clearColor];
+    view.userInteractionEnabled = NO;
+    [self.view addSubview:view];
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"switchChange" object:result userInfo:nil];
+    
 }
-
 
 
 #pragma mark app即将出现
@@ -73,7 +77,6 @@
         
         [self addLoginBtn];
     }
-    
     
 }
 
@@ -183,11 +186,7 @@
         
         SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"switchCell"];
         
-       
-        
-        [cell.dnSwitch addTarget:self action:@selector(switchAction) forControlEvents:UIControlEventValueChanged];
-        
-        self.mySwitch = cell.dnSwitch;
+        [cell.dnSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
         
         return cell;
         
@@ -202,23 +201,19 @@
     return cell;
 }
 
-- (void)switchAction
+- (void)switchAction:(UISwitch *)sender
 {
-    if (self.mySwitch.isOn) {
-        self.status = @"day";
-       [view removeFromSuperview];
+    if (sender.isOn == YES) {
+        view.backgroundColor = [UIColor clearColor];
+        [CoverView shareCoverView].isDarkTheme = YES;
     }else
     {
-        self.status = @"night";
-        view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        view.userInteractionEnabled = NO;
+        view.backgroundColor = [UIColor grayColor];
+        view.alpha = 0.5;
         
-        view.backgroundColor = [UIColor lightGrayColor];
-        view.alpha = 0.3;
-        view.hidden = NO;
-        [self.view addSubview:view];
-       
+        [CoverView shareCoverView].isDarkTheme = NO;
     }
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"switchChange" object:nil userInfo:nil];
 }
 
 #pragma mark 返回分区

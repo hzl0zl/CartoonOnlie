@@ -17,8 +17,11 @@
 #import "ComicStoreViewController.h"
 #import "RealReachability.h"
 #import "LaunchAnimationTool.h"
+#import "CoverView.h"
 @interface AppDelegate ()
-
+{
+    UIView *view;
+}
 
 @property (nonatomic ,strong) AudioPlayerController *palyer;
 
@@ -115,7 +118,7 @@
     // 设置所有导航栏的背景颜色
 //        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     //
-        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //UIColorFromRGB(0xFFBF00).CGColor
     [UITabBar appearance].backgroundColor = [UIColor orangeColor];
 
@@ -160,9 +163,13 @@
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self becomeFirstResponder];
     
-
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notifaction) name:@"switchChange" object:nil];
     
-#pragma mark === 
+    view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    view.alpha = 0.5;
+    view.userInteractionEnabled = NO;
+    
+#pragma mark ===
     
     //初始化友盟分享
     [UMSocialData setAppKey:@"57a5423267e58ebd7000281e"];
@@ -193,6 +200,19 @@
 }
 
 
+- (UIView *)notifaction
+{
+    NSLog(@"12121");
+    if ([CoverView shareCoverView].isDarkTheme == YES) {
+        
+        view.backgroundColor = [UIColor clearColor];
+        
+        
+    }else{
+        view.backgroundColor = [UIColor grayColor];
+    }
+    return view;
+}
 
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
