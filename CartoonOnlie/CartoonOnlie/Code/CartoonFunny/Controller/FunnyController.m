@@ -150,8 +150,8 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
-    self.tableView.backgroundColor = [UIColor whiteColor];;
-    self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];;
+    self.tableView.backgroundColor = KbackgroundColer;
+    self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
 }
 
 #pragma mark -- 观察者执行的方法

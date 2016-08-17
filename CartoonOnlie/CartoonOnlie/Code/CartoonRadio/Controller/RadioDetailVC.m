@@ -33,7 +33,7 @@ static NSString *const kCellID = @"radioDetailCell";
 
     [self getData];
 
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"音乐"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"06"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
     
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(leftAction)];
     

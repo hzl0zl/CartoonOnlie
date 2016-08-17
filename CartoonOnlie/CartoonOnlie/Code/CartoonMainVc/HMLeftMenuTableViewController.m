@@ -35,13 +35,13 @@
     [super viewDidLoad];
   
     
-    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
     
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"背景"]];
+//    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"背景"]];
     
-    image.frame = self.view.bounds;
+//    image.frame = self.view.bounds;
     
-    self.tableView.backgroundView = image;
+//    self.tableView.backgroundView = image;
 
     
     
@@ -84,6 +84,8 @@
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 150)];
     
+    headerView.backgroundColor = [UIColor orangeColor];
+    
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"二次元 (1)"]];
     
     imageView.layer.masksToBounds  = YES;
@@ -94,8 +96,8 @@
     
     [headerView addSubview:imageView];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 100, 30)];
-    
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    addBtn.centerX = headerView.centerX;
     [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     [addBtn setTitle:@"注销" forState:UIControlStateNormal];
@@ -115,7 +117,7 @@
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 150)];
     
-    
+    headerView.backgroundColor = [UIColor orangeColor];
     
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"二次元 (1)"]];
     
@@ -123,16 +125,16 @@
     
     imageView.layer.cornerRadius = 40;
     
-    imageView.frame = CGRectMake(160,25, 80, 80);
+    imageView.frame = CGRectMake(150,25, 80, 80);
     
     imageView.backgroundColor = [UIColor blueColor];
     
     [headerView addSubview:imageView];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(160, 110, 100, 30)];
+    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(140, 110, 100, 30)];
     
     [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-  
+//    addBtn.center = headerView.center;
     [addBtn setTitle:@"登陆/注册" forState:  UIControlStateNormal];
 
     [addBtn addTarget:self action:@selector(btnLoginClick) forControlEvents:UIControlEventTouchUpInside];
@@ -181,7 +183,7 @@
         
         SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"switchCell"];
         
-        cell.backgroundColor = [UIColor clearColor];
+       
         
         [cell.dnSwitch addTarget:self action:@selector(switchAction) forControlEvents:UIControlEventValueChanged];
         
@@ -195,9 +197,7 @@
     
     cell.textLabel.text = self.dataArray[indexPath.section];
     
-    cell.backgroundColor = [UIColor clearColor];
-    
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     return cell;
 }
@@ -235,7 +235,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 40;
 }
 
 #pragma mark 初始化
