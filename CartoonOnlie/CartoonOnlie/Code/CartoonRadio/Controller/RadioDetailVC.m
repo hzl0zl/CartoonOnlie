@@ -87,7 +87,7 @@ static NSString *const kCellID = @"radioDetailCell";
     
     AudioPlayerController *playVC = [AudioPlayerController audioPlayerController];
     
-    playVC.imageStr = self.radioModel.wiki_cover[@"small"];
+    playVC.imageStr = self.radioModel.wiki_cover[@"large"];
     [playVC initWithArray:self.dataArr index:indexPath.row];
 //    NSLog(@"%@", self.radioModel.wiki_cover[@"small"]);
     [self presentViewController:playVC animated:YES completion:nil];
@@ -154,7 +154,7 @@ static NSString *const kCellID = @"radioDetailCell";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 300;
+    return 320;
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
