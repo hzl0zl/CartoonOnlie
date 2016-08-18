@@ -72,7 +72,7 @@
 #pragma mark app即将出现
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+    self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *s = [user valueForKey:@"passWork"];
     if (s) {
