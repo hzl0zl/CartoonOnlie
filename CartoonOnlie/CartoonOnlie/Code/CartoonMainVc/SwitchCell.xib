@@ -9,28 +9,29 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="switchCell" rowHeight="96" id="KGk-i7-Jjw" customClass="SwitchCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="夜间模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4j-Zm-vmf">
-                        <rect key="frame" x="8" y="5" width="68" height="26"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夜间模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4j-Zm-vmf">
+                        <rect key="frame" x="15" y="8" width="68" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="IvF-Vz-At2"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26c-dk-hUD">
-                        <rect key="frame" x="260" y="5" width="62" height="31"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="60" id="Bpu-oS-7Ha"/>
-                            <constraint firstAttribute="height" constant="30" id="dfr-ES-ME4"/>
-                        </constraints>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26c-dk-hUD">
+                        <rect key="frame" x="251" y="4" width="51" height="31"/>
                     </switch>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="26c-dk-hUD" secondAttribute="bottom" constant="5" id="EOl-MU-8uV"/>
-                    <constraint firstItem="26c-dk-hUD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Pqg-HQ-Qbp"/>
-                    <constraint firstAttribute="trailing" secondItem="26c-dk-hUD" secondAttribute="trailing" id="dBz-B3-1Sy"/>
+                    <constraint firstItem="26c-dk-hUD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="PUM-Ip-GeW"/>
+                    <constraint firstItem="L4j-Zm-vmf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ZPN-ZO-Zc9"/>
+                    <constraint firstAttribute="trailing" secondItem="26c-dk-hUD" secondAttribute="trailing" constant="20" id="hNr-rO-Bfw"/>
+                    <constraint firstItem="L4j-Zm-vmf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ljs-4U-ryY"/>
+                    <constraint firstAttribute="bottom" secondItem="26c-dk-hUD" secondAttribute="bottom" constant="4" id="wBM-Jt-uzZ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

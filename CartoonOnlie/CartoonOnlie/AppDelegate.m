@@ -68,14 +68,14 @@
     
 
     
-    ComicStoreViewController *firstVC=(ComicStoreViewController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:nil class:[ComicStoreViewController class]];
+    ComicStoreViewController *firstVC=(ComicStoreViewController *)[self viewControllerWithTitle:@"二次元漫画" normalImage:@"01" selectedImage:@"011" class:[ComicStoreViewController class]];
     
-    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:nil class:[FunnyController class]];
+    FunnyController *secondVC = (FunnyController *)[self viewControllerWithTitle:@"搞笑一刻" normalImage:@"07" selectedImage:@"077" class:[FunnyController class]];
     
  
-    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"04" selectedImage:nil class:[HMLeftMenuTableViewController class]];
+    HMLeftMenuTableViewController *fourVC = (HMLeftMenuTableViewController *)[self viewControllerWithTitle:@"我的设置" normalImage:@"04" selectedImage:@"044" class:[HMLeftMenuTableViewController class]];
     
-    RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:nil class:[RadioController class]];
+    RadioController *thirdVC = (RadioController *)[self viewControllerWithTitle:@"Cartoon Radio" normalImage:@"06" selectedImage:@"066" class:[RadioController class]];
     
 
     UINavigationController *firstNav = [[UINavigationController alloc] initWithRootViewController:firstVC];
