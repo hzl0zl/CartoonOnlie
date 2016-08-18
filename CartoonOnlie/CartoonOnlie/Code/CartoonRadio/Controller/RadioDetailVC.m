@@ -171,7 +171,7 @@ static NSString *const kCellID = @"radioDetailCell";
 - (UITableView *)tableView{
     
     if (_tableView == nil) {
-        UITableView *tableView = [[UITableView alloc]init];
+        UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         tableView.backgroundColor = [UIColor whiteColor];
         tableView.delegate = self;
         tableView.dataSource = self;

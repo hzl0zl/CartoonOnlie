@@ -29,7 +29,7 @@
 
 @property (nonatomic, strong) NSMutableArray *scrollerArr;
 
-//@property (nonatomic, strong) NSMutableArray *scrollerTitleArr;
+@property (nonatomic, strong) UIView *tagView;
 
 @property (nonatomic, strong) UIButton *suspendBtn;
 
@@ -96,6 +96,7 @@
 
     
 }
+
 - (void)createTableView {
     
     self.tableView = [[UITableView alloc ]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 113) style:UITableViewStyleGrouped];
@@ -305,30 +306,52 @@
     }
 
 }
-
+- (UIView *)tagView{
+    if (!_tagView) {
+        _tagView = [[UIView alloc]initWithFrame:CGRectMake(10, 8, 5, 15)];
+        _tagView.backgroundColor = UIColorFromRGB(0xffbf00);
+        _tagView.layer.masksToBounds = YES;
+        _tagView.layer.cornerRadius = 2.5;
+    }
+    return _tagView;
+}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView *view;
     
     UILabel *label;
     
     if (section == 0) {
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        label.backgroundColor  = [UIColor brownColor];
-        label.text = @"  hot_musics";
-        return label;
+        view =[[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 150, 30)];
+        label.textColor = [UIColor lightGrayColor];
+        label.text = @"hot_musics";
+        [view addSubview:self.tagView];
+        [view addSubview:label];
+        
+        return view;
     }else if (section == 1) {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        label.text = @"  hot_radios";
-        label.backgroundColor  = [UIColor brownColor];
-        return label;
+        
+        view =[[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 150, 30)];
+        label.textColor = [UIColor lightGrayColor];
+        label.text = @"hot_radios";
+        [view addSubview:self.tagView];
+        [view addSubview:label];
+        
+        return view;
         
     }else {
         
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        label.text = @"  musics";
-        label.backgroundColor  = [UIColor brownColor];
-        return label;
+        view =[[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 150, 30)];
+        label.textColor = [UIColor lightGrayColor];
+        label.text = @"musics";
+        [view addSubview:self.tagView];
+        [view addSubview:label];
         
+        return view;
     }
     
 }
@@ -338,7 +361,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 40;
+    return 30;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -427,7 +450,13 @@
             
             [self.view bringSubviewToFront:self.suspendBtn];
         } else if (self.tableView.contentOffset.y < SCREEN_HEIGHT / 3) {
-            self.suspendBtn.hidden = YES;
+            
+            [UIView animateWithDuration:1 animations:^{
+                
+                
+                
+                self.suspendBtn.hidden = YES;
+            }];
         }
     }
 }
@@ -448,7 +477,7 @@
 #pragma mark 创建轮播图
 - (void)ScrollLocalImages
 {
-    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 360);
+    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 260);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
     NSMutableArray *urlStr = [[NSMutableArray alloc] init];
     
@@ -551,7 +580,7 @@
 //    [self.navigationController setNavigationBarHidden:YES];
      self.tabBarController.tabBar.hidden = NO;
     
-    self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
+//    self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
     
          [[JFJumpToControllerManager shared].navigation setNavigationBarHidden:YES];
     
