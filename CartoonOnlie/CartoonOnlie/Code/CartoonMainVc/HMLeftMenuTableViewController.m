@@ -39,20 +39,9 @@ BOOL isLogin;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
     
     self.tableView.backgroundColor = [UIColor lightGrayColor];
-    
-//    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"背景"]];
-    
-//    image.frame = self.view.bounds;
-    
-//    self.tableView.backgroundView = image;
 
-    
-    
-//    [user setValue:self.usernameT.text forKey:@"userName"];
-//    [user setValue:self.passwordT.text forKey:@"passWork"];
 
     UINib *nib = [UINib nibWithNibName:@"SwitchCell" bundle:nil];
     
@@ -61,13 +50,11 @@ BOOL isLogin;
     
     view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     view.backgroundColor = [UIColor clearColor];
-    
-//    view.userInteractionEnabled = NO;
+
     view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     view.alpha = 0.5;
     view.userInteractionEnabled = NO;
     [[JFJumpToControllerManager shared].navigation.view addSubview:view];
-//    [self.view addSubview:view];
     
     [self setBtn];
     
@@ -168,6 +155,7 @@ BOOL isLogin;
     cell.textLabel.text = self.dataArray[indexPath.section];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
 
     return cell;
 }
@@ -249,7 +237,7 @@ BOOL isLogin;
     {
         CollectionController *collectionVc = [[CollectionController alloc] initWithNibName:@"CollectionController" bundle:nil];
         
-        [self.navigationController pushViewController:collectionVc animated:NO];
+        [self.navigationController pushViewController:collectionVc animated:YES];
     }
     
     if (indexPath.section == 3) {
