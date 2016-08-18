@@ -25,7 +25,7 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="KgW-cS-Fjp"/>
                             <constraint firstAttribute="height" constant="20" id="ONa-j1-59I"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -34,7 +34,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="XzJ-fu-w1B"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -43,7 +43,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="8fY-NL-k13"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -53,7 +53,7 @@
                             <constraint firstAttribute="width" constant="140" id="Dr4-dh-Deg"/>
                             <constraint firstAttribute="height" constant="29" id="goV-aQ-doQ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -76,7 +76,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="1mp-wk-EBX"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -121,6 +121,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="popular" width="16" height="16"/>
+        <image name="popular" width="12" height="14"/>
     </resources>
 </document>

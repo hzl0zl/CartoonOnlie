@@ -106,7 +106,6 @@
     
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [self.reachability startNotifier];
-    [self simulateRequest];
     
     [self controllerSetting];
     
@@ -116,16 +115,18 @@
     
     [self createSuspendBtn];
     
-    self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
+    self.funList1 = [[DataHandler shareDataHandler] selectFromTable];
     
+    self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
     
+    [self segmentControlAction:self.segmentControl];
+    [self simulateRequest];
 }
 
 
 - (void)controllerSetting
 {
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
     
 }
 
@@ -221,7 +222,7 @@
 {
     self.segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"推荐漫画", @"热门漫画"]];
     
-    self.segmentControl.frame = CGRectMake(-5, 0, SCREEN_WIDTH + 10, 30);
+    self.segmentControl.frame = CGRectMake(0, 0, SCREEN_WIDTH, 30);
     
     self.segmentControl.selectedSegmentIndex = 0;
     
