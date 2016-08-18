@@ -116,11 +116,13 @@
 #pragma mark 同--UINavigationBara 和UITabbar的风格
     
     // 设置所有导航栏的背景颜色
-//        [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+//    [[UINavigationBar appearance] setBackgroundColor:[UIColor orangeColor]];
     //
-    //UIColorFromRGB(0xFFBF00).CGColor
-    [UITabBar appearance].backgroundColor = [UIColor orangeColor];
-
+  
+//    tabbarController.view.backgroundColor = [UIColor redColor];
+    
+//        [[UINavigationBar appearance] setTintColor:[UIColor orangeColor]];
+    
     return tabbarController;
     
 }

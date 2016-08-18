@@ -551,6 +551,8 @@
 //    [self.navigationController setNavigationBarHidden:YES];
      self.tabBarController.tabBar.hidden = NO;
     
+    self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
+    
          [[JFJumpToControllerManager shared].navigation setNavigationBarHidden:YES];
     
     
