@@ -41,8 +41,8 @@
 - (BOOL)deleteCartoon:(CollectionModel *)cartoon;
 
 
+
 // 创建表格
-//- (void)createTable:(NSString *)funlist;
 
 // 添加数据
 - (void)insertIntoTable:(FunListModel *)model;

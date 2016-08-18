@@ -26,8 +26,6 @@
 
 @property (strong, nonatomic) IBOutlet UIView *topView;
 
-@property (strong, nonatomic) IBOutlet UIView *bottomView;
-
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
 @property (strong, nonatomic) IBOutlet UILabel *authorL;
@@ -107,7 +105,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 [hud removeFromSuperview];
-                self.imageView.image = [UIImage imageNamed:@"bottomView"];
+                self.imageView.image = [UIImage imageNamed:@"bottom"];
                 
                 [self.collectionView reloadData];
             });
@@ -147,14 +145,14 @@
     if (isSelect) {
         self.descHeight.constant = (int)(self.descL.text.length * 15.0/ (SCREEN_WIDTH - 20) + 1) * 15;
         self.middleView.frame = CGRectMake(0, 160, SCREEN_WIDTH, 110 + self.descHeight.constant);
-        self.collectionView.frame = CGRectMake(0, 280 + self.descHeight.constant - 40, SCREEN_WIDTH, SCREEN_HEIGHT - 329 - (self.descHeight.constant - 40));
+        self.collectionView.frame = CGRectMake(0, 280 + self.descHeight.constant - 40, SCREEN_WIDTH, SCREEN_HEIGHT - 280 - (self.descHeight.constant - 40));
         [self.coverBtn setBackgroundImage:[UIImage imageNamed:@"up"] forState:UIControlStateNormal];
         
     }else
     {
         self.descHeight.constant = 40;
         self.middleView.frame = CGRectMake(0, 160, SCREEN_WIDTH, 150);
-        self.collectionView.frame = CGRectMake(0, 280, SCREEN_WIDTH, SCREEN_HEIGHT - 329);
+        self.collectionView.frame = CGRectMake(0, 280, SCREEN_WIDTH, SCREEN_HEIGHT - 280);
         [self.coverBtn setBackgroundImage:[UIImage imageNamed:@"down"] forState:UIControlStateNormal];
     }
     isSelect = !isSelect;
@@ -194,7 +192,7 @@
         // 设置距离分区的边距
         flowLayout.sectionInset = UIEdgeInsetsMake(10, 2, 0, 2);
         
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 280, SCREEN_WIDTH, SCREEN_HEIGHT - 329) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 280, SCREEN_WIDTH, SCREEN_HEIGHT - 280) collectionViewLayout:flowLayout];
         
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -257,9 +255,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
     if (self.dataArray.count < 15) {
-        self.size = CGSizeMake(0, 80);
+        self.size = CGSizeMake(0, 180);
     }
-    self.size= CGSizeMake(0, 50);
+    self.size= CGSizeMake(0, 100);
     return self.size;
 }
 
@@ -292,9 +290,9 @@
         UIView *bottomV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
         
         
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
         if (self.dataArray.count < 15) {
-            self.imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
+            self.imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 180);
         }
         
         [bottomV addSubview:self.imageView];
@@ -327,7 +325,6 @@
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.bottomView.hidden = NO;
     self.navigationController.navigationBar.hidden = YES;
     
     
@@ -343,7 +340,8 @@
         for (FunListModel *model in array) {
             if (![self.model.name isEqualToString:model.name]) {
                 [self.collectionBtn setTitle:@"收藏" forState:UIControlStateNormal];
-            }else
+            }
+            else
             {
                 [self.collectionBtn setTitle:@"已收藏" forState:UIControlStateNormal];
             }
@@ -367,17 +365,17 @@
 
 
 #pragma mark -- 推出收藏页面
-- (IBAction)showCollectionView:(id)sender {
-    
-    CollectionController *collectionVc = [[CollectionController alloc] initWithNibName:@"CollectionController" bundle:nil];
-    
-    collectionVc.model = self.model;
-    
-    [self.navigationController pushViewController:collectionVc animated:NO];
-    
-    self.bottomView.hidden = YES;
-    
-}
+//- (IBAction)showCollectionView:(id)sender {
+//    
+//    CollectionController *collectionVc = [[CollectionController alloc] initWithNibName:@"CollectionController" bundle:nil];
+//    
+//    collectionVc.model = self.model;
+//    
+//    [self.navigationController pushViewController:collectionVc animated:NO];
+//    
+////    self.bottomView.hidden = YES;
+//    
+//}
 
 
 #pragma mark -- 收藏按钮点击方法
@@ -421,7 +419,6 @@
 #pragma mark -- 视图即将消失
 - (void)viewWillDisappear:(BOOL)animated
 {
-    self.bottomView.hidden = YES;
     self.navigationController.navigationBar.hidden = NO;
     
     self.tabBarController.tabBar.hidden= YES;

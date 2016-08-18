@@ -30,9 +30,6 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"collectioncell"];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-    
-    
-    [self createRightBtn];
 }
 
 #pragma mark -- 懒加载
@@ -42,20 +39,6 @@
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
-}
-
-
-#pragma mark -- 返回主页按钮方法
-- (void)createRightBtn
-{
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"返回首页" style:UIBarButtonItemStyleDone target:self action:@selector(backAction)];
-    self.navigationItem.rightBarButtonItem = rightBtn;
-}
-
-#pragma makr -- 返回按钮方法
-- (void)backAction
-{
-    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 
