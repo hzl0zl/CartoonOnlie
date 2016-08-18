@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="common_navi_back" width="44" height="44"/>
+        <image name="common_navi_back" width="6" height="11"/>
     </resources>
 </document>

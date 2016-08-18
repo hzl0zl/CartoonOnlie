@@ -51,7 +51,7 @@
                         <constraint firstAttribute="height" constant="44" id="6ZZ-oy-7a7"/>
                         <constraint firstAttribute="width" constant="60" id="kMx-PM-yvt"/>
                     </constraints>
-                    <state key="normal" image="common_navi_back"/>
+                    <state key="normal" image="back"/>
                     <connections>
                         <action selector="backButtonAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="ncb-JY-2t8"/>
                     </connections>
@@ -83,10 +83,10 @@
                 <outlet property="titleContentView" destination="oMa-6C-fby" id="O7m-WS-lzc"/>
                 <outlet property="titleLabel" destination="EBr-kh-nbJ" id="fP1-xi-JXz"/>
             </connections>
-            <point key="canvasLocation" x="148.5" y="289.5"/>
+            <point key="canvasLocation" x="75.5" y="348.5"/>
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="common_navi_back" width="44" height="44"/>
+        <image name="back" width="20" height="28"/>
     </resources>
 </document>
