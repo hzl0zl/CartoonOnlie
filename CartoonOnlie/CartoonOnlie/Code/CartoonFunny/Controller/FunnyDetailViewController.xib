@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FunnyDetailViewController">
             <connections>
                 <outlet property="authorL" destination="x2u-WK-9ed" id="Nup-Gd-R6F"/>
-                <outlet property="bottomView" destination="iAW-xG-cC8" id="iqU-52-Wj0"/>
                 <outlet property="collectionBtn" destination="pKm-o6-Z04" id="wSV-9I-sco"/>
                 <outlet property="descHeight" destination="UB3-AZ-18e" id="lgR-w5-c8M"/>
                 <outlet property="descL" destination="EF8-Cn-lIu" id="8by-9R-rmA"/>
@@ -162,45 +161,20 @@
                         <constraint firstAttribute="trailing" secondItem="pKm-o6-Z04" secondAttribute="trailing" constant="20" id="z5L-Tz-fEh"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAW-xG-cC8">
-                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lt5-Cz-eHl">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                            <state key="normal" title="我的收藏">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="showCollectionView:" destination="-1" eventType="touchUpInside" id="Rg5-rY-5Hj"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.9137254901960784" green="0.66666666666666663" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Lt5-Cz-eHl" secondAttribute="trailing" id="3Fk-H4-JLs"/>
-                        <constraint firstAttribute="bottom" secondItem="Lt5-Cz-eHl" secondAttribute="bottom" id="Cj3-M9-X2j"/>
-                        <constraint firstAttribute="height" constant="49" id="mLP-KW-i6s"/>
-                        <constraint firstItem="Lt5-Cz-eHl" firstAttribute="leading" secondItem="iAW-xG-cC8" secondAttribute="leading" id="nVX-mM-aPi"/>
-                        <constraint firstItem="Lt5-Cz-eHl" firstAttribute="top" secondItem="iAW-xG-cC8" secondAttribute="top" id="z15-xQ-HcQ"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Ed8-67-1Ro" secondAttribute="trailing" id="5yr-dT-xrF"/>
-                <constraint firstAttribute="trailing" secondItem="iAW-xG-cC8" secondAttribute="trailing" id="7t5-rO-Dah"/>
                 <constraint firstItem="Ed8-67-1Ro" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GPG-iT-Qrf"/>
                 <constraint firstAttribute="trailing" secondItem="13X-on-D8A" secondAttribute="trailing" id="IbG-YK-0we"/>
                 <constraint firstItem="Ed8-67-1Ro" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mlo-ca-Ray"/>
-                <constraint firstItem="iAW-xG-cC8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YqW-Es-6VF"/>
                 <constraint firstItem="13X-on-D8A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fvP-1c-4OH"/>
                 <constraint firstItem="13X-on-D8A" firstAttribute="top" secondItem="Ed8-67-1Ro" secondAttribute="bottom" constant="10" id="lw2-nj-IvY"/>
-                <constraint firstAttribute="bottom" secondItem="iAW-xG-cC8" secondAttribute="bottom" id="w8r-Ok-DmS"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
     <resources>
-        <image name="back" width="32" height="32"/>
+        <image name="back" width="29" height="21"/>
     </resources>
 </document>
