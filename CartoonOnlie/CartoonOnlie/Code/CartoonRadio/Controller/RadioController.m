@@ -312,21 +312,22 @@
     
     if (section == 0) {
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
-        label.backgroundColor  = [UIColor brownColor];
+
+        label.backgroundColor  = KBarOrNarColor;
         label.text = @"  hot_musics";
         return label;
     }else if (section == 1) {
         
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
         label.text = @"  hot_radios";
-        label.backgroundColor  = [UIColor brownColor];
+        label.backgroundColor  = KBarOrNarColor;
         return label;
         
     }else {
         
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
         label.text = @"  musics";
-        label.backgroundColor  = [UIColor brownColor];
+        label.backgroundColor  = KBarOrNarColor;
         return label;
         
     }

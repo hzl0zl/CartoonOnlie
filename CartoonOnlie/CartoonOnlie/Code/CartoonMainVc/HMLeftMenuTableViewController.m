@@ -77,6 +77,8 @@ BOOL isLogin;
 #pragma mark app即将出现
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+     self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
+    
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *s = [user valueForKey:@"passWork"];
     if (s) {
