@@ -16,7 +16,6 @@
 #import "Reachability.h"
 #import "CoverView.h"
 
-#define KbackgroundColer ([UIColor colorWithRed:178/255.0 green:227/255.0 blue:233/255.0 alpha:1])
 
 @interface FunnyController ()
 {
@@ -119,7 +118,6 @@
     
     self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:233/255.0 green:170/255.0 blue:92/255.0 alpha:1];
     
 }
 
@@ -127,9 +125,8 @@
 - (void)controllerSetting
 {
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
     
-    self.tableView.backgroundColor = KbackgroundColer;
 }
 
 #pragma mark -- 观察者执行的方法
@@ -227,11 +224,6 @@
     self.segmentControl.frame = CGRectMake(-5, 0, SCREEN_WIDTH + 10, 30);
     
     self.segmentControl.selectedSegmentIndex = 0;
-    
-    self.segmentControl.tintColor = [UIColor brownColor];
-    
-    
-    self.segmentControl.backgroundColor = [UIColor whiteColor];
     
     [self.segmentControl addTarget:self action:@selector(segmentControlAction:) forControlEvents:UIControlEventValueChanged];
     

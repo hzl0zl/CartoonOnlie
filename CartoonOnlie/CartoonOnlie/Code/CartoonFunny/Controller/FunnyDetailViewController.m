@@ -273,7 +273,7 @@
         headerL.text = @"目录";
         
         [reusableView addSubview:headerL];
-        reusableView.backgroundColor = [UIColor colorWithRed:226.0/255 green:226.0/255 blue:237.0/255 alpha:1.0];
+        reusableView.backgroundColor = KBarOrNarColor;
         return reusableView;
     }else
     {

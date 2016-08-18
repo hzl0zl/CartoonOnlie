@@ -29,6 +29,8 @@
     
     [self.tableView registerNib:nib forCellReuseIdentifier:@"collectioncell"];
     
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
     
     [self createRightBtn];
 }
