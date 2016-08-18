@@ -127,7 +127,7 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="ico_daoxun" width="18" height="18"/>
-        <image name="ico_shunxun" width="18" height="18"/>
+        <image name="ico_daoxun" width="18" height="13"/>
+        <image name="ico_shunxun" width="18" height="13"/>
     </resources>
 </document>

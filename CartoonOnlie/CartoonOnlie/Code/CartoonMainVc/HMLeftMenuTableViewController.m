@@ -65,7 +65,7 @@ BOOL isLogin;
 #pragma mark app即将出现
 - (void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-     self.navigationController.navigationBar.barTintColor = KBarOrNarColor;
+    
     
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *s = [user valueForKey:@"passWork"];
@@ -80,16 +80,28 @@ BOOL isLogin;
     }
 }
 
+
+
 #pragma mark -- 个人设置页面
 - (void)setBtn {
     
-    self.tableView.separatorStyle = UITableViewCellAccessoryNone;
+    
+    self.tableView.separatorColor = [UIColor blackColor];
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 150)];
+  
+    UIView *view2 =[[UIView alloc]initWithFrame:CGRectMake(15, 149, SCREEN_WIDTH-15, 1)];
     
-    headerView.backgroundColor = [UIColor orangeColor];
+    view2.backgroundColor = [UIColor blackColor];
     
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"二次元 (1)"]];
+    [headerView addSubview:view2];
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"088"]];
+    
+    
+    imageView.layer.borderWidth = 1;
+    
+    imageView.layer.borderColor = [UIColor blackColor].CGColor;
     
     imageView.layer.masksToBounds  = YES;
     
@@ -97,7 +109,7 @@ BOOL isLogin;
     
     imageView.frame = CGRectMake(150,25, 80, 80);
     
-    imageView.backgroundColor = [UIColor blueColor];
+
     
     [headerView addSubview:imageView];
     
@@ -146,6 +158,9 @@ BOOL isLogin;
         
         [cell.dnSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
         
+        cell.backgroundColor = [UIColor clearColor];
+        
+ 
         return cell;
         
     }
@@ -157,6 +172,11 @@ BOOL isLogin;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 
+    cell.backgroundColor = [UIColor clearColor];
+    
+    self.tableView.tableHeaderView.backgroundColor = [UIColor clearColor];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     return cell;
 }
 
@@ -182,10 +202,7 @@ BOOL isLogin;
     return 5;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 30;
-}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -203,16 +220,7 @@ BOOL isLogin;
 }
 
 
-////获取缓存文件路径
-//-(NSString *)getCachesPath{
-//    // 获取Caches目录路径
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-//    NSString *cachesDir = [paths objectAtIndex:0];
-//    
-//    NSString *filePath = [cachesDir stringByAppendingPathComponent:@"com.nickcheng.NCMusicEngine"];
-//    
-//    return filePath;
-//}
+
 
 
 #pragma mark 新浪
@@ -245,9 +253,7 @@ BOOL isLogin;
     }
     if (indexPath.section == 2) {
         
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"真的要清除吗" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-//        [alert show];
-        
+      
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         NSString *path = [paths objectAtIndex:0];
         double aa = [CleanCaches sizeWithFilePath:path];
