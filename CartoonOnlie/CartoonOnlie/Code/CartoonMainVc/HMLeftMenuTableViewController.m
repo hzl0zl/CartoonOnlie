@@ -15,6 +15,7 @@
 #import "SwitchCell.h"
 #import "CoverView.h"
 #import "AppDelegate.h"
+#import "CollectionController.h"
 
 BOOL isLogin;
 @interface HMLeftMenuTableViewController ()<UMSocialUIDelegate>
@@ -201,7 +202,7 @@ BOOL isLogin;
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
  
-    return 4;
+    return 5;
 }
 
 
@@ -215,7 +216,7 @@ BOOL isLogin;
 - (NSMutableArray *)dataArray {
     
     if (_dataArray == nil) {
-        _dataArray = [[NSMutableArray alloc] initWithObjects:@"夜间模式",@"清除缓存", @"分享给朋友", @"当前版本", nil];
+        _dataArray = [[NSMutableArray alloc] initWithObjects:@"夜间模式", @"我的收藏", @"清除缓存", @"分享给朋友", @"当前版本", nil];
     }
     return _dataArray;
     
@@ -243,10 +244,17 @@ BOOL isLogin;
 #pragma mark -- 选中cell时触发的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 2) {
+    if (indexPath.section == 1)
+    {
+        CollectionController *collectionVc = [[CollectionController alloc] initWithNibName:@"CollectionController" bundle:nil];
+        
+        [self.navigationController pushViewController:collectionVc animated:NO];
+    }
+    
+    if (indexPath.section == 3) {
         [self shareSina];
     }
-    if (indexPath.section == 1) {
+    if (indexPath.section == 2) {
         
       
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
@@ -292,7 +300,7 @@ BOOL isLogin;
         
         
     }
-    if (indexPath.section == 3) {
+    if (indexPath.section == 4) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"当前版本号: v0.1" preferredStyle:UIAlertControllerStyleAlert];
         
