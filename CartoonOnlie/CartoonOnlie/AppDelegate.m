@@ -180,17 +180,18 @@
     
     //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[HMDrawerViewController drawerVcWithMainVc:[self createTabbarController]]];
+    UITabBarController *tabVc = [self createTabbarController];
+    tabVc.tabBar.barTintColor = [UIColor colorWithRed:233/255.0 green:170/255.0 blue:92/255.0 alpha:1];
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[HMDrawerViewController drawerVcWithMainVc:tabVc]];
     //设置窗口根控制器
     self.window.rootViewController = navVC;
     self.window.backgroundColor = [UIColor whiteColor];
     //显示窗口
     [self.window makeKeyAndVisible];
     [LaunchAnimationTool showLaunchAnimationViewToWindow];
-
-
+    
     
     return YES;
 

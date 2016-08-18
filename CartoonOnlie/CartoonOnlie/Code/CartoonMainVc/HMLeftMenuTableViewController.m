@@ -16,18 +16,21 @@
 #import "CoverView.h"
 #import "AppDelegate.h"
 
-
+BOOL isLogin;
 @interface HMLeftMenuTableViewController ()<UMSocialUIDelegate>
 
 
 {
     UIView *view;
 }
+
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
 @property (nonatomic, strong) UISwitch *mySwitch;
 
 @property (nonatomic, strong) NSString *status;
+
+@property (nonatomic, strong) UIButton *addBtn;
 
 @end
 
@@ -65,61 +68,30 @@
     [[JFJumpToControllerManager shared].navigation.view addSubview:view];
 //    [self.view addSubview:view];
     
+    [self setBtn];
+    
     
 }
 
 
 #pragma mark app即将出现
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
     NSString *s = [user valueForKey:@"passWork"];
     if (s) {
+        isLogin = YES;
+        [self.addBtn setTitle:@"注销" forState:UIControlStateNormal];
+    }else
+    {
         
-        [self addCancelBtn];
-    }else {
-        
-        [self addLoginBtn];
+        [self.addBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
+        isLogin = NO;
     }
-    
 }
 
-#pragma mark 注销
-- (void)addCancelBtn {
-    
-    self.tableView.separatorStyle = UITableViewCellAccessoryNone;
-    
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 150)];
-    
-    headerView.backgroundColor = [UIColor orangeColor];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"二次元 (1)"]];
-    
-    imageView.layer.masksToBounds  = YES;
-    
-    imageView.layer.cornerRadius = 40;
-    
-    imageView.frame = CGRectMake(160,25, 80, 80);
-    
-    [headerView addSubview:imageView];
-    
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
-    addBtn.centerX = headerView.centerX;
-    [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [addBtn setTitle:@"注销" forState:UIControlStateNormal];
-    
-    [addBtn addTarget:self action:@selector(btnCancelClick) forControlEvents:UIControlEventTouchUpInside];
-    [headerView addSubview:addBtn];
-    
-    
-    self.tableView.tableHeaderView = headerView;
-    
-}
-
-#pragma mark 登录
-- (void)addLoginBtn {
+#pragma mark -- 个人设置页面
+- (void)setBtn {
     
     self.tableView.separatorStyle = UITableViewCellAccessoryNone;
     
@@ -139,40 +111,31 @@
     
     [headerView addSubview:imageView];
     
-    UIButton *addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(140, 110, 100, 30)];
+    self.addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(140, 110, 100, 30)];
     
-    [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    addBtn.center = headerView.center;
-    [addBtn setTitle:@"登陆/注册" forState:  UIControlStateNormal];
-
-    [addBtn addTarget:self action:@selector(btnLoginClick) forControlEvents:UIControlEventTouchUpInside];
-    [headerView addSubview:addBtn];
-    
+    [self.addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.tableView.tableHeaderView = headerView;
     
-}
-
-#pragma mark 登录方法
-- (void)btnLoginClick{
-    
-    LoginController *loginVC = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
-    
-    [self presentViewController:loginVC animated:YES completion:nil];
-    
-    //    [[HMDrawerViewController shareDrawer] switchController:nav];
-    
+    [self.addBtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [headerView addSubview:self.addBtn];
     
 }
 
-#pragma mark 注销方法
-- (void)btnCancelClick{
-    
-    NSString*appDomain = [[NSBundle mainBundle]bundleIdentifier];
-    
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    
-    [self addLoginBtn];
-    
+#pragma mark -- 按钮点击方法
+- (void)btnClick
+{
+    if (isLogin == NO) {
+        LoginController *loginVC = [[LoginController alloc] initWithNibName:@"LoginController" bundle:nil];
+        
+        [self presentViewController:loginVC animated:YES completion:nil];        
+        
+    }else if(isLogin == YES)
+    {
+        NSString*appDomain = [[NSBundle mainBundle]bundleIdentifier];
+        [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+        [self.addBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
+        isLogin = NO;
+    }
 }
 
 

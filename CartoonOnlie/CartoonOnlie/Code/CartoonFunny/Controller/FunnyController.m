@@ -119,11 +119,7 @@
     
     self.funList3 = [[DataHandler shareDataHandler] selectFromTable];
     
-//    view = [((AppDelegate *)[[UIApplication sharedApplication] delegate]) notifaction];
-////    NSLog(@"%@", view);
-//    [[JFJumpToControllerManager shared].navigation.view addSubview:view];
-//    [self.navigationController.view addSubview:view];
-//    [self.view addSubview:view];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:233/255.0 green:170/255.0 blue:92/255.0 alpha:1];
     
 }
 
@@ -134,7 +130,6 @@
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
     self.tableView.backgroundColor = KbackgroundColer;
-    self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
 }
 
 #pragma mark -- 观察者执行的方法
