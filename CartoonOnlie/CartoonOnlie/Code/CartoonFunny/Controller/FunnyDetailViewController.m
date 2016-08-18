@@ -186,7 +186,7 @@
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         
         // 每一个item的大小
-        flowLayout.itemSize = CGSizeMake(70, 40);
+        flowLayout.itemSize = CGSizeMake(70, 30);
         
         // 列数是根据Item的大小和最小间距来自动调整
         flowLayout.minimumInteritemSpacing = 5;
@@ -233,6 +233,16 @@
     
     self.titleLabel.text = self.model.name;
     
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
+    
+    effectView.alpha = 0.5;
+    
+    effectView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
+    
+//    [self.topImageView addSubview:effectView];
+    
     self.topImageView.image = [UIImage imageNamed:@"background"];
     
 }
@@ -271,9 +281,10 @@
         [reusableView addSubview:self.coverBtn];
         
         headerL.text = @"目录";
+        headerL.font = [UIFont systemFontOfSize:15];
         
         [reusableView addSubview:headerL];
-        reusableView.backgroundColor = KBarOrNarColor;
+        reusableView.backgroundColor = [UIColor colorWithRed:216/255.0 green:212/255.0 blue:212/255.0 alpha:1];
         return reusableView;
     }else
     {
