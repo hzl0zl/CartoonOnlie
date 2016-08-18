@@ -40,7 +40,13 @@ BOOL isLogin;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+    
+    UIView *view1 = [[UIView alloc] init];
+    
+    self.tableView.tableFooterView = view1;
+    
+    [self.tableView setScrollEnabled:NO];
 
 
     UINib *nib = [UINib nibWithNibName:@"SwitchCell" bundle:nil];
