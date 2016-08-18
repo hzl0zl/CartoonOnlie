@@ -101,7 +101,7 @@
     self.tableView = [[UITableView alloc ]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 113) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.backgroundColor = [UIColor blackColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [self.view addSubview:self.tableView];
     
@@ -240,7 +240,7 @@
     
     cell.layer.cornerRadius = 8;
     cell.layer.masksToBounds = YES;
-    cell.backgroundColor = [UIColor lightGrayColor];
+//    cell.backgroundColor = [UIColor lightGrayColor];
     
 //    cell.backgroundColor = [UIColor magentaColor];
     if (indexPath.section == 0) {
@@ -400,7 +400,7 @@
     self.suspendBtn.layer.cornerRadius = 20;
     
     self.suspendBtn.layer.borderWidth = 0.2;
-    self.suspendBtn.backgroundColor = [UIColor orangeColor];
+    self.suspendBtn.backgroundColor = [UIColor clearColor];
     [self.suspendBtn setTitle:@"置顶" forState:UIControlStateNormal];
     self.suspendBtn.layer.masksToBounds = YES;
     
