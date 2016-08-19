@@ -480,7 +480,10 @@
     CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 330);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
     NSMutableArray *urlStr = [[NSMutableArray alloc] init];
-    
+//   [ urlStr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+//        
+//        
+//    }];
     for (RadioModel *model in self.scrollerArr) {
         
        NSString *str = model.wiki_cover[@"large"];

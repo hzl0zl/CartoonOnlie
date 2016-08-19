@@ -9,7 +9,6 @@
                 <outlet property="emailText" destination="Uz1-eo-bzx" id="tT5-1O-6aH"/>
                 <outlet property="loginBtn" destination="kLz-r2-wnK" id="UId-nn-w2s"/>
                 <outlet property="passwordText" destination="pY8-vw-QSk" id="bvG-Ah-bC4"/>
-                <outlet property="qqLogin" destination="QBH-HJ-4Wn" id="jgo-s7-WE3"/>
                 <outlet property="registerBtn" destination="ow0-mC-LUi" id="SZy-hO-6EX"/>
                 <outlet property="sinaLogin" destination="oWk-s3-ANO" id="u4i-gG-Fn2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,30 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvPlayBgm" translatesAutoresizingMaskIntoConstraints="NO" id="mja-3d-jK4">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AvPlayBgm" translatesAutoresizingMaskIntoConstraints="NO" id="mja-3d-jK4">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="手机" translatesAutoresizingMaskIntoConstraints="NO" id="RPP-GQ-boy">
-                    <rect key="frame" x="76" y="200" width="22" height="25"/>
+                    <rect key="frame" x="55" y="200" width="25" height="25"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="锁" translatesAutoresizingMaskIntoConstraints="NO" id="GJo-sn-6xT">
-                    <rect key="frame" x="76" y="260" width="22" height="20"/>
+                    <rect key="frame" x="55" y="260" width="25" height="25"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Uz1-eo-bzx">
-                    <rect key="frame" x="106" y="195" width="200" height="30"/>
+                    <rect key="frame" x="88" y="195" width="200" height="30"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-vw-QSk">
-                    <rect key="frame" x="106" y="250" width="200" height="30"/>
+                    <rect key="frame" x="88" y="250" width="200" height="30"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLz-r2-wnK">
-                    <rect key="frame" x="71" y="333" width="110" height="40"/>
+                    <rect key="frame" x="60" y="335" width="110" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" title="登陆">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,50 +52,45 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="Rqf-vZ-ENf">
-                    <rect key="frame" x="76" y="430" width="70" height="1"/>
+                    <rect key="frame" x="50" y="430" width="70" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-vS-Vm5">
-                    <rect key="frame" x="161" y="540" width="60" height="1"/>
+                    <rect key="frame" x="161" y="600" width="60" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-kj-vZ3">
-                    <rect key="frame" x="246" y="430" width="70" height="1"/>
+                    <rect key="frame" x="255" y="430" width="70" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="abp-Av-VoI">
-                    <rect key="frame" x="106" y="224" width="200" height="1"/>
+                    <rect key="frame" x="95" y="226" width="200" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-WA-btO">
-                    <rect key="frame" x="106" y="279" width="200" height="1"/>
+                    <rect key="frame" x="95" y="281" width="200" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第三方登陆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-dI-kpx">
-                    <rect key="frame" x="161" y="420" width="85" height="21"/>
+                    <rect key="frame" x="145" y="420" width="85" height="21"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWk-s3-ANO">
-                    <rect key="frame" x="211" y="450" width="110" height="40"/>
+                    <rect key="frame" x="83" y="471" width="210" height="60"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="  新浪登陆" image="新浪 (1)"/>
                     <connections>
                         <action selector="wbAction:" destination="-1" eventType="touchUpInside" id="0NB-Bk-LNi"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBH-HJ-4Wn">
-                    <rect key="frame" x="76" y="450" width="110" height="40"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="   QQ登陆" image="QQ (1)"/>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="二次元 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-TW-42m">
-                    <rect key="frame" x="156" y="97" width="70" height="62"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginheader" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-TW-42m">
+                    <rect key="frame" x="156" y="76" width="70" height="62"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jw-5b-46L">
-                    <rect key="frame" x="161" y="515" width="60" height="30"/>
+                    <rect key="frame" x="158" y="556" width="60" height="30"/>
                     <state key="normal" title="随便看看">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -105,7 +99,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ow0-mC-LUi">
-                    <rect key="frame" x="211" y="333" width="110" height="40"/>
+                    <rect key="frame" x="202" y="335" width="98" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" title="注册">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,21 +110,14 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="mja-3d-jK4" secondAttribute="trailing" id="Mxx-oI-w4o"/>
-                <constraint firstItem="mja-3d-jK4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VvW-Ma-S2S"/>
-                <constraint firstItem="mja-3d-jK4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jWR-5Y-4IB"/>
-                <constraint firstAttribute="bottom" secondItem="mja-3d-jK4" secondAttribute="bottom" id="uA6-zm-O42"/>
-            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="621" y="394"/>
+            <point key="canvasLocation" x="713.5" y="128.5"/>
         </view>
     </objects>
     <resources>
-        <image name="AvPlayBgm" width="700" height="1247"/>
-        <image name="QQ (1)" width="32" height="32"/>
+        <image name="AvPlayBgm" width="375" height="667"/>
         <image name="bai" width="219" height="190"/>
-        <image name="二次元 (1)" width="123" height="128"/>
+        <image name="loginheader" width="128" height="128"/>
         <image name="手机" width="20" height="28"/>
         <image name="新浪 (1)" width="40" height="32"/>
         <image name="锁" width="22" height="28"/>
