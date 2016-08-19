@@ -55,12 +55,12 @@
     
     NSString *body = [NSString stringWithFormat:@"account=%@&account_type=4&password=%@",self.emailText.text,[self.passwordText.text md532BitUpper]];
     
-    [DownLoad dowmLoadWithUrl:Url postBody:body resultBlock:^(NSData *data) {
+    if (self.emailText.text.length != 0 && self.passwordText.text.length != 0) {
+        
+         [DownLoad dowmLoadWithUrl:Url postBody:body resultBlock:^(NSData *data) {
         
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"%@", dict);
-//        NSLog(@"%@", dict[@"results"][@"status"]);
-        NSLog(@"%@", dict[@"info"]);
+        
        dispatch_async(dispatch_get_main_queue(), ^{
           
            if ([dict[@"info"] isEqualToString:@"登陆成功"]) {
@@ -85,22 +85,24 @@
                
                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:dict[@"info"] preferredStyle:UIAlertControllerStyleAlert];
                
-               [ alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                   
-//                   [self dismissViewControllerAnimated:YES completion:nil];
-                   
-                   
-               } ]];
+               [ alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil]];
                
            }
-      
-           
-       });
-        
-        
-        
+      });
         
     }];
+    }else
+    {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"请输入正确用户/密码" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+
+         [self presentViewController:alert animated:true completion:nil];
+        
+    }
+    
+   
     
     
     
