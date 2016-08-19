@@ -207,11 +207,11 @@
                 <constraint firstItem="2Jw-5b-46L" firstAttribute="top" secondItem="oWk-s3-ANO" secondAttribute="bottom" constant="20" id="ysX-X0-aBz"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="621" y="394"/>
+            <point key="canvasLocation" x="713.5" y="128.5"/>
         </view>
     </objects>
     <resources>
-        <image name="AvPlayBgm" width="700" height="1247"/>
+        <image name="AvPlayBgm" width="375" height="667"/>
         <image name="bai" width="219" height="190"/>
         <image name="二次元 (1)" width="123" height="128"/>
         <image name="手机" width="20" height="28"/>

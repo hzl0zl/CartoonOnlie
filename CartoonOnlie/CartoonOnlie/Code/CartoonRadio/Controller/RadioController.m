@@ -12,8 +12,8 @@
 #import "AudioPlayerController.h"
 #import "CartoonRadioDB.h"
 #import "RadioDetailVC.h"
-
-
+#import "Reachability.h"
+#import "RealReachability.h"
 #import <SDCycleScrollView/SDCycleScrollView.h>
 
 @interface RadioController () <UITableViewDelegate, UITableViewDataSource,SDCycleScrollViewDelegate>
@@ -33,6 +33,8 @@
 
 @property (nonatomic, strong) UIButton *suspendBtn;
 
+@property (nonatomic, strong) Reachability *reachability;
+
 //数据
 @property (nonatomic, strong) NSDictionary *dataDict;
 
@@ -46,55 +48,105 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self createTableView];
+      [self simulateRequest];
     
-    
-    
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"06"]style:UIBarButtonItemStyleDone target:self action:@selector(RadioRightAction)];
     
+    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reachability startNotifier];
+
     self.navigationController.navigationBar.translucent = NO;
-    
-    [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_musics"];
-    NSArray *arr = [[CartoonRadioDB shareDataHandler] allModelWithTableName:@"hot_musics"];
-    if (arr.count == 0) {
-        [self getScrollerViewData];
-        [self getData];
-    
-    }else {
-        
-        self.hot_musicsArr = (NSMutableArray *)arr;
-         [self.dataDict setValue:self.hot_musicsArr forKey:@"hot_musics"];
-        
-        
-         [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_radios"];
-        self.hot_radiosArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"hot_radios"];
-         [self.dataDict setValue:self.hot_radiosArr forKey:@"hot_radios"];
    
-         [[CartoonRadioDB shareDataHandler] createTableWithName:@"musics"];
-        self.musicsArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"musics"];
-        [self.dataDict setValue:self.musicsArr forKey:@"musics"];
-        
-        [[CartoonRadioDB shareDataHandler] createTableWithName:@"new_musics"];
-        self.scrollerArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"new_musics"];
-//        [self.dataDict setValue:self.musicsArr forKey:@"new_musics"];
-      
-        
-    }
-    
-    
-    
-    
-//    [self setNavbarBackgroundHidden:YES];
-    [self createSuspendBtn];
-    
-    [self createTableView];
-    if (self.scrollerArr.count != 0) {
-        
-             [self ScrollLocalImages];
-        
-    }
+  
 
     
+}
+#pragma mark -- 状态切换后提示信息
+- (void)showNotificationMessageWithStatus: (NSString *)status{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"当前网络状态" message:status preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    [self performSelector:@selector(dismiss:) withObject:alert afterDelay:2];
+}
+- (void)dismiss:(UIAlertController *)alert{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark -- 视图销毁的时候停止监听，移除通知
+- (void)dealloc{
+    [GLobalRealReachability stopNotifier];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark -- 判断当前网络状态
+
+- (void)simulateRequest
+{
+    BOOL net = [self networkreachability];
+    
+    if (net)
+    {
+        NSLog(@"网络可用");
+        [self getData];
+        [self getScrollerViewData];
+    }
+    else
+    {
+        
+        [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_musics"];
+       self.hot_musicsArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"hot_musics"];
+        
+         [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_radios"];
+          self.hot_radiosArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"hot_radios"];
+        
+         [[CartoonRadioDB shareDataHandler] createTableWithName:@"musics"];
+         self.musicsArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"musics"];
+        
+
+        [[CartoonRadioDB shareDataHandler] createTableWithName:@"new_musics"];
+        self.scrollerArr = (NSMutableArray *)[[CartoonRadioDB shareDataHandler] allModelWithTableName:@"new_musics"];
+        
+        [self scrollLocalImages];
+        
+        [self.dataDict setValue:self.hot_musicsArr forKey:@"hot_musics"];
+        [self.dataDict setValue:self.hot_musicsArr forKey:@"hot_radios"];
+        [self.dataDict setValue:self.hot_musicsArr forKey:@"musics"];
+
+        
+        NSLog(@"网络不可用");
+    }
+}
+#pragma mark -- 观察者执行的方法
+- (void)reachabilityChanged:(NSNotification* )notification
+{
+    NSLog(@"netWork changed");
+}
+- (BOOL)networkreachability
+{
+    if (self.reachability)
+    {
+        switch (self.reachability.currentReachabilityStatus) {
+            case NotReachable:
+                return NO;
+                break;
+            case ReachableViaWiFi:
+                return YES;
+                break;
+            case ReachableViaWWAN:
+                return YES;
+            default:
+                return NO;
+                break;
+        }
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 - (void)createTableView {
@@ -128,14 +180,15 @@
             NSArray *hot_radios = dict[@"response"][@"hot_radios"];
             NSArray *musics = dict[@"response"][@"musics"];
             
-            
+            [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_musics"];
+            [[CartoonRadioDB shareDataHandler] deleteModelWithTableName:@"hot_musics"];
             for (NSDictionary *hot_musicsDict in hot_musics) {
                 
                 RadioModel *model = [[RadioModel alloc] init];
                 
                 [model setValuesForKeysWithDictionary:hot_musicsDict];
                 
-                [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_musics"];
+         
                 [[CartoonRadioDB shareDataHandler] RadioModelModelWithTableName:@"hot_musics" model:model];
                 
                 [self.hot_musicsArr addObject:model];
@@ -143,13 +196,15 @@
               [self.dataDict setValue:self.hot_musicsArr forKey:@"hot_musics"];
           
             
+              [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_radios"];
+            [[CartoonRadioDB shareDataHandler] deleteModelWithTableName:@"hot_radios"];
             for (NSDictionary *hot_radiosDict in hot_radios) {
                 
                 RadioModel *model = [[RadioModel alloc] init];
                 
                 [model setValuesForKeysWithDictionary:hot_radiosDict];
                 
-                [[CartoonRadioDB shareDataHandler] createTableWithName:@"hot_radios"];
+              
                 [[CartoonRadioDB shareDataHandler] RadioModelModelWithTableName:@"hot_radios" model:model];
                 
                 [self.hot_radiosArr addObject:model];
@@ -157,13 +212,15 @@
             
               [self.dataDict setValue:self.hot_radiosArr forKey:@"hot_radios"];
             
+             [[CartoonRadioDB shareDataHandler] createTableWithName:@"musics"];
+                   [[CartoonRadioDB shareDataHandler] deleteModelWithTableName:@"musics"];
             for (NSDictionary *musicsDict in musics) {
                 
                 RadioModel *model = [[RadioModel alloc] init];
                 
                 [model setValuesForKeysWithDictionary:musicsDict];
                 
-                [[CartoonRadioDB shareDataHandler] createTableWithName:@"musics"];
+               
                 [[CartoonRadioDB shareDataHandler] RadioModelModelWithTableName:@"musics" model:model];
                 
                 [self.musicsArr addObject:model];
@@ -172,7 +229,7 @@
             [self.dataDict setValue:self.musicsArr forKey:@"musics"];
             
             
-            NSLog(@"%lu", (unsigned long)self.dataDict.count);
+//            NSLog(@"%lu", (unsigned long)self.dataDict.count);
             
       dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -198,6 +255,8 @@
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                NSArray *new_musics = dict[@"response"][@"new_musics"];
             
+             [[CartoonRadioDB shareDataHandler] createTableWithName:@"new_musics"];
+            [[CartoonRadioDB shareDataHandler] deleteModelWithTableName:@"new_musics"];
             for (NSDictionary *dict in new_musics) {
                 
                 
@@ -205,14 +264,14 @@
                                    
                 [model setValuesForKeysWithDictionary:dict];
                 
-                [[CartoonRadioDB shareDataHandler] createTableWithName:@"new_musics"];
+               
                 [[CartoonRadioDB shareDataHandler] RadioModelModelWithTableName:@"new_musics" model:model];
                 
                 [self.scrollerArr addObject:model];
                 
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self ScrollLocalImages];
+                [self scrollLocalImages];
                 
             });
             
@@ -475,12 +534,15 @@
 
 
 #pragma mark 创建轮播图
-- (void)ScrollLocalImages
+- (void)scrollLocalImages
 {
     CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 330);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
     NSMutableArray *urlStr = [[NSMutableArray alloc] init];
-    
+//   [ urlStr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+//        
+//        
+//    }];
     for (RadioModel *model in self.scrollerArr) {
         
        NSString *str = model.wiki_cover[@"large"];
@@ -586,10 +648,7 @@
     
     
 }
-- (void)dealloc {
-    
-    NSLog(@"页面销毁");
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

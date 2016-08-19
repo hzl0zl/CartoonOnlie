@@ -40,7 +40,10 @@ BOOL isLogin;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+    
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]]];
+    
+    self.view.frame = [UIScreen mainScreen].bounds;
     
     UIView *view1 = [[UIView alloc] init];
     
