@@ -278,9 +278,7 @@ static AudioPlayerController *audioVC;
     [self.rotatingView pauseLayer];
 }
 
-- (IBAction)downloadAction:(id)sender {
-    NSLog(@"点击下载");
-}
+
 - (IBAction)rightButtonAction:(id)sender {
     
     [UMSocialData defaultData].extConfig.title = @"分享的title";
@@ -289,7 +287,7 @@ static AudioPlayerController *audioVC;
                                          appKey:@"57a5423267e58ebd7000281e"
                                       shareText:@"友盟社会化分享让您快速实现分享等社会化功能，http://umeng.com/social"
                                      shareImage:[UIImage imageNamed:@"icon"]
-                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToQzone]
+                                shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina]
                                        delegate:self];
     
     

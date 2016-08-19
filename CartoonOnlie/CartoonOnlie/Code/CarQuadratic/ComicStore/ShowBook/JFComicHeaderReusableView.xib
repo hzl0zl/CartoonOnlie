@@ -87,6 +87,6 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <image name="back" width="20" height="28"/>
+        <image name="back" width="29" height="21"/>
     </resources>
 </document>
