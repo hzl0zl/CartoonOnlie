@@ -11,7 +11,6 @@
 #import <CoreImage/CoreImage.h>
 #import "ReadViewController.h"
 #import "DataHandler.h"
-#import "CollectionController.h"
 #import "MBProgressHUD.h"
 
 
@@ -51,6 +50,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *topImageView;
 
+@property (nonatomic, strong) UIView *tagView;
+
 
 @end
 
@@ -72,6 +73,16 @@
     [self getData];
     
     
+}
+
+- (UIView *)tagView{
+    if (!_tagView) {
+        _tagView = [[UIView alloc]initWithFrame:CGRectMake(10, 30, 5, 15)];
+        _tagView.backgroundColor = UIColorFromRGB(0xffbf00);
+        _tagView.layer.masksToBounds = YES;
+        _tagView.layer.cornerRadius = 2.5;
+    }
+    return _tagView;
 }
 
 #pragma mark -- 获取网络数据
@@ -269,7 +280,7 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         
-        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, 120, 20)];
+        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(15, 30, 120, 20)];
         self.coverBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         self.coverBtn.frame = CGRectMake(0, 0, SCREEN_WIDTH, 20);
         
@@ -277,6 +288,8 @@
 
         [self.coverBtn addTarget:self action:@selector(selectAction:) forControlEvents:UIControlEventTouchUpInside];
         [reusableView addSubview:self.coverBtn];
+        
+        [reusableView addSubview:self.tagView];
         
         headerL.text = @"目录";
         headerL.font = [UIFont systemFontOfSize:15];
@@ -362,20 +375,6 @@
     
 }
 
-
-
-#pragma mark -- 推出收藏页面
-//- (IBAction)showCollectionView:(id)sender {
-//    
-//    CollectionController *collectionVc = [[CollectionController alloc] initWithNibName:@"CollectionController" bundle:nil];
-//    
-//    collectionVc.model = self.model;
-//    
-//    [self.navigationController pushViewController:collectionVc animated:NO];
-//    
-////    self.bottomView.hidden = YES;
-//    
-//}
 
 
 #pragma mark -- 收藏按钮点击方法

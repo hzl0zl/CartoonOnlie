@@ -29,7 +29,9 @@
     
     [self.tableView registerNib:nib forCellReuseIdentifier:@"collectioncell"];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    UIView *view = [[UIView alloc] init];
+    self.tableView.tableFooterView = view;
+    
 }
 
 #pragma mark -- 懒加载
@@ -69,10 +71,15 @@
     [self.tabBarController.tabBar setHidden:YES];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArray = [NSMutableArray arrayWithArray:[[DataHandler shareDataHandler] allCartoon]];
-    
+    self.tabBarController.tabBar.translucent = YES;
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.tabBarController.tabBar.hidden = NO;
+    self.tabBarController.tabBar.translucent = NO;
+}
 
 #pragma mark -- 显示cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
