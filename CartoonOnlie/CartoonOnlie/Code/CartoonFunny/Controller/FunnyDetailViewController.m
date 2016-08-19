@@ -77,7 +77,7 @@
 
 - (UIView *)tagView{
     if (!_tagView) {
-        _tagView = [[UIView alloc]initWithFrame:CGRectMake(10, 30, 5, 15)];
+        _tagView = [[UIView alloc]initWithFrame:CGRectMake(10, 32, 5, 15)];
         _tagView.backgroundColor = UIColorFromRGB(0xffbf00);
         _tagView.layer.masksToBounds = YES;
         _tagView.layer.cornerRadius = 2.5;
@@ -250,8 +250,6 @@
     
     effectView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 150);
     
-//    [self.topImageView addSubview:effectView];
-    
     self.topImageView.image = [UIImage imageNamed:@"background"];
     
 }
@@ -266,9 +264,9 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
     if (self.dataArray.count < 15) {
-        self.size = CGSizeMake(0, 180);
+        self.size = CGSizeMake(0, 200);
     }
-    self.size= CGSizeMake(0, 100);
+    self.size= CGSizeMake(0, 150);
     return self.size;
 }
 
@@ -280,7 +278,7 @@
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         UICollectionReusableView *reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         
-        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(15, 30, 120, 20)];
+        UILabel *headerL = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 120, 20)];
         self.coverBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         self.coverBtn.frame = CGRectMake(0, 0, SCREEN_WIDTH, 20);
         
@@ -303,9 +301,9 @@
         UIView *bottomV = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
         
         
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
         if (self.dataArray.count < 15) {
-            self.imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 180);
+            self.imageView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
         }
         
         [bottomV addSubview:self.imageView];

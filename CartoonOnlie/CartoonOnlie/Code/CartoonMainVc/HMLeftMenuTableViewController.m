@@ -113,13 +113,13 @@ BOOL isLogin;
     
     imageView.layer.cornerRadius = 40;
     
-    imageView.frame = CGRectMake(150,25, 80, 80);
+    imageView.frame = CGRectMake(SCREEN_WIDTH / 2 - 40,25, 80, 80);
     
 
     
     [headerView addSubview:imageView];
     
-    self.addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(140, 110, 100, 30)];
+    self.addBtn  = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 50, 110, 100, 30)];
     
     [self.addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.tableView.tableHeaderView = headerView;

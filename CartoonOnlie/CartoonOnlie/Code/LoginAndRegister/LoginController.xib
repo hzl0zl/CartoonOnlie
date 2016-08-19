@@ -54,26 +54,50 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="Rqf-vZ-ENf">
                     <rect key="frame" x="50" y="430" width="70" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="RbM-2l-W4k"/>
+                        <constraint firstAttribute="height" constant="1" id="rg9-p9-hh6"/>
+                    </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-vS-Vm5">
                     <rect key="frame" x="161" y="600" width="60" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="TMf-h5-j9t"/>
+                        <constraint firstAttribute="width" constant="60" id="VWQ-ld-iQb"/>
+                    </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-kj-vZ3">
                     <rect key="frame" x="255" y="430" width="70" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="whN-QJ-2y9"/>
+                        <constraint firstAttribute="height" constant="1" id="xfN-lX-qhf"/>
+                    </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="abp-Av-VoI">
                     <rect key="frame" x="95" y="226" width="200" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="28j-WR-di6"/>
+                        <constraint firstAttribute="width" constant="200" id="ekB-IC-lUi"/>
+                    </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bai" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-WA-btO">
                     <rect key="frame" x="95" y="281" width="200" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2QO-Em-P3w"/>
+                        <constraint firstAttribute="height" constant="1" id="oH9-iU-3iB"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="第三方登陆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPE-dI-kpx">
                     <rect key="frame" x="145" y="420" width="85" height="21"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="93H-Is-wpd"/>
+                        <constraint firstAttribute="width" constant="90" id="oV5-bh-EAB"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
