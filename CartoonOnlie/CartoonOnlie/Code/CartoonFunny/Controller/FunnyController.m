@@ -240,7 +240,7 @@
 - (void)segmentControlAction:(UISegmentedControl *)sg
 {
     
-    [self simulateRequest];
+//    [self simulateRequest];
     self.tableView.contentOffset = CGPointMake(0, 0);
     
     [self toTop];

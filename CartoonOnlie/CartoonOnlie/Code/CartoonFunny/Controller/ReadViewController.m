@@ -46,6 +46,11 @@
     return _scrollView;
 }
 
+- (void)dealloc
+{
+    NSLog(@"页面销毁");
+}
+
 #pragma mark -- 视图即将出现
 - (void)viewWillAppear:(BOOL)animated
 {

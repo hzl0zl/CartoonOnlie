@@ -438,6 +438,10 @@
     
 }
 
+- (void)dealloc
+{
+    NSLog(@"页面销毁");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
