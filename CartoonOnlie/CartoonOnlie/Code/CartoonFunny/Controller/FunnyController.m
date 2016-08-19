@@ -102,11 +102,6 @@
     
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    
-    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
-    [self.reachability startNotifier];
-    
     [self controllerSetting];
     
     [self.view addSubview:self.tableView];
@@ -120,7 +115,14 @@
     self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
     
     [self segmentControlAction:self.segmentControl];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reachability startNotifier];
+    
     [self simulateRequest];
+    
 }
 
 
@@ -337,8 +339,12 @@
                 }
                 
             }
-            [self sortedWith:self.funList1];
-            [self sortedWith:self.funList2];
+            [self.funList1 sortUsingComparator:^NSComparisonResult(FunListModel *obj1, FunListModel *obj2) {
+                return [obj2.popular compare:obj1.popular];
+            }];
+            [self.funList2 sortUsingComparator:^NSComparisonResult(FunListModel *obj1, FunListModel *obj2) {
+                return [obj2.popular compare:obj1.popular];
+            }];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -357,21 +363,24 @@
 
 
 #pragma mark -- 数组排序
-- (void)sortedWith:(NSMutableArray *)array
-{
-    for (int i = 0; i < array.count - 1; i++) {
-        for (int j = 0; j < array.count - 1 - i; j++) {
-            FunListModel *model1 = array[j];
-            FunListModel *model2 = array[j + 1];
-            if ([model1.popular intValue] < [model2.popular intValue]) {
-                FunListModel *tempModel = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = tempModel;
-            }
-        }
-    }
-    
-}
+//- (void)sortedWith:(NSMutableArray *)array
+//{
+//    if (array.count == 0) {
+//        return;
+//    }
+//    for (int i = 0; i < array.count - 1; i++) {
+//        for (int j = 0; j < array.count - 1 - i; j++) {
+//            FunListModel *model1 = array[j];
+//            FunListModel *model2 = array[j + 1];
+//            if ([model1.popular intValue] < [model2.popular intValue]) {
+//                FunListModel *tempModel = array[j];
+//                array[j] = array[j + 1];
+//                array[j + 1] = tempModel;
+//            }
+//        }
+//    }
+//    
+//}
 
 #pragma mark -- 返回每个分区的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

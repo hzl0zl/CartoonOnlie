@@ -11,6 +11,7 @@
 #import "DataHandler.h"
 #import "CollectionModel.h"
 #import "FunnyDetailViewController.h"
+#import "MBProgressHUD.h"
 
 @interface CollectionController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -71,6 +72,18 @@
     self.dataArray = [NSMutableArray arrayWithArray:[[DataHandler shareDataHandler] allCartoon]];
     self.tabBarController.tabBar.translucent = YES;
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.dataArray.count) {
+        return;
+    }else
+    {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"收藏信息" message:@"暂时没有收藏, 请收藏再来" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
