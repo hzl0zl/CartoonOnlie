@@ -477,7 +477,7 @@
 #pragma mark 创建轮播图
 - (void)ScrollLocalImages
 {
-    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 260);
+    CGRect rect = CGRectMake(0, 0, SCREEN_WIDTH, 330);
     self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:rect delegate:self placeholderImage:[UIImage imageNamed:@"PlacehoderImage.png"]];
     NSMutableArray *urlStr = [[NSMutableArray alloc] init];
     
@@ -586,7 +586,10 @@
     
     
 }
-
+- (void)dealloc {
+    
+    NSLog(@"页面销毁");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

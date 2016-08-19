@@ -53,5 +53,8 @@
         }
     }];
 }
-
+- (void)dealloc {
+    
+    NSLog(@"页面销毁");
+}
 @end

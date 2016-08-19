@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    self.view.frame = [UIScreen mainScreen].bounds;
     self.navigationItem.title = @"收藏夹";
     
     UINib *nib = [UINib nibWithNibName:@"CollectionCell" bundle:nil];
@@ -67,8 +67,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     
-    self.tabBarController.tabBar.hidden = YES;
+//    self.tabBarController.tabBar.hidden = YES;
     
+    [self.tabBarController.tabBar setHidden:YES];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataArray = [NSMutableArray arrayWithArray:[[DataHandler shareDataHandler] allCartoon]];
     self.tabBarController.tabBar.translucent = YES;
     

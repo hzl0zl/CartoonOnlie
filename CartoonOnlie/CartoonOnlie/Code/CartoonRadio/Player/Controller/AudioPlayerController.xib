@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="音乐_播放器_默认模糊背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-Sj-mc0">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="音乐_播放器_默认模糊背景" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-Sj-mc0">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lph-2h-INS">
@@ -31,7 +31,7 @@
                         <constraint firstAttribute="width" constant="44" id="5BH-D9-CGW"/>
                         <constraint firstAttribute="height" constant="44" id="ieI-ZR-hzS"/>
                     </constraints>
-                    <state key="normal" image="MusicPlayer_后退.png"/>
+                    <state key="normal" image="MusicPlayer_后退"/>
                     <connections>
                         <action selector="disMissSelfClick:" destination="-1" eventType="touchUpInside" id="vbx-FH-0Wv"/>
                     </connections>
@@ -78,7 +78,7 @@
                                 <constraint firstAttribute="width" constant="44" id="pDC-PU-VXW"/>
                                 <constraint firstAttribute="height" constant="44" id="qOy-Ns-3ph"/>
                             </constraints>
-                            <state key="normal" image="MusicPlayer_下一个.png"/>
+                            <state key="normal" image="MusicPlayer_下一个"/>
                             <connections>
                                 <action selector="nextClick:" destination="-1" eventType="touchUpInside" id="rh4-rs-Mgs"/>
                             </connections>
@@ -89,20 +89,9 @@
                                 <constraint firstAttribute="height" constant="35" id="HYx-TW-6Fg"/>
                                 <constraint firstAttribute="width" constant="35" id="xkf-KS-3Ps"/>
                             </constraints>
-                            <state key="normal" image="MusicPlayer_顺序播放.png"/>
+                            <state key="normal" image="MusicPlayer_顺序播放"/>
                             <connections>
                                 <action selector="clickPlayerMode:" destination="-1" eventType="touchUpInside" id="lof-vw-rCI"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CS1-UV-ELI">
-                            <rect key="frame" x="274" y="33" width="35" height="35"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="35" id="NRW-xt-SBR"/>
-                                <constraint firstAttribute="height" constant="35" id="dd7-04-kcS"/>
-                            </constraints>
-                            <state key="normal" image="MusicPlayer_下载.png"/>
-                            <connections>
-                                <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="3ey-mu-oL6"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za4-Z5-IzC">
@@ -112,7 +101,7 @@
                                 <constraint firstAttribute="width" constant="68" id="0QH-pW-BAM"/>
                                 <constraint firstAttribute="height" constant="68" id="KJd-EC-FWA"/>
                             </constraints>
-                            <state key="normal" image="MusicPlayer_暂停.png"/>
+                            <state key="normal" image="MusicPlayer_暂停"/>
                             <connections>
                                 <action selector="playAndPauseClick:" destination="-1" eventType="touchUpInside" id="eec-hH-ml5"/>
                             </connections>
@@ -121,11 +110,9 @@
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="za4-Z5-IzC" firstAttribute="centerY" secondItem="R7K-y7-xfe" secondAttribute="centerY" id="7sb-EA-4qw"/>
-                        <constraint firstItem="CS1-UV-ELI" firstAttribute="centerY" secondItem="R7K-y7-xfe" secondAttribute="centerY" id="9dc-1i-0dB"/>
                         <constraint firstItem="dQM-f9-vyL" firstAttribute="centerY" secondItem="R7K-y7-xfe" secondAttribute="centerY" id="FMA-s7-7xg"/>
                         <constraint firstItem="za4-Z5-IzC" firstAttribute="centerX" secondItem="R7K-y7-xfe" secondAttribute="centerX" id="IM4-5M-3ez"/>
                         <constraint firstItem="za4-Z5-IzC" firstAttribute="centerY" secondItem="oOE-ei-cJP" secondAttribute="centerY" id="N6y-eg-46n"/>
-                        <constraint firstItem="CS1-UV-ELI" firstAttribute="leading" secondItem="AXd-Yd-GhR" secondAttribute="trailing" constant="18" id="PLq-CF-RUe"/>
                         <constraint firstAttribute="height" constant="100" id="T8K-1q-quQ"/>
                         <constraint firstItem="oOE-ei-cJP" firstAttribute="centerY" secondItem="R7K-y7-xfe" secondAttribute="centerY" id="TTe-AQ-4KL"/>
                         <constraint firstItem="AXd-Yd-GhR" firstAttribute="centerY" secondItem="R7K-y7-xfe" secondAttribute="centerY" id="Xpq-U4-hzK"/>
@@ -237,11 +224,10 @@
     </objects>
     <resources>
         <image name="MusicPlayer_上一个" width="40" height="40"/>
-        <image name="MusicPlayer_下一个.png" width="40" height="40"/>
-        <image name="MusicPlayer_下载.png" width="23" height="21"/>
-        <image name="MusicPlayer_后退.png" width="27" height="27"/>
-        <image name="MusicPlayer_暂停.png" width="68" height="68"/>
-        <image name="MusicPlayer_顺序播放.png" width="17" height="19"/>
-        <image name="音乐_播放器_默认模糊背景.png" width="375" height="667"/>
+        <image name="MusicPlayer_下一个" width="40" height="40"/>
+        <image name="MusicPlayer_后退" width="18" height="10"/>
+        <image name="MusicPlayer_暂停" width="68" height="68"/>
+        <image name="MusicPlayer_顺序播放" width="17" height="19"/>
+        <image name="音乐_播放器_默认模糊背景" width="375" height="667"/>
     </resources>
 </document>
