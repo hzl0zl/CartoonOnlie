@@ -237,5 +237,8 @@ static NSString *const kCellID = @"radioDetailCell";
     return YES;
 }
 
-
+- (void)dealloc {
+    
+    NSLog(@"页面销毁");
+}
 @end

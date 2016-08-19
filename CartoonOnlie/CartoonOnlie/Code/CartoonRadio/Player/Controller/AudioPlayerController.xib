@@ -67,7 +67,7 @@
                                 <constraint firstAttribute="height" constant="44" id="R68-EH-JVd"/>
                                 <constraint firstAttribute="width" constant="44" id="unP-pg-Vda"/>
                             </constraints>
-                            <state key="normal" image="MusicPlayer_上一个"/>
+                            <state key="normal" image="MusicPlayer_上一个@2x"/>
                             <connections>
                                 <action selector="previousClick:" destination="-1" eventType="touchUpInside" id="dzA-Ed-8eA"/>
                             </connections>
@@ -236,7 +236,7 @@
         </view>
     </objects>
     <resources>
-        <image name="MusicPlayer_上一个" width="40" height="40"/>
+        <image name="MusicPlayer_上一个@2x" width="40" height="40"/>
         <image name="MusicPlayer_下一个.png" width="40" height="40"/>
         <image name="MusicPlayer_下载.png" width="23" height="21"/>
         <image name="MusicPlayer_后退.png" width="27" height="27"/>
