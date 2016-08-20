@@ -262,12 +262,14 @@ BOOL isLogin;
     }
     if (indexPath.section == 2) {
         
-      
+NSLog(@"23432423");
+
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         NSString *path = [paths objectAtIndex:0];
         double aa = [CleanCaches sizeWithFilePath:path];
         NSString *str = [NSString stringWithFormat:@"当前缓存为%.1fMB 是否清空缓存", aa];
         
+    
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:str preferredStyle:UIAlertControllerStyleAlert];
         
         [ alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
