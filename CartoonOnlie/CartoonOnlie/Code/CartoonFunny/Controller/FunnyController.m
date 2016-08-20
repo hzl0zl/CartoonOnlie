@@ -196,10 +196,12 @@
     }
     else
     {
-        self.funList1 = [[DataHandler shareDataHandler] selectFromTable];
-        self.funList2 = [[DataHandler shareDataHandler] selectFromTable1];
-        self.funList3 = self.funList1;
-        self.funList3 = self.funList2;
+        MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+        [self.view addSubview:hud];
+        hud.labelText = @"请检查网络状态";
+        [hud show:YES];
+        
+        [hud hide:YES afterDelay:1];
         NSLog(@"网络不可用");
     }
 }
@@ -239,8 +241,6 @@
 #pragma mark -- 分段控件点击方法
 - (void)segmentControlAction:(UISegmentedControl *)sg
 {
-    
-//    [self simulateRequest];
     self.tableView.contentOffset = CGPointMake(0, 0);
     
     [self toTop];
@@ -303,6 +303,12 @@
 {
     [DownLoad dowmLoadWithUrl:FUNNYLIST postBody:FUNNYLISTPOST resultBlock:^(NSData *data) {
         if (data == nil) {
+            MBProgressHUD *hud = [[MBProgressHUD alloc] init];
+            [self.view addSubview:hud];
+            hud.labelText = @"我要挂了, 正在抢救";
+            [hud show:YES];
+            
+            [hud hide:YES afterDelay:1];
             return;
         }else
         {
@@ -430,7 +436,7 @@
         hud.labelText = @"网络不可用";
         [hud show:YES];
         
-        [hud hide:YES afterDelay:2];
+        [hud hide:YES afterDelay:1];
     }
 
 }
