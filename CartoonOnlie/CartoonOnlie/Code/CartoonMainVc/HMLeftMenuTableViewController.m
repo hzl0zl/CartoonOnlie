@@ -260,14 +260,7 @@ BOOL isLogin;
     if (indexPath.section == 3) {
         [self shareSina];
     }
-    if (indexPath.section == 2) {
-        
-        
-        
-        
-        
-        
-        
+    if (indexPath.section == 2) {       
       
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         NSString *path = [paths objectAtIndex:0];
