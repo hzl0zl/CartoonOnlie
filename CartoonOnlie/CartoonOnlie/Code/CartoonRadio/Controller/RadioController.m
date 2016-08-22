@@ -49,7 +49,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      [self createTableView];
-      [self simulateRequest];
+    
     
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
 
@@ -57,6 +57,7 @@
     
     self.reachability = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [self.reachability startNotifier];
+    [self simulateRequest];
 
     self.navigationController.navigationBar.translucent = NO;
    
